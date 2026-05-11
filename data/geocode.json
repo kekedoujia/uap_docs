@@ -1,0 +1,402 @@
+{
+  "Aegean Sea": {
+    "lat": 39.0,
+    "lon": 25.0
+  },
+  "Affidavit (Gen. du Bose, retired)": {
+    "lat": 38.9072,
+    "lon": -77.0369
+  },
+  "Albuquerque, New Mexico": {
+    "lat": 35.0844,
+    "lon": -106.6504
+  },
+  "Arabian Gulf": {
+    "lat": 26.5,
+    "lon": 51.0
+  },
+  "Arabian Sea": {
+    "lat": 16.0,
+    "lon": 65.0
+  },
+  "Ashley, Ohio": {
+    "lat": 40.4111,
+    "lon": -82.9529
+  },
+  "Asuncion, Paraguay": {
+    "lat": -25.2637,
+    "lon": -57.5759
+  },
+  "Azerbaijan": {
+    "lat": 40.1431,
+    "lon": 47.5769
+  },
+  "Bakersfield, California": {
+    "lat": 35.3733,
+    "lon": -119.0187
+  },
+  "Baltimore, Maryland": {
+    "lat": 39.2904,
+    "lon": -76.6122
+  },
+  "Bethel, Alaska": {
+    "lat": 60.7922,
+    "lon": -161.7558
+  },
+  "Boise, Idaho": {
+    "lat": 43.615,
+    "lon": -116.2023
+  },
+  "Cristobal, Panama": {
+    "lat": 9.3492,
+    "lon": -79.9036
+  },
+  "Detroit, MI": {
+    "lat": 42.3314,
+    "lon": -83.0458
+  },
+  "Fairfield, California": {
+    "lat": 38.2494,
+    "lon": -122.0399
+  },
+  "Germany": {
+    "lat": 51.1657,
+    "lon": 10.4515
+  },
+  "Gulf of Aden": {
+    "lat": 12.5,
+    "lon": 47.5
+  },
+  "Gulf of Oman": {
+    "lat": 24.5,
+    "lon": 58.5
+  },
+  "Hamilton Field, California": {
+    "lat": 38.0617,
+    "lon": -122.4669
+  },
+  "Iran": {
+    "lat": 32.4279,
+    "lon": 53.688
+  },
+  "Iraq": {
+    "lat": 33.2232,
+    "lon": 43.6793
+  },
+  "Japan": {
+    "lat": 36.2048,
+    "lon": 138.2529
+  },
+  "Kansas City, Missouri": {
+    "lat": 39.0997,
+    "lon": -94.5786
+  },
+  "Kazakhstan": {
+    "lat": 48.0196,
+    "lon": 66.9237
+  },
+  "Kirtland AFB, New Mexico": {
+    "lat": 35.0402,
+    "lon": -106.609
+  },
+  "Knoxville, Tennessee": {
+    "lat": 35.9606,
+    "lon": -83.9207
+  },
+  "Kodiak, Alaska": {
+    "lat": 57.79,
+    "lon": -152.4072
+  },
+  "Low Earth Orbit": {
+    "lat": 0,
+    "lon": 0
+  },
+  "Mediterranean Sea": {
+    "lat": 35.0,
+    "lon": 18.0
+  },
+  "Mexico": {
+    "lat": 23.6345,
+    "lon": -102.5528
+  },
+  "Muroc, California": {
+    "lat": 34.9059,
+    "lon": -117.8836
+  },
+  "Netherlands": {
+    "lat": 52.1326,
+    "lon": 5.2913
+  },
+  "New Mexico (El Paso / Albuquerque / Alamogordo / Roswell / Socorro)": {
+    "lat": 34.0,
+    "lon": -106.0
+  },
+  "Oak Ridge, Tennessee": {
+    "lat": 35.9009,
+    "lon": -84.2696
+  },
+  "Oklahoma City, Oklahoma": {
+    "lat": 35.4676,
+    "lon": -97.5164
+  },
+  "Pacific Time Zone": {
+    "lat": 37.0,
+    "lon": -120.0
+  },
+  "Palm Springs, California": {
+    "lat": 33.8303,
+    "lon": -116.5453
+  },
+  "Papua New Guinea": {
+    "lat": -6.314993,
+    "lon": 143.95555
+  },
+  "Phoenix, AZ → Blythe, CA (509th BG B-29 from Roswell, NM)": {
+    "lat": 33.6103,
+    "lon": -114.5964
+  },
+  "Phoenix, Arizona": {
+    "lat": 33.4484,
+    "lon": -112.074
+  },
+  "Roswell, New Mexico": {
+    "lat": 33.3943,
+    "lon": -104.523
+  },
+  "Sacramento, California": {
+    "lat": 38.5816,
+    "lon": -121.4944
+  },
+  "San Antonio, Texas": {
+    "lat": 29.4241,
+    "lon": -98.4936
+  },
+  "San Francisco, California": {
+    "lat": 37.7749,
+    "lon": -122.4194
+  },
+  "Socorro, New Mexico": {
+    "lat": 34.0584,
+    "lon": -106.8914
+  },
+  "Strait of Hormuz": {
+    "lat": 26.5667,
+    "lon": 56.25
+  },
+  "Student Williams Field Chandler, Arizona": {
+    "lat": 33.3001,
+    "lon": -111.6553
+  },
+  "Syria": {
+    "lat": 34.8021,
+    "lon": 38.9968
+  },
+  "Television (Lt. Col. Marcel testimony)": {
+    "lat": 38.9072,
+    "lon": -77.0369
+  },
+  "Turkmenistan": {
+    "lat": 38.9697,
+    "lon": 59.5563
+  },
+  "United States": {
+    "lat": 39.0,
+    "lon": -98.0
+  },
+  "Washington, D.C. (GAO)": {
+    "lat": 38.9072,
+    "lon": -77.0369
+  },
+  "4; Namo of": {
+    "lat": -6.7700722,
+    "lon": -78.3304297
+  },
+  "AF Base, Ohio": {
+    "lat": 40.9957015,
+    "lon": -82.7386531
+  },
+  "Anderson Road, Houston, Texas": {
+    "lat": 29.6067271,
+    "lon": -95.3946572
+  },
+  "Arlington, Texas": {
+    "lat": 32.7355816,
+    "lon": -97.1071186
+  },
+  "Bakersfield": {
+    "lat": 35.3738712,
+    "lon": -119.019463
+  },
+  "Baltimore (Hamilton) Maryland": {
+    "lat": 39.3540276,
+    "lon": -76.5602621
+  },
+  "Belmont, N. C": {
+    "lat": 35.2438272,
+    "lon": -81.0377322
+  },
+  "Burley, Idaho": {
+    "lat": 42.5357428,
+    "lon": -113.792794
+  },
+  "Burnie, Maryland": {
+    "lat": 39.1595439,
+    "lon": -76.6151514
+  },
+  "Chapel Hill, N. C": {
+    "lat": 35.9131542,
+    "lon": -79.05578
+  },
+  "Clinton County Air Field": {
+    "lat": 39.4299546,
+    "lon": -83.7919644
+  },
+  "Colon": {
+    "lat": 41.2974531,
+    "lon": -96.6094912
+  },
+  "Datil": {
+    "lat": 34.1450333,
+    "lon": -107.8433562
+  },
+  "Delaware , Ohio": {
+    "lat": 40.2317686,
+    "lon": -82.9651045
+  },
+  "Denver": {
+    "lat": 39.7392364,
+    "lon": -104.984862
+  },
+  "Des Moines, Iova": {
+    "lat": 41.5868654,
+    "lon": -93.6249494
+  },
+  "HAMILTON FIELD": {
+    "lat": 39.9526623,
+    "lon": -75.2003051
+  },
+  "Hackensack;, I: J": {
+    "lat": 40.8870781,
+    "lon": -74.0410667
+  },
+  "Hickam Field": {
+    "lat": 21.3276152,
+    "lon": -157.9528703
+  },
+  "Holloman Air Force Base": {
+    "lat": 33.076831,
+    "lon": -106.2190016
+  },
+  "Idaho": {
+    "lat": 43.6447642,
+    "lon": -114.015407
+  },
+  "Iu Groveport, Ohio": {
+    "lat": 39.8522449,
+    "lon": -82.8868636
+  },
+  "Knoxville": {
+    "lat": 35.9603948,
+    "lon": -83.9210261
+  },
+  "Lilly Lake, Illinois": {
+    "lat": 42.225405,
+    "lon": -87.9716217
+  },
+  "MadIsonville, Ky": {
+    "lat": 37.3280037,
+    "lon": -87.4986989
+  },
+  "Managua": {
+    "lat": 12.1547116,
+    "lon": -86.273725
+  },
+  "Mount Rainier, Washington (USA)": {
+    "lat": 46.8522029,
+    "lon": -121.7575158
+  },
+  "Mountain Home, Idaho": {
+    "lat": 43.1318937,
+    "lon": -115.6939827
+  },
+  "Navesink NJ": {
+    "lat": 40.4024745,
+    "lon": -74.0395498
+  },
+  "Neade": {
+    "lat": -38.5260368,
+    "lon": 143.9804135
+  },
+  "New Orleans, Louisiana": {
+    "lat": 29.9561422,
+    "lon": -90.0733934
+  },
+  "Oak Ridge": {
+    "lat": 36.0103562,
+    "lon": -84.2696449
+  },
+  "Ogden, Utah": {
+    "lat": 41.2230048,
+    "lon": -111.9738429
+  },
+  "Oregon": {
+    "lat": 43.9792797,
+    "lon": -120.737257
+  },
+  "Ou, Colorado": {
+    "lat": -38.0803673,
+    "lon": 144.3496549
+  },
+  "Po, Michigan": {
+    "lat": 42.264735,
+    "lon": -83.6680063
+  },
+  "Portland, Oregon 0": {
+    "lat": 45.5293197,
+    "lon": -122.6576147
+  },
+  "Raffeld": {
+    "lat": 52.9574955,
+    "lon": 7.9421214
+  },
+  "Roseau, Minnesota": {
+    "lat": 48.7710371,
+    "lon": -95.7697882
+  },
+  "Sen Francisco, California": {
+    "lat": 37.793747,
+    "lon": -122.4076074
+  },
+  "Time": {
+    "lat": 39.5614368,
+    "lon": -90.7242938
+  },
+  "Torrington": {
+    "lat": 41.8006523,
+    "lon": -73.1212214
+  },
+  "Van Nuys, Calif": {
+    "lat": 34.1866193,
+    "lon": -118.4486675
+  },
+  "Vejle, Denmark": {
+    "lat": 55.707931,
+    "lon": 9.5329419
+  },
+  "Weiser , Idaho": {
+    "lat": 44.2454664,
+    "lon": -116.9702376
+  },
+  "Wildwood, N. J": {
+    "lat": 38.9841969,
+    "lon": -74.8142502
+  },
+  "Wildwood, N. J. (390 00' N & 780": {
+    "lat": 38.9977667,
+    "lon": -74.8131078
+  },
+  "Wilmington, North Carolina, 340 14' N, 770 57' w": {
+    "lat": 34.2013063,
+    "lon": -77.8452978
+  }
+}

@@ -1,0 +1,3 @@
+# Build-time deps only — the site itself is pure static JS/HTML/CSS
+# and ships no Python code to the browser.
+# (No external libs needed; included for forward compatibility.)

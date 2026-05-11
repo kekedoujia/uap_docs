@@ -1,0 +1,24 @@
+# archives/ contains symlinks to ../files/pdfs etc. for local dev only.
+# In production they're not used (archive_url points to war.gov).
+# We git-ignore the symlink contents — they won't resolve on Render anyway.
+archives/pdfs
+archives/videos
+archives/images
+archives/thumbnails
+archives/slideshow
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local server / temp
+*.pid
+*.log

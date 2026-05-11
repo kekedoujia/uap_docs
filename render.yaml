@@ -1,0 +1,67 @@
+# Render Blueprint for UFO/UAP Disclosure Map
+# https://render.com/docs/blueprint-spec
+#
+# This repo IS the static site. Deploy by:
+#   1. Pushing this repo to GitHub/GitLab.
+#   2. On render.com → New → Blueprint → connect repo → Apply.
+#
+# The build step rewrites archive_url to point at war.gov originals
+# (no need to upload 3.7 GB of raw archives).
+# Final deployed size: ~2 MB.
+
+services:
+  - type: web
+    name: ufo-uap-map
+    runtime: static
+    plan: free                       # Switch to "starter" for more bandwidth.
+
+    # Build: regenerate event data with external war.gov archive URLs.
+    buildCommand: |
+      python3 -m pip install --user -r requirements-build.txt &&
+      python3 scripts/prepare_for_render.py
+
+    # The whole repo is the website root.
+    staticPublishPath: ./
+
+    # HTTP headers
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /data/cities_heatmap.json
+        name: Cache-Control
+        value: public, max-age=604800, immutable      # 7 days
+      - path: /data/geocode.json
+        name: Cache-Control
+        value: public, max-age=86400                  # 1 day
+      - path: /data/manifest.json
+        name: Cache-Control
+        value: public, max-age=300                    # 5 min (so new batches show up)
+      - path: /data/events/*
+        name: Cache-Control
+        value: public, max-age=3600
+      - path: /js/*
+        name: Cache-Control
+        value: public, max-age=3600
+      - path: /css/*
+        name: Cache-Control
+        value: public, max-age=3600
+      - path: /*.html
+        name: Cache-Control
+        value: public, max-age=300
+
+    # Pretty URLs
+    routes:
+      - type: rewrite
+        source: /about
+        destination: /about.html
+
+    # Auto-deploy on git push
+    autoDeploy: true
+
+    # If you want a custom domain, uncomment and configure DNS:
+    # domains:
+    #   - ufo-map.yourdomain.com
