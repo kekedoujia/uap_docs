@@ -143,67 +143,35 @@ function render() {
   document.getElementById('tl-visible-count').textContent = visible.length;
   const lang = (window.I18N && I18N.current) || 'zh';
 
-  // Split: non_geographic events go in their own dedicated section
-  // (mirrors the Other Events panel on the map page).
-  const others = visible.filter(e => e.non_geographic);
-  const geos = visible.filter(e => !e.non_geographic);
-
-  // Group GEO events by decade for jump bar
+  // Group by decade for jump bar
   const decades = new Map();
-  for (const e of geos) {
+  for (const e of visible) {
     const y = parseInt(e.date_iso.slice(0, 4), 10);
     const d = Math.floor(y / 10) * 10;
     decades.set(d, (decades.get(d) || 0) + 1);
   }
-  let jumpHtml = '';
-  if (others.length) {
-    jumpHtml += `<a href="#other-events-section" class="tl-decade-chip tl-decade-other"
-      >${lang === 'en' ? 'Other' : '其他'} <span>(${others.length})</span></a>`;
-  }
-  jumpHtml += [...decades.entries()]
+  decadeJump.innerHTML = [...decades.entries()]
     .sort((a, b) => b[0] - a[0])
     .map(([d, n]) =>
       `<a href="#decade-${d}" class="tl-decade-chip">${d}s <span>(${n})</span></a>`
     ).join('');
-  decadeJump.innerHTML = jumpHtml;
 
-  // Group GEO events by year
+  // Group all events by year (non_geographic included inline)
   const byYear = new Map();
-  for (const e of geos) {
+  for (const e of visible) {
     const y = e.date_iso.slice(0, 4);
     if (!byYear.has(y)) byYear.set(y, []);
     byYear.get(y).push(e);
   }
   const years = [...byYear.keys()].sort().reverse();
 
-  if (!years.length && !others.length) {
+  if (!years.length) {
     list.innerHTML = '<div class="tl-empty" data-i18n="tl_no_results">无符合条件的事件</div>';
     if (window.I18N) I18N.apply();
     return;
   }
 
   let html = '';
-
-  // Dedicated "Other Events" section at the top
-  if (others.length) {
-    const otherTitle = lang === 'en'
-      ? 'Other Events (outer space / no specific location)'
-      : '其他事件（外太空 / 无具体地点）';
-    html += `<section class="tl-year-section tl-other-section" id="other-events-section">
-      <h2 class="tl-year-header tl-other-header">
-        ✦ ${escapeHtml(otherTitle)}
-        <span class="tl-year-count">(${others.length})</span>
-      </h2>
-      <ul class="tl-event-list">`;
-    // Others sorted asc by date for narrative reading
-    const othersSorted = [...others].sort((a, b) => a.date_iso.localeCompare(b.date_iso));
-    for (const e of othersSorted) {
-      html += renderEventRow(e, lang);
-    }
-    html += '</ul></section>';
-  }
-
-  // Year groups
   let lastDecade = -1;
   for (const y of years) {
     const yearInt = parseInt(y, 10);
