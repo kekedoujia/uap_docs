@@ -490,5 +490,97 @@
   "Yacom, Washington": {
     "lat": 47.2529,
     "lon": -122.4443
+  },
+  "Arlington, Virginia": {
+    "lat": 38.8816,
+    "lon": -77.091
+  },
+  "Birmingham, Alabama": {
+    "lat": 33.5186,
+    "lon": -86.8104
+  },
+  "Chicago, Illinois": {
+    "lat": 41.8781,
+    "lon": -87.6298
+  },
+  "Dallas, Texas": {
+    "lat": 32.7767,
+    "lon": -96.797
+  },
+  "Georgia": {
+    "lat": 32.1656,
+    "lon": -82.9001
+  },
+  "La Guardia Field, New York": {
+    "lat": 40.7769,
+    "lon": -73.874
+  },
+  "Lake Meade, Nevada": {
+    "lat": 36.1271,
+    "lon": -114.7681
+  },
+  "Los Angeles, California": {
+    "lat": 34.0522,
+    "lon": -118.2437
+  },
+  "Miami, Florida": {
+    "lat": 25.7617,
+    "lon": -80.1918
+  },
+  "Orlando, Florida": {
+    "lat": 28.5383,
+    "lon": -81.3792
+  },
+  "Western United States": {
+    "lat": 39.0,
+    "lon": -113.0
+  },
+  "White Sands, New Mexico": {
+    "lat": 32.3199,
+    "lon": -106.2228
+  },
+  "Hanilton Fiold, California": {
+    "lat": 38.0617,
+    "lon": -122.4669
+  },
+  "Intelligence Hamilton Pield, California": {
+    "lat": 38.0617,
+    "lon": -122.4669
+  },
+  "Haxwell Field, Alabama": {
+    "lat": 32.3722,
+    "lon": -86.365
+  },
+  "Lallas, Texas": {
+    "lat": 32.7767,
+    "lon": -96.797
+  },
+  "Midlend, Michigan": {
+    "lat": 43.6156,
+    "lon": -84.2472
+  },
+  "YW Randolph Field, Texas": {
+    "lat": 29.5295,
+    "lon": -98.279
+  },
+  "FORCE Colorado Springs, Colorado": {
+    "lat": 38.8339,
+    "lon": -104.8214
+  },
+  "Ave Portland, Oregon": {
+    "lat": 45.5152,
+    "lon": -122.6784
+  },
+  "Aruy Ar Forces, Washington": {
+    "lat": 38.9072,
+    "lon": -77.0369
+  },
+  "Field, New York": {
+    "lat": 40.7128,
+    "lon": -74.006
+  },
+  "Postmaster, New York": {
+    "lat": 40.7128,
+    "lon": -74.006
   }
 }
