@@ -18,21 +18,27 @@ const STATE = {
   markersById: {},
 };
 
+// Fetch helper: always revalidate (bypass stale browser cache for dynamic data)
+async function fetchData(path) {
+  const res = await fetch(path, { cache: 'no-cache' });
+  return res.json();
+}
+
 async function loadData() {
   // 1. Manifest
-  const manifest = await (await fetch('data/manifest.json')).json();
+  const manifest = await fetchData('data/manifest.json');
   STATE.manifest = manifest;
 
   // 2. Geocode
-  STATE.geocode = await (await fetch('data/geocode.json')).json();
+  STATE.geocode = await fetchData('data/geocode.json');
 
-  // 3. Cities heatmap
+  // 3. Cities heatmap (large, rarely changes — can use normal cache)
   STATE.citiesHeat = await (await fetch('data/cities_heatmap.json')).json();
 
   // 4. All event batches
   const allEvents = [];
   for (const batchFile of manifest.batches) {
-    const batch = await (await fetch(`data/events/${batchFile}`)).json();
+    const batch = await fetchData(`data/events/${batchFile}`);
     for (const e of batch.events) {
       const geo = STATE.geocode[e.location];
       if (!geo) continue;  // skip un-geocoded

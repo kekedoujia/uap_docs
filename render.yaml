@@ -31,16 +31,16 @@ services:
         value: strict-origin-when-cross-origin
       - path: /data/cities_heatmap.json
         name: Cache-Control
-        value: public, max-age=604800, immutable      # 7 days
+        value: public, max-age=604800, immutable      # 7 days — never changes
       - path: /data/geocode.json
         name: Cache-Control
-        value: public, max-age=86400                  # 1 day
+        value: public, max-age=300, must-revalidate    # 5 min
       - path: /data/manifest.json
         name: Cache-Control
-        value: public, max-age=300                    # 5 min (so new batches show up)
+        value: public, max-age=60, must-revalidate     # 1 min — drives staleness check
       - path: /data/events/*
         name: Cache-Control
-        value: public, max-age=3600
+        value: public, max-age=120, must-revalidate    # 2 min — pick up new events quickly
       - path: /js/*
         name: Cache-Control
         value: public, max-age=3600

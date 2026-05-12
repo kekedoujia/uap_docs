@@ -8,13 +8,18 @@ const STATE = {
   lastDetailEvent: null,
 };
 
+async function fetchData(path) {
+  const res = await fetch(path, { cache: 'no-cache' });
+  return res.json();
+}
+
 async function loadData() {
-  const manifest = await (await fetch('data/manifest.json')).json();
+  const manifest = await fetchData('data/manifest.json');
   STATE.manifest = manifest;
-  STATE.geocode = await (await fetch('data/geocode.json')).json();
+  STATE.geocode = await fetchData('data/geocode.json');
   const all = [];
   for (const batchFile of manifest.batches) {
-    const batch = await (await fetch(`data/events/${batchFile}`)).json();
+    const batch = await fetchData(`data/events/${batchFile}`);
     for (const e of batch.events) {
       const geo = STATE.geocode[e.location];
       const ev = Object.assign({}, e, {
