@@ -66,6 +66,21 @@
 
   let LAST_COUNT = null;
 
+  // Self-contained strings — don't depend on i18n.js (avoids stale-cache issues)
+  const STRINGS = {
+    zh: { prefix: '您是第', suffix: '位访客' },
+    en: { prefix: 'You are visitor #', suffix: '' },
+  };
+
+  function currentLang() {
+    if (window.I18N && I18N.current && STRINGS[I18N.current]) return I18N.current;
+    try {
+      const saved = localStorage.getItem('ufo_lang');
+      if (saved && STRINGS[saved]) return saved;
+    } catch (e) {}
+    return (navigator.language || 'zh').toLowerCase().startsWith('zh') ? 'zh' : 'en';
+  }
+
   function renderVisitorCounter(n) {
     const el = document.getElementById('visitor-counter');
     if (!el) return;
@@ -74,14 +89,12 @@
       return;
     }
     if (n != null) LAST_COUNT = n;
-    const I = window.I18N || { t: (k) => k };
-    const prefix = I.t('visitor_you_are');
-    const suffix = I.t('visitor_suffix');
+    const s = STRINGS[currentLang()];
     const formatted = LAST_COUNT.toLocaleString('en-US');
     el.innerHTML =
-      escapeHtml(prefix) +
+      escapeHtml(s.prefix) +
       ' <span class="num">' + escapeHtml(formatted) + '</span>' +
-      (suffix ? ' ' + escapeHtml(suffix) : '');
+      (s.suffix ? ' ' + escapeHtml(s.suffix) : '');
     el.classList.add('ready');
   }
 
