@@ -15,9 +15,8 @@ services:
     runtime: static
 
     # Build: regenerate event data with external war.gov archive URLs.
-    buildCommand: |
-      python3 -m pip install --user -r requirements-build.txt &&
-      python3 scripts/prepare_for_render.py
+    # (requirements-build.txt is empty; prepare script only uses stdlib.)
+    buildCommand: python3 scripts/prepare_for_render.py
 
     # The whole repo is the website root.
     staticPublishPath: ./
