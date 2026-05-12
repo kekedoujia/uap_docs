@@ -15,7 +15,7 @@ html, body {
   height: 60px; padding: 8px 16px;
   background: linear-gradient(180deg, #0b1320 0%, #131e35 100%);
   border-bottom: 1px solid #2a3a5a;
-  z-index: 1000;
+  z-index: 1001;
   display: flex; align-items: center; justify-content: space-between;
   box-shadow: 0 1px 6px rgba(0,0,0,0.4);
 }
@@ -584,16 +584,188 @@ hr { border: 0; border-top: 1px solid #2a3a5a; margin: 16px 0; }
   display: inline-block;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  #sidebar { width: 220px; }
-  #map { left: 220px; }
-  #detail-panel { width: 320px; }
+/* ============================================
+   Hamburger button (mobile only)
+   ============================================ */
+#hamburger-btn {
+  display: none;
+  background: rgba(130, 185, 255, 0.08);
+  border: 1px solid #2a3a5a;
+  width: 40px; height: 40px; border-radius: 4px;
+  cursor: pointer; padding: 0;
+  margin-right: 12px;
+  align-items: center; justify-content: center;
+  flex-direction: column; gap: 4px;
 }
-@media (max-width: 600px) {
+#hamburger-btn:active { background: rgba(130, 185, 255, 0.2); }
+#hamburger-btn span {
+  display: block; width: 18px; height: 2px;
+  background: #82b9ff; border-radius: 1px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+body.sidebar-open #hamburger-btn span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+body.sidebar-open #hamburger-btn span:nth-child(2) { opacity: 0; }
+body.sidebar-open #hamburger-btn span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+#sidebar-backdrop {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6); z-index: 998;
+}
+body.sidebar-open #sidebar-backdrop { display: block; }
+
+/* Floating "back to map" button (timeline mobile only) */
+#mobile-fab-back {
+  display: none;
+  position: fixed; bottom: 16px; right: 16px;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: #82b9ff; color: #0b1320;
+  text-decoration: none;
+  font-size: 22px;
+  align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  z-index: 900;
+  transition: transform 0.15s;
+}
+#mobile-fab-back:active { transform: scale(0.92); }
+
+/* ============================================
+   Tablet (≤ 900px)
+   ============================================ */
+@media (max-width: 900px) {
+  #sidebar { width: 240px; }
+  #map { left: 240px; }
+  #detail-panel { width: 360px; }
+  #timeline-toolbar { padding: 10px 14px; gap: 10px; }
+}
+
+/* ============================================
+   Phone (≤ 720px) — off-canvas sidebar
+   ============================================ */
+@media (max-width: 720px) {
+  #topbar {
+    height: 52px; padding: 6px 10px;
+  }
   #topbar h1 { font-size: 14px; }
   #meta { display: none; }
-  #sidebar { width: 60%; }
-  #map { left: 60%; }
-  #detail-panel { width: 100%; }
+  #hamburger-btn { display: flex; }
+  #topbar-right { gap: 8px; }
+
+  /* Sidebar slides in from left as overlay */
+  #sidebar {
+    width: 280px; max-width: 88vw;
+    top: 52px;
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.22s ease;
+    box-shadow: 4px 0 16px rgba(0,0,0,0.4);
+  }
+  body.sidebar-open #sidebar {
+    transform: translateX(0);
+  }
+  /* Map takes full width */
+  #map {
+    left: 0;
+    top: 52px;
+  }
+  #detail-panel {
+    top: 52px;
+    width: 100%;
+    z-index: 2200;
+  }
+
+  /* Larger touch targets */
+  label.cb { padding: 6px 0; font-size: 13px; }
+  label.cb input { transform: scale(1.15); margin-right: 8px; }
+  .date-range input { padding: 6px 8px; font-size: 13px; }
+  .open-modal-btn { padding: 10px 12px; font-size: 13px; }
+
+  /* Detail panel close button — larger tap target */
+  #detail-close {
+    width: 40px; height: 40px;
+    font-size: 28px;
+  }
+
+  /* Lang toggle smaller */
+  .lang-btn { padding: 4px 8px; font-size: 11px; min-width: 28px; }
+
+  /* Timeline page mobile tweaks */
+  #timeline-toolbar {
+    top: 52px;
+    padding: 8px 12px; gap: 8px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  #timeline-toolbar .tl-filter-cell { flex-shrink: 0; }
+  #tl-search { min-width: 140px; }
+  .tl-filter-cell select { min-width: 100px; }
+  .tl-filter-cell.tl-grow { min-width: 160px; }
+
+  #timeline-container { padding: 0 12px 60px; }
+  .tl-decade-jump {
+    top: 110px;
+    margin: 0 -12px 12px;
+    padding: 8px 12px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tl-decade-chip { flex-shrink: 0; }
+  .tl-decade-anchor { margin-top: -110px; padding-top: 110px; }
+
+  .tl-event-row {
+    grid-template-columns: 12px 84px 1fr;
+    gap: 8px;
+    padding: 10px 10px;
+  }
+  .tl-row-date { font-size: 11px; }
+  .tl-row-loc { font-size: 13px; }
+  .tl-row-title { font-size: 11px; }
+  .tl-year-header { font-size: 18px; }
+
+  .back-link { display: none; }
+  body.timeline-page #mobile-fab-back { display: flex; }
+
+  /* Modal full-screen */
+  .modal-content {
+    max-height: 100vh; max-width: 100vw; width: 100%;
+    border-radius: 0; border: none;
+  }
+  .modal-header { padding: 12px 14px; }
+  .modal-header h2 { font-size: 14px; }
+  .modal-table { font-size: 11px; }
+  .modal-table th, .modal-table td { padding: 8px 6px; }
+  .modal-title-cell { display: none; }
+  .modal-table th:nth-child(5),
+  .modal-table td:nth-child(5) { display: none; }
+
+  /* Detail panel — make media touch-friendly */
+  .media-block video { max-height: 200px !important; }
+  .archive-link, .detail-links a {
+    padding: 10px 14px !important;
+    font-size: 13px !important;
+  }
+
+  /* Map legend smaller */
+  #legend { font-size: 10px; padding: 8px 10px; }
+  #legend h4 { font-size: 11px; }
+
+  /* Disable backdrop padding shift on small screens */
+  body:has(#detail-panel:not(.hidden)) .modal {
+    padding-right: 0;
+  }
+}
+
+/* ============================================
+   Very small phones (≤ 380px)
+   ============================================ */
+@media (max-width: 380px) {
+  #topbar h1 { font-size: 13px; }
+  #topbar h1 a.back-link { font-size: 14px; }
+  #lang-toggle { display: flex; }
 }

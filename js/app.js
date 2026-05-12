@@ -382,6 +382,22 @@ function rebuildMarkers() {
   updateStats();
 }
 
+// Mobile sidebar toggle
+function toggleSidebar(force) {
+  const open = force !== undefined ? force : !document.body.classList.contains('sidebar-open');
+  document.body.classList.toggle('sidebar-open', open);
+}
+document.addEventListener('click', evt => {
+  if (evt.target.closest('#hamburger-btn')) {
+    toggleSidebar();
+    return;
+  }
+  if (evt.target.closest('#sidebar-backdrop')) {
+    toggleSidebar(false);
+    return;
+  }
+});
+
 // Global event delegation
 document.addEventListener('click', evt => {
   // "View details" button inside map popup
@@ -415,6 +431,7 @@ document.addEventListener('keydown', evt => {
   if (evt.key === 'Escape') {
     const m = document.getElementById('other-modal');
     if (m && !m.classList.contains('hidden')) closeOtherModal();
+    if (document.body.classList.contains('sidebar-open')) toggleSidebar(false);
   }
   if (evt.key !== 'Enter' && evt.key !== ' ') return;
   const modalRow = evt.target.closest('.modal-row');
@@ -425,6 +442,13 @@ document.addEventListener('keydown', evt => {
     if (ev) showDetail(ev);
   }
 });
+
+// Auto-close sidebar when user picks something on mobile
+function autoCloseSidebar() {
+  if (window.innerWidth <= 720 && document.body.classList.contains('sidebar-open')) {
+    toggleSidebar(false);
+  }
+}
 
 function toggleHeat() {
   if (document.getElementById('show-heatmap').checked) {
