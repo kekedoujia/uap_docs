@@ -159,7 +159,9 @@ body:has(#detail-panel:not(.hidden)) .modal {
   border-radius: 8px;
   max-width: 1000px; width: calc(100% - 40px);
   max-height: calc(100vh - 60px);
+  max-height: calc(100dvh - 60px);   /* dvh = stable viewport on mobile */
   display: flex; flex-direction: column;
+  min-height: 0;
   box-shadow: 0 8px 32px rgba(0,0,0,0.6);
   animation: modal-in 0.18s ease-out;
 }
@@ -181,7 +183,15 @@ body:has(#detail-panel:not(.hidden)) .modal {
 }
 .modal-close:hover { color: #fff; }
 .modal-body {
-  flex: 1; overflow: auto; padding: 4px 0;
+  flex: 1 1 auto;
+  /* min-height: 0 is required so flex children can actually shrink and
+     allow `overflow: auto` to take effect (Safari/iOS fix). */
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding: 4px 0;
 }
 
 /* Modal table */
@@ -775,10 +785,21 @@ body.sidebar-open #sidebar-backdrop { display: block; }
   .back-link { display: none; }
   body.timeline-page #mobile-fab-back { display: flex; }
 
-  /* Modal full-screen */
+  /* Modal full-screen on phones */
   .modal-content {
-    max-height: 100vh; max-width: 100vw; width: 100%;
+    /* Use dynamic viewport height — Safari/Chrome iOS handle URL bar changes
+       gracefully with dvh and avoid the 100vh "too tall" bug. */
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100vh;
+    max-height: 100dvh;
+    max-width: 100vw; width: 100%;
     border-radius: 0; border: none;
+  }
+  .modal-body {
+    /* Belt-and-braces: explicit height in case flex shrinking misbehaves */
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
   }
   .modal-header { padding: 12px 14px; }
   .modal-header h2 { font-size: 14px; }
