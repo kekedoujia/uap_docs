@@ -215,6 +215,32 @@ body.timeline-page #topbar h1 a.back-link {
 .tl-decade-chip span { color: #6a7c9c; }
 .tl-decade-anchor { height: 1px; margin-top: -120px; padding-top: 120px; }
 
+/* Other Events section in timeline */
+.tl-decade-chip.tl-decade-other {
+  background: rgba(146, 214, 93, 0.12);
+  border-color: rgba(146, 214, 93, 0.4);
+  color: #92d65d;
+}
+.tl-decade-chip.tl-decade-other:hover {
+  background: rgba(146, 214, 93, 0.25);
+}
+.tl-other-section {
+  margin-top: 8px !important;
+  scroll-margin-top: 130px;
+}
+.tl-other-header {
+  color: #92d65d !important;
+  border-bottom-color: rgba(146, 214, 93, 0.4) !important;
+}
+.tl-other-section .tl-event-row {
+  background: rgba(146, 214, 93, 0.04);
+  border-color: rgba(146, 214, 93, 0.18);
+}
+.tl-other-section .tl-event-row:hover {
+  background: rgba(146, 214, 93, 0.10);
+  border-color: rgba(146, 214, 93, 0.35);
+}
+
 .tl-year-section { margin: 16px 0 28px; }
 .tl-year-header {
   font-size: 22px; color: #82b9ff; margin: 0 0 12px 0;

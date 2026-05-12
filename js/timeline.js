@@ -112,45 +112,98 @@ function refilter() {
   render();
 }
 
+function renderEventRow(e, lang) {
+  const kind = agencyKind(e.agency);
+  const hasImg = e.image_url ? '🖼' : '';
+  const hasVid = e.video_url ? '🎬' : '';
+  const ngBadge = e.non_geographic
+    ? `<span class="tl-tag tl-tag-other">${lang === 'en' ? 'no geo' : '无地点'}</span>` : '';
+  return `
+    <li class="tl-event-row" data-id="${escapeAttr(e.id)}" tabindex="0" role="button">
+      <div class="tl-row-marker tl-marker-${kind}"></div>
+      <div class="tl-row-date">${escapeHtml(e.date_iso)}</div>
+      <div class="tl-row-body">
+        <div class="tl-row-loc">${escapeHtml(e.location)}</div>
+        <div class="tl-row-meta">
+          <span class="tl-agency">${escapeHtml(e.agency || '')}</span>
+          <span class="tl-type">${escapeHtml(e.type || '')}</span>
+          ${ngBadge}
+          <span class="tl-icons">${hasImg}${hasVid}</span>
+        </div>
+        <div class="tl-row-title">${escapeHtml((e.title || '').slice(0, 130))}${e.title && e.title.length > 130 ? '…' : ''}</div>
+      </div>
+    </li>
+  `;
+}
+
 function render() {
   const list = document.getElementById('timeline-list');
   const decadeJump = document.getElementById('timeline-decade-jump');
   const visible = STATE.events.filter(eventPasses);
   document.getElementById('tl-visible-count').textContent = visible.length;
+  const lang = (window.I18N && I18N.current) || 'zh';
 
-  // Group by decade for navigation jump bar
+  // Split: non_geographic events go in their own dedicated section
+  // (mirrors the Other Events panel on the map page).
+  const others = visible.filter(e => e.non_geographic);
+  const geos = visible.filter(e => !e.non_geographic);
+
+  // Group GEO events by decade for jump bar
   const decades = new Map();
-  for (const e of visible) {
+  for (const e of geos) {
     const y = parseInt(e.date_iso.slice(0, 4), 10);
     const d = Math.floor(y / 10) * 10;
     decades.set(d, (decades.get(d) || 0) + 1);
   }
-  decadeJump.innerHTML = [...decades.entries()]
+  let jumpHtml = '';
+  if (others.length) {
+    jumpHtml += `<a href="#other-events-section" class="tl-decade-chip tl-decade-other"
+      >${lang === 'en' ? 'Other' : '其他'} <span>(${others.length})</span></a>`;
+  }
+  jumpHtml += [...decades.entries()]
     .sort((a, b) => b[0] - a[0])
     .map(([d, n]) =>
       `<a href="#decade-${d}" class="tl-decade-chip">${d}s <span>(${n})</span></a>`
     ).join('');
+  decadeJump.innerHTML = jumpHtml;
 
-  // Group by year
+  // Group GEO events by year
   const byYear = new Map();
-  for (const e of visible) {
+  for (const e of geos) {
     const y = e.date_iso.slice(0, 4);
     if (!byYear.has(y)) byYear.set(y, []);
     byYear.get(y).push(e);
   }
-  // Within year, already sorted desc by date_iso (from STATE.events sort)
   const years = [...byYear.keys()].sort().reverse();
 
-  if (!years.length) {
+  if (!years.length && !others.length) {
     list.innerHTML = '<div class="tl-empty" data-i18n="tl_no_results">无符合条件的事件</div>';
     if (window.I18N) I18N.apply();
     return;
   }
 
-  const lang = (window.I18N && I18N.current) || 'zh';
-  const playLabel = lang === 'en' ? 'video' : '视频';
-
   let html = '';
+
+  // Dedicated "Other Events" section at the top
+  if (others.length) {
+    const otherTitle = lang === 'en'
+      ? 'Other Events (outer space / no specific location)'
+      : '其他事件（外太空 / 无具体地点）';
+    html += `<section class="tl-year-section tl-other-section" id="other-events-section">
+      <h2 class="tl-year-header tl-other-header">
+        ✦ ${escapeHtml(otherTitle)}
+        <span class="tl-year-count">(${others.length})</span>
+      </h2>
+      <ul class="tl-event-list">`;
+    // Others sorted asc by date for narrative reading
+    const othersSorted = [...others].sort((a, b) => a.date_iso.localeCompare(b.date_iso));
+    for (const e of othersSorted) {
+      html += renderEventRow(e, lang);
+    }
+    html += '</ul></section>';
+  }
+
+  // Year groups
   let lastDecade = -1;
   for (const y of years) {
     const yearInt = parseInt(y, 10);
@@ -163,26 +216,7 @@ function render() {
       <h2 class="tl-year-header">${escapeHtml(y)} <span class="tl-year-count">(${byYear.get(y).length})</span></h2>
       <ul class="tl-event-list">`;
     for (const e of byYear.get(y)) {
-      const kind = agencyKind(e.agency);
-      const hasImg = e.image_url ? '🖼' : '';
-      const hasVid = e.video_url ? '🎬' : '';
-      const ngBadge = e.non_geographic ? `<span class="tl-tag tl-tag-other">${lang === 'en' ? 'no geo' : '无地点'}</span>` : '';
-      html += `
-        <li class="tl-event-row" data-id="${escapeAttr(e.id)}" tabindex="0" role="button">
-          <div class="tl-row-marker tl-marker-${kind}"></div>
-          <div class="tl-row-date">${escapeHtml(e.date_iso)}</div>
-          <div class="tl-row-body">
-            <div class="tl-row-loc">${escapeHtml(e.location)}</div>
-            <div class="tl-row-meta">
-              <span class="tl-agency">${escapeHtml(e.agency || '')}</span>
-              <span class="tl-type">${escapeHtml(e.type || '')}</span>
-              ${ngBadge}
-              <span class="tl-icons">${hasImg}${hasVid}</span>
-            </div>
-            <div class="tl-row-title">${escapeHtml((e.title || '').slice(0, 130))}${e.title && e.title.length > 130 ? '…' : ''}</div>
-          </div>
-        </li>
-      `;
+      html += renderEventRow(e, lang);
     }
     html += '</ul></section>';
   }
