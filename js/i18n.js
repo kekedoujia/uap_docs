@@ -67,6 +67,20 @@ const I18N = {
       tl_th_type: '类型',
       tl_th_title: '标题 / 摘要',
       tl_th_media: '媒体',
+      disclaimer_title: '📄 免责声明 / Disclaimer',
+      disclaimer_body: (
+        '本站所有数据均来源于美国战争部（Department of War）于 2026 年 5 月 8 日公开发布的 '
+        + '<a href="https://www.war.gov/UFO/" target="_blank" rel="noopener">'
+        + 'UFO/UAP 解密档案 Release 01</a>。'
+        + '<br><br>'
+        + '本站内容由 OCR 文字识别与自动化脚本索引生成，<strong>不保证完全准确</strong>——'
+        + '原始档案为唯一权威来源，关键信息请以官方文件为准。本站可能存在以下不完美之处：'
+        + 'OCR 误识、事件遗漏、日期或地点抽取错误、缩略图与正文页码偏差等。'
+        + '<br><br>'
+        + '本站为<strong>完全免费的公益研究项目</strong>，不涉及任何商业目的、不展示任何广告、'
+        + '不收集任何用户个人数据，与美国政府及任何官方机构均无关联、不代表其立场。'
+        + '仅供学习、研究及公共讨论之用。'
+      ),
     },
     en: {
       title: 'UFO/UAP Disclosure Archive — Interactive Map',
@@ -128,6 +142,25 @@ const I18N = {
       tl_th_type: 'Type',
       tl_th_title: 'Title / Summary',
       tl_th_media: 'Media',
+      disclaimer_title: '📄 Disclaimer',
+      disclaimer_body: (
+        'All data on this site is sourced from the U.S. Department of War\'s '
+        + '<a href="https://www.war.gov/UFO/" target="_blank" rel="noopener">'
+        + 'UFO/UAP Disclosure Release 01</a>, published on 8 May 2026.'
+        + '<br><br>'
+        + 'Content is auto-indexed via OCR text recognition and scripted '
+        + 'extraction; <strong>accuracy is not guaranteed</strong>. '
+        + 'The original documents are the sole authoritative source — please '
+        + 'refer to the official files for any definitive information. '
+        + 'Known imperfections include: OCR errors, missed events, '
+        + 'date/location extraction mistakes, and occasional thumbnail/page mismatches.'
+        + '<br><br>'
+        + 'This is a <strong>free, non-commercial research project</strong>. '
+        + 'No advertising. No user data is collected. '
+        + 'This site is not affiliated with, endorsed by, or representative of '
+        + 'the U.S. government or any official agency. '
+        + 'Provided for educational, research, and public discussion purposes only.'
+      ),
     },
   },
 
@@ -141,7 +174,14 @@ const I18N = {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const k = el.getAttribute('data-i18n');
       const v = this.t(k);
-      if (v) el.textContent = v;
+      if (!v) return;
+      // If the key starts with 'html_' OR the element has data-i18n-html,
+      // treat translation as raw HTML; otherwise use textContent.
+      if (el.hasAttribute('data-i18n-html') || k.startsWith('html_')) {
+        el.innerHTML = v;
+      } else {
+        el.textContent = v;
+      }
     });
     // Placeholder attribute
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {

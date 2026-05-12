@@ -419,6 +419,50 @@ body.timeline-page #topbar h1 a.back-link {
 hr { border: 0; border-top: 1px solid #2a3a5a; margin: 16px 0; }
 .footer { font-size: 11px; color: #6a7c9c; }
 .footer a { color: #82b9ff; }
+
+/* Disclaimer block in sidebar footer */
+.disclaimer {
+  margin-top: 14px;
+  font-size: 10.5px;
+  line-height: 1.55;
+  color: #8fa3c4;
+}
+.disclaimer > summary {
+  cursor: pointer;
+  color: #82b9ff;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 8px;
+  background: rgba(130, 185, 255, 0.06);
+  border: 1px solid rgba(130, 185, 255, 0.2);
+  border-radius: 3px;
+  user-select: none;
+  list-style: none;
+}
+.disclaimer > summary::-webkit-details-marker { display: none; }
+.disclaimer > summary:hover {
+  background: rgba(130, 185, 255, 0.12);
+}
+.disclaimer[open] > summary {
+  border-bottom-color: transparent;
+  border-radius: 3px 3px 0 0;
+}
+.disclaimer-body {
+  padding: 10px 10px 8px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(130, 185, 255, 0.2);
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+  color: #a8b8d4;
+}
+.disclaimer-body strong {
+  color: #c8d6f0;
+}
+.disclaimer-body a {
+  color: #82b9ff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .footer a.nav-link {
   display: inline-block;
   margin-bottom: 6px;
