@@ -103,6 +103,55 @@ label.cb input { margin-right: 6px; }
   padding: 2px 0; border-bottom: 1px solid #1a2745;
 }
 details summary { cursor: pointer; color: #82b9ff; padding: 4px 0; }
+
+/* Other Events panel */
+#other-events-panel details summary {
+  font-size: 12px; color: #82b9ff; padding: 6px 0;
+  user-select: none;
+}
+.other-events-badge {
+  color: #6a7c9c; font-size: 11px; margin-left: 4px;
+}
+.other-events-list {
+  max-height: 280px; overflow-y: auto; margin-top: 6px;
+  background: rgba(0,0,0,0.2); padding: 4px;
+  border: 1px solid #2a3a5a; border-radius: 3px;
+}
+.other-row {
+  padding: 6px 8px; border-bottom: 1px solid #1a2745;
+  cursor: pointer;
+  transition: background 0.12s;
+  font-size: 11px;
+}
+.other-row:last-child { border-bottom: none; }
+.other-row:hover {
+  background: rgba(130, 185, 255, 0.12);
+}
+.other-row-line {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.other-date {
+  color: #82b9ff; font-weight: 600; font-variant-numeric: tabular-nums;
+}
+.other-icons { font-size: 11px; opacity: 0.85; }
+.other-loc {
+  color: #e8eef9; margin-top: 2px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.other-meta {
+  color: #6a7c9c; font-size: 10px; margin-top: 1px;
+}
+
+/* Media block (image / video) inside detail panel */
+.media-block {
+  margin: 12px 0; padding: 8px;
+  background: rgba(0,0,0,0.3);
+  border-left: 3px solid #82b9ff;
+  border-radius: 3px;
+}
+.media-block-title {
+  font-size: 12px; color: #c8d6f0; margin-bottom: 6px;
+}
 hr { border: 0; border-top: 1px solid #2a3a5a; margin: 16px 0; }
 .footer { font-size: 11px; color: #6a7c9c; }
 .footer a { color: #82b9ff; }

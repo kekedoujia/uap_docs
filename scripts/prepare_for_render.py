@@ -20,58 +20,160 @@ SITE = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DATA = os.path.join(SITE, "data")
 ARCHIVES = os.path.join(SITE, "archives")
 RECORDS_JSON = os.path.join(SITE, "records.json")
+DVIDS_JSON = os.path.join(SITE, "dvids_metadata.json")
 
 
 def load_archive_url_map():
-    """Build {filename → original public URL} from records.json."""
+    """Build {filename → {archive_url, image_url, type, record_title, description}}
+    from records.json."""
     if not os.path.exists(RECORDS_JSON):
         print(f"[prepare] WARNING: {RECORDS_JSON} not found, "
               f"cannot rewrite to external URLs")
         return {}
     with open(RECORDS_JSON, encoding="utf-8") as f:
         records = json.load(f)
-    url_map = {}
+    info_map = {}
     for r in records:
         link = r.get("main_link", "")
         if not link:
             continue
         fname = os.path.basename(link)
-        url_map[fname.lower()] = link
-    return url_map
+        # Earlier entries win (PDF rows tend to be more canonical than paired VID rows)
+        info_map.setdefault(fname.lower(), {
+            "archive_url": link,
+            "image_url": (r.get("modal_image") or "").strip(),
+            "record_type": r.get("type", ""),
+            "record_title": (r.get("title") or "").strip(),
+            "description": (r.get("description") or "").strip(),
+        })
+    return info_map
 
 
-def rewrite_event_batches(url_map):
-    """Rewrite archive_url field in every event batch JSON."""
+# Locations that are either outer-space, broadcast media, or too vague
+# to render as a single point on the map. They show in the "Other" panel.
+NON_GEOGRAPHIC_LOCATIONS = {
+    "moon",
+    "low earth orbit",
+    "pacific ocean",
+    "pacific time zone (us)",
+    "pacific time zone",
+    "indopacom (indo-pacific)",
+    "indopacom",
+    "indo-pacom",
+    "western united states",
+    "united states (general)",
+    "southern united states",
+    "middle east",
+    "middle east (general)",
+    "united states",
+    "television broadcast (us)",
+    "affidavit (gen. du bose, retired)",
+    "television (lt. col. marcel testimony)",
+    "washington, d.c. (gao)",
+}
+
+
+def load_video_info_map():
+    """Build {filename or title → video info} for events with paired DVIDS videos.
+
+    Returns dict keyed by lowercase filename. Each value is:
+      {video_url, dvids_id, video_title, dvids_page}
+    """
+    if not os.path.exists(RECORDS_JSON) or not os.path.exists(DVIDS_JSON):
+        return {}
+    with open(RECORDS_JSON, encoding="utf-8") as f:
+        records = json.load(f)
+    with open(DVIDS_JSON, encoding="utf-8") as f:
+        dvids = json.load(f)
+
+    # records.json has both PDF rows and VID rows that share the same PDF link
+    # but have different titles. Both rows have dvids_video_id pointing at the
+    # same video. Pivot: filename → dvids_video_id (use the first non-empty).
+    file_to_dvids = {}
+    for r in records:
+        dvids_id = (r.get("dvids_video_id") or "").strip()
+        if not dvids_id:
+            continue
+        link = r.get("main_link", "")
+        if link:
+            fname = os.path.basename(link).lower()
+            file_to_dvids.setdefault(fname, dvids_id)
+
+    # Build the output map
+    info_map = {}
+    for fname, dvids_id in file_to_dvids.items():
+        meta = dvids.get(dvids_id)
+        if not meta:
+            continue
+        info_map[fname] = {
+            "video_url": meta.get("best_mp4_src", ""),
+            "dvids_id": dvids_id,
+            "video_title": meta.get("title", ""),
+            "dvids_page": f"https://www.dvidshub.net/video/{dvids_id}",
+            "captions_vtt": meta.get("captions_webvtt", ""),
+            "duration": meta.get("duration"),
+        }
+    return info_map
+
+
+def rewrite_event_batches(info_map, video_map):
+    """For each event:
+      - rewrite archive_url to point to war.gov
+      - attach image_url (thumbnail)
+      - attach paired DVIDS video info if available
+      - flag non_geographic locations (Moon, generic regions, etc.)
+    """
     events_dir = os.path.join(DATA, "events")
     if not os.path.isdir(events_dir):
         print(f"[prepare] {events_dir} missing — skip rewrite")
         return
-    total_rewritten = 0
-    total_untouched = 0
+    totals = {"external": 0, "image": 0, "video": 0, "non_geo": 0}
     for fn in sorted(os.listdir(events_dir)):
         if not fn.endswith(".json"):
             continue
         path = os.path.join(events_dir, fn)
         with open(path, encoding="utf-8") as f:
             batch = json.load(f)
-        rewritten = 0
-        untouched = 0
+        counts = {"external": 0, "image": 0, "video": 0, "non_geo": 0}
         for ev in batch.get("events", []):
             fname = (ev.get("file") or "").lower()
-            external = url_map.get(fname)
-            if external:
-                # Only update if not already pointing to war.gov
-                if ev.get("archive_url") != external:
-                    ev["archive_url"] = external
-                rewritten += 1
-            else:
-                untouched += 1
+            info = info_map.get(fname)
+            if info:
+                if ev.get("archive_url") != info["archive_url"]:
+                    ev["archive_url"] = info["archive_url"]
+                counts["external"] += 1
+                if info.get("image_url"):
+                    ev["image_url"] = info["image_url"]
+                    counts["image"] += 1
+                if not ev.get("description") and info.get("description"):
+                    ev["record_description"] = info["description"]
+                if info.get("record_type"):
+                    ev["record_type"] = info["record_type"]
+            # Attach paired video
+            vinfo = video_map.get(fname)
+            if vinfo and vinfo.get("video_url"):
+                ev["video_url"] = vinfo["video_url"]
+                ev["dvids_id"] = vinfo["dvids_id"]
+                ev["video_title"] = vinfo["video_title"]
+                ev["dvids_page"] = vinfo["dvids_page"]
+                if vinfo.get("captions_vtt"):
+                    ev["video_captions_vtt"] = vinfo["captions_vtt"]
+                counts["video"] += 1
+            # Flag non-geographic
+            loc_key = (ev.get("location") or "").lower().strip()
+            if loc_key in NON_GEOGRAPHIC_LOCATIONS:
+                ev["non_geographic"] = True
+                counts["non_geo"] += 1
         with open(path, "w", encoding="utf-8") as f:
             json.dump(batch, f, indent=2, ensure_ascii=False)
-        total_rewritten += rewritten
-        total_untouched += untouched
-        print(f"[prepare] {fn}: external={rewritten} kept-as-is={untouched}")
-    print(f"[prepare] DONE. Total: external={total_rewritten} kept-as-is={total_untouched}")
+        for k, v in counts.items():
+            totals[k] += v
+        print(f"[prepare] {fn}: external={counts['external']} "
+              f"images={counts['image']} videos={counts['video']} "
+              f"non_geo={counts['non_geo']}")
+    print(f"[prepare] TOTALS: external={totals['external']} "
+          f"images={totals['image']} videos={totals['video']} "
+          f"non_geographic={totals['non_geo']}")
 
 
 def note_archive_symlinks():
@@ -88,11 +190,14 @@ def note_archive_symlinks():
 
 def main():
     print(f"[prepare] SITE={SITE}")
-    url_map = load_archive_url_map()
-    if not url_map:
-        print("[prepare] No URL map → keeping existing archive_url values")
+    info_map = load_archive_url_map()
+    video_map = load_video_info_map()
+    print(f"[prepare] file→{{url,image,...}} map: {len(info_map)} entries")
+    print(f"[prepare] file→paired-video map: {len(video_map)} entries")
+    if not info_map:
+        print("[prepare] No info map → keeping existing values")
         return
-    rewrite_event_batches(url_map)
+    rewrite_event_batches(info_map, video_map)
     note_archive_symlinks()
     # Final size check
     total = 0

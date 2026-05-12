@@ -1,0 +1,1178 @@
+{
+  "1006119": {
+    "video_id": "1006119",
+    "title": "NASA Audio 12/5/1965 Low Earth Orbit",
+    "description": "This audio recording contains air to ground communications and the NASA Public Affairs audio feed with commentary, recorded during the flight of the Gemini VII mission. In this excerpted segment of audio, Astronaut Frank Borman reports to NASA mission control in Houston his sighting of an unidentified object, which he referred to as a \"bogey.\" This sighting occurred on December 5, 1965. The dialogue includes Borman's initial report, as well as additional comments by Astronaut Jim Lovell, Borman's fellow crew member.",
+    "date": "1965-12-04T00:00:00-05:00",
+    "virin": "651206-D-D0360-1065",
+    "duration": 371,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689232/DOD_111689232.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1006119&format=srt&api_key=key-68bb60d16b35e",
+    "captions_webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1006119&format=webvtt&api_key=key-68bb60d16b35e",
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689232/DOD_111689232.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689232/DOD_111689232-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689232/DOD_111689232-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689232/DOD_111689232-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689232/DOD_111689232-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689232/DOD_111689232-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689232/DOD_111689232-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006060": {
+    "video_id": "1006060",
+    "title": "DOW-UAP-PR22, Unresolved UAP Report, Syria, July 2022",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon (UAP) to the All-domain Anomaly Resolution Office (AARO) consisting of 14 seconds of video footage from an infrared (left) and electro-optical (right) sensor aboard a U.S. military platform in 2022. An accompanying mission report, DoW-UAP-D16, described the UAP as \u201cmoving from north to south.\u201d\r\n\r\nVideo Description: At the five second mark, the video depicts an object moving from right to left across the top right quarter of the sensor field-of-view.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2022-07-01T00:00:00-04:00",
+    "virin": "220701-D-D0360-5363",
+    "duration": 14,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688775/DOD_111688775.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688775/DOD_111688775.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688775/DOD_111688775-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688775/DOD_111688775-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688775/DOD_111688775-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688775/DOD_111688775-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688775/DOD_111688775-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688775/DOD_111688775-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006062": {
+    "video_id": "1006062",
+    "title": "DOW-UAP-PR23, Unresolved UAP Report, Iraq, December 2022",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of ten seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022. An accompanying mission report, DoW-UAP-D18, described the UAP as \"flying west to east.\"\r\n\r\nVideo Description: The video depicts an area of contrast moving from the bottom left to the top right of the sensor field-of-view. At approximately six seconds, the area of contrast leaves the sensor field-of-view near the top right corner of the frame.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2022-12-01T00:00:00-05:00",
+    "virin": "221201-D-D0360-5883",
+    "duration": 10,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688809/DOD_111688809.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688809/DOD_111688809.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688809/DOD_111688809-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688809/DOD_111688809-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688809/DOD_111688809-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688809/DOD_111688809-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688809/DOD_111688809-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688809/DOD_111688809-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006059": {
+    "video_id": "1006059",
+    "title": "DOW-UAP-PR21, Unresolved UAP Report, Iraq, May 2022",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon (UAP) to the All-domain Anomaly Resolution Office (AARO) consisting of ten seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022. An accompanying mission report, DoW-UAP-D14, described the UAP as a \u201cprobable SU-27/35.\" \r\n\r\nVideo Description: The video depicts two areas of contrast moving together near the center of the field-of-view throughout the runtime.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.\r\n\r\nAARO Comment: SU-27 and SU-35 are designations for military aircraft operated by the Armed Forces of the Russian Federation.",
+    "date": "2022-05-01T00:00:00-04:00",
+    "virin": "220501-D-D0360-5022",
+    "duration": 10,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688762/DOD_111688762.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688762/DOD_111688762.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688762/DOD_111688762-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688762/DOD_111688762-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688762/DOD_111688762-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688762/DOD_111688762-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688762/DOD_111688762-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688762/DOD_111688762-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006056": {
+    "video_id": "1006056",
+    "title": "DOW-UAP-PR19, Unresolved UAP Report, Middle East, May 2022",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of five seconds of video footage from an infrared sensor aboard a U.S. military platform in 2022. An accompanying mission report, DoW-UAP-D10, described the observation as a \u201cpossible missile\u201d moving across the field-of-view. The report also described four other objects not depicted in the video as \u201cpossible birds.\u201d\r\n\r\nVideo Description: At the two second mark, the video depicts an area of contrast moving from left to right across the bottom third of the sensor field-of-view.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2022-05-01T00:00:00-04:00",
+    "virin": "220501-D-D0360-6497",
+    "duration": 5,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688723/DOD_111688723.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688723/DOD_111688723.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688723/DOD_111688723-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688723/DOD_111688723-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688723/DOD_111688723-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688723/DOD_111688723-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688723/DOD_111688723-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688723/DOD_111688723-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006063": {
+    "video_id": "1006063",
+    "title": "DOW-UAP-PR26, Unresolved UAP Report, United Arab Emirates, October 2023",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon (UAP) to the All-domain Anomaly Resolution Office (AARO) consisting of a still image derived from a U.S. military system in 2022. The original reporter digitally altered the imagery by adding a red line encircling an area of interest before submitting it to AARO. An accompanying mission report, DoW-UAP-D12, described the UAP as moving from north to northeast. The operator reported that they were unable to positively identify the UAP.\r\n\r\nImage Description: The image contains an encircled, elongated area of contrast in the top left quarter. The area of contrast increases in intensity along its length from top left to bottom right.\r\n\r\nThis image description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2023-10-01T00:00:00-04:00",
+    "virin": "231001-D-D0360-8883",
+    "duration": 43,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688816/DOD_111688816.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688816/DOD_111688816.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688816/DOD_111688816-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688816/DOD_111688816-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688816/DOD_111688816-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688816/DOD_111688816-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688816/DOD_111688816-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688816/DOD_111688816-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006078": {
+    "video_id": "1006078",
+    "title": "DOW-UAP-PR32, Unresolved UAP Report, Syria, October 2024",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon (UAP) to the All-domain Anomaly Resolution Office (AARO) consisting of six seconds of video footage from a full-motion video (FMV) camera aboard a U.S. military platform in 2024. An accompanying mission report, DoW-UAP-D32, described the UAP as consisting of a \u201cmisshapen and uneven ball of white light,\u201d and reported that a \u201clight/glare halo effect\u201d occurred at the top of the FMV feed.\r\n\r\nVideo Description:\r\n00:02-00:04: An area of irregular color and brightness, mainly consisting of white and red highlights, appears near the center of the top edge of the sensor display. The area extends to a width of approximately one-third of the horizontal frame, with a vertical area comprising approximately one-sixth of the viewing area. Overall, its shape is best described as a horizontally-oriented half-oval bisected along its major axis.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2024-10-01T00:00:00-04:00",
+    "virin": "241002-D-D0360-2794",
+    "duration": 6,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688997/DOD_111688997.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688997/DOD_111688997.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688997/DOD_111688997-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688997/DOD_111688997-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688997/DOD_111688997-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688997/DOD_111688997-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688997/DOD_111688997-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688997/DOD_111688997-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006076": {
+    "video_id": "1006076",
+    "title": "DOW-UAP-PR31, Unresolved UAP Report, Syria, October 2024",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon (UAP) to the All-domain Anomaly Resolution Office (AARO) consisting of five seconds of video footage from a full-motion video (FMV) camera aboard a U.S. military platform in 2024. An accompanying mission report, DoW-UAP-D32, described the UAP as consisting of a \u201cmisshapen and uneven ball of white light,\u201d and reported that a \u201clight/glare halo effect\u201d occurred at the top of the FMV feed.\r\n\r\nVideo Description:\r\n00:00-00:01: An indistinctly shaped multi-colored area moves from right to left across the top edge of the sensor display within the first second of the video.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2024-10-01T00:00:00-04:00",
+    "virin": "241002-D-D0360-8752",
+    "duration": 5,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688970/DOD_111688970.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688970/DOD_111688970.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688970/DOD_111688970-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688970/DOD_111688970-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688970/DOD_111688970-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688970/DOD_111688970-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688970/DOD_111688970-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688970/DOD_111688970-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006082": {
+    "video_id": "1006082",
+    "title": "DOW-UAP-PR35, Unresolved UAP Report, Greece, October 2023",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon (UAP) to the All-domain Anomaly Resolution Office (AARO) consisting of 24 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2023. An accompanying mission report, DoW-UAP-D35, described the UAP as small and circular, flying near the surface of the ocean toward land.\r\n\r\nVideo Description:\r\n00:02: The sensor narrows its field-of-view to zoom in on an area of contrast near the center of the screen.\r\n00:03-00:19: The sensor tracks the area of contrast as it moves against the ocean background.\r\n00:20: As the background scene transitions from being predominantly water to land, the area of contrast becomes indistinguishable.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2023-10-01T00:00:00-04:00",
+    "virin": "231002-D-D0360-7307",
+    "duration": 24,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689022/DOD_111689022-1920x1080-9000k.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689022/DOD_111689022-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689022/DOD_111689022-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689022/DOD_111689022-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689022/DOD_111689022-1024x576-2000k.mp4"
+      },
+      {
+        "height": 444,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689022/DOD_111689022.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689022/DOD_111689022-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689022/DOD_111689022-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006080": {
+    "video_id": "1006080",
+    "title": "DOW-UAP-PR34, Unresolved UAP Report, Greece, October 2023",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon (UAP) to the All-domain Anomaly Resolution Office (AARO) consisting of two minutes and 57 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2023. An accompanying mission report, DoW-UAP-D33, described the UAP as flying near the surface of the ocean and making multiple \u201c90-degree turns\u201d at approximately 80 miles per hour.\r\n\r\nVideo Description:\r\n00:04: An area of contrast enters the sensor field-of-view from the bottom left quarter of the screen.\r\n00:07-00:19: The area of contrast moves back and forth horizontally across the field-of-view as the sensor pans to track it.\r\n00:20-01:00: The area of contrast remains generally centered within the sensor field-of-view.\r\n01:00-02:01: The sensor designates the area of contrast with a blue reticle, synchronizing its motion with the area of contrast\u2019s relative position.\r\n02:02-02:21: The sensor engages a contrast filter to better differentiate the area of contrast from the background.\r\n02:22: The area of contrast becomes indistinguishable against the background, and the reticle drops its lock.\r\n02:27-02:57: After losing lock, the sensor rapidly cycles zoom levels and contrast thresholds.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2023-10-01T00:00:00-04:00",
+    "virin": "231002-D-D0360-6858",
+    "duration": 177,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689011/DOD_111689011.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689011/DOD_111689011.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689011/DOD_111689011-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689011/DOD_111689011-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689011/DOD_111689011-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689011/DOD_111689011-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689011/DOD_111689011-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689011/DOD_111689011-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006067": {
+    "video_id": "1006067",
+    "title": "DOW-UAP-PR27, Unresolved UAP Report, United Arab Emirates, October 2023",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of four minutes and 57 seconds of video footage from an infrared (IR) sensor aboard a U.S. military platform in 2023. An accompanying mission report, DoW-UAP-D23, mentions a UAP was observed during the mission.\r\n\r\nVideo Description:\r\n00:00-01:55: No content.\r\n01:56: An area of contrast becomes distinguishable against the background in the center of the right side of the display.\r\n02:04: The IR sensor pans to center on the area of contrast.\r\n02:14: The sensor field-of-view narrows to zoom in on the area of contrast.\r\n02:15-03:26: The area of contrast remains generally in the center of the sensor field-of-view. \r\n03:27-04:57: The sensor motion causes the area of contrast to move erratically across the display. Due to this motion, the sensor system repeatedly loses and reacquires the area of contrast within the center area of the display.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2023-10-01T00:00:00-04:00",
+    "virin": "231001-D-D0360-9929",
+    "duration": 297,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688825/DOD_111688825.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688825/DOD_111688825.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688825/DOD_111688825-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688825/DOD_111688825-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688825/DOD_111688825-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688825/DOD_111688825-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688825/DOD_111688825-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688825/DOD_111688825-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006079": {
+    "video_id": "1006079",
+    "title": "DOW-UAP-PR33, Unresolved UAP Report, Syria, October 2024",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon (UAP) to the All-domain Anomaly Resolution Office (AARO) consisting of five seconds of video footage from a full-motion video (FMV) camera aboard a U.S. military platform in 2024. An accompanying mission report, DoW-UAP-D32, described the UAP as consisting of a \u201cmisshapen and uneven ball of white light,\u201d and reported that a \u201clight/glare halo effect\u201d occurred at the top of the FMV feed.\r\n\r\nVideo Description:\r\n00:01-00:03: Two semi-transparent, irregularly shaped orange areas overlay the background imagery, persisting for less than two seconds each.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2024-10-01T00:00:00-04:00",
+    "virin": "241002-D-D0360-6161",
+    "duration": 5,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689005/DOD_111689005.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689005/DOD_111689005.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689005/DOD_111689005-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689005/DOD_111689005-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689005/DOD_111689005-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689005/DOD_111689005-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689005/DOD_111689005-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689005/DOD_111689005-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006073": {
+    "video_id": "1006073",
+    "title": "DOW-UAP-PR28, Unresolved UAP Report, Greece, January 2024",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon (UAP) to the All-domain Anomaly Resolution Office (AARO) consisting of one minute and five seconds of video footage captured via multiple sensor modalities aboard a U.S. military platform in 2024. An accompanying mission report, DoW-UAP-D7, described the UAP as \u201cdiamond-shaped\u201d and moving at approximately 434 knots. The observer also reported that the UAP was only detectable via short-wave infrared (SWIR) sensor.\r\n\r\nVideo Description: The screen is split into two viewing areas for the first ten seconds of the video, with the right side displaying electro-optical footage and the left side displaying SWIR footage.\r\n00:04: An area of contrast becomes distinguishable against the background in the center of the right frame.\r\n00:10: The display shifts to a full-screen view of the SWIR feed to better focus on the area of contrast.\r\n00:55: The area of contrast remains generally within the center of the sensor field-of-view. The area of contrast visually resembles an inverted teardrop with a vertically linear trailing mass suspended below.\r\n00:56: The operator switches the sensor modality to visible spectrum, losing the subject against the background.\r\n00:57-01:05: The operator switches the sensor modality to SWIR (Black-Hot) but does not reacquire the area of contrast.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2024-01-01T00:00:00-05:00",
+    "virin": "240102-D-D0360-7887",
+    "duration": 66,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688954/DOD_111688954.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688954/DOD_111688954.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688954/DOD_111688954-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688954/DOD_111688954-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688954/DOD_111688954-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688954/DOD_111688954-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688954/DOD_111688954-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688954/DOD_111688954-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006087": {
+    "video_id": "1006087",
+    "title": "DOW-UAP-PR37, Unresolved UAP Report, Middle East, 2020",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of nine seconds of video footage from an infrared sensor aboard a U.S. military platform in 2020. The reporter did not provide any oral or written description of the observation.\r\n\r\nVideo Description:\r\n00:06-00:08: An area of contrast enters the sensor field-of-view from the bottom left quarter of the screen, follows a generally linear path from the bottom of the screen to the top, and exits from the top left quarter.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2020-01-01T00:00:00-05:00",
+    "virin": "200102-D-D0360-9165",
+    "duration": 9,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689044/DOD_111689044.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689044/DOD_111689044.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689044/DOD_111689044-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689044/DOD_111689044-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689044/DOD_111689044-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689044/DOD_111689044-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689044/DOD_111689044-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689044/DOD_111689044-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006088": {
+    "video_id": "1006088",
+    "title": "DOW-UAP-PR38, Unresolved UAP Report, Middle East, 2013",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of one minute and 46 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2013. The reporter did not provide any oral or written description of the observation.\r\n\r\nVideo Description: This video depicts an area of contrast resembling an eight-pointed star with arms of alternating length.\r\n00:10: The sensor field-of-view narrows to zoom in on the area of contrast.\r\n00:11-00:29: The area of contrast moves within the sensor field-of-view, followed by a visible trail.\r\n00:30: The area of contrast leaves the sensor field-of-view at the bottom right of the screen.\r\n00:35-01:44: Following an apparent cut, the area of contrast generally remains within the sensor field-of-view before exiting the frame from the top left quarter of the screen.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2013-01-01T00:00:00-05:00",
+    "virin": "130102-D-D0360-8893",
+    "duration": 106,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689051/DOD_111689051.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689051/DOD_111689051.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689051/DOD_111689051-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689051/DOD_111689051-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689051/DOD_111689051-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689051/DOD_111689051-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689051/DOD_111689051-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689051/DOD_111689051-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006083": {
+    "video_id": "1006083",
+    "title": "DOW-UAP-PR36, Unresolved UAP Report, Middle East, May 2020",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon (UAP) to the All-domain Anomaly Resolution Office (AARO) consisting of two minutes and 17 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2020. An accompanying Range Fouler report, DoW-UAP-D38, described the UAP as a solid white object making erratic movements above the water.\r\n\r\nVideo Description:\r\n00:05: An area of contrast briefly enters the sensor field-of-view from the left side of the screen.\r\n00:06-00:18: The sensor pans away from the scene\u2019s initial subject matter while cycling contrast settings and zoom levels.\r\n00:19: The area of contrast re-enters the sensor field-of-view from near the center of the top edge of the screen.\r\n00:20-01:15: The area of contrast remains generally within the sensor field-of-view.\r\n01:16: The sensor narrows its field-of-view to zoom in on the area of contrast.\r\n01:56: The sensor further narrows its field-of-view to zoom in on the area of contrast.\r\n02:10: A blue reticle briefly appears on screen but does not acquire a lock on the area of contrast.\r\n02:15-02:17: The sensor switches to a different modality and loses track of the area of contrast.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2020-05-01T00:00:00-04:00",
+    "virin": "200502-D-D0360-5343",
+    "duration": 137,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689030/DOD_111689030.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689030/DOD_111689030.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689030/DOD_111689030-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689030/DOD_111689030-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689030/DOD_111689030-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689030/DOD_111689030-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689030/DOD_111689030-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689030/DOD_111689030-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006089": {
+    "video_id": "1006089",
+    "title": "DOW-UAP-PR39, Unresolved UAP Report, Middle East, 2020",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of five seconds of video footage from an infrared sensor aboard a U.S. military platform in 2020. The reporter did not provide any oral or written description of the observation.\r\n\r\nVideo Description:\r\n00:03-00:05: A faint area of contrast enters the sensor field-of-view from the bottom half of the right edge of the screen, proceeds from right to left across the corner of the frame, and exits the scene from near the center of the bottom edge of the screen.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2020-01-01T00:00:00-05:00",
+    "virin": "200102-D-D0360-2155",
+    "duration": 5,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689057/DOD_111689057.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689057/DOD_111689057.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689057/DOD_111689057-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689057/DOD_111689057-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689057/DOD_111689057-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689057/DOD_111689057-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689057/DOD_111689057-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689057/DOD_111689057-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006093": {
+    "video_id": "1006093",
+    "title": "DOW-UAP-PR40, Unresolved UAP Report, Middle East, 2020",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of one minute and three seconds of video footage from an infrared sensor aboard a U.S. military platform in 2020. The original reporter digitally altered the imagery by pausing the video playback and adding a white line encircling an area of interest at timestamp 00:10, annotated with the phrase \u201cU/I SMALL THERMAL SIGNATURE.\u201d AARO did not edit the originally reported material, and this media is presented as received.\r\n\r\nVideo Description:\r\n00:00-00:09: An area of contrast brightens within the sensor field-of-view, becoming increasingly distinct against the background.\r\n00:10-00:14: Playback pauses to display a white line encircling an area of interest, annotated with the phrase \u201cU/I SMALL THERMAL SIGNATURE.\u201d\r\n00:15-01:03: Playback resumes, with the sensor panning to track the area of contrast against the background, generally maintaining the area of contrast\u2019s position within the top third of the display area. During this period, the sensor cycles through several contrast and zoom settings.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2020-01-01T00:00:00-05:00",
+    "virin": "200102-D-D0360-7746",
+    "duration": 63,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689082/DOD_111689082.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689082/DOD_111689082.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689082/DOD_111689082-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689082/DOD_111689082-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689082/DOD_111689082-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689082/DOD_111689082-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689082/DOD_111689082-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689082/DOD_111689082-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006074": {
+    "video_id": "1006074",
+    "title": "DOW-UAP-PR29, Unresolved UAP Report, United Arab Emirates, June 2024",
+    "description": "The United States Northern Command submitted a report of an unidentified anomalous phenomenon (UAP) to the All-domain Anomaly Resolution Office (AARO) consisting of 21 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2024. An accompanying mission report, DoW-UAP-D8, described the UAP as consisting of an object with a vertical pole or bar attached to the bottom of the object. The observer also reported that the UAP may instead be a reflection from an object in the water.\r\n\r\nVideo Description:\r\n00:00-00:21: An area of contrast visually resembling an inverted teardrop with a vertically linear trailing mass suspended below remains generally within the center of the sensor field-of-view throughout the video.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2024-06-01T00:00:00-04:00",
+    "virin": "240602-D-D0360-1039",
+    "duration": 21,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688964/DOD_111688964.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688964/DOD_111688964.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688964/DOD_111688964-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688964/DOD_111688964-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688964/DOD_111688964-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688964/DOD_111688964-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688964/DOD_111688964-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111688964/DOD_111688964-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006097": {
+    "video_id": "1006097",
+    "title": "DOW-UAP-PR42, Unresolved UAP Report, Middle East, 2020",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of four minutes and 53 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2020. The reporter did not provide any oral or written description of the observation.\r\n\r\nVideo Description:\r\n00:00-00:12: An area of contrast enters the sensor field-of-view from the bottom left corner of the frame. The sensor pans to track the area of contrast, keeping it generally within the lower left quadrant of the frame.\r\n00:13-00:40: The area of contrast intermittently loses distinctiveness against the background, seeming to disappear and reappear irregularly.\r\n00:41: The sensor narrows its field-of-view to zoom in on the area of contrast.\r\n00:42-00:52: An area of contrast exits the sensor field-of-view from the left half of the top of the frame, after which the sensor pans up and to the left.\r\n00:53-02:09: The sensor pans erratically, with an area of contrast appearing in a relatively fixed position to the left and slightly below the center of the frame.\r\n02:09-02:29: The sensor switches imaging modalities, and the area of contrast appears to the right and slightly above the center of the frame.\r\n02:30-04:53: The sensor switches imaging modalities again, and the area of contrast returns to its previous position to the left and slightly below the center of the frame.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2020-01-01T00:00:00-05:00",
+    "virin": "200102-D-D0360-6218",
+    "duration": 293,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689090/DOD_111689090.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689090/DOD_111689090.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689090/DOD_111689090-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689090/DOD_111689090-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689090/DOD_111689090-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689090/DOD_111689090-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689090/DOD_111689090-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689090/DOD_111689090-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006105": {
+    "video_id": "1006105",
+    "title": "DOW-UAP-PR45, Unresolved UAP Report, Middle East, 2020",
+    "description": "The Department of the Air Force submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of 58 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2020. The reporter did not provide any oral or written description of the observation.\r\n\r\nVideo Description:\r\n00:00-00:03: The sensor tracks an area of contrast acquiring a reticle lock.\r\n00:04-00:30: The area of contrast gradually increases in distinctiveness against the background.\r\n00:31: The sensor narrows its field-of-view to zoom in on the area of contrast.\r\n00:32-00:56: The area of contrast increases in apparent size and distinctiveness.\r\n00:57-00:58: The area of contrast leaves the center of the frame and passes out of the sensor field-of-view, exiting the scene in the bottom right corner of the screen.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.\r\n\r\nAARO Comment: The area of contrast\u2019s apparent increase in size is likely to be at least partially attributable to the U.S. platform closing the distance between itself and the source of the detection.",
+    "date": "2020-01-01T00:00:00-05:00",
+    "virin": "200102-D-D0360-7322",
+    "duration": 58,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689123/DOD_111689123.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689123/DOD_111689123.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689123/DOD_111689123-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689123/DOD_111689123-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689123/DOD_111689123-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689123/DOD_111689123-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689123/DOD_111689123-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689123/DOD_111689123-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006094": {
+    "video_id": "1006094",
+    "title": "DOW-UAP-PR41, Unresolved UAP Report, Middle East, 2020",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of one minute and 34 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2020. The reporter did not provide any oral or written description of the observation.\r\n\r\nVideo Description:\r\n00:01: An area of contrast enters the sensor field-of-view from the bottom third of the left side of the screen.\r\n00:02-01:34: The sensor pans from left to right, tracking the area of contrast and keeping it generally centered within the field-of-view.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2020-01-01T00:00:00-05:00",
+    "virin": "200102-D-D0360-9704",
+    "duration": 94,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689083/DOD_111689083.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689083/DOD_111689083.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689083/DOD_111689083-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689083/DOD_111689083-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689083/DOD_111689083-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689083/DOD_111689083-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689083/DOD_111689083-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689083/DOD_111689083-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006106": {
+    "video_id": "1006106",
+    "title": "DOW-UAP-PR46, Unresolved UAP Report, INDOPACOM, 2024",
+    "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of nine seconds of video footage from an infrared sensor aboard a U.S. military platform in 2024. The reporter did not provide any oral or written description of the observation.\r\n\r\nVideo Description:\r\n00:00-00:09: The sensor focuses on an area of contrast that resembles a football-shaped body with three radial projections: one oriented vertically, and two oriented downward at a 45-degree angle relative to the major axis of the main mass.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2024-01-01T00:00:00-05:00",
+    "virin": "240102-D-D0360-7891",
+    "duration": 9,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689133/DOD_111689133.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689133/DOD_111689133.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689133/DOD_111689133-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689133/DOD_111689133-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689133/DOD_111689133-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689133/DOD_111689133-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689133/DOD_111689133-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689133/DOD_111689133-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006104": {
+    "video_id": "1006104",
+    "title": "DOW-UAP-PR44, Unresolved UAP Report, Middle East, 2020",
+    "description": "The United States Central Command submitted a report of an unidentified anomalous phenomenon (UAP) to the All-domain Anomaly Resolution Office (AARO) consisting of five minutes and 11 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2020. The reporter did not provide any oral or written description of the observation.\r\n\r\nVideo Description: This video features incidentally recorded audio, which does not relate to the visual content described below.\r\n00:00-00:30: No content.\r\n00:31-03:24: The sensor pans down and to the right to focus on an area of contrast. The sensor tracks the area of contrast against the background for approximately three minutes, panning to maintain its position generally within the center of the frame. The sensor cycles contrast and zoom levels several times throughout, appearing as brief, bright white flashes across the frame.\r\n03:25-04:23: The sensor cycles through reticles of various sizes while continuing to track the area of contrast. Between 04:20 and 04:23, the area of contrast briefly leaves the center of the sensor field-of-view.\r\n04:24-04:50: The sensor field-of-view widens to zoom out from the scene, continuing to track the area of contrast.\r\n04:50-04:54: The sensor stops tracking the area of contrast, at which point it exits the frame from the top left quadrant of the screen.\r\n04:55-05:11: No content.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2020-01-01T00:00:00-05:00",
+    "virin": "200102-D-D0360-8501",
+    "duration": 312,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689115/DOD_111689115.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689115/DOD_111689115.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689115/DOD_111689115-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689115/DOD_111689115-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689115/DOD_111689115-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689115/DOD_111689115-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689115/DOD_111689115-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689115/DOD_111689115-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006159": {
+    "video_id": "1006159",
+    "title": "DOW-UAP-PR43, Unresolved UAP Report, Africa, 2025",
+    "description": "The United States Africa Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of two seconds of video footage from an infrared sensor aboard a U.S. military platform in 2025. The reporter did not provide any oral or written description of the observation.\r\n \r\nVideo Description:00:00-00:02: A small, barely distinguishable area of contrast moves from the left side of the sensor field-of-view to the right side, exiting the scene from the bottom right quarter of the screen.\r\n \r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance. The video is looped for viewing purposes.",
+    "date": "2025-01-01T00:00:00-05:00",
+    "virin": "250101-D-D0360-6307",
+    "duration": 11,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689759/DOD_111689759.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689759/DOD_111689759.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689759/DOD_111689759-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689759/DOD_111689759-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689759/DOD_111689759-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689759/DOD_111689759-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689759/DOD_111689759-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689759/DOD_111689759-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006107": {
+    "video_id": "1006107",
+    "title": "DOW-UAP-PR47, Unresolved UAP Report, INDOPACOM, 2023",
+    "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of one minute and 59 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2023. The reporter did not provide any oral or written description of the observation.\r\n\r\nVideo Description:\r\n00:00-01:59: The sensor tracks three distinct areas of contrast, maintaining their positions generally within the center of the frame. The areas of contrast appear to maintain a fixed position and orientation relative to one another.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2023-01-01T00:00:00-05:00",
+    "virin": "230102-D-D0360-7088",
+    "duration": 119,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689142/DOD_111689142.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689142/DOD_111689142.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689142/DOD_111689142-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689142/DOD_111689142-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689142/DOD_111689142-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689142/DOD_111689142-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689142/DOD_111689142-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689142/DOD_111689142-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006110": {
+    "video_id": "1006110",
+    "title": "DOW-UAP-PR48, Unresolved UAP Report, INDOPACOM, 2024",
+    "description": "The United States Indo-Pacific Command submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of one minute and 39 seconds of video footage from an infrared sensor aboard a U.S. military platform in 2024. The reporter did not provide any oral or written description of the observation.\r\n\r\nVideo Description:\r\n00:00-01:39: The sensor tracks an area of contrast, maintaining its position generally within the center of the frame.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2024-01-01T00:00:00-05:00",
+    "virin": "240102-D-D0360-9234",
+    "duration": 99,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689167/DOD_111689167.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689167/DOD_111689167.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689167/DOD_111689167-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689167/DOD_111689167-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689167/DOD_111689167-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689167/DOD_111689167-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689167/DOD_111689167-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689167/DOD_111689167-256x144-1000k.mp4"
+      }
+    ]
+  },
+  "1006111": {
+    "video_id": "1006111",
+    "title": "DOW-UAP-PR49, Unresolved UAP Report, Department of the Army, 2026",
+    "description": "The Department of the Army submitted a report of an unidentified anomalous phenomenon to the All-domain Anomaly Resolution Office (AARO) consisting of one minute and 49 seconds of video from an infrared sensor aboard a U.S. military platform in 2026. The reporter did not provide any oral or written description of the observation.\r\n\r\nVideo Description:\r\n00:00-00:08: The sensor tracks an initial area of interest.\r\n00:09-00:16: The sensor disengages from its previous area of focus and pans from right to left to track two areas of contrast, narrowing the field-of-view to zoom in while panning to maintain the objects' positions generally within the center of the frame.\r\n00:17-01:03: The sensor widens its field-of-view to zoom out, keeping the areas of contrast generally centered within the display.\r\n01:04-01:08: The sensor field-of-view rapidly cycles between levels of zoom, causing the areas of contrast to appear to rapidly increase and decrease in size.\r\n01:09-01:48: The sensor tracks the areas of contrast while maintaining a generally centered position, intermittently cycling between contrast settings.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event\u2019s validity, nature, or significance.",
+    "date": "2026-01-01T00:00:00-05:00",
+    "virin": "260102-D-D0360-9604",
+    "duration": 109,
+    "best_mp4_src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689168/DOD_111689168.mp4",
+    "best_mp4_height": 1080,
+    "captions_srt": null,
+    "captions_webvtt": null,
+    "all_mp4s": [
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689168/DOD_111689168.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689168/DOD_111689168-1920x1080-9000k.mp4"
+      },
+      {
+        "height": 1080,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689168/DOD_111689168-1920x1080-6000k.mp4"
+      },
+      {
+        "height": 720,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689168/DOD_111689168-1280x720-3000k.mp4"
+      },
+      {
+        "height": 576,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689168/DOD_111689168-1024x576-2000k.mp4"
+      },
+      {
+        "height": 288,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689168/DOD_111689168-512x288-1000k.mp4"
+      },
+      {
+        "height": 144,
+        "src": "https://d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111689168/DOD_111689168-256x144-1000k.mp4"
+      }
+    ]
+  }
+}

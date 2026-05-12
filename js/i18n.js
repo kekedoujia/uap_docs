@@ -51,6 +51,7 @@ const I18N = {
       loading: '加载中…',
       visitor_you_are: '您是第',
       visitor_suffix: '位访客',
+      other_events_title: '其他事件（外太空 / 无具体地点）',
     },
     en: {
       title: 'UFO/UAP Disclosure Archive — Interactive Map',
@@ -96,6 +97,7 @@ const I18N = {
       loading: 'Loading…',
       visitor_you_are: 'You are visitor #',
       visitor_suffix: '',
+      other_events_title: 'Other events (outer space / unlocated)',
     },
   },
 

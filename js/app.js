@@ -178,18 +178,73 @@ function buildPopupHtml(e) {
 function buildDetailHtml(e) {
   const url = e.archive_url || '';
   const t = (k) => I18N.t(k);
+  const lang = (window.I18N && I18N.current) || 'zh';
+
+  // Thumbnail / image preview
+  let imageBlock = '';
+  if (e.image_url) {
+    imageBlock = `
+      <div class="media-block">
+        <a href="${escapeAttr(e.image_url)}" target="_blank" rel="noopener" title="${escapeHtml(e.image_url)}">
+          <img src="${escapeAttr(e.image_url)}" alt="thumbnail"
+               style="width:100%; max-height:240px; object-fit:contain;
+                      background:#000; border-radius:4px; cursor:zoom-in;"
+               onerror="this.parentElement.parentElement.style.display='none'">
+        </a>
+      </div>
+    `;
+  }
+
+  // Embedded video player if a paired DVIDS video is attached
+  let videoBlock = '';
+  if (e.video_url) {
+    const captionsTrack = e.video_captions_vtt
+      ? `<track kind="subtitles" src="${escapeAttr(e.video_captions_vtt)}" srclang="en" label="English" default>`
+      : '';
+    const playLabel = lang === 'en' ? '▶ Play video' : '▶ 播放视频';
+    const dvidsLabel = lang === 'en' ? 'DVIDS page ↗' : 'DVIDS 页面 ↗';
+    const captionVid = e.video_title || e.title || '';
+    videoBlock = `
+      <div class="media-block">
+        <div class="media-block-title">🎬 ${escapeHtml(captionVid)}</div>
+        <video controls preload="metadata" playsinline crossorigin="anonymous"
+               style="width:100%; max-height:260px; background:#000; border-radius:4px;">
+          <source src="${escapeAttr(e.video_url)}" type="video/mp4">
+          ${captionsTrack}
+        </video>
+        <div style="margin-top:6px;">
+          <a href="${escapeAttr(e.video_url)}" target="_blank" rel="noopener"
+             class="archive-link small">${escapeHtml(playLabel)}</a>
+          ${e.dvids_page ? `<a href="${escapeAttr(e.dvids_page)}" target="_blank"
+             rel="noopener" class="archive-link small"
+             style="margin-left:6px;">${escapeHtml(dvidsLabel)}</a>` : ''}
+        </div>
+      </div>
+    `;
+  }
+
+  const coordLabel = e.non_geographic
+    ? (lang === 'en' ? '(non-geographic)' : '(无具体坐标)')
+    : (e.lat != null ? `(${e.lat.toFixed(4)}, ${e.lon.toFixed(4)})` : '');
+
+  // Type label maps to record_type if present
+  const typeLabel = e.record_type || e.type || '';
+
   return `
     <h3>${escapeHtml(e.title || t('detail_no_title'))}</h3>
     <div class="date-badge">${e.date_iso}</div>
-    <div class="meta-row"><strong>${t('detail_location')}</strong>：${escapeHtml(e.location)} (${e.lat.toFixed(4)}, ${e.lon.toFixed(4)})</div>
+    <div class="meta-row"><strong>${t('detail_location')}</strong>：${escapeHtml(e.location)} ${coordLabel}</div>
     <div class="meta-row"><strong>${t('detail_agency')}</strong>：${escapeHtml(e.agency || '')}</div>
-    <div class="meta-row"><strong>${t('detail_type')}</strong>：${escapeHtml(e.type || '')}</div>
+    <div class="meta-row"><strong>${t('detail_type')}</strong>：${escapeHtml(typeLabel)}</div>
     <div class="meta-row"><strong>${t('detail_date_raw')}</strong>：${escapeHtml(e.date_raw || '')}</div>
     <div class="meta-row"><strong>${t('detail_source')}</strong>：${escapeHtml(e.source || '')}</div>
     <div class="meta-row"><strong>${t('detail_batch')}</strong>：${escapeHtml(e.batch_name)} (${e.release_date})</div>
     ${e.page ? `<div class="meta-row"><strong>${t('detail_page')}</strong>：${escapeHtml(String(e.page))}</div>` : ''}
 
-    <div class="full-text">${escapeHtml(e.title || '')}</div>
+    ${e.record_description ? `<div class="full-text">${escapeHtml(e.record_description)}</div>` : `<div class="full-text">${escapeHtml(e.title || '')}</div>`}
+
+    ${imageBlock}
+    ${videoBlock}
 
     ${url ? `<a class="archive-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">
        ${escapeHtml(t('detail_open_pdf'))}
@@ -294,6 +349,8 @@ function rebuildMarkers() {
   const filters = getActiveFilters();
   for (const e of STATE.events) {
     if (!eventPasses(e, filters)) continue;
+    // Skip non-geographic events — they show in the Other panel instead
+    if (e.non_geographic) continue;
     const kind = agencyKind(e.agency);
     const icon = L.divIcon({
       className: 'uap-marker ' + kind,
@@ -319,11 +376,28 @@ function rebuildMarkers() {
   updateStats();
 }
 
-// Global event delegation for popup buttons (more robust than per-marker handlers)
+// Global event delegation for popup buttons + Other-events list
 document.addEventListener('click', evt => {
   const btn = evt.target.closest('.show-detail');
   if (btn) {
     const id = btn.dataset.id;
+    const ev = STATE.events.find(x => x.id === id);
+    if (ev) showDetail(ev);
+    return;
+  }
+  const row = evt.target.closest('.other-row');
+  if (row) {
+    const id = row.dataset.id;
+    const ev = STATE.events.find(x => x.id === id);
+    if (ev) showDetail(ev);
+  }
+});
+document.addEventListener('keydown', evt => {
+  if (evt.key !== 'Enter' && evt.key !== ' ') return;
+  const row = evt.target.closest('.other-row');
+  if (row) {
+    evt.preventDefault();
+    const id = row.dataset.id;
     const ev = STATE.events.find(x => x.id === id);
     if (ev) showDetail(ev);
   }
@@ -371,6 +445,34 @@ function updateStats() {
     `<div class="region-row"><span>${escapeHtml(r)}</span><span>${n}</span></div>`
   ).join('');
   document.getElementById('region-stats').innerHTML = html;
+
+  // Other Events: non-geographic events (visible after filters)
+  updateOtherEvents(visible);
+}
+
+function updateOtherEvents(visible) {
+  const wrap = document.getElementById('other-events-list');
+  const countEl = document.getElementById('other-events-count');
+  if (!wrap) return;
+  const others = visible.filter(e => e.non_geographic);
+  others.sort((a, b) => a.date_iso.localeCompare(b.date_iso));
+  if (countEl) countEl.textContent = others.length;
+  if (!others.length) {
+    wrap.innerHTML = '<div style="color:#6a7c9c; padding:4px 0;">— —</div>';
+    return;
+  }
+  const hasVideo = (e) => e.video_url ? '🎬' : '';
+  const hasImage = (e) => e.image_url ? '🖼' : '';
+  wrap.innerHTML = others.map(e => `
+    <div class="other-row" data-id="${escapeAttr(e.id)}" role="button" tabindex="0">
+      <div class="other-row-line">
+        <span class="other-date">${e.date_iso}</span>
+        <span class="other-icons">${hasVideo(e)}${hasImage(e)}</span>
+      </div>
+      <div class="other-loc">${escapeHtml(e.location)}</div>
+      <div class="other-meta">${escapeHtml(e.agency || '')} · ${escapeHtml(e.type || '')}</div>
+    </div>
+  `).join('');
 }
 
 function showDetail(e) {
