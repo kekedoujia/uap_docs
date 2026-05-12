@@ -104,42 +104,121 @@ label.cb input { margin-right: 6px; }
 }
 details summary { cursor: pointer; color: #82b9ff; padding: 4px 0; }
 
-/* Other Events panel */
-#other-events-panel details summary {
-  font-size: 12px; color: #82b9ff; padding: 6px 0;
-  user-select: none;
+/* Open-modal button in sidebar */
+.open-modal-btn {
+  width: 100%; text-align: left;
+  background: rgba(130, 185, 255, 0.08);
+  border: 1px solid #2a3a5a;
+  color: #82b9ff;
+  padding: 8px 10px; border-radius: 4px;
+  cursor: pointer; font-size: 12px; font-weight: 500;
+  display: flex; align-items: center; gap: 6px;
+  transition: background 0.12s, border-color 0.12s;
+  font-family: inherit;
 }
+.open-modal-btn:hover {
+  background: rgba(130, 185, 255, 0.2);
+  border-color: rgba(130, 185, 255, 0.5);
+}
+.open-modal-btn > span:first-child { font-size: 14px; }
 .other-events-badge {
-  color: #6a7c9c; font-size: 11px; margin-left: 4px;
+  margin-left: auto; color: #6a7c9c; font-size: 11px;
 }
-.other-events-list {
-  max-height: 280px; overflow-y: auto; margin-top: 6px;
-  background: rgba(0,0,0,0.2); padding: 4px;
-  border: 1px solid #2a3a5a; border-radius: 3px;
+
+/* Modal */
+.modal {
+  position: fixed; inset: 0; z-index: 2000;
+  display: flex; align-items: center; justify-content: center;
 }
-.other-row {
-  padding: 6px 8px; border-bottom: 1px solid #1a2745;
+.modal.hidden { display: none; }
+.modal-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px);
   cursor: pointer;
-  transition: background 0.12s;
-  font-size: 11px;
 }
-.other-row:last-child { border-bottom: none; }
-.other-row:hover {
+.modal-content {
+  position: relative; z-index: 1;
+  background: linear-gradient(180deg, #131e35 0%, #0b1320 100%);
+  border: 1px solid #2a3a5a;
+  border-radius: 8px;
+  max-width: 1000px; width: calc(100% - 40px);
+  max-height: calc(100vh - 60px);
+  display: flex; flex-direction: column;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  animation: modal-in 0.18s ease-out;
+}
+@keyframes modal-in {
+  from { transform: scale(0.95) translateY(8px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+.modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px; border-bottom: 1px solid #2a3a5a;
+}
+.modal-header h2 {
+  margin: 0; font-size: 15px; color: #82b9ff; font-weight: 600;
+}
+.modal-count { color: #6a7c9c; font-size: 13px; font-weight: normal; }
+.modal-close {
+  background: none; border: none; color: #82b9ff;
+  font-size: 24px; cursor: pointer; padding: 0 6px; line-height: 1;
+}
+.modal-close:hover { color: #fff; }
+.modal-body {
+  flex: 1; overflow: auto; padding: 4px 0;
+}
+
+/* Modal table */
+.modal-table {
+  width: 100%; border-collapse: collapse; font-size: 12px;
+}
+.modal-table thead { position: sticky; top: 0; z-index: 1; }
+.modal-table th {
+  background: rgba(11, 19, 32, 0.95);
+  color: #82b9ff; font-weight: 600;
+  padding: 10px 12px;
+  border-bottom: 1px solid #2a3a5a;
+  text-align: left; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.modal-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #1a2745;
+  color: #c8d6f0; vertical-align: top;
+}
+.modal-table tr.modal-row {
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.modal-table tr.modal-row:hover td {
+  background: rgba(130, 185, 255, 0.08);
+}
+.modal-table tr.modal-row:nth-child(odd) td {
+  background: rgba(15, 26, 47, 0.4);
+}
+.modal-table tr.modal-row:nth-child(odd):hover td {
   background: rgba(130, 185, 255, 0.12);
 }
-.other-row-line {
-  display: flex; justify-content: space-between; align-items: center;
+.modal-table td:first-child {
+  color: #82b9ff; font-family: "Consolas", "Monaco", monospace;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
-.other-date {
-  color: #82b9ff; font-weight: 600; font-variant-numeric: tabular-nums;
+.modal-title-cell {
+  max-width: 360px;
+  font-size: 11px; line-height: 1.45;
 }
-.other-icons { font-size: 11px; opacity: 0.85; }
-.other-loc {
-  color: #e8eef9; margin-top: 2px;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+.modal-media-cell {
+  white-space: nowrap; text-align: center;
 }
-.other-meta {
-  color: #6a7c9c; font-size: 10px; margin-top: 1px;
+
+body.modal-open { overflow: hidden; }
+
+@media (max-width: 760px) {
+  .modal-content { max-height: 100vh; max-width: 100vw;
+    width: 100%; border-radius: 0; }
+  .modal-table th, .modal-table td { padding: 8px 6px; }
+  .modal-title-cell { display: none; }  /* hide on narrow */
 }
 
 /* Media block (image / video) inside detail panel */

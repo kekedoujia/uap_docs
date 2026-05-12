@@ -382,8 +382,9 @@ function rebuildMarkers() {
   updateStats();
 }
 
-// Global event delegation for popup buttons + Other-events list
+// Global event delegation
 document.addEventListener('click', evt => {
+  // "View details" button inside map popup
   const btn = evt.target.closest('.show-detail');
   if (btn) {
     const id = btn.dataset.id;
@@ -391,19 +392,35 @@ document.addEventListener('click', evt => {
     if (ev) showDetail(ev);
     return;
   }
-  const row = evt.target.closest('.other-row');
-  if (row) {
-    const id = row.dataset.id;
+  // Row in the Other Events modal table
+  const modalRow = evt.target.closest('.modal-row');
+  if (modalRow) {
+    const id = modalRow.dataset.id;
     const ev = STATE.events.find(x => x.id === id);
     if (ev) showDetail(ev);
+    return;
+  }
+  // Open the Other Events modal
+  if (evt.target.closest('#other-events-btn')) {
+    openOtherModal();
+    return;
+  }
+  // Close the modal via X button or backdrop click
+  if (evt.target.closest('[data-modal-close]')) {
+    closeOtherModal();
+    return;
   }
 });
 document.addEventListener('keydown', evt => {
+  if (evt.key === 'Escape') {
+    const m = document.getElementById('other-modal');
+    if (m && !m.classList.contains('hidden')) closeOtherModal();
+  }
   if (evt.key !== 'Enter' && evt.key !== ' ') return;
-  const row = evt.target.closest('.other-row');
-  if (row) {
+  const modalRow = evt.target.closest('.modal-row');
+  if (modalRow) {
     evt.preventDefault();
-    const id = row.dataset.id;
+    const id = modalRow.dataset.id;
     const ev = STATE.events.find(x => x.id === id);
     if (ev) showDetail(ev);
   }
@@ -457,28 +474,43 @@ function updateStats() {
 }
 
 function updateOtherEvents(visible) {
-  const wrap = document.getElementById('other-events-list');
-  const countEl = document.getElementById('other-events-count');
-  if (!wrap) return;
+  const tbody = document.getElementById('other-modal-tbody');
+  const countSidebar = document.getElementById('other-events-count');
+  const countModal = document.getElementById('other-modal-count');
   const others = visible.filter(e => e.non_geographic);
   others.sort((a, b) => a.date_iso.localeCompare(b.date_iso));
-  if (countEl) countEl.textContent = others.length;
+  if (countSidebar) countSidebar.textContent = others.length;
+  if (countModal) countModal.textContent = others.length;
+  if (!tbody) return;
   if (!others.length) {
-    wrap.innerHTML = '<div style="color:#6a7c9c; padding:4px 0;">— —</div>';
+    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:#6a7c9c;padding:20px;">—</td></tr>';
     return;
   }
-  const hasVideo = (e) => e.video_url ? '🎬' : '';
-  const hasImage = (e) => e.image_url ? '🖼' : '';
-  wrap.innerHTML = others.map(e => `
-    <div class="other-row" data-id="${escapeAttr(e.id)}" role="button" tabindex="0">
-      <div class="other-row-line">
-        <span class="other-date">${e.date_iso}</span>
-        <span class="other-icons">${hasVideo(e)}${hasImage(e)}</span>
-      </div>
-      <div class="other-loc">${escapeHtml(e.location)}</div>
-      <div class="other-meta">${escapeHtml(e.agency || '')} · ${escapeHtml(e.type || '')}</div>
-    </div>
-  `).join('');
+  tbody.innerHTML = others.map(e => {
+    const kind = agencyKind(e.agency);
+    const hasVid = e.video_url ? '🎬' : '';
+    const hasImg = e.image_url ? '🖼' : '';
+    const title = (e.report_summary || e.title || '').slice(0, 160);
+    return `
+      <tr class="modal-row" data-id="${escapeAttr(e.id)}" tabindex="0" role="button">
+        <td><span class="tl-row-marker tl-marker-${kind}" style="display:inline-block;margin-right:6px;vertical-align:middle;"></span>${escapeHtml(e.date_iso)}</td>
+        <td>${escapeHtml(e.location)}</td>
+        <td>${escapeHtml(e.agency || '')}</td>
+        <td>${escapeHtml(e.type || '')}</td>
+        <td class="modal-title-cell">${escapeHtml(title)}${title.length >= 160 ? '…' : ''}</td>
+        <td class="modal-media-cell">${hasImg}${hasVid}</td>
+      </tr>
+    `;
+  }).join('');
+}
+
+function openOtherModal() {
+  document.getElementById('other-modal').classList.remove('hidden');
+  document.body.classList.add('modal-open');
+}
+function closeOtherModal() {
+  document.getElementById('other-modal').classList.add('hidden');
+  document.body.classList.remove('modal-open');
 }
 
 function showDetail(e) {

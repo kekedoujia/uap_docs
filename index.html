@@ -72,13 +72,11 @@
   </div>
 
   <div class="filter-group" id="other-events-panel">
-    <details>
-      <summary>
-        <span data-i18n="other_events_title">其他事件（外太空 / 无具体地点）</span>
-        <span class="other-events-badge">(<span id="other-events-count">0</span>)</span>
-      </summary>
-      <div id="other-events-list" class="other-events-list"></div>
-    </details>
+    <button id="other-events-btn" type="button" class="open-modal-btn">
+      <span>✦</span>
+      <span data-i18n="other_events_title">其他事件（外太空 / 无具体地点）</span>
+      <span class="other-events-badge">(<span id="other-events-count">0</span>)</span>
+    </button>
   </div>
 
   <hr>
@@ -95,6 +93,34 @@
 <div id="detail-panel" class="hidden">
   <button id="detail-close" title="Close">×</button>
   <div id="detail-content"></div>
+</div>
+
+<div id="other-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="other-modal-title">
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-content">
+    <header class="modal-header">
+      <h2 id="other-modal-title">
+        ✦ <span data-i18n="other_events_title">其他事件（外太空 / 无具体地点）</span>
+        <span class="modal-count">(<span id="other-modal-count">0</span>)</span>
+      </h2>
+      <button class="modal-close" data-modal-close title="Close">×</button>
+    </header>
+    <div class="modal-body">
+      <table class="modal-table">
+        <thead>
+          <tr>
+            <th data-i18n="tl_th_date">日期</th>
+            <th data-i18n="tl_th_location">地点</th>
+            <th data-i18n="tl_th_agency">机构</th>
+            <th data-i18n="tl_th_type">类型</th>
+            <th data-i18n="tl_th_title">标题 / 摘要</th>
+            <th data-i18n="tl_th_media">媒体</th>
+          </tr>
+        </thead>
+        <tbody id="other-modal-tbody"></tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
