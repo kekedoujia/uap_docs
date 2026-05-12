@@ -104,8 +104,11 @@ label.cb input { margin-right: 6px; }
 }
 details summary { cursor: pointer; color: #82b9ff; padding: 4px 0; }
 
-/* Open-modal button in sidebar */
-.open-modal-btn {
+/* Open-modal / nav buttons in sidebar */
+.nav-group {
+  display: flex; flex-direction: column; gap: 6px;
+}
+.nav-group .nav-link, .open-modal-btn {
   width: 100%; text-align: left;
   background: rgba(130, 185, 255, 0.08);
   border: 1px solid #2a3a5a;
@@ -115,10 +118,13 @@ details summary { cursor: pointer; color: #82b9ff; padding: 4px 0; }
   display: flex; align-items: center; gap: 6px;
   transition: background 0.12s, border-color 0.12s;
   font-family: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
 }
-.open-modal-btn:hover {
+.nav-group .nav-link:hover, .open-modal-btn:hover {
   background: rgba(130, 185, 255, 0.2);
   border-color: rgba(130, 185, 255, 0.5);
+  text-decoration: none;
 }
 .open-modal-btn > span:first-child { font-size: 14px; }
 .other-events-badge {
@@ -473,21 +479,6 @@ hr { border: 0; border-top: 1px solid #2a3a5a; margin: 16px 0; }
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.footer a.nav-link {
-  display: inline-block;
-  margin-bottom: 6px;
-  padding: 6px 10px;
-  background: rgba(130, 185, 255, 0.1);
-  border: 1px solid #2a3a5a;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 12px;
-  transition: background 0.12s;
-}
-.footer a.nav-link:hover {
-  background: rgba(130, 185, 255, 0.25);
-}
-
 /* Visitor counter */
 .visitor-counter {
   display: block;

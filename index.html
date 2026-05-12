@@ -42,6 +42,15 @@
     </div>
   </div>
 
+  <div class="filter-group nav-group">
+    <a href="timeline.html" class="nav-link" data-i18n="nav_timeline">📅 时间轴视图</a>
+    <button id="other-events-btn" type="button" class="open-modal-btn">
+      <span>✦</span>
+      <span data-i18n="other_events_title">其他事件（外太空 / 无具体地点）</span>
+      <span class="other-events-badge">(<span id="other-events-count">0</span>)</span>
+    </button>
+  </div>
+
   <div class="filter-group">
     <label data-i18n="filter_agency">报告机构：</label>
     <div id="agency-checkboxes"></div>
@@ -75,17 +84,8 @@
     </details>
   </div>
 
-  <div class="filter-group" id="other-events-panel">
-    <button id="other-events-btn" type="button" class="open-modal-btn">
-      <span>✦</span>
-      <span data-i18n="other_events_title">其他事件（外太空 / 无具体地点）</span>
-      <span class="other-events-badge">(<span id="other-events-count">0</span>)</span>
-    </button>
-  </div>
-
   <hr>
   <p class="footer">
-    <a href="timeline.html" class="nav-link" data-i18n="nav_timeline">📅 时间轴视图</a><br>
     <span data-i18n="footer_version">站点版本</span>：v1.0<br>
     <span data-i18n="footer_built">生成日期</span>：2026-05-11
     <span id="visitor-counter" class="visitor-counter" aria-live="polite"></span>
