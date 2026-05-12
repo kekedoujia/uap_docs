@@ -153,10 +153,10 @@ function agencyKind(agency) {
 }
 
 function buildPopupHtml(e) {
-  const url = e.archive_url || '#';
+  // Hover-preview popup: no buttons (clicking the marker opens the detail panel directly).
   const titleEsc = escapeHtml(e.title || I18N.t('detail_no_title'));
   return `
-    <div style="min-width:240px">
+    <div style="min-width:220px">
       <div class="date-badge" style="display:inline-block; background:#82b9ff; color:#0b1320;
            padding:2px 8px; border-radius:3px; font-weight:bold; font-size:11px;">
         ${e.date_iso}
@@ -168,15 +168,6 @@ function buildPopupHtml(e) {
       <div style="margin-top:6px; font-size:11px; color:#c8d6f0; max-height:80px; overflow:hidden;">
         ${titleEsc.length > 140 ? titleEsc.slice(0, 140) + '…' : titleEsc}
       </div>
-      <div style="margin-top:8px;">
-        <button class="show-detail" data-id="${escapeAttr(e.id)}"
-          style="background:#82b9ff; color:#0b1320; border:none; padding:6px 12px;
-                 border-radius:3px; cursor:pointer; font-size:11px; font-weight:600;">
-          ${escapeHtml(I18N.t('popup_view_detail'))}
-        </button>
-        ${url !== '#' ? `<a href="${escapeAttr(url)}" target="_blank" rel="noopener"
-            style="margin-left:6px; color:#82b9ff; font-size:11px;">${escapeHtml(I18N.t('popup_open_archive'))}</a>` : ''}
-      </div>
     </div>
   `;
 }
@@ -184,7 +175,7 @@ function buildPopupHtml(e) {
 function buildDetailHtml(e) {
   const url = e.archive_url || '';
   const t = (k) => I18N.t(k);
-  const lang = (window.I18N && I18N.current) || 'zh';
+  const lang = (typeof I18N !== 'undefined' && I18N.current) || 'zh';
 
   // Page-specific thumbnail (rendered from the actual PDF page) takes priority.
   // Falls back to cover thumbnail from war.gov modal_image when no page-specific
@@ -192,9 +183,7 @@ function buildDetailHtml(e) {
   let imageBlock = '';
   let watermarkBlock = '';
   if (e.watermark_crop_url) {
-    const label = lang === 'en'
-      ? 'Bottom-left timestamp watermark (IR sensor default — real date unknown)'
-      : '图片左下角时间水印（红外传感器默认时钟，实际日期未提供）';
+    const label = t('detail_watermark_full');
     watermarkBlock = `
       <div class="media-block">
         <div class="media-block-title">⏱ ${escapeHtml(label)}</div>
@@ -208,9 +197,7 @@ function buildDetailHtml(e) {
     ? e.archive_url + (e.archive_url.includes('#') ? '' : `#page=${parseInt(e.page, 10)}`)
     : e.archive_url;
   if (e.page_thumb_url) {
-    const pageLabel = lang === 'en'
-      ? `Rendered page ${parseInt(e.page, 10)}`
-      : `第 ${parseInt(e.page, 10)} 页（PDF 渲染）`;
+    const pageLabel = t('detail_rendered_page').replace('{page}', parseInt(e.page, 10));
     imageBlock = `
       <div class="media-block">
         <div class="media-block-title">📄 ${escapeHtml(pageLabel)}</div>
@@ -242,8 +229,8 @@ function buildDetailHtml(e) {
     const captionsTrack = e.video_captions_vtt
       ? `<track kind="subtitles" src="${escapeAttr(e.video_captions_vtt)}" srclang="en" label="English" default>`
       : '';
-    const playLabel = lang === 'en' ? '▶ Play video' : '▶ 播放视频';
-    const dvidsLabel = lang === 'en' ? 'DVIDS page ↗' : 'DVIDS 页面 ↗';
+    const playLabel = t('detail_play_video');
+    const dvidsLabel = t('detail_dvids_page');
     const captionVid = e.video_title || e.title || '';
     videoBlock = `
       <div class="media-block">
@@ -265,7 +252,7 @@ function buildDetailHtml(e) {
   }
 
   const coordLabel = e.non_geographic
-    ? (lang === 'en' ? '(non-geographic)' : '(无具体坐标)')
+    ? t('detail_non_geo')
     : (e.lat != null ? `(${e.lat.toFixed(4)}, ${e.lon.toFixed(4)})` : '');
 
   // Type label maps to record_type if present
@@ -282,7 +269,7 @@ function buildDetailHtml(e) {
     <div class="meta-row"><strong>${t('detail_batch')}</strong>：${escapeHtml(e.batch_name)} (${e.release_date})</div>
     ${e.page ? `<div class="meta-row"><strong>${t('detail_page')}</strong>：${escapeHtml(String(e.page))}</div>` : ''}
 
-    ${e.report_summary ? `<div class="full-text">${escapeHtml(e.report_summary)}</div>` : ''}
+    ${renderSummaryBlock(e, lang)}
 
     ${imageBlock}
     ${watermarkBlock}
@@ -294,7 +281,7 @@ function buildDetailHtml(e) {
        </a>` : ''}
       ${e.gov_page_url ? `<a class="archive-link" href="${escapeAttr(e.gov_page_url)}" target="_blank" rel="noopener"
          style="background:#3a5d9e;">
-         ${escapeHtml(lang === 'en' ? '🏛 war.gov source page' : '🏛 war.gov 官方页面')}
+         ${escapeHtml(t('detail_war_gov'))}
        </a>` : ''}
     </div>
 
@@ -313,6 +300,45 @@ function escapeHtml(s) {
 function escapeAttr(s) {
   if (s == null) return '';
   return String(s).replace(/"/g, '&quot;').replace(/&/g, '&amp;');
+}
+
+// Render report_summary text with paragraphs + minimal inline formatting.
+// Escapes HTML first (safe), then applies: **bold**, *italic*, double newlines
+// → paragraph breaks, single newlines → <br>.
+function renderSummary(text) {
+  if (!text) return '';
+  let s = escapeHtml(text);
+  // Inline: **bold** before *italic* so ** doesn't get partially-matched as *...*
+  s = s.replace(/\*\*([^*\n]+?)\*\*/g, '<strong>$1</strong>');
+  s = s.replace(/(^|[^*])\*([^*\n]+?)\*(?!\*)/g, '$1<em>$2</em>');
+  // Split into paragraphs on blank lines, then <br> within each para
+  const paras = s.split(/\n\s*\n+/).map(p => p.trim()).filter(Boolean);
+  return paras.map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
+}
+
+// Render the report_summary block. In zh mode shows Chinese on top with English
+// "原文" expandable below; in en mode shows only the English text.
+function renderSummaryBlock(e, lang) {
+  if (!e.report_summary) return '';
+  const label = e.report_summary_label
+    ? `<div class="full-text-label">${escapeHtml(e.report_summary_label)}</div>`
+    : '';
+  if (lang === 'zh' && e.report_summary_zh) {
+    return `
+      <div class="full-text">
+        ${label}
+        ${renderSummary(e.report_summary_zh)}
+        <details class="bilingual-toggle">
+          <summary>原文 / English original</summary>
+          <div class="bilingual-en">${renderSummary(e.report_summary)}</div>
+        </details>
+      </div>`;
+  }
+  return `
+    <div class="full-text">
+      ${label}
+      ${renderSummary(e.report_summary)}
+    </div>`;
 }
 
 function initMap() {
@@ -406,15 +432,20 @@ function rebuildMarkers() {
     });
     const marker = L.marker([e.lat, e.lon], { icon: icon });
 
-    // Tooltip on hover
-    const tooltip = `<b>${e.date_iso}</b> · ${escapeHtml(e.location)}<br>
-      <span style="color:#8fa3c4">${escapeHtml(e.agency || '')} · ${escapeHtml(e.type || '')}</span>`;
-    marker.bindTooltip(tooltip, {
-      direction: 'top', offset: [0, -10], opacity: 0.95,
+    // Hover → rich popup preview; click → open detail panel directly.
+    marker.bindPopup(buildPopupHtml(e), {
+      maxWidth: 280,
+      closeButton: false,
+      autoClose: true,
+      closeOnClick: false,
+      autoPan: false,
     });
-
-    // Popup on click
-    marker.bindPopup(buildPopupHtml(e), { maxWidth: 280 });
+    marker.on('mouseover', () => marker.openPopup());
+    marker.on('mouseout', () => marker.closePopup());
+    marker.on('click', () => {
+      marker.closePopup();
+      showDetail(e);
+    });
 
     layer.addLayer(marker);
     STATE.markersById[e.id] = marker;
@@ -451,14 +482,6 @@ document.addEventListener('click', evt => {
 
 // Global event delegation
 document.addEventListener('click', evt => {
-  // "View details" button inside map popup
-  const btn = evt.target.closest('.show-detail');
-  if (btn) {
-    const id = btn.dataset.id;
-    const ev = STATE.events.find(x => x.id === id);
-    if (ev) showDetail(ev);
-    return;
-  }
   // Row in the Other Events modal table
   const modalRow = evt.target.closest('.modal-row');
   if (modalRow) {

@@ -67,6 +67,16 @@ const I18N = {
       tl_th_type: '类型',
       tl_th_title: '标题 / 摘要',
       tl_th_media: '媒体',
+      detail_play_video: '▶ 播放视频',
+      detail_dvids_page: 'DVIDS 页面 ↗',
+      detail_non_geo: '(无具体坐标)',
+      detail_war_gov: '🏛 war.gov 官方页面',
+      detail_view_on_map: '🗺 在地图上查看',
+      detail_rendered_page: '第 {page} 页（PDF 渲染）',
+      detail_watermark_full: '图片左下角时间水印（红外传感器默认时钟，实际日期未提供）',
+      detail_watermark_short: '左下角时间水印（红外传感器默认时钟）',
+      tl_tag_no_geo: '无地点',
+      tl_load_fail: '加载失败。请通过 HTTP 服务器访问。',
       disclaimer_title: '📄 免责声明 / Disclaimer',
       disclaimer_body: (
         '本站所有数据均来源于美国战争部（Department of War）于 2026 年 5 月 8 日公开发布的 '
@@ -142,6 +152,16 @@ const I18N = {
       tl_th_type: 'Type',
       tl_th_title: 'Title / Summary',
       tl_th_media: 'Media',
+      detail_play_video: '▶ Play video',
+      detail_dvids_page: 'DVIDS page ↗',
+      detail_non_geo: '(non-geographic)',
+      detail_war_gov: '🏛 war.gov source page',
+      detail_view_on_map: '🗺 View on map',
+      detail_rendered_page: 'Rendered page {page}',
+      detail_watermark_full: 'Bottom-left timestamp watermark (IR sensor default — real date unknown)',
+      detail_watermark_short: 'Bottom-left timestamp (IR sensor default)',
+      tl_tag_no_geo: 'no geo',
+      tl_load_fail: 'Load failed. Please serve over HTTP.',
       disclaimer_title: '📄 Disclaimer',
       disclaimer_body: (
         'All data on this site is sourced from the U.S. Department of War\'s '
@@ -195,13 +215,17 @@ const I18N = {
     document.querySelectorAll('.lang-btn').forEach(b => {
       b.classList.toggle('active', b.dataset.lang === this.current);
     });
-    // Re-render dynamic parts of the app if it has booted
+    // Re-render map-specific elements (only on the map page)
     if (window.STATE && window.STATE.map) {
       if (window.rebuildMarkers) window.rebuildMarkers();
       if (window.updateLegend) window.updateLegend();
+    }
+    // Re-render open detail panel on EITHER page (map or timeline), since
+    // its content has lang-dependent fields (Chinese/English summary, labels).
+    if (window.STATE && window.STATE.lastDetailEvent && window.showDetail) {
       const id = document.getElementById('detail-panel');
-      if (id && !id.classList.contains('hidden') && window.STATE.lastDetailEvent) {
-        if (window.showDetail) window.showDetail(window.STATE.lastDetailEvent);
+      if (id && !id.classList.contains('hidden')) {
+        window.showDetail(window.STATE.lastDetailEvent);
       }
     }
     // Visitor counter re-render

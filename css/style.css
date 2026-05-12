@@ -541,11 +541,70 @@ hr { border: 0; border-top: 1px solid #2a3a5a; margin: 16px 0; }
 }
 #detail-content .meta-row strong { color: #c8d6f0; }
 #detail-content .full-text {
-  margin: 12px 0; padding: 10px;
+  margin: 12px 0; padding: 12px 14px;
   background: rgba(0,0,0,0.3); border-left: 3px solid #82b9ff;
   border-radius: 3px;
-  font-size: 12px; line-height: 1.5; color: #c8d6f0;
-  max-height: 200px; overflow-y: auto;
+  font-size: 12.5px; line-height: 1.6; color: #c8d6f0;
+  max-height: 360px; overflow-y: auto;
+}
+#detail-content .full-text p {
+  margin: 0 0 10px 0;
+}
+#detail-content .full-text p:last-child {
+  margin-bottom: 0;
+}
+#detail-content .full-text strong {
+  color: #e6efff; font-weight: 600;
+}
+#detail-content .full-text em {
+  color: #b8c9e6; font-style: italic;
+}
+#detail-content .full-text-label {
+  font-size: 11px; font-weight: 600;
+  color: #82b9ff; text-transform: uppercase;
+  letter-spacing: 0.5px; margin-bottom: 6px;
+}
+#detail-content .full-text .bilingual-toggle {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(130, 185, 255, 0.25);
+}
+#detail-content .full-text .bilingual-toggle > summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #82b9ff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  user-select: none;
+  padding: 2px 0;
+}
+#detail-content .full-text .bilingual-toggle > summary::-webkit-details-marker { display: none; }
+#detail-content .full-text .bilingual-toggle > summary::before {
+  content: "▸ ";
+  display: inline-block;
+  transition: transform 0.15s;
+  color: #82b9ff;
+}
+#detail-content .full-text .bilingual-toggle[open] > summary::before {
+  transform: rotate(90deg);
+}
+#detail-content .full-text .bilingual-en {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: rgba(11, 19, 32, 0.4);
+  border-left: 2px solid rgba(130, 185, 255, 0.35);
+  border-radius: 2px;
+  color: #a8b8d4;
+  font-size: 12px;
+  line-height: 1.55;
+}
+#detail-content .full-text .bilingual-en p {
+  margin: 0 0 8px 0;
+}
+#detail-content .full-text .bilingual-en p:last-child {
+  margin-bottom: 0;
 }
 #detail-content .archive-link {
   display: inline-block; margin-top: 8px;

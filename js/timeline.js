@@ -51,6 +51,38 @@ function escapeAttr(s) {
   return String(s).replace(/"/g, '&quot;').replace(/&/g, '&amp;');
 }
 
+function renderSummary(text) {
+  if (!text) return '';
+  let s = escapeHtml(text);
+  s = s.replace(/\*\*([^*\n]+?)\*\*/g, '<strong>$1</strong>');
+  s = s.replace(/(^|[^*])\*([^*\n]+?)\*(?!\*)/g, '$1<em>$2</em>');
+  const paras = s.split(/\n\s*\n+/).map(p => p.trim()).filter(Boolean);
+  return paras.map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
+}
+
+function renderSummaryBlock(e, lang) {
+  if (!e.report_summary) return '';
+  const label = e.report_summary_label
+    ? `<div class="full-text-label">${escapeHtml(e.report_summary_label)}</div>`
+    : '';
+  if (lang === 'zh' && e.report_summary_zh) {
+    return `
+      <div class="full-text">
+        ${label}
+        ${renderSummary(e.report_summary_zh)}
+        <details class="bilingual-toggle">
+          <summary>原文 / English original</summary>
+          <div class="bilingual-en">${renderSummary(e.report_summary)}</div>
+        </details>
+      </div>`;
+  }
+  return `
+    <div class="full-text">
+      ${label}
+      ${renderSummary(e.report_summary)}
+    </div>`;
+}
+
 function agencyKind(agency) {
   const a = (agency || '').toLowerCase();
   if (a.includes('fbi')) return 'fbi';
@@ -122,7 +154,7 @@ function renderEventRow(e, lang) {
   const hasImg = e.image_url ? '🖼' : '';
   const hasVid = e.video_url ? '🎬' : '';
   const ngBadge = e.non_geographic
-    ? `<span class="tl-tag tl-tag-other">${lang === 'en' ? 'no geo' : '无地点'}</span>` : '';
+    ? `<span class="tl-tag tl-tag-other">${escapeHtml(I18N.t('tl_tag_no_geo'))}</span>` : '';
   return `
     <li class="tl-event-row" data-id="${escapeAttr(e.id)}" tabindex="0" role="button">
       <div class="tl-row-marker tl-marker-${kind}"></div>
@@ -146,7 +178,7 @@ function render() {
   const decadeJump = document.getElementById('timeline-decade-jump');
   const visible = STATE.events.filter(eventPasses);
   document.getElementById('tl-visible-count').textContent = visible.length;
-  const lang = (window.I18N && I18N.current) || 'zh';
+  const lang = (typeof I18N !== 'undefined' && I18N.current) || 'zh';
 
   // Group by decade for jump bar
   const decades = new Map();
@@ -199,16 +231,14 @@ function render() {
 function buildDetailHtml(e) {
   const url = e.archive_url || '';
   const t = (k) => I18N.t(k);
-  const lang = (window.I18N && I18N.current) || 'zh';
+  const lang = (typeof I18N !== 'undefined' && I18N.current) || 'zh';
 
   let imageBlock = '';
   const useFullPdfLink = e.archive_url && e.page
     ? e.archive_url + (e.archive_url.includes('#') ? '' : `#page=${parseInt(e.page, 10)}`)
     : e.archive_url;
   if (e.page_thumb_url) {
-    const pageLabel = lang === 'en'
-      ? `Rendered page ${parseInt(e.page, 10)}`
-      : `第 ${parseInt(e.page, 10)} 页（PDF 渲染）`;
+    const pageLabel = I18N.t('detail_rendered_page').replace('{page}', parseInt(e.page, 10));
     imageBlock = `
       <div class="media-block">
         <div class="media-block-title">📄 ${escapeHtml(pageLabel)}</div>
@@ -238,8 +268,8 @@ function buildDetailHtml(e) {
     const captionsTrack = e.video_captions_vtt
       ? `<track kind="subtitles" src="${escapeAttr(e.video_captions_vtt)}" srclang="en" label="English" default>`
       : '';
-    const playLabel = lang === 'en' ? '▶ Play video' : '▶ 播放视频';
-    const dvidsLabel = lang === 'en' ? 'DVIDS page ↗' : 'DVIDS 页面 ↗';
+    const playLabel = I18N.t('detail_play_video');
+    const dvidsLabel = I18N.t('detail_dvids_page');
     const captionVid = e.video_title || e.title || '';
     videoBlock = `
       <div class="media-block">
@@ -261,7 +291,7 @@ function buildDetailHtml(e) {
   }
 
   const coordLabel = e.non_geographic
-    ? (lang === 'en' ? '(non-geographic)' : '(无具体坐标)')
+    ? I18N.t('detail_non_geo')
     : (e.lat != null ? `(${e.lat.toFixed(4)}, ${e.lon.toFixed(4)})` : '');
 
   const typeLabel = e.record_type || e.type || '';
@@ -269,7 +299,7 @@ function buildDetailHtml(e) {
   // "View on map" button if event has coordinates
   const mapBtn = (e.lat != null && !e.non_geographic) ? `
     <a class="archive-link small" href="index.html#event=${encodeURIComponent(e.id)}"
-       style="margin-right:6px;">${escapeHtml(lang === 'en' ? '🗺 View on map' : '🗺 在地图上查看')}</a>
+       style="margin-right:6px;">${escapeHtml(I18N.t('detail_view_on_map'))}</a>
   ` : '';
 
   return `
@@ -283,12 +313,12 @@ function buildDetailHtml(e) {
     <div class="meta-row"><strong>${t('detail_batch')}</strong>：${escapeHtml(e.batch_name)} (${e.release_date})</div>
     ${e.page ? `<div class="meta-row"><strong>${t('detail_page')}</strong>：${escapeHtml(String(e.page))}</div>` : ''}
 
-    ${e.report_summary ? `<div class="full-text">${escapeHtml(e.report_summary)}</div>` : ''}
+    ${renderSummaryBlock(e, lang)}
 
     ${imageBlock}
     ${e.watermark_crop_url ? `
       <div class="media-block">
-        <div class="media-block-title">⏱ ${escapeHtml(lang==='en'?'Bottom-left timestamp (IR sensor default)':'左下角时间水印（红外传感器默认时钟）')}</div>
+        <div class="media-block-title">⏱ ${escapeHtml(I18N.t('detail_watermark_short'))}</div>
         <img src="${escapeAttr(e.watermark_crop_url)}" alt="watermark"
              style="width:100%; max-height:140px; object-fit:contain; background:#000; border-radius:4px;">
       </div>` : ''}
@@ -301,7 +331,7 @@ function buildDetailHtml(e) {
        </a>` : ''}
       ${e.gov_page_url ? `<a class="archive-link" href="${escapeAttr(e.gov_page_url)}" target="_blank" rel="noopener"
          style="background:#3a5d9e;">
-         ${escapeHtml(lang === 'en' ? '🏛 war.gov source' : '🏛 war.gov 官方页面')}
+         ${escapeHtml(I18N.t('detail_war_gov'))}
        </a>` : ''}
     </div>
 
@@ -342,7 +372,7 @@ window.STATE = STATE;
 window.showDetail = showDetail;
 window.timelineRender = render;
 // When language changes, re-render list (because labels are inline)
-const _origApply = window.I18N && I18N.apply.bind(I18N);
+const _origApply = (typeof I18N !== 'undefined') && I18N.apply.bind(I18N);
 if (_origApply) {
   I18N.apply = function () {
     _origApply();
@@ -363,6 +393,6 @@ if (_origApply) {
   } catch (err) {
     console.error('Failed:', err);
     document.getElementById('timeline-list').innerHTML =
-      '<div class="tl-empty">加载失败 / Load failed. 请通过 HTTP 服务器访问。</div>';
+      `<div class="tl-empty">${escapeHtml((window.I18N && I18N.t('tl_load_fail')) || 'Load failed.')}</div>`;
   }
 })();
