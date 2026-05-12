@@ -52,6 +52,15 @@ const I18N = {
       visitor_you_are: '您是第',
       visitor_suffix: '位访客',
       other_events_title: '其他事件（外太空 / 无具体地点）',
+      nav_timeline: '📅 时间轴视图',
+      timeline_title: 'UFO/UAP 事件时间轴',
+      timeline_header: '事件时间轴',
+      timeline_to_map: '🗺 返回地图',
+      timeline_back: '返回地图',
+      tl_search: '搜索',
+      tl_search_placeholder: '输入地点、机构、关键词...',
+      tl_visible: '显示',
+      tl_no_results: '无符合条件的事件',
     },
     en: {
       title: 'UFO/UAP Disclosure Archive — Interactive Map',
@@ -98,6 +107,15 @@ const I18N = {
       visitor_you_are: 'You are visitor #',
       visitor_suffix: '',
       other_events_title: 'Other events (outer space / unlocated)',
+      nav_timeline: '📅 Timeline view',
+      timeline_title: 'UFO/UAP Event Timeline',
+      timeline_header: 'Event Timeline',
+      timeline_to_map: '🗺 Back to map',
+      timeline_back: 'Back to map',
+      tl_search: 'Search',
+      tl_search_placeholder: 'location, agency, keyword...',
+      tl_visible: 'Showing',
+      tl_no_results: 'No events match.',
     },
   },
 
@@ -112,6 +130,12 @@ const I18N = {
       const k = el.getAttribute('data-i18n');
       const v = this.t(k);
       if (v) el.textContent = v;
+    });
+    // Placeholder attribute
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const k = el.getAttribute('data-i18n-placeholder');
+      const v = this.t(k);
+      if (v) el.setAttribute('placeholder', v);
     });
     // Update <html lang>
     document.documentElement.lang = this.current === 'zh' ? 'zh-CN' : 'en';

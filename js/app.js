@@ -502,6 +502,24 @@ window.rebuildMarkers = rebuildMarkers;
 window.updateLegend = updateLegend;
 window.showDetail = showDetail;
 
+// Open detail panel + zoom to a specific event if URL hash specifies one
+function handleHash() {
+  const m = location.hash.match(/^#event=(.+)$/);
+  if (!m) return;
+  const id = decodeURIComponent(m[1]);
+  const ev = STATE.events.find(x => x.id === id);
+  if (!ev) return;
+  if (ev.lat != null && !ev.non_geographic && STATE.map) {
+    STATE.map.setView([ev.lat, ev.lon], 7, { animate: true });
+    // Open the marker popup if present
+    const marker = STATE.markersById[ev.id];
+    if (marker && marker.openPopup) {
+      setTimeout(() => marker.openPopup(), 400);
+    }
+  }
+  showDetail(ev);
+}
+
 // Boot
 (async function main() {
   // Set loading placeholder via i18n if available
@@ -510,6 +528,8 @@ window.showDetail = showDetail;
   try {
     await loadData();
     initMap();
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
   } catch (err) {
     console.error('Failed to load data:', err);
     const I = window.I18N || { t: (k) => k };
