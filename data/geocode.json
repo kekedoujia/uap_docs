@@ -398,5 +398,9 @@
   "Wilmington, North Carolina, 340 14' N, 770 57' w": {
     "lat": 34.2013063,
     "lon": -77.8452978
+  },
+  "Moon": {
+    "lat": 0,
+    "lon": 0
   }
 }
