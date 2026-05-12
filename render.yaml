@@ -51,12 +51,6 @@ services:
         name: Cache-Control
         value: public, max-age=300
 
-    # Pretty URLs
-    routes:
-      - type: rewrite
-        source: /about
-        destination: /about.html
-
     # Auto-deploy on git push
     autoDeploy: true
 

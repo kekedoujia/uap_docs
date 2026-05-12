@@ -25,7 +25,6 @@ const I18N = {
       stats_by_region: '按地区统计',
       footer_version: '站点版本',
       footer_built: '生成日期',
-      footer_about: '关于本站 / About',
       // Map popup / detail
       popup_view_detail: '查看详情 / Details',
       popup_open_archive: '原档↗',
@@ -72,7 +71,6 @@ const I18N = {
       stats_by_region: 'By region',
       footer_version: 'Site version',
       footer_built: 'Built',
-      footer_about: 'About',
       popup_view_detail: 'View details',
       popup_open_archive: 'Archive↗',
       detail_close: 'Close',
