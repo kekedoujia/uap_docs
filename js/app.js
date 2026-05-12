@@ -241,7 +241,7 @@ function buildDetailHtml(e) {
     <div class="meta-row"><strong>${t('detail_batch')}</strong>：${escapeHtml(e.batch_name)} (${e.release_date})</div>
     ${e.page ? `<div class="meta-row"><strong>${t('detail_page')}</strong>：${escapeHtml(String(e.page))}</div>` : ''}
 
-    ${e.record_description ? `<div class="full-text">${escapeHtml(e.record_description)}</div>` : `<div class="full-text">${escapeHtml(e.title || '')}</div>`}
+    ${e.report_summary ? `<div class="full-text">${escapeHtml(e.report_summary)}</div>` : ''}
 
     ${imageBlock}
     ${videoBlock}
