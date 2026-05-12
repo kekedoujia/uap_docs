@@ -133,8 +133,24 @@ details summary { cursor: pointer; color: #82b9ff; padding: 4px 0; }
 .modal.hidden { display: none; }
 .modal-backdrop {
   position: absolute; inset: 0;
-  background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.7);
+  /* No blur — keeps the right-side detail panel crisp */
   cursor: pointer;
+}
+/* When detail panel is open, shift modal centering to the left so it doesn't
+   sit underneath the panel */
+body:has(#detail-panel:not(.hidden)) .modal {
+  padding-right: 420px;
+}
+@media (max-width: 900px) {
+  body:has(#detail-panel:not(.hidden)) .modal {
+    padding-right: 320px;
+  }
+}
+@media (max-width: 600px) {
+  body:has(#detail-panel:not(.hidden)) .modal {
+    padding-right: 0;
+  }
 }
 .modal-content {
   position: relative; z-index: 1;
@@ -451,7 +467,8 @@ hr { border: 0; border-top: 1px solid #2a3a5a; margin: 16px 0; }
   background: rgba(15, 26, 47, 0.98);
   border-left: 1px solid #2a3a5a;
   overflow-y: auto;
-  z-index: 1100;
+  /* Above .modal (2000) so it stays unblurred and interactive */
+  z-index: 2200;
   box-shadow: -2px 0 12px rgba(0,0,0,0.5);
   transition: transform 0.25s ease;
 }
