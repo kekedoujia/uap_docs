@@ -402,5 +402,93 @@
   "Moon": {
     "lat": 0,
     "lon": 0
+  },
+  "Wright-Patterson AFB, Ohio": {
+    "lat": 39.8261,
+    "lon": -84.0489
+  },
+  "Holloman AFB, New Mexico": {
+    "lat": 32.8525,
+    "lon": -106.1063
+  },
+  "Los Alamos, New Mexico": {
+    "lat": 35.8881,
+    "lon": -106.3031
+  },
+  "Kirtland AFB, Albuquerque, New Mexico": {
+    "lat": 35.0402,
+    "lon": -106.609
+  },
+  "Mount Rainier, Washington": {
+    "lat": 46.8523,
+    "lon": -121.7603
+  },
+  "Muroc Field, California": {
+    "lat": 34.9059,
+    "lon": -117.8836
+  },
+  "Harmon Field, Newfoundland": {
+    "lat": 48.55,
+    "lon": -58.5667
+  },
+  "El Paso, Texas": {
+    "lat": 31.7619,
+    "lon": -106.485
+  },
+  "Denver, Colorado": {
+    "lat": 39.7392,
+    "lon": -104.9903
+  },
+  "Portland, Oregon": {
+    "lat": 45.5152,
+    "lon": -122.6784
+  },
+  "Bridgeport, Connecticut": {
+    "lat": 41.1865,
+    "lon": -73.1952
+  },
+  "AAF Brooks Field, Texas": {
+    "lat": 29.338,
+    "lon": -98.4275
+  },
+  "Air Force Base, New York": {
+    "lat": 40.7128,
+    "lon": -74.006
+  },
+  "Baltinore, Maryland": {
+    "lat": 39.2904,
+    "lon": -76.6122
+  },
+  "Daltimore, Maryland": {
+    "lat": 39.2904,
+    "lon": -76.6122
+  },
+  "Boite, Idaho": {
+    "lat": 43.615,
+    "lon": -116.2023
+  },
+  "Soise, Idaho": {
+    "lat": 43.615,
+    "lon": -116.2023
+  },
+  "Hamilton Pield, California": {
+    "lat": 38.0617,
+    "lon": -122.4669
+  },
+  "Haxilton Pield, California": {
+    "lat": 38.0617,
+    "lon": -122.4669
+  },
+  "Intelligence Janilton Field, California": {
+    "lat": 38.0617,
+    "lon": -122.4669
+  },
+  "Intelligonce Yamilton Tiold, California": {
+    "lat": 38.0617,
+    "lon": -122.4669
+  },
+  "Yacom, Washington": {
+    "lat": 47.2529,
+    "lon": -122.4443
   }
 }
