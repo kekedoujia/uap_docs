@@ -12,8 +12,24 @@ Idempotent — safe to run repeatedly.
 The script lives in <site_root>/scripts/, so the site root is its parent dir.
 """
 import os
+import re
 import sys
 import json
+
+
+def title_to_hash(s):
+    """Mirror war.gov/UFO's JS titleToHash() — strip non-alphanum, replace spaces with hyphens."""
+    s = (s or '').strip()
+    s = re.sub(r'\s+', '-', s)
+    s = re.sub(r'[^A-Za-z0-9\-_]', '', s)
+    s = re.sub(r'-+', '-', s)
+    return s
+
+
+def gov_page_url(title):
+    """Build the war.gov deep-link URL for a given record title."""
+    h = title_to_hash(title)
+    return f"https://www.war.gov/UFO/#{h}" if h else "https://www.war.gov/UFO/"
 
 # Site root = parent dir of this script
 SITE = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -24,7 +40,7 @@ DVIDS_JSON = os.path.join(SITE, "dvids_metadata.json")
 
 
 def load_archive_url_map():
-    """Build {filename → {archive_url, image_url, type, record_title, description}}
+    """Build {filename → {archive_url, image_url, type, record_title, description, gov_url}}
     from records.json."""
     if not os.path.exists(RECORDS_JSON):
         print(f"[prepare] WARNING: {RECORDS_JSON} not found, "
@@ -33,19 +49,26 @@ def load_archive_url_map():
     with open(RECORDS_JSON, encoding="utf-8") as f:
         records = json.load(f)
     info_map = {}
+    title_to_url = {}  # for matching events whose `file` field is missing
     for r in records:
+        title = (r.get("title") or "").strip()
+        gov_url = gov_page_url(title) if title else "https://www.war.gov/UFO/"
         link = r.get("main_link", "")
-        if not link:
-            continue
-        fname = os.path.basename(link)
-        # Earlier entries win (PDF rows tend to be more canonical than paired VID rows)
-        info_map.setdefault(fname.lower(), {
+        info_obj = {
             "archive_url": link,
             "image_url": (r.get("modal_image") or "").strip(),
             "record_type": r.get("type", ""),
-            "record_title": (r.get("title") or "").strip(),
+            "record_title": title,
             "description": (r.get("description") or "").strip(),
-        })
+            "gov_page_url": gov_url,
+            "incident_date": (r.get("incident_date") or "").strip(),
+            "incident_location": (r.get("incident_location") or "").strip(),
+        }
+        if link:
+            fname = os.path.basename(link)
+            info_map.setdefault(fname.lower(), info_obj)
+        title_to_url[title.lower()] = info_obj
+    info_map["__by_title__"] = title_to_url
     return info_map
 
 
@@ -122,35 +145,60 @@ def rewrite_event_batches(info_map, video_map):
       - attach image_url (thumbnail)
       - attach paired DVIDS video info if available
       - flag non_geographic locations (Moon, generic regions, etc.)
+      - attach gov_page_url deep-link to war.gov/UFO record
     """
+    by_title = info_map.get("__by_title__", {})
     events_dir = os.path.join(DATA, "events")
     if not os.path.isdir(events_dir):
         print(f"[prepare] {events_dir} missing — skip rewrite")
         return
-    totals = {"external": 0, "image": 0, "video": 0, "non_geo": 0}
+    totals = {"external": 0, "image": 0, "video": 0, "non_geo": 0, "gov": 0}
     for fn in sorted(os.listdir(events_dir)):
         if not fn.endswith(".json"):
             continue
         path = os.path.join(events_dir, fn)
         with open(path, encoding="utf-8") as f:
             batch = json.load(f)
-        counts = {"external": 0, "image": 0, "video": 0, "non_geo": 0}
+        counts = {"external": 0, "image": 0, "video": 0, "non_geo": 0, "gov": 0}
         for ev in batch.get("events", []):
             fname = (ev.get("file") or "").lower()
-            info = info_map.get(fname)
+            info = info_map.get(fname) if fname else None
+            # Fallback: lookup by title
+            if not info:
+                title_low = (ev.get("title") or "").lower().strip()
+                if title_low in by_title:
+                    info = by_title[title_low]
             if info:
-                if ev.get("archive_url") != info["archive_url"]:
-                    ev["archive_url"] = info["archive_url"]
-                counts["external"] += 1
+                if info.get("archive_url"):
+                    if ev.get("archive_url") != info["archive_url"]:
+                        ev["archive_url"] = info["archive_url"]
+                    counts["external"] += 1
                 if info.get("image_url"):
                     ev["image_url"] = info["image_url"]
                     counts["image"] += 1
-                if not ev.get("description") and info.get("description"):
+                if not ev.get("record_description") and info.get("description"):
                     ev["record_description"] = info["description"]
                 if info.get("record_type"):
                     ev["record_type"] = info["record_type"]
+                # Attach gov.war page deep link
+                if info.get("gov_page_url"):
+                    ev["gov_page_url"] = info["gov_page_url"]
+                    counts["gov"] += 1
+                # Sync date/location from official manifest if our data is missing/N/A
+                if info.get("incident_date"):
+                    ev["official_date"] = info["incident_date"]
+                if info.get("incident_location"):
+                    ev["official_location"] = info["incident_location"]
             # Attach paired video
-            vinfo = video_map.get(fname)
+            vinfo = video_map.get(fname) if fname else None
+            # Fallback: try by title
+            if not vinfo:
+                # Search video_map for any entry with matching title
+                title_low = (ev.get("title") or "").lower().strip()
+                for k, v in video_map.items():
+                    if k.startswith(title_to_hash(title_low).lower()[:20]):
+                        vinfo = v
+                        break
             if vinfo and vinfo.get("video_url"):
                 ev["video_url"] = vinfo["video_url"]
                 ev["dvids_id"] = vinfo["dvids_id"]
@@ -170,10 +218,10 @@ def rewrite_event_batches(info_map, video_map):
             totals[k] += v
         print(f"[prepare] {fn}: external={counts['external']} "
               f"images={counts['image']} videos={counts['video']} "
-              f"non_geo={counts['non_geo']}")
+              f"non_geo={counts['non_geo']} gov_url={counts['gov']}")
     print(f"[prepare] TOTALS: external={totals['external']} "
           f"images={totals['image']} videos={totals['video']} "
-          f"non_geographic={totals['non_geo']}")
+          f"non_geographic={totals['non_geo']} gov_url={totals['gov']}")
 
 
 def note_archive_symlinks():

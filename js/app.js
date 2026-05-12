@@ -246,9 +246,15 @@ function buildDetailHtml(e) {
     ${imageBlock}
     ${videoBlock}
 
-    ${url ? `<a class="archive-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">
-       ${escapeHtml(t('detail_open_pdf'))}
-     </a>` : ''}
+    <div class="detail-links">
+      ${url ? `<a class="archive-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">
+         ${escapeHtml(t('detail_open_pdf'))}
+       </a>` : ''}
+      ${e.gov_page_url ? `<a class="archive-link" href="${escapeAttr(e.gov_page_url)}" target="_blank" rel="noopener"
+         style="background:#3a5d9e;">
+         ${escapeHtml(lang === 'en' ? '🏛 war.gov source page' : '🏛 war.gov 官方页面')}
+       </a>` : ''}
+    </div>
 
     <div style="margin-top:14px; font-size:11px; color:#6a7c9c;">
       ${t('detail_event_id')}: <code>${escapeHtml(e.id)}</code>

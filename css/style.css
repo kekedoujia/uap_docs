@@ -417,6 +417,19 @@ hr { border: 0; border-top: 1px solid #2a3a5a; margin: 16px 0; }
   background: transparent; color: #82b9ff; border: 1px solid #82b9ff;
   font-size: 11px; padding: 4px 8px;
 }
+#detail-content .detail-links {
+  margin-top: 12px;
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+#detail-content .detail-links a {
+  margin: 0;
+}
+#detail-content .detail-links a[style*="3a5d9e"] {
+  color: #fff !important;
+}
+#detail-content .detail-links a[style*="3a5d9e"]:hover {
+  background: #4a7ac0 !important;
+}
 
 /* Leaflet override (dark theme) */
 .leaflet-control-attribution {

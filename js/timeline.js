@@ -265,10 +265,14 @@ function buildDetailHtml(e) {
     ${imageBlock}
     ${videoBlock}
 
-    <div style="margin-top:8px;">
+    <div class="detail-links" style="margin-top:8px;">
       ${mapBtn}
       ${url ? `<a class="archive-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">
          ${escapeHtml(t('detail_open_pdf'))}
+       </a>` : ''}
+      ${e.gov_page_url ? `<a class="archive-link" href="${escapeAttr(e.gov_page_url)}" target="_blank" rel="noopener"
+         style="background:#3a5d9e;">
+         ${escapeHtml(lang === 'en' ? '🏛 war.gov source' : '🏛 war.gov 官方页面')}
        </a>` : ''}
     </div>
 
