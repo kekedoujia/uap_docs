@@ -13,7 +13,6 @@ services:
   - type: web
     name: ufo-uap-map
     runtime: static
-    plan: free                       # Switch to "starter" for more bandwidth.
 
     # Build: regenerate event data with external war.gov archive URLs.
     buildCommand: |
