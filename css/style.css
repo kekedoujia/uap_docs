@@ -620,16 +620,45 @@ hr { border: 0; border-top: 1px solid #2a3a5a; margin: 16px 0; }
 /* Legend */
 #legend {
   position: absolute; bottom: 12px; right: 12px;
+  z-index: 800;
+}
+.legend-fab {
+  display: none;     /* visible only on mobile via media query */
+  background: rgba(15, 26, 47, 0.92);
+  border: 1px solid #2a3a5a;
+  color: #82b9ff;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  font-size: 16px; font-weight: 600;
+  cursor: pointer;
+  align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  font-family: inherit;
+  padding: 0;
+}
+.legend-fab:active { transform: scale(0.95); }
+.legend-content {
   background: rgba(15, 26, 47, 0.92);
   padding: 10px 14px; border-radius: 4px;
   border: 1px solid #2a3a5a;
   font-size: 11px; color: #c8d6f0;
-  z-index: 800;
+  min-width: 140px;
 }
-#legend h4 {
-  margin: 0 0 6px 0; font-size: 12px; color: #82b9ff;
-  text-transform: uppercase;
+.legend-head {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 8px;
 }
+.legend-head h4 {
+  margin: 0 0 0 0; font-size: 12px; color: #82b9ff;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.legend-close {
+  display: none;     /* visible only on mobile */
+  background: none; border: none; color: #82b9ff;
+  font-size: 18px; cursor: pointer; padding: 0 4px; line-height: 1;
+}
+.legend-close:hover { color: #fff; }
+#legend h4 { margin: 0 0 6px 0; }
 #legend .leg-row {
   display: flex; align-items: center; gap: 6px; padding: 2px 0;
 }
@@ -816,9 +845,26 @@ body.sidebar-open #sidebar-backdrop { display: block; }
     font-size: 13px !important;
   }
 
-  /* Map legend smaller */
-  #legend { font-size: 10px; padding: 8px 10px; }
-  #legend h4 { font-size: 11px; }
+  /* Map legend — collapsed by default on mobile, FAB toggles it */
+  #legend { padding: 0; bottom: 16px; right: 16px; }
+  .legend-fab { display: flex; }
+  .legend-content { display: none; }
+  #legend.expanded .legend-content {
+    display: block;
+    position: absolute; bottom: 44px; right: 0;
+    font-size: 11px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    animation: legend-pop 0.18s ease-out;
+  }
+  #legend.expanded .legend-fab {
+    background: #82b9ff; color: #0b1320;
+    border-color: #82b9ff;
+  }
+  .legend-close { display: inline-block; }
+  @keyframes legend-pop {
+    from { transform: translateY(6px) scale(0.96); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+  }
 
   /* Disable backdrop padding shift on small screens */
   body:has(#detail-panel:not(.hidden)) .modal {

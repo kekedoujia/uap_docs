@@ -423,6 +423,15 @@ document.addEventListener('click', evt => {
     toggleSidebar(false);
     return;
   }
+  // Legend FAB toggle (mobile expand/collapse)
+  if (evt.target.closest('.legend-fab')) {
+    if (STATE.legendEl) STATE.legendEl.classList.toggle('expanded');
+    return;
+  }
+  if (evt.target.closest('.legend-close')) {
+    if (STATE.legendEl) STATE.legendEl.classList.remove('expanded');
+    return;
+  }
 });
 
 // Global event delegation
@@ -574,14 +583,20 @@ function updateLegend() {
   if (!STATE.legendEl) return;
   const t = (k) => I18N.t(k);
   STATE.legendEl.innerHTML = `
-    <h4>${escapeHtml(t('legend_title'))}</h4>
-    <div class="leg-row"><span class="swatch" style="background:#ffd93d"></span> ${escapeHtml(t('legend_fbi'))}</div>
-    <div class="leg-row"><span class="swatch" style="background:#6bcb77"></span> ${escapeHtml(t('legend_usaf'))}</div>
-    <div class="leg-row"><span class="swatch" style="background:#82b9ff"></span> ${escapeHtml(t('legend_dow'))}</div>
-    <div class="leg-row"><span class="swatch" style="background:#ff9f6b"></span> ${escapeHtml(t('legend_nasa'))}</div>
-    <div class="leg-row"><span class="swatch" style="background:#ff6b6b"></span> ${escapeHtml(t('legend_other'))}</div>
-    <hr style="border-color:#2a3a5a; margin:6px 0;">
-    <div class="leg-row">${t('legend_heatmap_caption')}</div>
+    <button class="legend-fab" type="button" aria-label="Toggle legend" title="Legend">ⓘ</button>
+    <div class="legend-content">
+      <div class="legend-head">
+        <h4>${escapeHtml(t('legend_title'))}</h4>
+        <button class="legend-close" type="button" aria-label="Close legend">×</button>
+      </div>
+      <div class="leg-row"><span class="swatch" style="background:#ffd93d"></span> ${escapeHtml(t('legend_fbi'))}</div>
+      <div class="leg-row"><span class="swatch" style="background:#6bcb77"></span> ${escapeHtml(t('legend_usaf'))}</div>
+      <div class="leg-row"><span class="swatch" style="background:#82b9ff"></span> ${escapeHtml(t('legend_dow'))}</div>
+      <div class="leg-row"><span class="swatch" style="background:#ff9f6b"></span> ${escapeHtml(t('legend_nasa'))}</div>
+      <div class="leg-row"><span class="swatch" style="background:#ff6b6b"></span> ${escapeHtml(t('legend_other'))}</div>
+      <hr style="border-color:#2a3a5a; margin:6px 0;">
+      <div class="leg-row">${t('legend_heatmap_caption')}</div>
+    </div>
   `;
 }
 
