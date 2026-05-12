@@ -286,6 +286,12 @@ function buildDetailHtml(e) {
     ${e.report_summary ? `<div class="full-text">${escapeHtml(e.report_summary)}</div>` : ''}
 
     ${imageBlock}
+    ${e.watermark_crop_url ? `
+      <div class="media-block">
+        <div class="media-block-title">⏱ ${escapeHtml(lang==='en'?'Bottom-left timestamp (IR sensor default)':'左下角时间水印（红外传感器默认时钟）')}</div>
+        <img src="${escapeAttr(e.watermark_crop_url)}" alt="watermark"
+             style="width:100%; max-height:140px; object-fit:contain; background:#000; border-radius:4px;">
+      </div>` : ''}
     ${videoBlock}
 
     <div class="detail-links" style="margin-top:8px;">

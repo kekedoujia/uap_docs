@@ -190,6 +190,20 @@ function buildDetailHtml(e) {
   // Falls back to cover thumbnail from war.gov modal_image when no page-specific
   // render is available.
   let imageBlock = '';
+  let watermarkBlock = '';
+  if (e.watermark_crop_url) {
+    const label = lang === 'en'
+      ? 'Bottom-left timestamp watermark (IR sensor default — real date unknown)'
+      : '图片左下角时间水印（红外传感器默认时钟，实际日期未提供）';
+    watermarkBlock = `
+      <div class="media-block">
+        <div class="media-block-title">⏱ ${escapeHtml(label)}</div>
+        <img src="${escapeAttr(e.watermark_crop_url)}" alt="watermark"
+             style="width:100%; max-height:140px; object-fit:contain;
+                    background:#000; border-radius:4px; image-rendering: crisp-edges;">
+      </div>
+    `;
+  }
   const useFullPdfLink = e.archive_url && e.page
     ? e.archive_url + (e.archive_url.includes('#') ? '' : `#page=${parseInt(e.page, 10)}`)
     : e.archive_url;
@@ -271,6 +285,7 @@ function buildDetailHtml(e) {
     ${e.report_summary ? `<div class="full-text">${escapeHtml(e.report_summary)}</div>` : ''}
 
     ${imageBlock}
+    ${watermarkBlock}
     ${videoBlock}
 
     <div class="detail-links">
