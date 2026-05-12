@@ -197,7 +197,25 @@ function buildDetailHtml(e) {
   const lang = (window.I18N && I18N.current) || 'zh';
 
   let imageBlock = '';
-  if (e.image_url) {
+  const useFullPdfLink = e.archive_url && e.page
+    ? e.archive_url + (e.archive_url.includes('#') ? '' : `#page=${parseInt(e.page, 10)}`)
+    : e.archive_url;
+  if (e.page_thumb_url) {
+    const pageLabel = lang === 'en'
+      ? `Rendered page ${parseInt(e.page, 10)}`
+      : `第 ${parseInt(e.page, 10)} 页（PDF 渲染）`;
+    imageBlock = `
+      <div class="media-block">
+        <div class="media-block-title">📄 ${escapeHtml(pageLabel)}</div>
+        <a href="${escapeAttr(useFullPdfLink || e.page_thumb_url)}" target="_blank" rel="noopener">
+          <img src="${escapeAttr(e.page_thumb_url)}" alt="page thumbnail"
+               style="width:100%; max-height:520px; object-fit:contain;
+                      background:#000; border-radius:4px; cursor:zoom-in;"
+               onerror="this.parentElement.parentElement.style.display='none'">
+        </a>
+      </div>
+    `;
+  } else if (e.image_url && !e.page) {
     imageBlock = `
       <div class="media-block">
         <a href="${escapeAttr(e.image_url)}" target="_blank" rel="noopener">
@@ -267,8 +285,8 @@ function buildDetailHtml(e) {
 
     <div class="detail-links" style="margin-top:8px;">
       ${mapBtn}
-      ${url ? `<a class="archive-link" href="${escapeAttr(url)}" target="_blank" rel="noopener">
-         ${escapeHtml(t('detail_open_pdf'))}
+      ${url ? `<a class="archive-link" href="${escapeAttr(useFullPdfLink || url)}" target="_blank" rel="noopener">
+         ${escapeHtml(t('detail_open_pdf'))}${e.page ? ` <span style="opacity:0.7;">· p.${parseInt(e.page,10)}</span>` : ''}
        </a>` : ''}
       ${e.gov_page_url ? `<a class="archive-link" href="${escapeAttr(e.gov_page_url)}" target="_blank" rel="noopener"
          style="background:#3a5d9e;">
