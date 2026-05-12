@@ -156,8 +156,8 @@
     "lon": -114.5964
   },
   "Phoenix, Arizona": {
-    "lat": 33.4484,
-    "lon": -112.074
+    "lat": 33.45,
+    "lon": -112.05
   },
   "Roswell, New Mexico": {
     "lat": 33.3943,
@@ -728,8 +728,8 @@
     "lon": -111.7167
   },
   "South Brooksville, Maine": {
-    "lat": 44.565,
-    "lon": -68.7833
+    "lat": 44.3356,
+    "lon": -68.7847
   },
   "Unknown (OCR error)": {
     "lat": 0,
@@ -777,11 +777,11 @@
   },
   "Muroc Army Air Field, California": {
     "lat": 34.9054,
-    "lon": -117.8843
+    "lon": -117.884
   },
   "Rogers Dry Lake, California": {
-    "lat": 34.93,
-    "lon": -117.88
+    "lat": 34.9054,
+    "lon": -117.8844
   },
   "Lake City, Seattle, Washington": {
     "lat": 47.7151,
@@ -857,7 +857,7 @@
   },
   "Fort Richardson, Alaska": {
     "lat": 61.2644,
-    "lon": -149.6647
+    "lon": -149.6611
   },
   "Salmon Dam, Idaho": {
     "lat": 45.176,
@@ -1894,5 +1894,69 @@
   "Iraq/Syria Theater (ESSA Area)": {
     "lat": 33.3,
     "lon": 44.4
+  },
+  "Vancouver, Washington": {
+    "lat": 45.6387,
+    "lon": -122.6615
+  },
+  "West Trenton, New Jersey": {
+    "lat": 40.2679,
+    "lon": -74.8249
+  },
+  "Northern Arizona, Route 66": {
+    "lat": 35.2,
+    "lon": -111.0
+  },
+  "Oakland, California": {
+    "lat": 37.8044,
+    "lon": -122.2712
+  },
+  "Wilmington, Ohio": {
+    "lat": 39.4453,
+    "lon": -83.8285
+  },
+  "Near Sidney, Newfoundland": {
+    "lat": 46.8,
+    "lon": -60.2
+  },
+  "Snake River Canyon near Twin Falls, Idaho": {
+    "lat": 42.6,
+    "lon": -114.47
+  },
+  "Necker Island, Pacific Ocean": {
+    "lat": 23.57,
+    "lon": -164.67
+  },
+  "Hickam Field, Hawaii": {
+    "lat": 21.3187,
+    "lon": -157.9225
+  },
+  "Tauberbischofsheim, Germany": {
+    "lat": 49.62,
+    "lon": 9.66
+  },
+  "Hollywood, California": {
+    "lat": 34.0928,
+    "lon": -118.3287
+  },
+  "Manitou Springs, Colorado": {
+    "lat": 38.8583,
+    "lon": -104.9197
+  },
+  "Pyramid Lake, Nevada": {
+    "lat": 40.0,
+    "lon": -119.5
+  },
+  "Canyon Ferry, Montana": {
+    "lat": 46.65,
+    "lon": -111.75
+  },
+  "Rosedale, California": {
+    "lat": 38.967,
+    "lon": -123.883
+  },
+  "Near Lake Mead, Nevada (en route to Fairfield-Suisun AAB)": {
+    "lat": 36.155,
+    "lon": -114.37
   }
 }
