@@ -50,6 +50,8 @@ const I18N = {
       load_error: '加载数据失败。请通过 HTTP 服务器访问（不能直接打开 index.html 文件）。',
       load_error_cmd: '命令',
       loading: '加载中…',
+      visitor_you_are: '您是第',
+      visitor_suffix: '位访客',
     },
     en: {
       title: 'UFO/UAP Disclosure Archive — Interactive Map',
@@ -94,6 +96,8 @@ const I18N = {
       load_error: 'Failed to load data. Please serve over HTTP (not file://).',
       load_error_cmd: 'Command',
       loading: 'Loading…',
+      visitor_you_are: 'You are visitor #',
+      visitor_suffix: '',
     },
   },
 
@@ -124,6 +128,8 @@ const I18N = {
         if (window.showDetail) window.showDetail(window.STATE.lastDetailEvent);
       }
     }
+    // Visitor counter re-render
+    if (window.renderVisitorCounter) window.renderVisitorCounter();
   },
 
   set(lang) {

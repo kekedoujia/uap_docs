@@ -107,6 +107,26 @@ hr { border: 0; border-top: 1px solid #2a3a5a; margin: 16px 0; }
 .footer { font-size: 11px; color: #6a7c9c; }
 .footer a { color: #82b9ff; }
 
+/* Visitor counter */
+.visitor-counter {
+  display: block;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: rgba(130, 185, 255, 0.08);
+  border-left: 2px solid #82b9ff;
+  border-radius: 2px;
+  font-size: 11px;
+  color: #c8d6f0;
+  letter-spacing: 0.3px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.visitor-counter.ready { opacity: 1; }
+.visitor-counter .num {
+  color: #82b9ff; font-weight: 700; font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
+
 /* Map */
 #map {
   position: absolute; top: 60px; left: 280px; right: 0; bottom: 0;
