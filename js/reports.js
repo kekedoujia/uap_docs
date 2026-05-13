@@ -50,7 +50,8 @@ async function loadData() {
   for (const e of all) {
     const key = e.file || `__novfile__::${e.dvids_video_id || e.video_title || e.type || 'unknown'}`;
     if (!groups.has(key)) {
-      const isPdf = !!e.file;
+      // True PDF only if filename ends in .pdf — images/videos shouldn't show a page stat.
+      const isPdf = !!e.file && /\.pdf$/i.test(e.file);
       groups.set(key, {
         key,
         is_pdf: isPdf,
@@ -248,7 +249,7 @@ function renderReportCard(r) {
             <span class="rp-stat-num">${r.eventCount}</span>
             <span class="rp-stat-lbl">${escapeHtml(I18N.t('reports_events_label'))}</span>
           </div>
-          ${r.is_pdf ? `<div class="rp-stat">
+          ${r.is_pdf && r.pageCount > 0 ? `<div class="rp-stat">
             <span class="rp-stat-num">${r.pageCount}</span>
             <span class="rp-stat-lbl">${escapeHtml(I18N.t('reports_pages_label'))}</span>
           </div>` : ''}
