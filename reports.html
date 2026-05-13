@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="reports_title">UFO/UAP 档案 — 按报告索引</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="reports-page">
+
+<div id="topbar">
+  <h1><a href="index.html" class="back-link" data-i18n="reports_back" title="Map">🛸</a> <span data-i18n="reports_header">档案报告索引</span></h1>
+  <div id="topbar-right">
+    <div id="meta">
+      <a href="index.html" data-i18n="reports_to_map">🗺 返回地图</a> ·
+      <a href="timeline.html" data-i18n="reports_to_timeline">📅 时间轴</a> ·
+      <span id="report-count">…</span> <span data-i18n="reports_pages_label">页数</span><span style="opacity:.5">/</span>
+      <span id="event-count">…</span> <span data-i18n="meta_events">事件</span>
+    </div>
+    <div id="lang-toggle" role="group" aria-label="Language toggle">
+      <button data-lang="zh" class="lang-btn active">中</button>
+      <button data-lang="en" class="lang-btn">EN</button>
+    </div>
+  </div>
+</div>
+<a href="index.html" id="mobile-fab-back" title="Back to map" aria-label="Back to map">🗺</a>
+
+<div id="reports-toolbar">
+  <div class="rp-filter-cell rp-grow">
+    <label data-i18n="tl_search">搜索：</label>
+    <input type="text" id="rp-search" placeholder="..." data-i18n-placeholder="reports_search_placeholder">
+  </div>
+  <div class="rp-filter-cell">
+    <label data-i18n="reports_sort_label">排序：</label>
+    <select id="rp-sort">
+      <option value="events" data-i18n="reports_sort_events">事件数（多→少）</option>
+      <option value="name" data-i18n="reports_sort_name">档案名</option>
+      <option value="pages" data-i18n="reports_sort_pages">页数（多→少）</option>
+    </select>
+  </div>
+  <div class="rp-filter-cell">
+    <label data-i18n="reports_visible_short">显示：</label>
+    <span id="rp-visible-count">—</span> / <span id="rp-total-count">—</span>
+  </div>
+</div>
+
+<div id="reports-container">
+  <div id="reports-list"></div>
+</div>
+
+<div id="detail-panel" class="hidden">
+  <button id="detail-close" title="Close">×</button>
+  <div id="detail-content"></div>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/reports.js"></script>
+</body>
+</html>

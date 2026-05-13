@@ -930,3 +930,249 @@ body.sidebar-open #sidebar-backdrop { display: block; }
   #topbar h1 a.back-link { font-size: 14px; }
   #lang-toggle { display: flex; }
 }
+
+/* ============================================
+   Reports page (按报告索引)
+   ============================================ */
+body.reports-page { overflow: auto; }
+body.reports-page #topbar { position: sticky; top: 0; }
+body.reports-page #topbar h1 a.back-link { text-decoration: none; color: #82b9ff; }
+
+#reports-toolbar {
+  position: sticky; top: 60px;
+  z-index: 800;
+  background: rgba(15, 26, 47, 0.97);
+  border-bottom: 1px solid #2a3a5a;
+  padding: 12px 24px;
+  display: flex; flex-wrap: wrap; gap: 14px; align-items: center;
+}
+.rp-filter-cell { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #8fa3c4; }
+.rp-filter-cell label { color: #8fa3c4; }
+.rp-filter-cell input[type="text"], .rp-filter-cell select {
+  background: #0b1320; border: 1px solid #2a3a5a; border-radius: 3px;
+  color: #e8eef9; padding: 4px 8px; font-size: 12px; font-family: inherit;
+}
+.rp-filter-cell select { min-width: 180px; }
+#rp-search { min-width: 220px; }
+.rp-filter-cell.rp-grow { flex: 1; min-width: 240px; }
+.rp-filter-cell.rp-grow input { flex: 1; }
+#rp-visible-count { color: #82b9ff; font-weight: 600; }
+
+#reports-container {
+  position: relative;
+  padding: 0 24px 60px;
+  max-width: 1100px;
+  margin: 16px auto 0;
+}
+
+.rp-card {
+  background: rgba(15, 26, 47, 0.6);
+  border: 1px solid #1a2745;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: border-color 0.12s;
+}
+.rp-card.rp-open { border-color: #2a3a5a; }
+.rp-card-header {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 16px;
+  padding: 14px 16px;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.1s;
+}
+.rp-card-header:hover { background: rgba(130, 185, 255, 0.05); }
+.rp-card-header:focus-visible { background: rgba(130, 185, 255, 0.08); box-shadow: inset 0 0 0 1px #82b9ff; }
+.rp-card.rp-open .rp-card-header { background: rgba(130, 185, 255, 0.05); border-bottom: 1px solid #1a2745; }
+
+.rp-card-titleblock { min-width: 0; }
+.rp-card-title {
+  font-size: 15px; font-weight: 600;
+  color: #e8eef9; margin: 0 0 4px;
+  line-height: 1.3;
+}
+.rp-card-file {
+  font-size: 11px; color: #8fa3c4;
+  display: flex; align-items: center; gap: 6px;
+  margin-bottom: 4px;
+}
+.rp-card-file code {
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 10.5px;
+  color: #82b9ff;
+  background: rgba(130, 185, 255, 0.06);
+  padding: 1px 5px; border-radius: 2px;
+  word-break: break-all;
+}
+.rp-card-fileicon { font-size: 14px; }
+.rp-card-desc {
+  font-size: 11.5px; color: #a8b8d4;
+  line-height: 1.5;
+  margin-top: 6px;
+  max-height: 4.6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.rp-card-stats {
+  display: flex; gap: 14px; align-items: center;
+  flex-shrink: 0;
+}
+.rp-stat {
+  display: flex; flex-direction: column; align-items: center;
+  min-width: 60px;
+  padding: 4px 8px;
+  background: rgba(130, 185, 255, 0.08);
+  border-radius: 4px;
+}
+.rp-stat-num {
+  font-size: 18px; font-weight: 700; color: #82b9ff;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.rp-stat-lbl {
+  font-size: 9.5px; color: #8fa3c4;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+.rp-card-actions {
+  display: flex; flex-direction: column; gap: 4px;
+  flex-shrink: 0; align-items: stretch;
+}
+.rp-link, .rp-toggle-btn {
+  font-size: 11px;
+  background: rgba(130, 185, 255, 0.08);
+  border: 1px solid rgba(130, 185, 255, 0.25);
+  color: #82b9ff;
+  padding: 4px 10px;
+  border-radius: 3px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+}
+.rp-link:hover, .rp-toggle-btn:hover {
+  background: rgba(130, 185, 255, 0.18);
+  color: #e8eef9;
+}
+.rp-link-gov { background: rgba(58, 93, 158, 0.4); border-color: #3a5d9e; color: #cce0ff; }
+.rp-link-gov:hover { background: rgba(58, 93, 158, 0.7); }
+
+.rp-event-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 12px 12px;
+  background: rgba(0, 0, 0, 0.18);
+}
+.rp-event-row {
+  display: grid;
+  grid-template-columns: 12px 56px 96px 1.2fr 2fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  margin: 3px 0;
+  background: rgba(15, 26, 47, 0.4);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.4;
+  transition: background 0.1s, border-color 0.1s;
+}
+.rp-event-row:hover {
+  background: rgba(130, 185, 255, 0.08);
+  border-color: #2a3a5a;
+}
+.rp-event-row:focus-visible {
+  outline: none;
+  background: rgba(130, 185, 255, 0.1);
+  border-color: #82b9ff;
+}
+.rp-row-marker {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: #ff6b6b;
+  box-shadow: 0 0 6px rgba(255,107,107,0.4);
+}
+.rp-marker-fbi { background: #ffd93d; box-shadow: 0 0 6px rgba(255,217,61,0.4); }
+.rp-marker-usaf { background: #6bcb77; box-shadow: 0 0 6px rgba(107,203,119,0.4); }
+.rp-marker-dow { background: #82b9ff; box-shadow: 0 0 6px rgba(130,185,255,0.4); }
+.rp-marker-nasa { background: #ff9f6b; box-shadow: 0 0 6px rgba(255,159,107,0.4); }
+
+.rp-row-page {
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 11px;
+  color: #8fa3c4;
+  background: rgba(130, 185, 255, 0.06);
+  padding: 1px 5px;
+  border-radius: 2px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.rp-row-date {
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 11px;
+  color: #82b9ff;
+  font-variant-numeric: tabular-nums;
+}
+.rp-row-loc {
+  color: #e8eef9;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rp-row-title {
+  color: #a8b8d4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rp-tag {
+  background: rgba(255,107,107,0.15);
+  color: #ff9999;
+  padding: 1px 5px; border-radius: 2px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.rp-tag-other { background: rgba(130,185,255,0.15); color: #82b9ff; }
+
+.rp-empty {
+  padding: 60px 20px; text-align: center; color: #6a7c9c;
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  .rp-card-header {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .rp-card-stats { justify-content: flex-start; }
+  .rp-card-actions { flex-direction: row; flex-wrap: wrap; }
+  .rp-event-row {
+    grid-template-columns: 9px 50px 80px 1fr;
+    gap: 8px;
+    grid-template-rows: auto auto;
+  }
+  .rp-row-title {
+    grid-column: 2 / -1;
+    grid-row: 2;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .rp-tag { grid-column: 2 / -1; }
+}
+@media (max-width: 480px) {
+  #reports-toolbar { padding: 10px 14px; gap: 10px; }
+  #reports-container { padding: 0 14px 40px; }
+  .rp-card-title { font-size: 14px; }
+  .rp-stat-num { font-size: 15px; }
+}
