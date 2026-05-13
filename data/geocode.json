@@ -896,8 +896,8 @@
     "lon": -147.7164
   },
   "Greenville, South Carolina": {
-    "lat": 34.8481,
-    "lon": -82.354
+    "lat": 34.8526,
+    "lon": -82.394
   },
   "Near James Bay (V.J. Pratt)": {
     "lat": 51.45,
@@ -1628,8 +1628,8 @@
     "lon": -74.0104
   },
   "Chanute Air Force Base, Illinois": {
-    "lat": 40.3,
-    "lon": -87.95
+    "lat": 40.298,
+    "lon": -87.954
   },
   "West of Las Vegas, New Mexico": {
     "lat": 35.6,
@@ -1820,8 +1820,8 @@
     "lon": -98.5795
   },
   "40 miles northwest of Martinsburg, West Virginia": {
-    "lat": 39.75,
-    "lon": -78.3
+    "lat": 39.8,
+    "lon": -78.5
   },
   "Miami Office, FBI (Miami, Florida)": {
     "lat": 25.7617,
@@ -1990,5 +1990,93 @@
   "Belleville, Illinois (Scott AF Base)": {
     "lat": 38.5447,
     "lon": -89.992
+  },
+  "Griffiss Air Force Base, Rome, New York": {
+    "lat": 43.2338,
+    "lon": -75.4069
+  },
+  "Medford, Oregon": {
+    "lat": 42.3265,
+    "lon": -122.8756
+  },
+  "Portland, Oregon (vicinity of Troutdale and Mount Hood)": {
+    "lat": 45.523,
+    "lon": -122.676
+  },
+  "Portland, Oregon (vicinity)": {
+    "lat": 45.5152,
+    "lon": -122.6784
+  },
+  "Fairfield, Ohio": {
+    "lat": 39.3456,
+    "lon": -84.5603
+  },
+  "20 miles southwest of Boston, Massachusetts": {
+    "lat": 42.16,
+    "lon": -71.29
+  },
+  "Elko, Nevada": {
+    "lat": 40.8324,
+    "lon": -115.7631
+  },
+  "Guam and Marianas Islands": {
+    "lat": 13.4443,
+    "lon": 144.7937
+  },
+  "Tinker Air Force Base, Oklahoma": {
+    "lat": 35.4147,
+    "lon": -97.3866
+  },
+  "Fort Worth, Texas (Carswell Air Force Base)": {
+    "lat": 32.7555,
+    "lon": -97.3308
+  },
+  "Port Chimo, Quebec (near Station 1950)": {
+    "lat": 58.1064,
+    "lon": -68.4266
+  },
+  "Goose Bay, Labrador (Canada)": {
+    "lat": 53.3191,
+    "lon": -60.4258
+  },
+  "Sandberg Pass, California (9 miles south of Bakersfield)": {
+    "lat": 34.75,
+    "lon": -118.72
+  },
+  "Guelph's East, Newfoundland": {
+    "lat": 48.85,
+    "lon": -58.5
+  },
+  "Curtiss Field (location at 58°N, 48°W - likely North Atlantic/Greenland area)": {
+    "lat": 58.0,
+    "lon": -48.0
+  },
+  "Godman Air Force Base, Fort Knox, Kentucky": {
+    "lat": 37.9079,
+    "lon": -85.9722
+  },
+  "Hickam Air Force Base, Hawaii": {
+    "lat": 21.318611,
+    "lon": -157.922778
+  },
+  "Indian House Lake, Canada (Newfoundland and Labrador)": {
+    "lat": 54.9167,
+    "lon": -63.75
+  },
+  "Jackson, Mississippi (2 miles East)": {
+    "lat": 32.2988,
+    "lon": -90.1848
+  },
+  "Edmonton, Alberta, Canada": {
+    "lat": 53.5461,
+    "lon": -113.4938
+  },
+  "Maxwell Air Force Base, Alabama": {
+    "lat": 32.3829,
+    "lon": -86.3659
+  },
+  "Edmonton to Kittigazuit, Northwest Territories, Canada (en route)": {
+    "lat": 60.0,
+    "lon": -125.0
   }
 }
