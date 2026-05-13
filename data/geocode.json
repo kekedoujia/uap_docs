@@ -736,8 +736,8 @@
     "lon": 0
   },
   "McKeesport, Pennsylvania": {
-    "lat": 40.3476,
-    "lon": -79.8645
+    "lat": 40.3487,
+    "lon": -79.8642
   },
   "Richmond, Indiana": {
     "lat": 39.8289,
@@ -896,8 +896,8 @@
     "lon": -147.7164
   },
   "Greenville, South Carolina": {
-    "lat": 34.8526,
-    "lon": -82.394
+    "lat": 34.8481,
+    "lon": -82.354
   },
   "Near James Bay (V.J. Pratt)": {
     "lat": 51.45,
@@ -976,8 +976,8 @@
     "lon": 18.0
   },
   "Indianapolis, Indiana": {
-    "lat": 39.7684,
-    "lon": -86.1581
+    "lat": 39.8,
+    "lon": -86.15
   },
   "North Monroe Ave, Columbus, Ohio": {
     "lat": 39.9612,
@@ -992,8 +992,8 @@
     "lon": -79.8961
   },
   "Hamel, Minnesota": {
-    "lat": 45.0786,
-    "lon": -93.5258
+    "lat": 45.0886,
+    "lon": -93.5763
   },
   "Arnhem area, Netherlands": {
     "lat": 51.9851,
@@ -1958,5 +1958,37 @@
   "Near Lake Mead, Nevada (en route to Fairfield-Suisun AAB)": {
     "lat": 36.155,
     "lon": -114.37
+  },
+  "Montgomery, Alabama": {
+    "lat": 32.3668,
+    "lon": -86.3
+  },
+  "Memphis, Tennessee": {
+    "lat": 35.1495,
+    "lon": -90.049
+  },
+  "North Atlantic Ocean, 62°00'N 33°00'W": {
+    "lat": 62.0,
+    "lon": -33.0
+  },
+  "Hecla, South Dakota": {
+    "lat": 45.8747,
+    "lon": -98.1456
+  },
+  "Between Parrott and Richland, Georgia": {
+    "lat": 32.31,
+    "lon": -84.43
+  },
+  "Pacific Ocean, between Kwajalein and Hickam Field": {
+    "lat": 19.133333,
+    "lon": 164.083333
+  },
+  "Gahanna, Ohio": {
+    "lat": 40.0192,
+    "lon": -82.8794
+  },
+  "Belleville, Illinois (Scott AF Base)": {
+    "lat": 38.5447,
+    "lon": -89.992
   }
 }
