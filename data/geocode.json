@@ -2306,5 +2306,229 @@
   "Bakersfield, California (front yard of Rankin home)": {
     "lat": 35.3733,
     "lon": -119.0187
+  },
+  "Princeton, Mercer County, West Virginia, USA": {
+    "lat": 37.3662,
+    "lon": -81.1026
+  },
+  "Chesapeake, Virginia (Sharon Drive / Great Bridge Road area)": {
+    "lat": 36.7682,
+    "lon": -76.2875
+  },
+  "Victoria, British Columbia, Canada": {
+    "lat": 48.4284,
+    "lon": -123.3656
+  },
+  "White Sands Missile Range, near Alamogordo, New Mexico, USA": {
+    "lat": 32.384,
+    "lon": -106.48
+  },
+  "Moorestown, New Jersey, USA": {
+    "lat": 39.965,
+    "lon": -74.942
+  },
+  "Unknown location (reported to Harvard College Observatory, Cambridge, Massachusetts)": {
+    "lat": 42.3736,
+    "lon": -71.1097
+  },
+  "Dallas, Texas (Dallas FBI Office)": {
+    "lat": 32.7767,
+    "lon": -96.797
+  },
+  "Compton, California (4267 E. Compton Boulevard)": {
+    "lat": 33.8958,
+    "lon": -118.2201
+  },
+  "La Habra, California (writer's address; no specific sighting site stated)": {
+    "lat": 33.9319,
+    "lon": -117.9461
+  },
+  "Waco, Texas (Waco Tribune Newspaper / Professional Building)": {
+    "lat": 31.5493,
+    "lon": -97.1467
+  },
+  "Milwaukee, Wisconsin (recovered by Milwaukee Police Department)": {
+    "lat": 43.0389,
+    "lon": -87.9065
+  },
+  "Lake of the Woods (vicinity), Ontario, Canada": {
+    "lat": 49.0,
+    "lon": -94.5
+  },
+  "Mountains near Los Angeles, California (exact spot not stated)": {
+    "lat": 34.11,
+    "lon": -118.24
+  },
+  "near Burns, Oregon (Harney Mountain / dry lakes area)": {
+    "lat": 43.586,
+    "lon": -119.054
+  },
+  "Lake County, Oregon (south-central Oregon high desert)": {
+    "lat": 42.6333,
+    "lon": -119.7167
+  },
+  "Lubeck area, west of South Parkersburg, West Virginia (about 4 mi SW of Parkersburg)": {
+    "lat": 39.24,
+    "lon": -81.68
+  },
+  "Denver University (Denver, Colorado, USA)": {
+    "lat": 39.6766,
+    "lon": -104.9612
+  },
+  "Paxinos, Pennsylvania (from witness's home)": {
+    "lat": 40.8526,
+    "lon": -76.5805
+  },
+  "New Mexico, USA (reported recovery area; no specific site named)": {
+    "lat": 34.5199,
+    "lon": -105.8701
+  },
+  "Elmira–Corning Regional Airport area (Elmira, New York)": {
+    "lat": 42.1596,
+    "lon": -76.8916
+  },
+  "Warner Valley, Oregon (Hart Mountain area)": {
+    "lat": 42.7,
+    "lon": -120.1
+  },
+  "Route 47 west of Genoa, Illinois (near St. Charles, DeKalb County)": {
+    "lat": 42.0979,
+    "lon": -88.692
+  },
+  "Lubeck, West Virginia (about 4 miles west of South Parkersburg)": {
+    "lat": 39.23,
+    "lon": -81.69
+  },
+  "Tulsa, Oklahoma (near 1039 N. College Ave.; earlier 44 E. 17th St.)": {
+    "lat": 36.154,
+    "lon": -95.9928
+  },
+  "New Orleans, Louisiana (Urquhart Street / Port of Embarkation)": {
+    "lat": 29.9511,
+    "lon": -90.0715
+  },
+  "Downers Grove, Illinois": {
+    "lat": 41.8089,
+    "lon": -88.0112
+  },
+  "North Chicago, Illinois (over Great Lakes Naval Training Center)": {
+    "lat": 42.31,
+    "lon": -87.85
+  },
+  "Washington, District of Columbia (2337 Ashmead Place NW residence)": {
+    "lat": 38.9072,
+    "lon": -77.0369
+  },
+  "Alice Municipal Airport area, Alice, Jim Wells County, Texas": {
+    "lat": 27.7523,
+    "lon": -98.0697
+  },
+  "Louisville, Kentucky (near Longest & Everett Aves.)": {
+    "lat": 38.2527,
+    "lon": -85.7585
+  },
+  "Kodiak Naval Air Station area, Kodiak, Alaska, USA": {
+    "lat": 57.79,
+    "lon": -152.41
+  },
+  "Toronto, Ontario, Canada (farm about 12 miles northeast of City Hall)": {
+    "lat": 43.77,
+    "lon": -79.21
+  },
+  "South Chicago, Chicago, Illinois (neighborhood/area)": {
+    "lat": 41.7398,
+    "lon": -87.554
+  },
+  "Roscoe, South Dakota, USA (rural Edmunds County)": {
+    "lat": 45.45,
+    "lon": -99.33
+  },
+  "Oak Park, Illinois (truck parked under large ash tree)": {
+    "lat": 41.885,
+    "lon": -87.7845
+  },
+  "Philadelphia, Pennsylvania (Vare Boulevard near 26th Street)": {
+    "lat": 39.9526,
+    "lon": -75.1652
+  },
+  "Camp Hood (Fort Cavazos), Texas, USA": {
+    "lat": 31.134,
+    "lon": -97.771
+  },
+  "Killeen Base, Texas": {
+    "lat": 31.117,
+    "lon": -97.727
+  },
+  "Alamogordo, New Mexico, USA": {
+    "lat": 32.8995,
+    "lon": -105.9603
+  },
+  "Between Tucumcari and Kirtland AFB, New Mexico": {
+    "lat": 35.1,
+    "lon": -105.2
+  },
+  "Sandia Base and Kirtland Air Force Base, Albuquerque, New Mexico, USA": {
+    "lat": 35.0844,
+    "lon": -106.6504
+  },
+  "New Haven, Connecticut (backyard of 495 Edgewood Avenue)": {
+    "lat": 41.3083,
+    "lon": -72.9279
+  },
+  "Oak Ridge, Tennessee (AEC controlled area / Oak Ridge installation)": {
+    "lat": 36.0104,
+    "lon": -84.2696
+  },
+  "New York City, New York (observed from witness residence; exact borough not stated)": {
+    "lat": 40.7128,
+    "lon": -74.006
+  },
+  "Los Alamos, New Mexico (AEC restricted area / Los Alamos Project)": {
+    "lat": 35.8816,
+    "lon": -106.3031
+  },
+  "Oak Ridge area, Tennessee (northeast of Oliver Springs)": {
+    "lat": 35.9613,
+    "lon": -84.2926
+  },
+  "Oak Ridge, Tennessee (vital installations area)": {
+    "lat": 36.0104,
+    "lon": -84.2696
+  },
+  "Chicago, Illinois (over Fullerton Avenue near North Burling Street)": {
+    "lat": 41.923,
+    "lon": -87.648
+  },
+  "Nashville, Tennessee (1900 Graybar Lane backyard)": {
+    "lat": 36.1627,
+    "lon": -86.7816
+  },
+  "Savannah River Plant (near Ellenton, South Carolina)": {
+    "lat": 33.27,
+    "lon": -81.73
+  },
+  "New York City, New York (object tracked over the city; seen from nearby residential area)": {
+    "lat": 40.7128,
+    "lon": -74.006
+  },
+  "Ashland, Kentucky (over the town)": {
+    "lat": 38.4784,
+    "lon": -82.6382
+  },
+  "Thessalon Lake (near Thessalon, Ontario, Canada)": {
+    "lat": 46.25,
+    "lon": -83.55
+  },
+  "Savannah, Georgia, USA": {
+    "lat": 32.0809,
+    "lon": -81.0912
+  },
+  "Jersey Shore, Pennsylvania (315 Cemetery Street)": {
+    "lat": 41.2023,
+    "lon": -77.2644
+  },
+  "Hasselbach, Thuringia, Germany (forest clearing near Meiningen, Soviet Zone)": {
+    "lat": 50.53,
+    "lon": 10.35
   }
 }
