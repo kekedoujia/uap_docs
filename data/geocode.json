@@ -2190,5 +2190,121 @@
   "Rehoboth Beach, Sussex County, Delaware (over Rehoboth Airport)": {
     "lat": 38.7209,
     "lon": -75.076
+  },
+  "Lake St. Clair area (near an air field by the lake, Michigan)": {
+    "lat": 42.46,
+    "lon": -82.65
+  },
+  "Omaha, Nebraska, USA": {
+    "lat": 41.2565,
+    "lon": -95.9345
+  },
+  "Omaha, Nebraska (2315 Kimbrough Ave)": {
+    "lat": 41.2565,
+    "lon": -95.9345
+  },
+  "Darlington, South Carolina (over town)": {
+    "lat": 34.2999,
+    "lon": -79.8762
+  },
+  "Yoakum, Texas (near town)": {
+    "lat": 29.2889,
+    "lon": -97.151
+  },
+  "Omaha, Douglas County, Nebraska (2319 Himebaugh Avenue)": {
+    "lat": 41.2565,
+    "lon": -95.9345
+  },
+  "Wisconsin, USA (Janesville, Oshkosh, and Green Bay reports)": {
+    "lat": 44.5,
+    "lon": -89.5
+  },
+  "Cuero, Texas, USA": {
+    "lat": 29.0894,
+    "lon": -97.2885
+  },
+  "Palisades Park and Bergenfield area (Bergen County, New Jersey, USA)": {
+    "lat": 40.887,
+    "lon": -73.998
+  },
+  "Laurel, Maryland": {
+    "lat": 39.0993,
+    "lon": -76.8483
+  },
+  "Grafton, Wisconsin (St. Joseph's Church)": {
+    "lat": 43.3197,
+    "lon": -87.9534
+  },
+  "Twin Falls, Idaho (215 7th Avenue East area)": {
+    "lat": 42.56297,
+    "lon": -114.46087
+  },
+  "Burbank, California (in or near Burbank; possibly Los Angeles city limits)": {
+    "lat": 34.1808,
+    "lon": -118.3089
+  },
+  "North Hollywood, Los Angeles, California (Radford Ave & Magnolia St / 11858 Magnolia Blvd)": {
+    "lat": 34.1867,
+    "lon": -118.373
+  },
+  "Black River Falls, Wisconsin, USA": {
+    "lat": 44.2947,
+    "lon": -90.8546
+  },
+  "Asbury Park, New Jersey (dance hall/shoreline area)": {
+    "lat": 40.2204,
+    "lon": -74.0121
+  },
+  "Trail Creek, near Sun Valley, Idaho": {
+    "lat": 43.686,
+    "lon": -114.351
+  },
+  "Shreveport, Louisiana (Texas Avenue / 1500 block)": {
+    "lat": 32.5252,
+    "lon": -93.7502
+  },
+  "West Rindge, Rindge, New Hampshire (Earl Whitehead’s lawn, Route 2)": {
+    "lat": 42.75,
+    "lon": -72.05
+  },
+  "Seattle, Washington (2608 3rd Ave W)": {
+    "lat": 47.643,
+    "lon": -122.388
+  },
+  "Maury Island (Puget Sound near Tacoma), Washington, USA": {
+    "lat": 47.37,
+    "lon": -122.44
+  },
+  "Hackensack, Bergen County, New Jersey, USA": {
+    "lat": 40.8859,
+    "lon": -74.0435
+  },
+  "Rural Germany (approx. 120 mi NW of \"Habberbishopsheim\" as written)": {
+    "lat": 50.8,
+    "lon": 6.9
+  },
+  "Myrtle Creek, Douglas County, Oregon (in flight above the town)": {
+    "lat": 43.0201,
+    "lon": -123.2931
+  },
+  "Norfolk, Virginia, USA (410 West 14th Street)": {
+    "lat": 36.8508,
+    "lon": -76.2859
+  },
+  "Norfolk, Virginia (Tidewater area)": {
+    "lat": 36.8508,
+    "lon": -76.2859
+  },
+  "Phoenix, Arizona (vicinity of 4333 N. 14th St.)": {
+    "lat": 33.4484,
+    "lon": -112.074
+  },
+  "Bakersfield, California (sky over the city)": {
+    "lat": 35.3733,
+    "lon": -119.0187
+  },
+  "Bakersfield, California (front yard of Rankin home)": {
+    "lat": 35.3733,
+    "lon": -119.0187
   }
 }
