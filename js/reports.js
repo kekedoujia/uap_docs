@@ -20,6 +20,12 @@ async function loadData() {
   const manifest = await fetchData('data/manifest.json');
   STATE.manifest = manifest;
   STATE.geocode = await fetchData('data/geocode.json');
+  // pdf_pages.json: file → total page count in the source PDF
+  try {
+    STATE.pdfPages = await fetchData('data/pdf_pages.json');
+  } catch (e) {
+    STATE.pdfPages = {};
+  }
   const all = [];
   for (const batchFile of manifest.batches) {
     const batch = await fetchData(`data/events/${batchFile}`);
@@ -66,7 +72,10 @@ async function loadData() {
   // Compute counts and sort events by page (ascending) then date
   for (const g of groups.values()) {
     g.eventCount = g.events.length;
-    g.pageCount = g.pages.size;
+    // pageCount = total pages in the source PDF (from pdf_pages.json),
+    // falling back to the count of distinct event-pages if not available.
+    g.pageCount = (g.file && (STATE.pdfPages || {})[g.file]) || g.pages.size;
+    g.coveredPages = g.pages.size;  // distinct event-pages (informational)
     g.events.sort((a, b) => {
       const pa = parseInt(a.page || 0, 10);
       const pb = parseInt(b.page || 0, 10);

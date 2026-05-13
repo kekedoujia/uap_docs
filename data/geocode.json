@@ -328,8 +328,8 @@
     "lon": 143.9804135
   },
   "New Orleans, Louisiana": {
-    "lat": 29.9561422,
-    "lon": -90.0733934
+    "lat": 29.9511,
+    "lon": -90.0715
   },
   "Oak Ridge": {
     "lat": 36.0103562,
@@ -2530,5 +2530,689 @@
   "Hasselbach, Thuringia, Germany (forest clearing near Meiningen, Soviet Zone)": {
     "lat": 50.53,
     "lon": 10.35
+  },
+  "Mount Adams district, Washington (near Mount Adams)": {
+    "lat": 46.202,
+    "lon": -121.49
+  },
+  "Hamilton Field (near Novato, Marin County, California)": {
+    "lat": 38.17,
+    "lon": -122.12
+  },
+  "Canyon Ferry, Montana (road to York, ~25 mi NE of Helena)": {
+    "lat": 46.6,
+    "lon": -111.5
+  },
+  "Phoenix, Arizona (4333 North 14th Street)": {
+    "lat": 33.4484,
+    "lon": -112.074
+  },
+  "Agate Beach (reported near Oceanlake, Oregon)": {
+    "lat": 44.97,
+    "lon": -124.01
+  },
+  "Near Mount Rainier, Washington (Cascade Range)": {
+    "lat": 46.8523,
+    "lon": -121.7603
+  },
+  "Twin Falls, Idaho (Snake River Canyon / Salmon Dam area)": {
+    "lat": 42.56297,
+    "lon": -114.46087
+  },
+  "Redmond, Washington (near the Redmond Post Office)": {
+    "lat": 47.673988,
+    "lon": -122.121513
+  },
+  "Philadelphia, Pennsylvania (South Philadelphia near Hobart, Arlington, and Vankirk Streets)": {
+    "lat": 39.9526,
+    "lon": -75.1652
+  },
+  "Fort Richardson, near Anchorage, Alaska": {
+    "lat": 61.263,
+    "lon": -149.677
+  },
+  "Ellensburg–Seattle corridor, Washington (along the driving route)": {
+    "lat": 47.35,
+    "lon": -121.3
+  },
+  "Boeing Field, Seattle, Washington": {
+    "lat": 47.53,
+    "lon": -122.3
+  },
+  "South Royalton, Vermont (witness residence)": {
+    "lat": 43.817,
+    "lon": -72.522
+  },
+  "Portland, Oregon (near NE 25th Ave and Saratoga Ct)": {
+    "lat": 45.549,
+    "lon": -122.64
+  },
+  "Bethel, Alaska (near Bethel Airport)": {
+    "lat": 60.7922,
+    "lon": -161.7558
+  },
+  "Covington, Ohio (R.R. 1)": {
+    "lat": 40.117,
+    "lon": -84.353
+  },
+  "Benkelman, Nebraska (witnessed from town; track reported east to west)": {
+    "lat": 40.049,
+    "lon": -101.532
+  },
+  "Near Lone Pine, Inyo County, California (about 30 miles east of Lone Pine)": {
+    "lat": 36.606,
+    "lon": -118.062
+  },
+  "Port Allegany, Pennsylvania, USA": {
+    "lat": 41.8114,
+    "lon": -78.2797
+  },
+  "Norton, Kansas (bolide/meteor overhead; witness elsewhere in Colorado area)": {
+    "lat": 39.8339,
+    "lon": -99.8915
+  },
+  "Houston, Texas": {
+    "lat": 29.7604,
+    "lon": -95.3698
+  },
+  "Ellington Field, Houston, Texas, USA": {
+    "lat": 29.6075,
+    "lon": -95.1583
+  },
+  "Las Vegas, Nevada (desert location near the city)": {
+    "lat": 36.1699,
+    "lon": -115.1398
+  },
+  "Pasadena, California (exact observation site not stated)": {
+    "lat": 34.1478,
+    "lon": -118.1445
+  },
+  "Mojave Desert, California (exact site not named; east/northeast of Pasadena)": {
+    "lat": 35.0,
+    "lon": -116.0
+  },
+  "Desert near Helendale, California (San Bernardino County)": {
+    "lat": 34.7255,
+    "lon": -117.33
+  },
+  "Logan, Utah (west of town; Cache County)": {
+    "lat": 41.7355,
+    "lon": -111.8344
+  },
+  "Fort Smith, Arkansas (North Eleventh Street and Grand Avenue)": {
+    "lat": 35.3859,
+    "lon": -94.3985
+  },
+  "Los Angeles, California, USA": {
+    "lat": 34.0522,
+    "lon": -118.2437
+  },
+  "Killeen Base / Camp Hood (southwest of Killeen, Texas)": {
+    "lat": 31.1171,
+    "lon": -97.7278
+  },
+  "Merced, California (about 1 mile west of town)": {
+    "lat": 37.3022,
+    "lon": -120.482
+  },
+  "Texas–Mexico border region, Texas": {
+    "lat": 27.6,
+    "lon": -99.1
+  },
+  "near Montgomery, Alabama (airborne on Houston–Atlanta–Boston route)": {
+    "lat": 32.3668,
+    "lon": -86.3
+  },
+  "Los Angeles, California (residential neighborhood; exact address not stated)": {
+    "lat": 34.0522,
+    "lon": -118.2437
+  },
+  "Radford, Virginia (city/vicinity)": {
+    "lat": 37.1318,
+    "lon": -80.5764
+  },
+  "Atlanta, Georgia (citywide; multiple neighborhoods)": {
+    "lat": 33.749,
+    "lon": -84.388
+  },
+  "Roanoke, Virginia (first report; later reports across southwest Virginia and east Tennessee)": {
+    "lat": 37.27097,
+    "lon": -79.94143
+  },
+  "Nobleboro, Lincoln County, Maine, USA (Chimney Farm)": {
+    "lat": 44.078,
+    "lon": -69.484
+  },
+  "Bristol, Virginia (Tri-Cities area; reports also from nearby VA cities)": {
+    "lat": 36.5951,
+    "lon": -82.1887
+  },
+  "Radford, Virginia (reported across the Pulaski–Blacksburg–Christiansburg area)": {
+    "lat": 37.1318,
+    "lon": -80.5764
+  },
+  "Scranton, Pennsylvania": {
+    "lat": 41.4089,
+    "lon": -75.6624
+  },
+  "Lake Ariel, Wayne County, Pennsylvania (near South Canaan)": {
+    "lat": 41.434,
+    "lon": -75.393
+  },
+  "Lake of the Woods (near Kenora, Ontario, Canada)": {
+    "lat": 49.75,
+    "lon": -94.5
+  },
+  "Jackson, Minnesota (uncle’s pasture near town)": {
+    "lat": 43.6208,
+    "lon": -94.988
+  },
+  "Roadstown (Downe Township, Cumberland County), New Jersey, USA": {
+    "lat": 39.35,
+    "lon": -75.12
+  },
+  "Savannah River Plant, 400 Area (AEC), near Aiken, South Carolina": {
+    "lat": 33.25,
+    "lon": -81.72
+  },
+  "West Palm Beach, Florida (desolate area nearby)": {
+    "lat": 26.7153,
+    "lon": -80.0534
+  },
+  "Jackson, Mississippi (rural area, R.R. 3)": {
+    "lat": 32.2988,
+    "lon": -90.1848
+  },
+  "Montana, USA": {
+    "lat": 46.8797,
+    "lon": -110.3626
+  },
+  "Passaic, New Jersey (exact observation site not stated)": {
+    "lat": 40.8568,
+    "lon": -74.1285
+  },
+  "Washington, D.C. (near the Smithsonian Institution, National Mall)": {
+    "lat": 38.8887,
+    "lon": -77.0261
+  },
+  "Near Mount Rainier, Washington (between Chehalis and Yakima)": {
+    "lat": 46.8523,
+    "lon": -121.7603
+  },
+  "Over Fargo, North Dakota (near Fargo Municipal Airport)": {
+    "lat": 46.8772,
+    "lon": -96.7898
+  },
+  "Washington, D.C. (Washington National Airport / Andrews AFB area)": {
+    "lat": 38.9072,
+    "lon": -77.0369
+  },
+  "Franklin, Indiana, USA": {
+    "lat": 39.4806,
+    "lon": -86.0544
+  },
+  "Flatwoods (near Sutton), Braxton County, West Virginia, USA": {
+    "lat": 38.71,
+    "lon": -80.66
+  },
+  "Lynchburg College administration building, Lynchburg, Virginia, USA": {
+    "lat": 37.4138,
+    "lon": -79.1422
+  },
+  "Bowie, Prince George's County, Maryland": {
+    "lat": 38.9429,
+    "lon": -76.7305
+  },
+  "Natick, Massachusetts (school parking lot)": {
+    "lat": 42.2834,
+    "lon": -71.3468
+  },
+  "Fort Buchanan (San Juan area), Puerto Rico": {
+    "lat": 18.414,
+    "lon": -66.118
+  },
+  "Watertown, Massachusetts, USA": {
+    "lat": 42.367,
+    "lon": -71.178
+  },
+  "Circleville, Ohio (pasture/field near town)": {
+    "lat": 39.6006,
+    "lon": -82.946
+  },
+  "Mableton, Cobb County, Georgia, USA": {
+    "lat": 33.8187,
+    "lon": -84.5824
+  },
+  "Atlanta, Georgia, USA": {
+    "lat": 33.749,
+    "lon": -84.388
+  },
+  "Atlanta, Georgia (highway near the city)": {
+    "lat": 33.749,
+    "lon": -84.388
+  },
+  "Valparaíso, Chile (letter origin; cites events in London, Kent, and Berlin)": {
+    "lat": -33.0472,
+    "lon": -71.6127
+  },
+  "Circleville, Pickaway County, Ohio (Bruce Stevenson farm, Rural Route 2)": {
+    "lat": 39.6006,
+    "lon": -82.946
+  },
+  "Circleville, Ohio (Rural Route 2)": {
+    "lat": 39.6006,
+    "lon": -82.946
+  },
+  "Cincinnati, Hamilton County, Ohio": {
+    "lat": 39.1031,
+    "lon": -84.512
+  },
+  "Rockford, Illinois (moon observation through telescope)": {
+    "lat": 42.2711,
+    "lon": -89.0937
+  },
+  "Po di Gnocca marshlands, near Rovigo (Porto Tolle), Veneto, Italy": {
+    "lat": 44.96,
+    "lon": 12.34
+  },
+  "Milford, Clermont County, Ohio (two miles east of town on U.S. Highway 28)": {
+    "lat": 39.175,
+    "lon": -84.294
+  },
+  "Piedmont, Northern Italy (later reported in Rome, Genoa, and Modena)": {
+    "lat": 45.0,
+    "lon": 8.0
+  },
+  "Kansas City, Kansas / Claycomo, Missouri (Ford Aircraft Plant)": {
+    "lat": 39.0997,
+    "lon": -94.5786
+  },
+  "Ottawa, Ontario, Canada (planned contact point mentioned in report)": {
+    "lat": 45.4215,
+    "lon": -75.6972
+  },
+  "Oxford, Pennsylvania (reported toward Baltimore, Maryland)": {
+    "lat": 39.7851,
+    "lon": -75.9788
+  },
+  "Near Henderson, Vance County, North Carolina, USA (Route 1 north of town)": {
+    "lat": 36.3285,
+    "lon": -78.399
+  },
+  "Van Nuys, Los Angeles County, California, USA (1430 Hatteras St)": {
+    "lat": 34.1867,
+    "lon": -118.4514
+  },
+  "Great Meadows (Independence Township, Warren County), New Jersey, USA": {
+    "lat": 40.86,
+    "lon": -74.91
+  },
+  "Old Brookville (incorporated village), Nassau County, Long Island, New York, USA": {
+    "lat": 40.837,
+    "lon": -73.558
+  },
+  "Fort Worth, Texas, USA": {
+    "lat": 32.7555,
+    "lon": -97.3308
+  },
+  "Butte, Montana vicinity (observed from a train en route to an unclear destination)": {
+    "lat": 46.0038,
+    "lon": -112.5348
+  },
+  "near Danville, Illinois (southwest of the city)": {
+    "lat": 40.1245,
+    "lon": -87.63
+  },
+  "Houston, Texas (1235 Shawnee)": {
+    "lat": 29.7604,
+    "lon": -95.3698
+  },
+  "Gut Alt Golssen (near Golßen, Brandenburg, Germany)": {
+    "lat": 51.95,
+    "lon": 13.6
+  },
+  "Matahambre Mines, Minas de Matahambre, Pinar del Río Province, Cuba": {
+    "lat": 22.62,
+    "lon": -83.94
+  },
+  "Michigan (rural road near an unnamed country club)": {
+    "lat": 44.3148,
+    "lon": -85.6024
+  },
+  "Phoenix, Arizona (Phoenix Office)": {
+    "lat": 33.4484,
+    "lon": -112.074
+  },
+  "Oklahoma City, Oklahoma, USA": {
+    "lat": 35.4676,
+    "lon": -97.5164
+  },
+  "Grand Blanc, Michigan (Edwards St. area; pizza house/telescope observation)": {
+    "lat": 42.9278,
+    "lon": -83.6299
+  },
+  "Elkhart, Indiana area (farm/orchard with river view; exact site not named)": {
+    "lat": 41.681,
+    "lon": -85.9767
+  },
+  "Grand Blanc, Michigan, United States": {
+    "lat": 42.9275,
+    "lon": -83.6296
+  },
+  "Philips Auditorium, City Park, Denver, Colorado": {
+    "lat": 39.747,
+    "lon": -104.95
+  },
+  "Mariemont, Ohio (4412 Grove Avenue, Cincinnati area)": {
+    "lat": 39.1456,
+    "lon": -84.3783
+  },
+  "Cincinnati, Ohio (Mr. Stringfield’s workplace telephone call)": {
+    "lat": 39.1031,
+    "lon": -84.512
+  },
+  "Socorro, New Mexico (secondary incident at La Madera, north of Santa Fe)": {
+    "lat": 34.0584,
+    "lon": -106.8914
+  },
+  "Cincinnati, Ohio (Stringfield's workplace; exact address not given)": {
+    "lat": 39.1031,
+    "lon": -84.512
+  },
+  "Unspecified rural New Mexico site (exact locality not named in excerpt)": {
+    "lat": 34.5,
+    "lon": -106.0
+  },
+  "Cincinnati, Ohio (Stringfield's place of employment)": {
+    "lat": 39.1031,
+    "lon": -84.512
+  },
+  "Socorro, New Mexico (southwest outskirts / La Madera area)": {
+    "lat": 34.0584,
+    "lon": -106.8914
+  },
+  "Mojave Desert, California (about 200 miles east of Los Angeles)": {
+    "lat": 35.0,
+    "lon": -116.0
+  },
+  "Grand Blanc, Michigan (Genesee County)": {
+    "lat": 42.9275,
+    "lon": -83.6297
+  },
+  "Between Philipsburg and Bradford, Pennsylvania, USA": {
+    "lat": 41.426,
+    "lon": -78.431
+  },
+  "Savannah River Plant (near Aiken, South Carolina, opposite Augusta, Georgia)": {
+    "lat": 33.24,
+    "lon": -81.73
+  },
+  "Kearney, Nebraska (field near the Platte River)": {
+    "lat": 40.6994,
+    "lon": -99.0815
+  },
+  "Gulf of Mexico (reported by Coast Guard Cutter Sebago)": {
+    "lat": 25.0,
+    "lon": -90.0
+  },
+  "Near Amarillo, Texas (roadside while driving)": {
+    "lat": 35.221997,
+    "lon": -101.831297
+  },
+  "Saginaw, Michigan (reports across Saginaw, Midland, and Gratiot counties)": {
+    "lat": 43.4195,
+    "lon": -83.9508
+  },
+  "Near Mobile, Alabama (airborne over the Mobile area)": {
+    "lat": 30.6954,
+    "lon": -88.0399
+  },
+  "Atlantic Ocean off New York City (about 80 miles east of Manhattan)": {
+    "lat": 40.7,
+    "lon": -72.5
+  },
+  "Levelland, Hockley County, Texas (and vicinity on State Highway 51)": {
+    "lat": 33.5873,
+    "lon": -102.3779
+  },
+  "Boston, Massachusetts (about 10 miles north)": {
+    "lat": 42.3601,
+    "lon": -71.0589
+  },
+  "Mobile, Alabama (Brookley Air Force Base / Alabama-Mississippi Gulf Coast)": {
+    "lat": 30.6954,
+    "lon": -88.0399
+  },
+  "Hässleholm (Haessleholm), Skåne County, Sweden": {
+    "lat": 56.155,
+    "lon": 13.763
+  },
+  "Northern Japan (near the Russian-Siberian area)": {
+    "lat": 43.0,
+    "lon": 142.0
+  },
+  "Helena, Montana (reported track over Bozeman, Butte, Boulder, and Helena)": {
+    "lat": 46.5884,
+    "lon": -112.0245
+  },
+  "Washington, District of Columbia (seen across MD, VA, WV, PA, and OH)": {
+    "lat": 38.8951,
+    "lon": -77.0364
+  },
+  "Quantico Marine Corps Base (Quantico, Virginia, USA)": {
+    "lat": 38.5229,
+    "lon": -77.2897
+  },
+  "Berks County, Pennsylvania, USA (Reading/Birdsboro/Kutztown area)": {
+    "lat": 40.3356,
+    "lon": -75.9277
+  },
+  "San Francisco International Airport (San Francisco, California)": {
+    "lat": 37.6213,
+    "lon": -122.379
+  },
+  "Bowling Green, Ohio, USA": {
+    "lat": 41.3748,
+    "lon": -83.6513
+  },
+  "Andrews Air Force Base (near Camp Springs), Maryland, USA": {
+    "lat": 38.8058,
+    "lon": -76.8668
+  },
+  "Near Norfolk, Virginia (between Newport News and Norfolk)": {
+    "lat": 36.8508,
+    "lon": -76.2859
+  },
+  "Anacortes, Washington, USA": {
+    "lat": 48.5126,
+    "lon": -122.6127
+  },
+  "Washington, D.C. area (Washington National Airport radar center)": {
+    "lat": 38.8512,
+    "lon": -77.0402
+  },
+  "Kutztown, Pennsylvania, USA (roadside near town)": {
+    "lat": 40.5173,
+    "lon": -75.7774
+  },
+  "Miami, Florida (over the city)": {
+    "lat": 25.7617,
+    "lon": -80.1918
+  },
+  "Chard, Somerset, England": {
+    "lat": 50.872,
+    "lon": -2.957
+  },
+  "Chicago, Illinois (O'Hare Air Force Base vicinity)": {
+    "lat": 41.9742,
+    "lon": -87.9073
+  },
+  "Salem, Massachusetts (U.S. Coast Guard Air Station Salem)": {
+    "lat": 42.5195,
+    "lon": -70.8967
+  },
+  "Devon, England (Woolacombe, Exeter, Cullompton, Lympstone, Sidmouth Junction, Paignton)": {
+    "lat": 50.733,
+    "lon": -3.533
+  },
+  "Poplar Bluff, Missouri (over town; tracked southeast toward Malden)": {
+    "lat": 36.757,
+    "lon": -90.3929
+  },
+  "Philadelphia, Pennsylvania (field location not specified in clipping)": {
+    "lat": 39.9526,
+    "lon": -75.1652
+  },
+  "Fargo, North Dakota (south of Fargo/Fargo Airport)": {
+    "lat": 46.8772,
+    "lon": -96.7898
+  },
+  "Williamsville, Illinois (north of Springfield)": {
+    "lat": 39.951,
+    "lon": -89.548
+  },
+  "Fairbanks, Alaska (airspace over the city)": {
+    "lat": 64.8378,
+    "lon": -147.7164
+  },
+  "near Osceola, Arkansas (about 10 miles northeast)": {
+    "lat": 35.7056,
+    "lon": -89.9773
+  },
+  "Milan, Lombardy, Italy": {
+    "lat": 45.4642,
+    "lon": 9.19
+  },
+  "Italy (Salo, Carrara, Calabria, Sardinia, Val d'Aosta)": {
+    "lat": 42.5,
+    "lon": 12.5
+  },
+  "Preston, Lancashire, England (Preston-Lancaster main road near Preston)": {
+    "lat": 53.7632,
+    "lon": -2.7031
+  },
+  "Chioggia, Veneto, Italy (near Venice; above the fishing port)": {
+    "lat": 45.218,
+    "lon": 12.277
+  },
+  "Torquay–Paignton area (South Devon coast), Devon, England": {
+    "lat": 50.45,
+    "lon": -3.54
+  },
+  "Laurel, Maryland (Thaddeus Elder home, 111 6th St.)": {
+    "lat": 39.0993,
+    "lon": -76.8483
+  },
+  "Friendship Heights, Maryland (5160 Shoemaker Lane, near Washington, D.C.)": {
+    "lat": 38.961,
+    "lon": -77.085
+  },
+  "Bristol Channel / Chard, Somerset, England (multiple sightings)": {
+    "lat": 51.2,
+    "lon": -3.0
+  },
+  "Twin Falls, Twin Falls County, Idaho, USA": {
+    "lat": 42.56297,
+    "lon": -114.46087
+  },
+  "Los Angeles Harbor (Wilmington), Los Angeles, California": {
+    "lat": 33.7705,
+    "lon": -118.265
+  },
+  "St. Joseph's Church yard, Grafton, Wisconsin, USA": {
+    "lat": 43.3197,
+    "lon": -87.9537
+  },
+  "St. Maries, Benewah County, Idaho (mountainside near town)": {
+    "lat": 47.3142,
+    "lon": -116.5632
+  },
+  "Washington, D.C. area (incl. Alexandria, Virginia)": {
+    "lat": 38.9072,
+    "lon": -77.0369
+  },
+  "North Hollywood (Los Angeles), California, USA": {
+    "lat": 34.1879,
+    "lon": -118.3813
+  },
+  "United States (multi-state flying-saucer reports)": {
+    "lat": 39.8283,
+    "lon": -98.5795
+  },
+  "Seattle, Washington (near home/front porch)": {
+    "lat": 47.6062,
+    "lon": -122.3321
+  },
+  "Washington, District of Columbia (Minnesota Ave NE)": {
+    "lat": 38.8951,
+    "lon": -76.9747
+  },
+  "Westlake Park, Los Angeles, California, USA": {
+    "lat": 34.0607,
+    "lon": -118.281
+  },
+  "Dijon, Côte-d'Or, France (airborne flyover)": {
+    "lat": 47.322,
+    "lon": 5.0415
+  },
+  "Near Coulommiers, Seine-et-Marne, Île-de-France, France": {
+    "lat": 48.814,
+    "lon": 3.085
+  },
+  "Dallas, Texas area (RB-47 flight path across Mississippi, Louisiana, and Texas)": {
+    "lat": 32.7767,
+    "lon": -96.797
+  },
+  "RAF Lakenheath / RAF Bentwaters (Suffolk, England)": {
+    "lat": 52.418,
+    "lon": 0.558
+  },
+  "Near Tours, Indre-et-Loire, France (in flight over the Rennes–Nantes–Poitiers route)": {
+    "lat": 47.3941,
+    "lon": 0.6848
+  },
+  "San Carlos de Bariloche Airport approach, Río Negro, Argentina": {
+    "lat": -41.1511,
+    "lon": -71.1575
+  },
+  "Valensole (lavender fields near the village), Alpes-de-Haute-Provence, France": {
+    "lat": 43.836,
+    "lon": 5.983
+  },
+  "Kapustin Yar missile base (near Astrakhan, Astrakhan Oblast, Russia)": {
+    "lat": 48.58,
+    "lon": 46.26
+  },
+  "Tehran, Iran (above the Shemiran district)": {
+    "lat": 35.6892,
+    "lon": 51.389
+  },
+  "Cussac (Cantal department, France)": {
+    "lat": 45.09,
+    "lon": 3.1
+  },
+  "Dijon, Côte-d'Or, France (village near the city; field by witness home)": {
+    "lat": 47.322,
+    "lon": 5.0415
+  },
+  "Nancy, Meurthe-et-Moselle, France": {
+    "lat": 48.6921,
+    "lon": 6.1844
+  },
+  "Barnaul Airport, Barnaul, Altai Krai, Russia": {
+    "lat": 53.363,
+    "lon": 83.538
+  },
+  "Unnamed village, Dombes region (Ain, France)": {
+    "lat": 46.0,
+    "lon": 5.0
+  },
+  "Paris–Lille freeway (A1 motorway, France)": {
+    "lat": 49.2,
+    "lon": 2.58
+  },
+  "Jefferson, Oregon (vicinity)": {
+    "lat": 44.719,
+    "lon": -123.011
   }
 }

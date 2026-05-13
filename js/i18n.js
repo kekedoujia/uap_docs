@@ -115,7 +115,7 @@ const I18N = {
     en: {
       title: 'UFO/UAP Disclosure Archive — Interactive Map',
       header_title: '🛸 UFO/UAP Disclosure Archive Map',
-      meta_events: 'events',
+      meta_events: 'incidents',
       meta_batches: 'batch(es)',
       meta_source: 'Data source',
       sidebar_title: 'Filters',
@@ -125,7 +125,7 @@ const I18N = {
       filter_layers: 'Display layers:',
       layer_heatmap: 'Human activity heatmap',
       layer_intensity: 'Intensity',
-      layer_markers: 'Event markers',
+      layer_markers: 'Incident markers',
       layer_cluster: 'Cluster nearby points',
       stats_visible: 'Currently visible:',
       stats_by_region: 'By region',
@@ -142,7 +142,7 @@ const I18N = {
       detail_batch: '📦 Batch',
       detail_page: '📄 Page',
       detail_open_pdf: '📄 Open original PDF',
-      detail_event_id: 'Event ID',
+      detail_event_id: 'Incident ID',
       detail_no_title: '(no title)',
       legend_title: 'Legend',
       legend_fbi: 'FBI',
@@ -156,16 +156,16 @@ const I18N = {
       loading: 'Loading…',
       visitor_you_are: 'You are visitor #',
       visitor_suffix: '',
-      other_events_title: 'Other events (outer space / unlocated)',
+      other_events_title: 'Other incidents (outer space / unlocated)',
       nav_timeline: '📅 Timeline view',
-      timeline_title: 'UFO/UAP Event Timeline',
-      timeline_header: 'Event Timeline',
+      timeline_title: 'UFO/UAP Incident Timeline',
+      timeline_header: 'Incident Timeline',
       timeline_to_map: '🗺 Back to map',
       timeline_back: 'Back to map',
       tl_search: 'Search',
       tl_search_placeholder: 'location, agency, keyword...',
       tl_visible: 'Showing',
-      tl_no_results: 'No events match.',
+      tl_no_results: 'No incidents match.',
       tl_th_date: 'Date',
       tl_th_location: 'Location',
       tl_th_agency: 'Agency',
@@ -192,14 +192,14 @@ const I18N = {
       reports_visible_short: 'Showing',
       reports_no_results: 'No reports match.',
       reports_pages_label: 'pages',
-      reports_events_label: 'events',
+      reports_events_label: 'incidents',
       reports_file_label: 'File',
       reports_open_pdf_short: 'Open PDF',
       reports_open_gov: 'war.gov ↗',
-      reports_expand: 'Show events',
+      reports_expand: 'Show incidents',
       reports_collapse: 'Hide',
       reports_sort_label: 'Sort:',
-      reports_sort_events: 'Event count (high→low)',
+      reports_sort_events: 'Incident count (high→low)',
       reports_sort_name: 'File name',
       reports_sort_pages: 'Page count (high→low)',
       disclaimer_title: '📄 Disclaimer',
@@ -212,7 +212,7 @@ const I18N = {
         + 'extraction; <strong>accuracy is not guaranteed</strong>. '
         + 'The original documents are the sole authoritative source — please '
         + 'refer to the official files for any definitive information. '
-        + 'Known imperfections include: OCR errors, missed events, '
+        + 'Known imperfections include: OCR errors, missed incidents, '
         + 'date/location extraction mistakes, and occasional thumbnail/page mismatches.'
         + '<br><br>'
         + 'This is a <strong>free, non-commercial research project</strong>. '
