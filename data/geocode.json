@@ -2078,5 +2078,117 @@
   "Edmonton to Kittigazuit, Northwest Territories, Canada (en route)": {
     "lat": 60.0,
     "lon": -125.0
+  },
+  "Hackensack, New Jersey (Simons Avenue near Summit Avenue)": {
+    "lat": 40.8859,
+    "lon": -74.0435
+  },
+  "Lake Michigan off Jackson Park Beach, Chicago, Illinois": {
+    "lat": 41.779,
+    "lon": -87.577
+  },
+  "Southeast Wisconsin (Koshkonong–Elkhorn; Eagle–Muskego corridors)": {
+    "lat": 42.85,
+    "lon": -88.45
+  },
+  "Hackensack, New Jersey (reported to Hackensack Police Department)": {
+    "lat": 40.8859,
+    "lon": -74.0451
+  },
+  "Midland, Michigan (Dow Chemical Company field)": {
+    "lat": 43.6156,
+    "lon": -84.2472
+  },
+  "Maury Island, Puget Sound off Tacoma, Washington": {
+    "lat": 47.33,
+    "lon": -122.36
+  },
+  "Myrtle Creek, Oregon (east of town; Tri City Airport)": {
+    "lat": 43.02,
+    "lon": -123.29
+  },
+  "Twin Falls, Idaho (Third Avenue North residence)": {
+    "lat": 42.56297,
+    "lon": -114.46087
+  },
+  "Agate Beach, near Newport, Oregon": {
+    "lat": 44.63,
+    "lon": -124.06
+  },
+  "Twin Falls, Idaho, USA": {
+    "lat": 42.56297,
+    "lon": -114.46087
+  },
+  "Correspondent's front yard, United States (exact town not stated)": {
+    "lat": 39.8283,
+    "lon": -98.5795
+  },
+  "Florence, Lauderdale County, Alabama, USA (Stevenson St. residence)": {
+    "lat": 34.7998,
+    "lon": -87.6773
+  },
+  "Saybrook, Illinois (front yard of Mrs. June Anderson)": {
+    "lat": 40.4267,
+    "lon": -88.525
+  },
+  "Estill, Hampton County, South Carolina, USA": {
+    "lat": 32.7559,
+    "lon": -81.2415
+  },
+  "Myrtle Creek, Oregon (vicinity)": {
+    "lat": 43.0207,
+    "lon": -123.2937
+  },
+  "Rix Ledges (north of Lebanon, New Hampshire, USA)": {
+    "lat": 43.642,
+    "lon": -72.251
+  },
+  "Oswego, Oregon (now Lake Oswego)": {
+    "lat": 45.4207,
+    "lon": -122.6706
+  },
+  "Portland, Oregon (over the city)": {
+    "lat": 45.5152,
+    "lon": -122.6784
+  },
+  "Phoenix, Arizona (near 4333 N 14th St.)": {
+    "lat": 33.4484,
+    "lon": -112.074
+  },
+  "Shouns, Tennessee (Johnson County)": {
+    "lat": 36.5,
+    "lon": -81.84
+  },
+  "Cascade Mountains, Oregon (prospecting area near Portland)": {
+    "lat": 44.0,
+    "lon": -121.5
+  },
+  "Logan, Cache County, Utah": {
+    "lat": 41.7355,
+    "lon": -111.8344
+  },
+  "Tacoma, Washington (Winthrop Hotel)": {
+    "lat": 47.2529,
+    "lon": -122.4443
+  },
+  "Mount Rainier area, Washington (southwest side near Mineral/Ashford)": {
+    "lat": 46.8523,
+    "lon": -121.7603
+  },
+  "Near Boise, Idaho (airborne on Boise–Seattle route)": {
+    "lat": 43.615,
+    "lon": -116.2023
+  },
+  "Oakland, California (seen from Hamilton Field / Marin County)": {
+    "lat": 37.8044,
+    "lon": -122.2712
+  },
+  "Rehoboth Beach, Delaware (2-3 miles south of town)": {
+    "lat": 38.7209,
+    "lon": -75.076
+  },
+  "Rehoboth Beach, Sussex County, Delaware (over Rehoboth Airport)": {
+    "lat": 38.7209,
+    "lon": -75.076
   }
 }
