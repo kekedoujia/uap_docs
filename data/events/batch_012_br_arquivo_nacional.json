@@ -1,0 +1,43 @@
+{
+  "batch_id": "012_br_arquivo_nacional_arx0161_2026-05-14",
+  "batch_name": "Brazilian Arquivo Nacional — Ilha da Trindade UFO file (ARX.0.0.161)",
+  "release_date": "2026-05-14",
+  "data_source": "BR-AN",
+  "data_source_label": "Arquivo Nacional do Brasil",
+  "data_source_short_label": "Brazil (Arquivo Nacional)",
+  "data_source_filter_label": "Brazil — Arquivo Nacional",
+  "data_source_short_label_zh": "巴西国家档案馆",
+  "data_source_filter_label_zh": "巴西国家档案馆 (Arquivo Nacional)",
+  "data_source_url": "https://www.gov.br/arquivonacional/",
+  "source_url": "Arquivo Nacional do Brasil",
+  "country": "Brazil",
+  "events": [
+    {
+      "data_source": "BR-AN",
+      "id": "BR-AN-ARX-0161-TRINDADE-1958",
+      "type": "PDF",
+      "record_type": "PDF",
+      "date_iso": "1958-01-16",
+      "date_raw": "16 January 1958",
+      "location": "Ilha da Trindade, South Atlantic (off Brazil)",
+      "lat": -20.51,
+      "lon": -29.32,
+      "agency": "Ministério da Aeronáutica",
+      "title": "UFO photographed from NE Almirante Saldanha off Ilha da Trindade",
+      "witnesses": "Almiro Baraúna; Captain José Teobaldo Viegas; Brazilian Air Force Rot. Commander Carlos Bacellar; Lt. Homero Ribeiro; ship's dentist; several sailors; crew members in the stern and bow; at least 100 later-reported witnesses",
+      "source": "Arquivo Nacional do Brasil · BR DFANBSB ARX.0.0.161 (Ministério da Aeronáutica, Gabinete do Ministro, 1976)",
+      "file": "br_dfanbsb_arx_0_0_0161_d0001de0001.pdf",
+      "page": "004",
+      "archive_url": "https://imagem.sian.an.gov.br/acervo/derivadas/br_dfanbsb_arx/0/0/0161/br_dfanbsb_arx_0_0_0161_d0001de0001.pdf",
+      "gov_page_url": "https://sian.an.gov.br/sianex/Consulta/Pesquisa_Livre_Painel_Resultado.asp?v_CodReferencia_id=2073611",
+      "image_url": "data/page_thumbs/br_arquivo_nacional/page_004.jpg",
+      "page_thumb_url": "data/page_thumbs/br_arquivo_nacional/page_004.jpg",
+      "record_description": "Brazilian National Archive file, Ministry of Aeronautics (Gabinete do Ministro). The file consists of a 1976 release of the Brazilian Navy inquiry, congressional and presidential correspondence, and the formal English-language résumé of the famous 1958 Ilha da Trindade UFO photographic case. Released to the public via Arquivo Nacional / SIAN (Sistema de Informações do Arquivo Nacional).",
+      "official_date": "16 January 1958",
+      "official_location": "Ilha da Trindade, South Atlantic (off Brazilian coast)",
+      "report_summary": "**Witnesses:** On 16 January 1958, the unidentified flying object was seen from the Brazilian Navy training ship NE Almirante Saldanha, anchored off Galo Crest, Trindade Isle. The principal photographer was Almiro Baraúna, a member of the Icarain Club for Submarine Hunting. Other named witnesses included Captain José Teobaldo Viegas of the Brazilian Air Force Reserve, Commander Carlos Bacellar (captain of the ship), Lieutenant Homero Ribeiro, the ship’s dentist, and several sailors. The résumé also states that crew members in the stern and bow later saw the event, and that Baraúna was able to take six photographs, four of which showed the object.\n\n**Sighting:** The report says that around 12:15 hours an UFO alarm was registered aboard the NE Almirante Saldanha while the vessel was anchored close to the island and preparing to depart. The crew was engaged in taking aboard the boat used for trips to the island when the alarm was given simultaneously by men stationed in the stern and bow. On the same occasion, Baraúna, who was on deck photographing the operation, was alerted and had the opportunity to shoot the sequence of images.\n\n**Object:** The object itself is described only as an unidentified aerial object seen over Trindade Isle. The surrounding documents emphasize that the sighting was accompanied by photographs and that the negatives later showed details not obvious in the first inspection. According to Commander Bacellar, the object seen in the photographs was the same one the crew had observed in the air. The negatives were later sent to the Cruzeiro do Sul Aerophotogrammetric Service, where they were analyzed and declared genuine.\n\n**Aftermath:** Immediately after the sighting, Baraúna removed the film from the camera in the presence of Commander Bacellar and other officers; later, together with Bacellar, he went to the ship’s photo-lab dressed only in a shirt and shorts. The processing took about ten minutes, after which the negatives were examined. They were then shown to crew members who had witnessed the phenomenon, and they recognized the object in the photos as identical to the one they had seen. The documents further note that the episode became the subject of Navy inquiry, congressional interest, and press coverage. The naval statement quoted in the file says the Ministry had no reason to prevent disclosure of the photographs, but could not pronounce on the object’s nature because the images did not constitute sufficient proof. The inquiry therefore confirmed the existence of the photographic record and the witness accounts, but stopped short of a definitive identification of the object.",
+      "report_summary_zh": "**见证者：** 1958年1月16日，这一不明飞行物是在巴西海军训练舰 NE Almirante Saldanha 上被看到并拍摄到的，该舰当时锚泊在特林达德岛（Ilha da Trindade）外、靠近 Galo Crest。主要摄影者是 Almiro Baraúna，他是 Icarain Club for Submarine Hunting 的成员。文中还点名了其他见证者：巴西空军预备役 José Teobaldo Viegas 上尉、舰长 Carlos Bacellar 指挥官、Homero Ribeiro 中尉、舰上牙医以及几名水手。摘要还说明，舰尾和舰首的船员也看到了这一现象，Baraúna 总共拍摄了六张照片，其中四张拍到了该物体。\n\n**目击：** 报告称大约在 12:15，NE Almirante Saldanha 舰上响起了 UFO 警报。当时军舰停在岛附近，正准备起航，船员们正在把用于往返岛屿的小艇收上船；警报几乎同时由舰尾和舰首的人员发出。就在这一时刻，站在甲板上拍摄作业的 Baraúna 被提醒，并获得了拍摄这一连串影像的机会。\n\n**物体：** 文中对该物体的描述仅为在特林达德岛上空出现的不明空中物体。相关文件强调，这次目击伴随着照片证据，而且底片在初次查看时看不清的一些细节，后来才显现出来。根据 Bacellar 指挥官的说法，照片中的物体与船员在空中看到的那个物体是同一个。随后，这些底片被送往 Cruzeiro do Sul Aerophotogrammetric Service 分析，并被认定为真实。\n\n**后续：** 目击发生后，Baraúna 在 Bacellar 指挥官和其他军官在场的情况下，从相机中取出胶卷；之后他与 Bacellar 一起只穿着衬衫和短裤前往船上的暗房。显影大约持续十分钟，随后底片被检查。之后，这些底片又展示给目击该现象的船员，他们认出照片里的物体与自己当时在空中看到的完全相同。文件还指出，此事引发了海军调查、国会关注以及媒体报道。档案中的海军声明表示，部里没有理由阻止这些照片公开，但由于照片不足以证明该物体的性质，因此无法作出最终判断。调查因此确认了摄影记录和证人陈述的存在，但并未对该物体给出明确身份认定。",
+      "report_summary_label": "Summary (GPT-5.4-mini vision from PDF, with editorial cleanup)"
+    }
+  ]
+}
