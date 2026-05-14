@@ -4,6 +4,7 @@
   "description": "Geographic/chronological visualization of UAP/UFO sighting and contact events.",
   "batches": [
     "batch_001_dow_release_01_2026-05-08.json",
-    "batch_002_aus_naa.json"
+    "batch_002_aus_naa.json",
+    "batch_003_nzdf_air39_v1.json"
   ]
 }
