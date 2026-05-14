@@ -42,7 +42,7 @@ async function loadData() {
         release_date: batch.release_date,
         data_source: e.data_source || batch.data_source || 'Other',
       });
-      ev.id = `${batch.batch_id}_${ev.date_iso}_${ev.location}_${(ev.file || '').slice(0, 30)}`;
+      ev.id = e.id || `${batch.batch_id}_${ev.date_iso}_${ev.location}_${(ev.file || '').slice(0, 30)}`;
       all.push(ev);
     }
   }
@@ -121,7 +121,6 @@ function eventPasses(e) {
   if (f.yearMax && yr > f.yearMax) return false;
   if (f.source && (e.data_source || 'Other') !== f.source) return false;
   if (f.agency && e.agency !== f.agency) return false;
-  if (f.type && e.type !== f.type) return false;
   if (f.q) {
     const hay = (e.location + ' ' + e.title + ' ' + (e.agency || '') + ' ' + (e.source || '')).toLowerCase();
     if (!hay.includes(f.q)) return false;
@@ -140,14 +139,10 @@ function buildFilters() {
     sources.set(ds, (sources.get(ds) || 0) + 1);
   }
   const agencySel = document.getElementById('tl-agency-filter');
-  const typeSel = document.getElementById('tl-type-filter');
   const sourceSel = document.getElementById('tl-source-filter');
   agencySel.innerHTML = '<option value="">All</option>' + [...agencies.entries()]
     .sort((a, b) => b[1] - a[1])
     .map(([a, n]) => `<option value="${escapeAttr(a)}">${escapeHtml(a)} (${n})</option>`).join('');
-  typeSel.innerHTML = '<option value="">All</option>' + [...types.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .map(([t, n]) => `<option value="${escapeAttr(t)}">${escapeHtml(t)} (${n})</option>`).join('');
   if (sourceSel) {
     sourceSel.innerHTML = '<option value="">All</option>' + [...sources.entries()]
       .sort((a, b) => b[1] - a[1])
@@ -159,7 +154,6 @@ function buildFilters() {
   document.getElementById('tl-year-max').addEventListener('input', refilter);
   document.getElementById('tl-search').addEventListener('input', refilter);
   agencySel.addEventListener('change', refilter);
-  typeSel.addEventListener('change', refilter);
 
   document.getElementById('detail-close').addEventListener('click', () => {
     document.getElementById('detail-panel').classList.add('hidden');
@@ -172,7 +166,6 @@ function readFilters() {
     yearMin: parseInt(document.getElementById('tl-year-min').value, 10) || null,
     yearMax: parseInt(document.getElementById('tl-year-max').value, 10) || null,
     agency: document.getElementById('tl-agency-filter').value,
-    type: document.getElementById('tl-type-filter').value,
     source: srcSel ? srcSel.value : '',
     q: document.getElementById('tl-search').value.trim().toLowerCase(),
   };

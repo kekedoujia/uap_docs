@@ -51,7 +51,7 @@ async function loadData() {
         release_date: batch.release_date,
         data_source: e.data_source || batch.data_source || 'Other',
       });
-      ev.id = `${batch.batch_id}_${ev.date_iso}_${ev.location}_${(ev.file || '').slice(0, 30)}`;
+      ev.id = e.id || `${batch.batch_id}_${ev.date_iso}_${ev.location}_${(ev.file || '').slice(0, 30)}`;
       all.push(ev);
     }
   }
@@ -62,15 +62,24 @@ async function loadData() {
   // "(no file / video pairing)" bucket keyed by 'type+video_title' or 'agency'.
   const groups = new Map();
   for (const e of all) {
-    const key = e.file || `__novfile__::${e.dvids_video_id || e.video_title || e.type || 'unknown'}`;
+    let key;
+    if (e.file) {
+      key = e.file;
+    } else {
+      // Non-file events (e.g. external archive references like NAA RecordSearch):
+      // each event becomes its own group keyed by id, so the reports view lists
+      // them individually rather than collapsing into a single bucket.
+      key = `__ref__::${e.id}`;
+    }
     if (!groups.has(key)) {
-      // True PDF only if filename ends in .pdf — images/videos shouldn't show a page stat.
       const isPdf = !!e.file && /\.pdf$/i.test(e.file);
       groups.set(key, {
         key,
         is_pdf: isPdf,
+        is_external_ref: !e.file,
         file: e.file || null,
-        label: isPdf ? e.file : (e.video_title || e.type || '(no file)'),
+        // For non-file refs, use the event title as the card label
+        label: e.file || e.title || e.video_title || '(no title)',
         record_description: e.record_description || '',
         archive_url: e.archive_url || null,
         gov_page_url: e.gov_page_url || null,

@@ -102,16 +102,22 @@ const I18N = {
       reports_sort_pages: '页数（多→少）',
       disclaimer_title: '📄 免责声明 / Disclaimer',
       disclaimer_body: (
-        '本站所有数据均来源于美国战争部（Department of War）于 2026 年 5 月 8 日公开发布的 '
-        + '<a href="https://www.war.gov/UFO/" target="_blank" rel="noopener">'
-        + 'UFO/UAP 解密档案 Release 01</a>。'
+        '<strong>数据源</strong>：本站所有事件均来自<strong>各国可靠的官方政府档案/解密发布</strong>，'
+        + '目前已收录的来源包括：'
+        + '美国战争部 (Department of War / War Department) 于 2026 年 5 月 8 日发布的 '
+        + '<a href="https://www.war.gov/UFO/" target="_blank" rel="noopener">UFO/UAP 解密档案 Release 01</a>'
+        + '、澳大利亚国家档案馆 (National Archives of Australia) 的 '
+        + '<a href="https://recordsearch.naa.gov.au/" target="_blank" rel="noopener">RecordSearch 公开档案</a>。'
+        + '<strong>本站只收录由官方机构正式公开/解密的政府记录</strong>，不收录非官方目击网站、'
+        + '民间整理的二次资料或匿名爆料。'
         + '<br><br>'
-        + '本站内容由 OCR 文字识别与自动化脚本索引生成，<strong>不保证完全准确</strong>——'
-        + '原始档案为唯一权威来源，关键信息请以官方文件为准。本站可能存在以下不完美之处：'
-        + 'OCR 误识、事件遗漏、日期或地点抽取错误、缩略图与正文页码偏差等。'
+        + '本站内容由 OCR 文字识别与自动化脚本索引生成，部分摘要由 AI（GPT-5.4-mini）基于'
+        + '原始档案图像与公开信息撰写，<strong>不保证完全准确</strong>——原始档案为唯一权威来源，'
+        + '关键信息请以官方文件为准。本站可能存在以下不完美之处：OCR 误识、事件遗漏、'
+        + '日期或地点抽取错误、缩略图与正文页码偏差等。'
         + '<br><br>'
         + '本站为<strong>完全免费的公益研究项目</strong>，不涉及任何商业目的、不展示任何广告、'
-        + '不收集任何用户个人数据，与美国政府及任何官方机构均无关联、不代表其立场。'
+        + '不收集任何用户个人数据，与美国、澳大利亚或任何其它政府/官方机构均无关联、不代表其立场。'
         + '仅供学习、研究及公共讨论之用。'
       ),
     },
@@ -210,22 +216,26 @@ const I18N = {
       reports_sort_pages: 'Page count (high→low)',
       disclaimer_title: '📄 Disclaimer',
       disclaimer_body: (
-        'All data on this site is sourced from the U.S. Department of War\'s '
+        '<strong>Data sources</strong>: All incidents on this site come from '
+        + '<strong>reliable official government archives and declassification releases</strong>. '
+        + 'Sources currently included: the U.S. Department of War\'s '
         + '<a href="https://www.war.gov/UFO/" target="_blank" rel="noopener">'
-        + 'UFO/UAP Disclosure Release 01</a>, published on 8 May 2026.'
+        + 'UFO/UAP Disclosure Release 01</a> (8 May 2026), and the '
+        + '<a href="https://recordsearch.naa.gov.au/" target="_blank" rel="noopener">'
+        + 'National Archives of Australia RecordSearch</a> public collection. '
+        + '<strong>This site only includes records officially published or declassified by government bodies</strong> — '
+        + 'it does not include unofficial sighting databases, third-party compilations, or anonymous reports.'
         + '<br><br>'
         + 'Content is auto-indexed via OCR text recognition and scripted '
-        + 'extraction; <strong>accuracy is not guaranteed</strong>. '
-        + 'The original documents are the sole authoritative source — please '
-        + 'refer to the official files for any definitive information. '
-        + 'Known imperfections include: OCR errors, missed incidents, '
-        + 'date/location extraction mistakes, and occasional thumbnail/page mismatches.'
+        + 'extraction; some summaries are written by AI (GPT-5.4-mini) from the original '
+        + 'document images and public knowledge. <strong>Accuracy is not guaranteed</strong> — '
+        + 'the original archival documents are the sole authoritative source. Known imperfections include: '
+        + 'OCR errors, missed incidents, date/location extraction mistakes, and occasional thumbnail/page mismatches.'
         + '<br><br>'
         + 'This is a <strong>free, non-commercial research project</strong>. '
         + 'No advertising. No user data is collected. '
-        + 'This site is not affiliated with, endorsed by, or representative of '
-        + 'the U.S. government or any official agency. '
-        + 'Provided for educational, research, and public discussion purposes only.'
+        + 'This site is not affiliated with, endorsed by, or representative of the U.S., Australian, or any other '
+        + 'government / official agency. Provided for educational, research, and public discussion purposes only.'
       ),
     },
   },

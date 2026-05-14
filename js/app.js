@@ -65,7 +65,7 @@ async function loadData() {
         data_source: e.data_source || batch.data_source || 'Other',
       });
       // Unique ID
-      ev.id = `${batch.batch_id}_${ev.date_iso}_${ev.location}_${(ev.file || '').slice(0, 30)}`;
+      ev.id = e.id || `${batch.batch_id}_${ev.date_iso}_${ev.location}_${(ev.file || '').slice(0, 30)}`;
       allEvents.push(ev);
     }
   }
