@@ -619,16 +619,32 @@ document.addEventListener('click', evt => {
     openOtherModal();
     return;
   }
-  // Close the modal via X button or backdrop click
-  if (evt.target.closest('[data-modal-close]')) {
-    closeOtherModal();
+  // Open the Disclaimer modal
+  if (evt.target.closest('#disclaimer-btn')) {
+    openDisclaimerModal();
+    return;
+  }
+  // Close any open modal via X button or backdrop click
+  const closer = evt.target.closest('[data-modal-close]');
+  if (closer) {
+    const m = closer.closest('.modal');
+    if (m) {
+      m.classList.add('hidden');
+      if (!document.querySelector('.modal:not(.hidden)')) {
+        document.body.classList.remove('modal-open');
+      }
+    }
     return;
   }
 });
 document.addEventListener('keydown', evt => {
   if (evt.key === 'Escape') {
-    const m = document.getElementById('other-modal');
-    if (m && !m.classList.contains('hidden')) closeOtherModal();
+    let closedAny = false;
+    document.querySelectorAll('.modal:not(.hidden)').forEach(m => {
+      m.classList.add('hidden');
+      closedAny = true;
+    });
+    if (closedAny) document.body.classList.remove('modal-open');
     if (document.body.classList.contains('sidebar-open')) toggleSidebar(false);
   }
   if (evt.key !== 'Enter' && evt.key !== ' ') return;
@@ -738,6 +754,10 @@ function openOtherModal() {
 function closeOtherModal() {
   document.getElementById('other-modal').classList.add('hidden');
   document.body.classList.remove('modal-open');
+}
+function openDisclaimerModal() {
+  document.getElementById('disclaimer-modal').classList.remove('hidden');
+  document.body.classList.add('modal-open');
 }
 
 // Lazy summary fetch (perf: keeps critical batches small).

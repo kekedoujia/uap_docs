@@ -97,10 +97,9 @@
     <span id="visitor-counter" class="visitor-counter" aria-live="polite"></span>
   </p>
 
-  <details class="disclaimer">
-    <summary data-i18n="disclaimer_title">📄 免责声明 / Disclaimer</summary>
-    <div class="disclaimer-body" data-i18n="disclaimer_body" data-i18n-html></div>
-  </details>
+  <button id="disclaimer-btn" type="button" class="open-modal-btn disclaimer-btn">
+    <span data-i18n="disclaimer_title">📄 免责声明 / Disclaimer</span>
+  </button>
 </div>
 
 <div id="map"></div>
@@ -108,6 +107,17 @@
 <div id="detail-panel" class="hidden">
   <button id="detail-close" title="Close">×</button>
   <div id="detail-content"></div>
+</div>
+
+<div id="disclaimer-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="disclaimer-modal-title">
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-content modal-content--narrow">
+    <header class="modal-header">
+      <h2 id="disclaimer-modal-title" data-i18n="disclaimer_title">📄 免责声明 / Disclaimer</h2>
+      <button class="modal-close" data-modal-close title="Close">×</button>
+    </header>
+    <div class="modal-body disclaimer-modal-body" data-i18n="disclaimer_body" data-i18n-html></div>
+  </div>
 </div>
 
 <div id="other-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="other-modal-title">

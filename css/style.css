@@ -457,48 +457,49 @@ hr { border: 0; border-top: 1px solid #2a3a5a; margin: 16px 0; }
 .footer { font-size: 11px; color: #6a7c9c; }
 .footer a { color: #82b9ff; }
 
-/* Disclaimer block in sidebar footer */
-.disclaimer {
+/* Disclaimer button in sidebar footer (opens modal) */
+.disclaimer-btn {
   margin-top: 14px;
-  font-size: 10.5px;
-  line-height: 1.55;
-  color: #8fa3c4;
-}
-.disclaimer > summary {
-  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
   color: #82b9ff;
-  font-size: 11px;
-  font-weight: 500;
-  padding: 6px 8px;
-  background: rgba(130, 185, 255, 0.06);
-  border: 1px solid rgba(130, 185, 255, 0.2);
-  border-radius: 3px;
-  user-select: none;
-  list-style: none;
+  padding: 8px 12px;
+  background: rgba(130, 185, 255, 0.08);
+  border: 1px solid rgba(130, 185, 255, 0.30);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  font-family: inherit;
 }
-.disclaimer > summary::-webkit-details-marker { display: none; }
-.disclaimer > summary:hover {
-  background: rgba(130, 185, 255, 0.12);
+.disclaimer-btn:hover {
+  background: rgba(130, 185, 255, 0.16);
+  border-color: rgba(130, 185, 255, 0.5);
 }
-.disclaimer[open] > summary {
-  border-bottom-color: transparent;
-  border-radius: 3px 3px 0 0;
+
+/* Disclaimer modal — narrower than the data tables modal */
+.modal-content--narrow {
+  max-width: 720px;
 }
-.disclaimer-body {
-  padding: 10px 10px 8px;
-  background: rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(130, 185, 255, 0.2);
-  border-top: none;
-  border-radius: 0 0 3px 3px;
-  color: #a8b8d4;
+.disclaimer-modal-body {
+  padding: 22px 28px 28px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #c4d2e8;
 }
-.disclaimer-body strong {
-  color: #c8d6f0;
+.disclaimer-modal-body strong {
+  color: #e8eef9;
 }
-.disclaimer-body a {
+.disclaimer-modal-body a {
   color: #82b9ff;
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+.disclaimer-modal-body a:hover {
+  color: #b8d3fb;
+}
+@media (max-width: 600px) {
+  .disclaimer-modal-body { padding: 16px 18px 20px; font-size: 12px; }
 }
 /* Visitor counter */
 .visitor-counter {
