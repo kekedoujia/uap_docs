@@ -29,6 +29,9 @@ services:
       - path: /*
         name: Referrer-Policy
         value: strict-origin-when-cross-origin
+      - path: /data/version.json
+        name: Cache-Control
+        value: no-store, max-age=0                     # always fetch fresh — drives client-side reload
       - path: /data/cities_heatmap.json
         name: Cache-Control
         value: public, max-age=604800, immutable      # 7 days — never changes

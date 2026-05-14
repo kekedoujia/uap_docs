@@ -236,8 +236,33 @@ def note_archive_symlinks():
               f"(local dev only; Render ignores)")
 
 
+def write_version_file():
+    """Write data/version.json with build timestamp + commit SHA. The
+    client polls this with no-cache to detect new deploys and reload."""
+    from datetime import datetime, timezone
+    commit = (os.environ.get('RENDER_GIT_COMMIT', '')
+              or os.environ.get('GIT_COMMIT', ''))[:8]
+    if not commit:
+        try:
+            import subprocess
+            commit = subprocess.check_output(
+                ['git', 'rev-parse', '--short=8', 'HEAD'],
+                cwd=SITE, stderr=subprocess.DEVNULL).decode().strip()
+        except Exception:
+            commit = 'local'
+    payload = {
+        'version': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+        'commit': commit or 'unknown',
+    }
+    out = os.path.join(DATA, 'version.json')
+    with open(out, 'w', encoding='utf-8') as f:
+        json.dump(payload, f)
+    print(f"[prepare] version.json: {payload['version']} (commit {payload['commit']})")
+
+
 def main():
     print(f"[prepare] SITE={SITE}")
+    write_version_file()
     info_map = load_archive_url_map()
     video_map = load_video_info_map()
     print(f"[prepare] file→{{url,image,...}} map: {len(info_map)} entries")
