@@ -3990,5 +3990,9 @@
   "Ilha da Trindade, South Atlantic (off Brazil)": {
     "lat": -20.51,
     "lon": -29.32
+  },
+  "São Paulo / Rio de Janeiro / Minas Gerais / Goiás (Brazil)": {
+    "lat": -22.0,
+    "lon": -45.0
   }
 }
