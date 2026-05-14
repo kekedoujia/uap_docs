@@ -37,8 +37,22 @@ async function loadData() {
 
   // 4. All event batches
   const allEvents = [];
+  const dataSources = {};  // ds_id → metadata from batch
   for (const batchFile of manifest.batches) {
     const batch = await fetchData(`data/events/${batchFile}`);
+    // Collect per-batch data-source metadata (driven by batch JSON, not hardcoded)
+    if (batch.data_source) {
+      dataSources[batch.data_source] = {
+        id: batch.data_source,
+        label: batch.data_source_label || batch.data_source,
+        short_label: batch.data_source_short_label || batch.data_source,
+        filter_label: batch.data_source_filter_label || batch.data_source_label || batch.data_source,
+        short_label_zh: batch.data_source_short_label_zh || batch.data_source_short_label || batch.data_source,
+        filter_label_zh: batch.data_source_filter_label_zh || batch.data_source_filter_label || batch.data_source,
+        url: batch.data_source_url || '',
+        country: batch.country || '',
+      };
+    }
     for (const e of batch.events) {
       const geo = STATE.geocode[e.location];
       if (!geo) continue;  // skip un-geocoded
@@ -48,6 +62,7 @@ async function loadData() {
         batch_id: batch.batch_id,
         batch_name: batch.batch_name,
         release_date: batch.release_date,
+        data_source: e.data_source || batch.data_source || 'Other',
       });
       // Unique ID
       ev.id = `${batch.batch_id}_${ev.date_iso}_${ev.location}_${(ev.file || '').slice(0, 30)}`;
@@ -55,19 +70,55 @@ async function loadData() {
     }
   }
   STATE.events = allEvents;
+  STATE.dataSources = dataSources;
   document.getElementById('event-count').textContent = allEvents.length;
-  document.getElementById('batch-count').textContent = manifest.batches.length;
+  renderDataSourcesMeta();
 
   // Build filter options
   buildFilters();
 }
 
+// Lookup helpers driven by STATE.dataSources (loaded from batch JSONs)
+function dsInfo(id) {
+  return (STATE.dataSources && STATE.dataSources[id]) || {
+    id, label: id, short_label: id, filter_label: id,
+    short_label_zh: id, filter_label_zh: id, url: '',
+  };
+}
+function dsLabel(id, kind) {
+  const lang = (typeof I18N !== 'undefined' && I18N.current) || 'zh';
+  const info = dsInfo(id);
+  const key = (lang === 'zh' && info[kind + '_zh']) ? kind + '_zh' : kind;
+  return info[key] || info.label || id;
+}
+
+function renderDataSourcesMeta() {
+  const dsMeta = document.getElementById('data-sources-meta');
+  if (!dsMeta) return;
+  const counts = new Map();
+  for (const ev of STATE.events) {
+    const ds = ev.data_source || 'Other';
+    counts.set(ds, (counts.get(ds) || 0) + 1);
+  }
+  dsMeta.innerHTML = [...counts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([ds, n]) => {
+      const info = dsInfo(ds);
+      const label = dsLabel(ds, 'short_label');
+      const url = info.url || '#';
+      return `<a href="${url}" target="_blank" rel="noopener" class="ds-pill" data-ds="${ds}">${escapeHtml(label)} (${n})</a>`;
+    }).join(' · ');
+}
+
 function buildFilters() {
   const agencies = new Map();
   const types = new Map();
+  const sources = new Map();
   for (const e of STATE.events) {
     agencies.set(e.agency, (agencies.get(e.agency) || 0) + 1);
     types.set(e.type, (types.get(e.type) || 0) + 1);
+    const ds = e.data_source || 'Other';
+    sources.set(ds, (sources.get(ds) || 0) + 1);
   }
   // Date range
   let minYear = 9999, maxYear = 0;
@@ -78,6 +129,20 @@ function buildFilters() {
   }
   document.getElementById('date-min').placeholder = String(minYear);
   document.getElementById('date-max').placeholder = String(maxYear);
+
+  // Data source checkboxes — labels come from each batch's data_source_filter_label
+  const dsWrap = document.getElementById('source-checkboxes');
+  if (dsWrap) {
+    dsWrap.innerHTML = '';
+    for (const [ds, n] of [...sources.entries()].sort((a, b) => b[1] - a[1])) {
+      const label = document.createElement('label');
+      label.className = 'cb';
+      const pretty = dsLabel(ds, 'filter_label');
+      label.innerHTML = `<input type="checkbox" value="${escapeAttr(ds)}" checked> ${escapeHtml(pretty)} <span style="color:#6a7c9c">(${n})</span>`;
+      label.querySelector('input').addEventListener('change', refilter);
+      dsWrap.appendChild(label);
+    }
+  }
 
   // Agency checkboxes
   const aWrap = document.getElementById('agency-checkboxes');
@@ -90,15 +155,7 @@ function buildFilters() {
     aWrap.appendChild(label);
   }
 
-  // Type checkboxes
-  const tWrap = document.getElementById('type-checkboxes');
-  for (const [t, n] of [...types.entries()].sort((a, b) => b[1] - a[1])) {
-    const label = document.createElement('label');
-    label.className = 'cb';
-    label.innerHTML = `<input type="checkbox" value="${escapeAttr(t)}" checked> ${escapeHtml(t)} <span style="color:#6a7c9c">(${n})</span>`;
-    label.querySelector('input').addEventListener('change', refilter);
-    tWrap.appendChild(label);
-  }
+  // Type checkboxes (removed — was misleading; kept type filter pass-through below in case re-added)
 
   // Date inputs
   document.getElementById('date-min').addEventListener('change', refilter);
@@ -123,17 +180,20 @@ function getActiveFilters() {
   const dateMax = document.getElementById('date-max').value || null;
   const agenciesChecked = new Set();
   document.querySelectorAll('#agency-checkboxes input:checked').forEach(c => agenciesChecked.add(c.value));
-  const typesChecked = new Set();
-  document.querySelectorAll('#type-checkboxes input:checked').forEach(c => typesChecked.add(c.value));
-  return { dateMin, dateMax, agenciesChecked, typesChecked };
+  const typesChecked = null;  // type filter removed; always pass
+  const sourcesChecked = new Set();
+  document.querySelectorAll('#source-checkboxes input:checked').forEach(c => sourcesChecked.add(c.value));
+  return { dateMin, dateMax, agenciesChecked, typesChecked, sourcesChecked };
 }
 
 function eventPasses(e, filters) {
   const yr = parseInt(e.date_iso.slice(0, 4), 10);
   if (filters.dateMin && yr < parseInt(filters.dateMin, 10)) return false;
   if (filters.dateMax && yr > parseInt(filters.dateMax, 10)) return false;
+  if (filters.sourcesChecked && filters.sourcesChecked.size > 0 &&
+      !filters.sourcesChecked.has(e.data_source || 'Other')) return false;
   if (!filters.agenciesChecked.has(e.agency)) return false;
-  if (!filters.typesChecked.has(e.type)) return false;
+  if (filters.typesChecked && !filters.typesChecked.has(e.type)) return false;
   return true;
 }
 
@@ -277,16 +337,29 @@ function buildDetailHtml(e) {
 
     <div class="detail-links">
       ${url ? `<a class="archive-link" href="${escapeAttr(useFullPdfLink || url)}" target="_blank" rel="noopener">
-         ${escapeHtml(t('detail_open_pdf'))}${e.page ? ` <span style="opacity:0.7;">· p.${parseInt(e.page,10)}</span>` : ''}
+         ${escapeHtml(e.file && /\.pdf$/i.test(e.file) ? t('detail_open_pdf') : t('detail_view_archive'))}${e.page ? ` <span style="opacity:0.7;">· p.${parseInt(e.page,10)}</span>` : ''}
        </a>` : ''}
-      ${e.gov_page_url ? `<a class="archive-link" href="${escapeAttr(e.gov_page_url)}" target="_blank" rel="noopener"
+      ${e.gov_page_url && e.gov_page_url !== e.archive_url ? `<a class="archive-link" href="${escapeAttr(e.gov_page_url)}" target="_blank" rel="noopener"
          style="background:#3a5d9e;">
-         ${escapeHtml(t('detail_war_gov'))}
+         🏛 ${escapeHtml(dsLabel(e.data_source, 'short_label'))}
        </a>` : ''}
     </div>
 
+    ${Array.isArray(e.additional_resources) && e.additional_resources.length ? `
+    <div class="detail-resources">
+      <div class="detail-resources-title">${escapeHtml(t('detail_additional_resources'))}</div>
+      <ul class="detail-resource-list">
+        ${e.additional_resources.map(r => `
+          <li><a href="${escapeAttr(r.url)}" target="_blank" rel="noopener">
+            ${escapeHtml(r.label || r.url)}
+          </a> ${r.type ? `<span class="resource-type">[${escapeHtml(r.type)}]</span>` : ''}</li>
+        `).join('')}
+      </ul>
+    </div>` : ''}
+
     <div style="margin-top:14px; font-size:11px; color:#6a7c9c;">
       ${t('detail_event_id')}: <code>${escapeHtml(e.id)}</code>
+      ${e.data_source ? ` · <span class="ds-tag">${escapeHtml(dsLabel(e.data_source, 'short_label'))}</span>` : ''}
     </div>
   `;
 }
@@ -643,6 +716,36 @@ window.STATE = STATE;
 window.rebuildMarkers = rebuildMarkers;
 window.updateLegend = updateLegend;
 window.showDetail = showDetail;
+window.renderDataSourcesMeta = renderDataSourcesMeta;
+
+// Hook I18N.apply to also re-render the data-source meta pill (labels are lang-aware).
+if (typeof I18N !== 'undefined') {
+  const _origApply = I18N.apply.bind(I18N);
+  I18N.apply = function () {
+    _origApply();
+    if (window.renderDataSourcesMeta && STATE.events.length) {
+      window.renderDataSourcesMeta();
+    }
+    // Re-render source filter checkbox labels too
+    const dsWrap = document.getElementById('source-checkboxes');
+    if (dsWrap && STATE.events.length) {
+      const sources = new Map();
+      for (const e of STATE.events) {
+        const ds = e.data_source || 'Other';
+        sources.set(ds, (sources.get(ds) || 0) + 1);
+      }
+      dsWrap.innerHTML = '';
+      for (const [ds, n] of [...sources.entries()].sort((a, b) => b[1] - a[1])) {
+        const lbl = document.createElement('label');
+        lbl.className = 'cb';
+        const pretty = dsLabel(ds, 'filter_label');
+        lbl.innerHTML = `<input type="checkbox" value="${escapeAttr(ds)}" checked> ${escapeHtml(pretty)} <span style="color:#6a7c9c">(${n})</span>`;
+        lbl.querySelector('input').addEventListener('change', refilter);
+        dsWrap.appendChild(lbl);
+      }
+    }
+  };
+}
 
 // Open detail panel + zoom to a specific event if URL hash specifies one
 function handleHash() {

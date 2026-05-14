@@ -3218,5 +3218,33 @@
   "Hobson, Ohio (unincorporated community)": {
     "lat": 39.96,
     "lon": -82.02
+  },
+  "Wewak area, Maralinga / Woomera weapons testing context, South Australia": {
+    "lat": -31.5,
+    "lon": 136.83
+  },
+  "Woomera, South Australia": {
+    "lat": -31.197,
+    "lon": 136.825
+  },
+  "Near Nowra, New South Wales": {
+    "lat": -34.876,
+    "lon": 150.602
+  },
+  "RAAF Bases (multiple), Australia": {
+    "lat": -25.27,
+    "lon": 133.78
+  },
+  "Reedy Creek, South Australia": {
+    "lat": -34.92,
+    "lon": 138.74
+  },
+  "Bass Strait, flight from Moorabbin to King Island": {
+    "lat": -39.5,
+    "lon": 144.0
+  },
+  "RAAF Amberley / No. 82 Bomber Wing context": {
+    "lat": -27.638,
+    "lon": 152.711
   }
 }

@@ -1176,3 +1176,66 @@ body.reports-page #topbar h1 a.back-link { text-decoration: none; color: #82b9ff
   .rp-card-title { font-size: 14px; }
   .rp-stat-num { font-size: 15px; }
 }
+
+/* ============================================
+   Data source pills & tags
+   ============================================ */
+.ds-pill {
+  display: inline-block;
+  color: #82b9ff;
+  text-decoration: none;
+  padding: 1px 6px;
+  background: rgba(130, 185, 255, 0.08);
+  border: 1px solid rgba(130, 185, 255, 0.25);
+  border-radius: 3px;
+  font-size: 11px;
+}
+.ds-pill:hover {
+  background: rgba(130, 185, 255, 0.2);
+  color: #e8eef9;
+}
+.ds-tag {
+  display: inline-block;
+  background: rgba(130, 185, 255, 0.1);
+  border: 1px solid rgba(130, 185, 255, 0.2);
+  color: #82b9ff;
+  padding: 1px 5px;
+  border-radius: 2px;
+  font-size: 10.5px;
+}
+.detail-resources {
+  margin-top: 14px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.15);
+  border-left: 2px solid #82b9ff;
+  border-radius: 0 3px 3px 0;
+}
+.detail-resources-title {
+  font-size: 11px;
+  color: #8fa3c4;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.detail-resource-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.detail-resource-list li {
+  padding: 3px 0;
+  font-size: 12px;
+}
+.detail-resource-list a {
+  color: #82b9ff;
+  text-decoration: none;
+}
+.detail-resource-list a:hover {
+  color: #e8eef9;
+  text-decoration: underline;
+}
+.resource-type {
+  color: #6a7c9c;
+  font-size: 10px;
+  margin-left: 4px;
+}

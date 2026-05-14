@@ -18,8 +18,20 @@ async function loadData() {
   STATE.manifest = manifest;
   STATE.geocode = await fetchData('data/geocode.json');
   const all = [];
+  const dataSources = {};
   for (const batchFile of manifest.batches) {
     const batch = await fetchData(`data/events/${batchFile}`);
+    if (batch.data_source) {
+      dataSources[batch.data_source] = {
+        id: batch.data_source,
+        label: batch.data_source_label || batch.data_source,
+        short_label: batch.data_source_short_label || batch.data_source,
+        filter_label: batch.data_source_filter_label || batch.data_source_label || batch.data_source,
+        short_label_zh: batch.data_source_short_label_zh || batch.data_source_short_label || batch.data_source,
+        filter_label_zh: batch.data_source_filter_label_zh || batch.data_source_filter_label || batch.data_source,
+        url: batch.data_source_url || '',
+      };
+    }
     for (const e of batch.events) {
       const geo = STATE.geocode[e.location];
       const ev = Object.assign({}, e, {
@@ -28,6 +40,7 @@ async function loadData() {
         batch_id: batch.batch_id,
         batch_name: batch.batch_name,
         release_date: batch.release_date,
+        data_source: e.data_source || batch.data_source || 'Other',
       });
       ev.id = `${batch.batch_id}_${ev.date_iso}_${ev.location}_${(ev.file || '').slice(0, 30)}`;
       all.push(ev);
@@ -36,8 +49,16 @@ async function loadData() {
   // Sort by date desc (newest first)
   all.sort((a, b) => b.date_iso.localeCompare(a.date_iso));
   STATE.events = all;
+  STATE.dataSources = dataSources;
   document.getElementById('event-count').textContent = all.length;
   document.getElementById('tl-total-count').textContent = all.length;
+}
+
+function dsLabel(id, kind) {
+  const lang = (typeof I18N !== 'undefined' && I18N.current) || 'zh';
+  const info = (STATE.dataSources && STATE.dataSources[id]) || { id };
+  const zhKey = kind + '_zh';
+  return (lang === 'zh' && info[zhKey]) || info[kind] || info.label || id;
 }
 
 function escapeHtml(s) {
@@ -98,6 +119,7 @@ function eventPasses(e) {
   const yr = parseInt(e.date_iso.slice(0, 4), 10);
   if (f.yearMin && yr < f.yearMin) return false;
   if (f.yearMax && yr > f.yearMax) return false;
+  if (f.source && (e.data_source || 'Other') !== f.source) return false;
   if (f.agency && e.agency !== f.agency) return false;
   if (f.type && e.type !== f.type) return false;
   if (f.q) {
@@ -110,18 +132,28 @@ function eventPasses(e) {
 function buildFilters() {
   const agencies = new Map();
   const types = new Map();
+  const sources = new Map();
   for (const e of STATE.events) {
     agencies.set(e.agency, (agencies.get(e.agency) || 0) + 1);
     types.set(e.type, (types.get(e.type) || 0) + 1);
+    const ds = e.data_source || 'Other';
+    sources.set(ds, (sources.get(ds) || 0) + 1);
   }
   const agencySel = document.getElementById('tl-agency-filter');
   const typeSel = document.getElementById('tl-type-filter');
+  const sourceSel = document.getElementById('tl-source-filter');
   agencySel.innerHTML = '<option value="">All</option>' + [...agencies.entries()]
     .sort((a, b) => b[1] - a[1])
     .map(([a, n]) => `<option value="${escapeAttr(a)}">${escapeHtml(a)} (${n})</option>`).join('');
   typeSel.innerHTML = '<option value="">All</option>' + [...types.entries()]
     .sort((a, b) => b[1] - a[1])
     .map(([t, n]) => `<option value="${escapeAttr(t)}">${escapeHtml(t)} (${n})</option>`).join('');
+  if (sourceSel) {
+    sourceSel.innerHTML = '<option value="">All</option>' + [...sources.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .map(([s, n]) => `<option value="${escapeAttr(s)}">${escapeHtml(dsLabel(s, 'filter_label'))} (${n})</option>`).join('');
+    sourceSel.addEventListener('change', refilter);
+  }
 
   document.getElementById('tl-year-min').addEventListener('input', refilter);
   document.getElementById('tl-year-max').addEventListener('input', refilter);
@@ -135,11 +167,13 @@ function buildFilters() {
 }
 
 function readFilters() {
+  const srcSel = document.getElementById('tl-source-filter');
   STATE.filters = {
     yearMin: parseInt(document.getElementById('tl-year-min').value, 10) || null,
     yearMax: parseInt(document.getElementById('tl-year-max').value, 10) || null,
     agency: document.getElementById('tl-agency-filter').value,
     type: document.getElementById('tl-type-filter').value,
+    source: srcSel ? srcSel.value : '',
     q: document.getElementById('tl-search').value.trim().toLowerCase(),
   };
 }
@@ -327,16 +361,29 @@ function buildDetailHtml(e) {
     <div class="detail-links" style="margin-top:8px;">
       ${mapBtn}
       ${url ? `<a class="archive-link" href="${escapeAttr(useFullPdfLink || url)}" target="_blank" rel="noopener">
-         ${escapeHtml(t('detail_open_pdf'))}${e.page ? ` <span style="opacity:0.7;">· p.${parseInt(e.page,10)}</span>` : ''}
+         ${escapeHtml(e.file && /\.pdf$/i.test(e.file) ? t('detail_open_pdf') : t('detail_view_archive'))}${e.page ? ` <span style="opacity:0.7;">· p.${parseInt(e.page,10)}</span>` : ''}
        </a>` : ''}
-      ${e.gov_page_url ? `<a class="archive-link" href="${escapeAttr(e.gov_page_url)}" target="_blank" rel="noopener"
+      ${e.gov_page_url && e.gov_page_url !== e.archive_url ? `<a class="archive-link" href="${escapeAttr(e.gov_page_url)}" target="_blank" rel="noopener"
          style="background:#3a5d9e;">
-         ${escapeHtml(I18N.t('detail_war_gov'))}
+         🏛 ${escapeHtml(dsLabel(e.data_source, 'short_label'))}
        </a>` : ''}
     </div>
 
+    ${Array.isArray(e.additional_resources) && e.additional_resources.length ? `
+    <div class="detail-resources">
+      <div class="detail-resources-title">${escapeHtml(t('detail_additional_resources'))}</div>
+      <ul class="detail-resource-list">
+        ${e.additional_resources.map(r => `
+          <li><a href="${escapeAttr(r.url)}" target="_blank" rel="noopener">
+            ${escapeHtml(r.label || r.url)}
+          </a> ${r.type ? `<span class="resource-type">[${escapeHtml(r.type)}]</span>` : ''}</li>
+        `).join('')}
+      </ul>
+    </div>` : ''}
+
     <div style="margin-top:14px; font-size:11px; color:#6a7c9c;">
       ${t('detail_event_id')}: <code>${escapeHtml(e.id)}</code>
+      ${e.data_source ? ` · <span class="ds-tag">${escapeHtml(dsLabel(e.data_source, 'short_label'))}</span>` : ''}
     </div>
   `;
 }

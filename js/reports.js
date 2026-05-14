@@ -27,8 +27,20 @@ async function loadData() {
     STATE.pdfPages = {};
   }
   const all = [];
+  const dataSources = {};
   for (const batchFile of manifest.batches) {
     const batch = await fetchData(`data/events/${batchFile}`);
+    if (batch.data_source) {
+      dataSources[batch.data_source] = {
+        id: batch.data_source,
+        label: batch.data_source_label || batch.data_source,
+        short_label: batch.data_source_short_label || batch.data_source,
+        filter_label: batch.data_source_filter_label || batch.data_source_label || batch.data_source,
+        short_label_zh: batch.data_source_short_label_zh || batch.data_source_short_label || batch.data_source,
+        filter_label_zh: batch.data_source_filter_label_zh || batch.data_source_filter_label || batch.data_source,
+        url: batch.data_source_url || '',
+      };
+    }
     for (const e of batch.events) {
       const geo = STATE.geocode[e.location];
       const ev = Object.assign({}, e, {
@@ -37,12 +49,14 @@ async function loadData() {
         batch_id: batch.batch_id,
         batch_name: batch.batch_name,
         release_date: batch.release_date,
+        data_source: e.data_source || batch.data_source || 'Other',
       });
       ev.id = `${batch.batch_id}_${ev.date_iso}_${ev.location}_${(ev.file || '').slice(0, 30)}`;
       all.push(ev);
     }
   }
   STATE.events = all;
+  STATE.dataSources = dataSources;
 
   // Group by `file` (PDF). Events without a file go into a synthetic
   // "(no file / video pairing)" bucket keyed by 'type+video_title' or 'agency'.
@@ -167,13 +181,40 @@ function shortenFile(f) {
 
 function reportPasses(r) {
   const f = STATE.filters;
+  if (f.source) {
+    // Pass only if any event in the report belongs to that data source
+    const hits = r.events.some(e => (e.data_source || 'Other') === f.source);
+    if (!hits) return false;
+  }
   if (!f.q) return true;
   const hay = (r.label + ' ' + r.file + ' ' + r.record_description + ' '
     + r.agency + ' ' + r.type).toLowerCase();
   return hay.includes(f.q);
 }
 
+function dsLabel(id, kind) {
+  const lang = (typeof I18N !== 'undefined' && I18N.current) || 'zh';
+  const info = (STATE.dataSources && STATE.dataSources[id]) || { id };
+  const zhKey = kind + '_zh';
+  return (lang === 'zh' && info[zhKey]) || info[kind] || info.label || id;
+}
+
 function buildFilters() {
+  // Populate the source filter dropdown from STATE.dataSources
+  const srcSel = document.getElementById('rp-source-filter');
+  if (srcSel) {
+    const counts = new Map();
+    for (const r of STATE.reports) {
+      for (const e of r.events) {
+        const ds = e.data_source || 'Other';
+        counts.set(ds, (counts.get(ds) || 0) + 1);
+      }
+    }
+    srcSel.innerHTML = '<option value="">All</option>' + [...counts.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .map(([s, n]) => `<option value="${escapeAttr(s)}">${escapeHtml(dsLabel(s, 'filter_label'))} (${n})</option>`).join('');
+    srcSel.addEventListener('change', refilter);
+  }
   document.getElementById('rp-search').addEventListener('input', refilter);
   document.getElementById('rp-sort').addEventListener('change', refilter);
   document.getElementById('detail-close').addEventListener('click', () => {
@@ -182,9 +223,11 @@ function buildFilters() {
 }
 
 function readFilters() {
+  const srcSel = document.getElementById('rp-source-filter');
   STATE.filters = {
     q: document.getElementById('rp-search').value.trim().toLowerCase(),
     sort: document.getElementById('rp-sort').value,
+    source: srcSel ? srcSel.value : '',
   };
 }
 
@@ -390,16 +433,29 @@ function buildDetailHtml(e) {
     <div class="detail-links" style="margin-top:8px;">
       ${mapBtn}
       ${url ? `<a class="archive-link" href="${escapeAttr(useFullPdfLink || url)}" target="_blank" rel="noopener">
-         ${escapeHtml(t('detail_open_pdf'))}${e.page ? ` <span style="opacity:0.7;">· p.${parseInt(e.page,10)}</span>` : ''}
+         ${escapeHtml(e.file && /\.pdf$/i.test(e.file) ? t('detail_open_pdf') : t('detail_view_archive'))}${e.page ? ` <span style="opacity:0.7;">· p.${parseInt(e.page,10)}</span>` : ''}
        </a>` : ''}
-      ${e.gov_page_url ? `<a class="archive-link" href="${escapeAttr(e.gov_page_url)}" target="_blank" rel="noopener"
+      ${e.gov_page_url && e.gov_page_url !== e.archive_url ? `<a class="archive-link" href="${escapeAttr(e.gov_page_url)}" target="_blank" rel="noopener"
          style="background:#3a5d9e;">
-         ${escapeHtml(I18N.t('detail_war_gov'))}
+         🏛 ${escapeHtml(dsLabel(e.data_source, 'short_label'))}
        </a>` : ''}
     </div>
 
+    ${Array.isArray(e.additional_resources) && e.additional_resources.length ? `
+    <div class="detail-resources">
+      <div class="detail-resources-title">${escapeHtml(t('detail_additional_resources'))}</div>
+      <ul class="detail-resource-list">
+        ${e.additional_resources.map(r => `
+          <li><a href="${escapeAttr(r.url)}" target="_blank" rel="noopener">
+            ${escapeHtml(r.label || r.url)}
+          </a> ${r.type ? `<span class="resource-type">[${escapeHtml(r.type)}]</span>` : ''}</li>
+        `).join('')}
+      </ul>
+    </div>` : ''}
+
     <div style="margin-top:14px; font-size:11px; color:#6a7c9c;">
       ${t('detail_event_id')}: <code>${escapeHtml(e.id)}</code>
+      ${e.data_source ? ` · <span class="ds-tag">${escapeHtml(dsLabel(e.data_source, 'short_label'))}</span>` : ''}
     </div>
   `;
 }
