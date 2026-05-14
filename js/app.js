@@ -93,21 +93,49 @@ function dsLabel(id, kind) {
 }
 
 function renderDataSourcesMeta() {
-  const dsMeta = document.getElementById('data-sources-meta');
-  if (!dsMeta) return;
+  const btnCount = document.getElementById('ds-menu-count');
+  const panel = document.getElementById('ds-menu-panel');
+  if (!btnCount || !panel) return;
   const counts = new Map();
   for (const ev of STATE.events) {
     const ds = ev.data_source || 'Other';
     counts.set(ds, (counts.get(ds) || 0) + 1);
   }
-  dsMeta.innerHTML = [...counts.entries()]
+  btnCount.textContent = counts.size;
+  const items = [...counts.entries()]
     .sort((a, b) => b[1] - a[1])
     .map(([ds, n]) => {
       const info = dsInfo(ds);
       const label = dsLabel(ds, 'short_label');
+      const flabel = dsLabel(ds, 'filter_label');
       const url = info.url || '#';
-      return `<a href="${url}" target="_blank" rel="noopener" class="ds-pill" data-ds="${ds}">${escapeHtml(label)} (${n})</a>`;
-    }).join(' · ');
+      return `
+        <li role="menuitem" class="ds-menu-item">
+          <a href="${url}" target="_blank" rel="noopener">
+            <span class="ds-menu-label">${escapeHtml(flabel)}</span>
+            <span class="ds-menu-meta">${n} · ${escapeHtml(info.country || '')}</span>
+          </a>
+        </li>`;
+    }).join('');
+  panel.innerHTML = `<ul class="ds-menu-list">${items}</ul>`;
+
+  // Wire button toggle (idempotent)
+  const btn = document.getElementById('ds-menu-btn');
+  if (btn && !btn._wired) {
+    btn._wired = true;
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = !panel.classList.contains('hidden');
+      panel.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!open));
+    });
+    document.addEventListener('click', (e) => {
+      if (!panel.classList.contains('hidden') && !panel.contains(e.target) && e.target !== btn) {
+        panel.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 }
 
 function buildFilters() {

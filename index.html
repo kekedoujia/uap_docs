@@ -19,7 +19,12 @@
   <div id="topbar-right">
     <div id="meta">
       <span id="event-count">…</span> <span data-i18n="meta_events">事件</span> ·
-      <span data-i18n="meta_source">数据源</span>：<span id="data-sources-meta">…</span>
+      <span class="data-source-menu">
+        <button id="ds-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          📚 <span data-i18n="meta_source">数据源</span> (<span id="ds-menu-count">…</span>) <span class="caret">▾</span>
+        </button>
+        <div id="ds-menu-panel" class="ds-menu-panel hidden" role="menu"></div>
+      </span>
     </div>
     <div id="lang-toggle" role="group" aria-label="Language toggle">
       <button data-lang="zh" class="lang-btn active">中</button>
