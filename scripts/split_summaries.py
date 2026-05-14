@@ -30,7 +30,15 @@ def event_key(e, batch_id):
 
 
 def main():
+    # PRESERVE existing summaries — only add/overwrite for events whose batch
+    # still has report_summary inline. Otherwise re-running this script after
+    # the batches are already split would wipe summaries.json to {}.
     summaries = {}
+    if os.path.exists(SUMMARIES_OUT):
+        try:
+            summaries = json.load(open(SUMMARIES_OUT))
+        except Exception:
+            summaries = {}
     batches_modified = 0
     total_events = 0
     bytes_saved = 0

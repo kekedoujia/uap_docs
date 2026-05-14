@@ -57,11 +57,14 @@ async function loadData() {
       };
     }
     for (const e of batch.events) {
+      // Prefer the geocode lookup, then any embedded lat/lon on the event.
       const geo = STATE.geocode[e.location];
-      if (!geo) continue;  // skip un-geocoded
+      let lat = geo ? geo.lat : (typeof e.lat === 'number' ? e.lat : null);
+      let lon = geo ? geo.lon : (typeof e.lon === 'number' ? e.lon : null);
+      // Drop only if NEITHER geocoded NOR explicitly marked non-geographic.
+      if (lat == null && !e.non_geographic) continue;
       const ev = Object.assign({}, e, {
-        lat: geo.lat,
-        lon: geo.lon,
+        lat, lon,
         batch_id: batch.batch_id,
         batch_name: batch.batch_name,
         release_date: batch.release_date,
@@ -227,8 +230,7 @@ function eventPasses(e, filters) {
   const yr = parseInt(e.date_iso.slice(0, 4), 10);
   if (filters.dateMin && yr < parseInt(filters.dateMin, 10)) return false;
   if (filters.dateMax && yr > parseInt(filters.dateMax, 10)) return false;
-  if (filters.sourcesChecked && filters.sourcesChecked.size > 0 &&
-      !filters.sourcesChecked.has(e.data_source || 'Other')) return false;
+  if (filters.sourcesChecked && !filters.sourcesChecked.has(e.data_source || 'Other')) return false;
   if (!filters.agenciesChecked.has(e.agency)) return false;
   if (filters.typesChecked && !filters.typesChecked.has(e.type)) return false;
   return true;
@@ -358,13 +360,13 @@ function buildDetailHtml(e) {
   return `
     <h3>${escapeHtml(e.title || t('detail_no_title'))}</h3>
     <div class="date-badge">${e.date_iso}</div>
-    <div class="meta-row"><strong>${t('detail_location')}</strong>：${escapeHtml(e.location)} ${coordLabel}</div>
+    <div class="meta-row"><strong>${t('detail_location')}</strong>：${escapeHtml(e.location)} ${coordLabel}${e.location_approximate ? ` <span style="color:#e0a83c;font-size:11px;margin-left:6px;">· ${escapeHtml(t('detail_loc_approx'))}</span>` : ''}</div>
     <div class="meta-row"><strong>${t('detail_agency')}</strong>：${escapeHtml(e.agency || '')}</div>
     <div class="meta-row"><strong>${t('detail_type')}</strong>：${escapeHtml(typeLabel)}</div>
     <div class="meta-row"><strong>${t('detail_date_raw')}</strong>：${escapeHtml(e.date_raw || '')}</div>
     <div class="meta-row"><strong>${t('detail_source')}</strong>：${escapeHtml(e.source || '')}</div>
     <div class="meta-row"><strong>${t('detail_batch')}</strong>：${escapeHtml(e.batch_name)} (${e.release_date})</div>
-    ${e.page ? `<div class="meta-row"><strong>${t('detail_page')}</strong>：${escapeHtml(String(e.page))}</div>` : ''}
+    ${e.page ? (() => { const ps = parseInt(e.page, 10); const pe = e.page_end ? parseInt(e.page_end, 10) : ps; return `<div class="meta-row"><strong>${t('detail_page')}</strong>：${pe > ps ? `${ps} – ${pe}` : ps}</div>`; })() : ''}
 
     ${renderSummaryBlock(e, lang)}
 
@@ -489,10 +491,12 @@ function initMap() {
     });
     const cb = document.getElementById('show-heatmap');
     if (cb && cb.checked) STATE.heatLayer.addTo(map);
-    // Re-apply current opacity if slider was already moved
+    // Apply slider value to the actual canvas opacity. Wrap in a tiny
+    // timeout because the heatmap canvas only exists after the layer
+    // has been added to the map and Leaflet has drawn it once.
     const op = document.getElementById('heat-opacity');
-    if (op && STATE.heatLayer.setOptions) {
-      STATE.heatLayer.setOptions({ minOpacity: parseInt(op.value, 10) / 100 });
+    if (op) {
+      setTimeout(() => applyHeatOpacity(parseInt(op.value, 10) / 100), 50);
     }
   };
   applyHeatLayer();
@@ -721,7 +725,8 @@ function updateOtherEvents(visible) {
   const countSidebar = document.getElementById('other-events-count');
   const countModal = document.getElementById('other-modal-count');
   const others = visible.filter(e => e.non_geographic);
-  others.sort((a, b) => a.date_iso.localeCompare(b.date_iso));
+  // Newest first — matches the timeline view ordering.
+  others.sort((a, b) => b.date_iso.localeCompare(a.date_iso));
   if (countSidebar) countSidebar.textContent = others.length;
   if (countModal) countModal.textContent = others.length;
   if (!tbody) return;

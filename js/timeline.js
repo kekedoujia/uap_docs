@@ -338,13 +338,13 @@ function buildDetailHtml(e) {
   return `
     <h3>${escapeHtml(e.title || t('detail_no_title'))}</h3>
     <div class="date-badge">${e.date_iso}</div>
-    <div class="meta-row"><strong>${t('detail_location')}</strong>：${escapeHtml(e.location)} ${coordLabel}</div>
+    <div class="meta-row"><strong>${t('detail_location')}</strong>：${escapeHtml(e.location)} ${coordLabel}${e.location_approximate ? ` <span style="color:#e0a83c;font-size:11px;margin-left:6px;">· ${escapeHtml(t('detail_loc_approx'))}</span>` : ''}</div>
     <div class="meta-row"><strong>${t('detail_agency')}</strong>：${escapeHtml(e.agency || '')}</div>
     <div class="meta-row"><strong>${t('detail_type')}</strong>：${escapeHtml(typeLabel)}</div>
     <div class="meta-row"><strong>${t('detail_date_raw')}</strong>：${escapeHtml(e.date_raw || '')}</div>
     <div class="meta-row"><strong>${t('detail_source')}</strong>：${escapeHtml(e.source || '')}</div>
     <div class="meta-row"><strong>${t('detail_batch')}</strong>：${escapeHtml(e.batch_name)} (${e.release_date})</div>
-    ${e.page ? `<div class="meta-row"><strong>${t('detail_page')}</strong>：${escapeHtml(String(e.page))}</div>` : ''}
+    ${e.page ? (() => { const ps = parseInt(e.page, 10); const pe = e.page_end ? parseInt(e.page_end, 10) : ps; return `<div class="meta-row"><strong>${t('detail_page')}</strong>：${pe > ps ? `${ps} – ${pe}` : ps}</div>`; })() : ''}
 
     ${renderSummaryBlock(e, lang)}
 
