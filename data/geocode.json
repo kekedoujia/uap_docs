@@ -3542,5 +3542,449 @@
   "Mount Victoria, Wellington, NZ": {
     "lat": -41.289,
     "lon": 174.786
+  },
+  "Clarence River mouth, Canterbury, NZ": {
+    "lat": -42.12,
+    "lon": 173.92
+  },
+  "RNZAF Base Woodbourne, Blenheim, NZ": {
+    "lat": -41.518,
+    "lon": 173.872
+  },
+  "Woodbourne, Blenheim, NZ": {
+    "lat": -41.516,
+    "lon": 173.87
+  },
+  "New Zealand, air route between Auckland and Christchurch": {
+    "lat": -40.9,
+    "lon": 173.0
+  },
+  "Kaikoura coast / Marlborough, NZ": {
+    "lat": -42.4,
+    "lon": 173.7
+  },
+  "Picton, Marlborough Sounds, NZ": {
+    "lat": -41.29,
+    "lon": 174.002
+  },
+  "Hikurangi, Northland, NZ": {
+    "lat": -35.65,
+    "lon": 174.28
+  },
+  "Wainuiomata Road, Lower Hutt, NZ": {
+    "lat": -41.2167,
+    "lon": 174.9167
+  },
+  "Gisborne Airport, Gisborne, NZ": {
+    "lat": -38.663,
+    "lon": 177.978
+  },
+  "Preservation Inlet, Southland, NZ": {
+    "lat": -46.5,
+    "lon": 166.9
+  },
+  "Preservation Inlet, near Goulches Head and Coal Island, Southland, NZ": {
+    "lat": -46.37,
+    "lon": 167.3
+  },
+  "Christchurch, NZ": {
+    "lat": -43.532,
+    "lon": 172.636
+  },
+  "Matawai, Gisborne Region, NZ": {
+    "lat": -38.4,
+    "lon": 177.3
+  },
+  "Blenheim, NZ": {
+    "lat": -41.513,
+    "lon": 173.96
+  },
+  "Masterton, NZ": {
+    "lat": -40.9597,
+    "lon": 175.6575
+  },
+  "Lower Hutt, NZ": {
+    "lat": -41.2167,
+    "lon": 174.9167
+  },
+  "Funafuti, Tuvalu": {
+    "lat": -8.52,
+    "lon": 179.2
+  },
+  "Paraparaumu, NZ": {
+    "lat": -40.9167,
+    "lon": 175.0167
+  },
+  "Hawke's Bay, NZ": {
+    "lat": -39.4928,
+    "lon": 176.912
+  },
+  "Takaka, Nelson, NZ": {
+    "lat": -40.85,
+    "lon": 172.81
+  },
+  "Approx. 24°S 177°E": {
+    "lat": -24.0,
+    "lon": 177.0
+  },
+  "South Brighton, Canterbury, NZ": {
+    "lat": -43.5,
+    "lon": 172.7
+  },
+  "Eglinton Valley near Milford, Southland, NZ": {
+    "lat": -44.97,
+    "lon": 168.05
+  },
+  "Wellington Botanical Gardens / Tinakori Hills, Wellington, NZ": {
+    "lat": -41.282,
+    "lon": 174.766
+  },
+  "Hastings, Hawke's Bay, NZ": {
+    "lat": -39.64,
+    "lon": 176.84
+  },
+  "Channel Island, off Cape Colville, Coromandel coast, NZ": {
+    "lat": -36.42,
+    "lon": 175.43
+  },
+  "Temuka, NZ": {
+    "lat": -44.24,
+    "lon": 171.28
+  },
+  "Tasman Bay near Nelson, NZ": {
+    "lat": -41.27,
+    "lon": 173.28
+  },
+  "Balclutha, NZ": {
+    "lat": -46.23,
+    "lon": 169.75
+  },
+  "Blenheim / Woodbourne, NZ": {
+    "lat": -41.516,
+    "lon": 173.96
+  },
+  "Wairau Road, Marlborough, NZ": {
+    "lat": -41.5,
+    "lon": 173.95
+  },
+  "Taumarunui, NZ": {
+    "lat": -38.883,
+    "lon": 175.259
+  },
+  "McKinney, Texas, USA": {
+    "lat": 33.1976,
+    "lon": -96.6155
+  },
+  "Belfast, Northern Ireland": {
+    "lat": 54.5973,
+    "lon": -5.9301
+  },
+  "Rome, Italy": {
+    "lat": 41.9028,
+    "lon": 12.4964
+  },
+  "Hatuma, Hawke's Bay, NZ": {
+    "lat": -39.9167,
+    "lon": 176.6167
+  },
+  "Rissington, Hawke's Bay, NZ": {
+    "lat": -39.65,
+    "lon": 176.95
+  },
+  "Balfour, Southland, NZ": {
+    "lat": -46.115,
+    "lon": 168.275
+  },
+  "Taradale, Hawke's Bay, NZ": {
+    "lat": -39.533,
+    "lon": 176.848
+  },
+  "Ngaruawahia, Waikato, NZ": {
+    "lat": -37.667,
+    "lon": 175.15
+  },
+  "Wigram, Christchurch, NZ": {
+    "lat": -43.55,
+    "lon": 172.53
+  },
+  "Ashhurst, Palmerston North, NZ": {
+    "lat": -40.29,
+    "lon": 175.75
+  },
+  "Palmerston North, New Zealand": {
+    "lat": -40.3523,
+    "lon": 175.6082
+  },
+  "Cass, Canterbury, NZ": {
+    "lat": -43.08,
+    "lon": 171.75
+  },
+  "Wellington Airport, NZ": {
+    "lat": -41.3272,
+    "lon": 174.8053
+  },
+  "Blenheim, Marlborough, NZ": {
+    "lat": -41.516,
+    "lon": 173.96
+  },
+  "Waikanae, NZ": {
+    "lat": -40.875,
+    "lon": 175.073
+  },
+  "Christchurch International Airport, Christchurch, NZ": {
+    "lat": -43.489,
+    "lon": 172.532
+  },
+  "Christchurch Airport, NZ": {
+    "lat": -43.4894,
+    "lon": 172.532
+  },
+  "Waikawa Bay, Marlborough Sounds, NZ": {
+    "lat": -41.25,
+    "lon": 174.03
+  },
+  "Waimairi, Christchurch, NZ": {
+    "lat": -43.53,
+    "lon": 172.57
+  },
+  "Kaikoura, NZ": {
+    "lat": -42.4,
+    "lon": 173.68
+  },
+  "Waikawa Bay, Picton, NZ": {
+    "lat": -41.27,
+    "lon": 174.04
+  },
+  "Walkawa Bay, Marlborough Sounds, NZ": {
+    "lat": -41.15,
+    "lon": 174.02
+  },
+  "Near Kaikoura, NZ": {
+    "lat": -42.4,
+    "lon": 173.68
+  },
+  "Waverley, NZ": {
+    "lat": -39.78,
+    "lon": 175.12
+  },
+  "Clarence River, Canterbury, NZ": {
+    "lat": -42.1,
+    "lon": 173.72
+  },
+  "Clarence River area north of Kaikoura, NZ": {
+    "lat": -42.1,
+    "lon": 173.45
+  },
+  "Clarence River / Kaikoura coast, NZ": {
+    "lat": -42.15,
+    "lon": 173.95
+  },
+  "28 NM east of Waimakariri, Canterbury, NZ": {
+    "lat": -43.433,
+    "lon": 173.333
+  },
+  "Kaikoura coast, NZ": {
+    "lat": -42.4,
+    "lon": 173.68
+  },
+  "Waipapa Point, Southland, NZ": {
+    "lat": -46.525,
+    "lon": 168.433
+  },
+  "Kaikoura-Cape Campbell coast, NZ": {
+    "lat": -42.4,
+    "lon": 173.7
+  },
+  "Clarence River mouth, Marlborough, NZ": {
+    "lat": -42.05,
+    "lon": 173.95
+  },
+  "Woodbourne, NZ": {
+    "lat": -41.51,
+    "lon": 173.87
+  },
+  "Woodbourne, Marlborough, NZ": {
+    "lat": -41.518,
+    "lon": 173.87
+  },
+  "Kaikoura East, Canterbury, NZ": {
+    "lat": -42.4,
+    "lon": 173.7
+  },
+  "Clarence River area, Canterbury, NZ": {
+    "lat": -42.0,
+    "lon": 173.7
+  },
+  "Cook Strait, NZ": {
+    "lat": -41.3,
+    "lon": 174.5
+  },
+  "Near Christchurch, NZ": {
+    "lat": -43.5321,
+    "lon": 172.6362
+  },
+  "Kaikoura to Wellington, NZ": {
+    "lat": -42.4,
+    "lon": 173.7
+  },
+  "Clarence River mouth, NZ": {
+    "lat": -42.03,
+    "lon": 173.68
+  },
+  "Whanganui, NZ": {
+    "lat": -39.9326,
+    "lon": 175.0516
+  },
+  "Whenuapai, Auckland, NZ": {
+    "lat": -36.787,
+    "lon": 174.625
+  },
+  "RNZAF Base Ohakea, NZ": {
+    "lat": -40.228,
+    "lon": 175.419
+  },
+  "Renwick, NZ": {
+    "lat": -41.508,
+    "lon": 173.821
+  },
+  "Near Blenheim, NZ": {
+    "lat": -41.516,
+    "lon": 173.96
+  },
+  "Ashburton, Canterbury, NZ": {
+    "lat": -43.9,
+    "lon": 171.75
+  },
+  "Makara, Wellington, NZ": {
+    "lat": -41.205,
+    "lon": 174.7
+  },
+  "At sea near 38°25'S 166°25'E": {
+    "lat": -38.4167,
+    "lon": 166.4167
+  },
+  "Tasman Sea west of Wellington, NZ": {
+    "lat": -41.0,
+    "lon": 166.0
+  },
+  "South of Wellington, NZ": {
+    "lat": -41.0,
+    "lon": 167.0
+  },
+  "Tasman Sea west of New Zealand, near 41°S 168°E": {
+    "lat": -41.0,
+    "lon": 168.0
+  },
+  "Makara Beach, Wellington, NZ": {
+    "lat": -41.24,
+    "lon": 174.69
+  },
+  "Tasman Sea west of New Zealand (41°S 167°E)": {
+    "lat": -41.0,
+    "lon": 167.0
+  },
+  "White Bluff, Wellington, NZ": {
+    "lat": -41.31,
+    "lon": 174.72
+  },
+  "Canberra, Australia": {
+    "lat": -35.2809,
+    "lon": 149.13
+  },
+  "19°46'S, 178°02'W": {
+    "lat": -19.767,
+    "lon": -178.033
+  },
+  "Colonial Knob, Porirua/Wellington, NZ": {
+    "lat": -41.13,
+    "lon": 174.83
+  },
+  "Renwick, Marlborough, NZ": {
+    "lat": -41.5139,
+    "lon": 173.8333
+  },
+  "Near Oamaru/Waimate, NZ": {
+    "lat": -44.0,
+    "lon": 171.1
+  },
+  "Timaru, NZ": {
+    "lat": -44.3926,
+    "lon": 171.255
+  },
+  "Old Renwick Road, Blenheim, NZ": {
+    "lat": -41.511,
+    "lon": 173.952
+  },
+  "Grovetown, Marlborough, NZ": {
+    "lat": -41.515,
+    "lon": 173.907
+  },
+  "Lower Wairau Valley, Marlborough, NZ": {
+    "lat": -41.52,
+    "lon": 173.95
+  },
+  "Old Renwick Road, near Blenheim, NZ": {
+    "lat": -41.513,
+    "lon": 173.96
+  },
+  "East Coast, South Island, NZ": {
+    "lat": -43.5,
+    "lon": 172.5
+  },
+  "Clarence River mouth, Marlborough/Canterbury coast, NZ": {
+    "lat": -42.03,
+    "lon": 173.27
+  },
+  "Clarence area, Canterbury, NZ": {
+    "lat": -42.85,
+    "lon": 173.15
+  },
+  "Wanganui, NZ": {
+    "lat": -39.9312,
+    "lon": 175.0533
+  },
+  "Roseneath, Wellington, NZ": {
+    "lat": -41.294,
+    "lon": 174.798
+  },
+  "Howick, Auckland, NZ": {
+    "lat": -36.899,
+    "lon": 174.933
+  },
+  "Whakatane, NZ": {
+    "lat": -37.95,
+    "lon": 176.99
+  },
+  "Hamilton area, NZ": {
+    "lat": -37.787,
+    "lon": 175.279
+  },
+  "Tauranga, NZ": {
+    "lat": -37.6878,
+    "lon": 176.1651
+  },
+  "RNZAF Woodbourne / Blenheim area, NZ": {
+    "lat": -41.518,
+    "lon": 173.87
+  },
+  "Amberley, North Canterbury, NZ": {
+    "lat": -43.16,
+    "lon": 172.72
+  },
+  "Porirua Basin, NZ": {
+    "lat": -41.133,
+    "lon": 174.85
+  },
+  "Dannevirke, NZ": {
+    "lat": -40.205,
+    "lon": 176.096
+  },
+  "Eastbourne / Wellington Harbour, NZ": {
+    "lat": -41.287,
+    "lon": 174.905
+  },
+  "Porirua, NZ": {
+    "lat": -41.13,
+    "lon": 174.85
   }
 }

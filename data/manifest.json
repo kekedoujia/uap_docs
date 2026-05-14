@@ -5,6 +5,14 @@
   "batches": [
     "batch_001_dow_release_01_2026-05-08.json",
     "batch_002_aus_naa.json",
-    "batch_003_nzdf_air39_v1.json"
+    "batch_003_nzdf_air39_v1.json",
+    "batch_004_nzdf_air39_v2.json",
+    "batch_005_nzdf_air39_v3.json",
+    "batch_006_nzdf_air39_v4.json",
+    "batch_007_nzdf_air39a_v1.json",
+    "batch_008_nzdf_air1080.json",
+    "batch_009_nzdf_air244.json",
+    "batch_010_nzdf_air1630_v1.json",
+    "batch_011_nzdf_air1630_v2.json"
   ]
 }
