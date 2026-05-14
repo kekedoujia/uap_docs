@@ -110,7 +110,9 @@ const I18N = {
       donate_disclaimer: '⚠️ 重要说明：本款项为<strong>自愿赞助（support payment）</strong>，<strong>不是慈善捐款（charitable donation）</strong>。本项目并非任何美国 501(c)(3) 或其他国家/地区注册的慈善/非营利组织，您所支付的款项<strong>不可用于税务抵扣</strong>。<br>Contributions are <strong>voluntary support payments</strong>, <strong>not tax-deductible charitable donations</strong>. This project is not a registered 501(c)(3) or any other charitable/non-profit entity.',
       donate_venmo_hint: '使用 Venmo App 扫描二维码，或直接搜索 @uapmap',
       donate_venmo_open: '在 Venmo 中打开 ↗',
-      donate_more_coming: '更多付款方式即将上线<br>（PayPal / 微信 / 支付宝）',
+      donate_paypal_hint: '使用 PayPal App 扫描二维码，或直接搜索用户名 UAP-MAP',
+      donate_verify: '🔍 <strong>扫码后请务必核对收款用户名</strong>，确认与本页所示一致（Venmo: <strong>@uapmap</strong>，PayPal: <strong>UAP-MAP</strong>，均与本站名称相关）后再转账，谨防误付他人。',
+      donate_more_coming: '更多付款方式即将上线<br>（微信 / 支付宝）',
       donate_thanks: '感谢您的支持 🛸',
       disclaimer_title: '📄 免责声明 / Disclaimer',
       disclaimer_body: (
@@ -236,7 +238,9 @@ const I18N = {
       donate_disclaimer: '⚠️ Important: Contributions are <strong>voluntary support payments</strong>, <strong>not tax-deductible charitable donations</strong>. This project is not a registered 501(c)(3) or any other charitable/non-profit entity, so your contribution <strong>cannot be claimed as a tax deduction</strong>.<br>本款项为<strong>自愿赞助（support payment）</strong>，<strong>非慈善捐款</strong>，<strong>不可用于税务抵扣</strong>。',
       donate_venmo_hint: 'Scan with the Venmo app, or search @uapmap directly',
       donate_venmo_open: 'Open in Venmo ↗',
-      donate_more_coming: 'More payment methods coming soon<br>(PayPal / WeChat / Alipay)',
+      donate_paypal_hint: 'Scan with the PayPal app, or search the username UAP-MAP directly',
+      donate_verify: '🔍 <strong>After scanning, please verify the recipient username</strong> matches what is shown on this page (Venmo: <strong>@uapmap</strong>, PayPal: <strong>UAP-MAP</strong> — both derived from this site\'s name) before sending, to avoid paying the wrong person.',
+      donate_more_coming: 'More payment methods coming soon<br>(WeChat / Alipay)',
       donate_thanks: 'Thank you for your support 🛸',
       disclaimer_title: '📄 Disclaimer',
       disclaimer_body: (

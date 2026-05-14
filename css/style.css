@@ -1402,6 +1402,21 @@ body.donate-page #topbar h1 a.back-link {
 }
 .donate-disclaimer strong { color: #ffd980; font-weight: 600; }
 
+.donate-verify {
+  display: block;
+  max-width: 720px;
+  margin: 0 auto 18px;
+  padding: 12px 16px;
+  background: rgba(220, 80, 80, 0.10);
+  border: 1px solid rgba(255, 120, 120, 0.45);
+  border-left: 3px solid #ff6b6b;
+  border-radius: 6px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #ffd5d5;
+}
+.donate-verify strong { color: #ffb0b0; font-weight: 600; }
+
 .donate-methods {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1424,6 +1439,9 @@ body.donate-page #topbar h1 a.back-link {
 .donate-card--venmo {
   border-top: 3px solid #3D95CE;
 }
+.donate-card--paypal {
+  border-top: 3px solid #0070BA;
+}
 
 .donate-card__head {
   display: flex;
@@ -1439,6 +1457,16 @@ body.donate-page #topbar h1 a.back-link {
   border: 2px solid #3D95CE;
   background: #0b1320;
   flex-shrink: 0;
+}
+.donate-card__avatar--logo {
+  display: flex; align-items: center; justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  font-size: 28px; font-weight: 700; font-style: italic;
+  color: #ffffff;
+}
+.donate-card__avatar--paypal {
+  border-color: #0070BA;
+  background: linear-gradient(135deg, #0070BA 0%, #002C8A 100%);
 }
 .donate-card__title { flex: 1; min-width: 0; }
 .donate-card__brand {
@@ -1491,6 +1519,8 @@ body.donate-page #topbar h1 a.back-link {
   transition: background 0.15s;
 }
 .donate-card__btn:hover { background: #2f7fb3; }
+.donate-card__btn--paypal { background: #0070BA; }
+.donate-card__btn--paypal:hover { background: #005a96; }
 
 .donate-card--coming-soon {
   border-style: dashed;
