@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="donate_title">支持本项目 / Support this project</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="donate-page">
+
+<div id="topbar">
+  <h1><a href="index.html" class="back-link" title="Map">🛸</a> <span data-i18n="donate_header">支持本项目</span></h1>
+  <div id="topbar-right">
+    <div id="meta">
+      <a href="index.html" data-i18n="reports_to_map">🗺 返回地图</a>
+    </div>
+    <div id="lang-toggle" role="group" aria-label="Language toggle">
+      <button data-lang="zh" class="lang-btn active">中</button>
+      <button data-lang="en" class="lang-btn">EN</button>
+    </div>
+  </div>
+</div>
+<a href="index.html" id="mobile-fab-back" title="Back to map" aria-label="Back to map">🗺</a>
+
+<main id="donate-page-main">
+  <section class="donate-intro">
+    <h2 data-i18n="donate_intro_title">这是一个非营利、不展示广告的个人维护项目</h2>
+    <p data-i18n="donate_intro_body">本站完全免费、不收集用户数据。所有维护费用目前由开发者自费承担。若本站对您有帮助，欢迎通过以下方式打赏一杯咖啡。</p>
+  </section>
+
+  <aside class="donate-use">
+    <h3 data-i18n="donate_use_title">💡 款项用途</h3>
+    <p data-i18n="donate_use_body" data-i18n-html>您所支付的款项将<strong>仅用于本站的运营与内容建设</strong>，具体包括：<strong>原始档案 PDF/OCR 处理与数据整理</strong>、<strong>AI 推理费用</strong>（GPT/Claude API，用于事件摘要与双语翻译）、<strong>网站运维</strong>（域名、Render 托管、CDN、地图瓦片等）、以及后续新档案来源（更多国家/机构解密文件）的获取与索引。</p>
+  </aside>
+
+  <aside class="donate-disclaimer" data-i18n="donate_disclaimer" data-i18n-html>
+    ⚠️ 重要说明：本款项为<strong>自愿赞助（support payment）</strong>，<strong>不是慈善捐款</strong>。本项目并非任何美国 501(c)(3) 或其他国家/地区注册的慈善/非营利组织，您所支付的款项<strong>不可用于税务抵扣</strong>。<br>Contributions are <strong>voluntary support payments</strong>, <strong>not tax-deductible charitable donations</strong>.
+  </aside>
+
+  <section class="donate-methods">
+    <article class="donate-card donate-card--venmo">
+      <header class="donate-card__head">
+        <img class="donate-card__avatar" src="assets/donate/VenmoProfile.jpg" alt="Venmo profile">
+        <div class="donate-card__title">
+          <div class="donate-card__brand">Venmo</div>
+          <div class="donate-card__handle">@uapmap</div>
+        </div>
+      </header>
+      <div class="donate-card__qr-wrap">
+        <img class="donate-card__qr" src="assets/donate/VenmoQRcode.jpg" alt="Venmo QR code for @uapmap">
+      </div>
+      <div class="donate-card__hint" data-i18n="donate_venmo_hint">使用 Venmo App 扫描二维码，或直接搜索 @uapmap</div>
+      <a class="donate-card__btn" href="https://venmo.com/u/uapmap" target="_blank" rel="noopener" data-i18n="donate_venmo_open">在 Venmo 中打开 ↗</a>
+    </article>
+
+    <article class="donate-card donate-card--coming-soon">
+      <div class="donate-card__placeholder">
+        <div class="donate-card__placeholder-icon">＋</div>
+        <div class="donate-card__placeholder-text" data-i18n="donate_more_coming" data-i18n-html>更多付款方式即将上线<br>（PayPal / 微信 / 支付宝）</div>
+      </div>
+    </article>
+  </section>
+
+  <section class="donate-thanks">
+    <p data-i18n="donate_thanks">感谢您的支持 🛸</p>
+  </section>
+</main>
+
+<script src="js/i18n.js"></script>
+</body>
+</html>
