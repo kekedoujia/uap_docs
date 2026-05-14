@@ -12,24 +12,27 @@ const STATE = {
 };
 
 async function fetchData(path) {
-  const res = await fetch(path, { cache: 'no-cache' });
+  const res = await fetch(path);
   return res.json();
 }
 
 async function loadData() {
-  const manifest = await fetchData('data/manifest.json');
+  // Manifest + geocode + pdf_pages in parallel.
+  const [manifest, geocode, pdfPages] = await Promise.all([
+    fetchData('data/manifest.json'),
+    fetchData('data/geocode.json'),
+    fetchData('data/pdf_pages.json').catch(() => ({})),
+  ]);
   STATE.manifest = manifest;
-  STATE.geocode = await fetchData('data/geocode.json');
-  // pdf_pages.json: file → total page count in the source PDF
-  try {
-    STATE.pdfPages = await fetchData('data/pdf_pages.json');
-  } catch (e) {
-    STATE.pdfPages = {};
-  }
+  STATE.geocode = geocode;
+  STATE.pdfPages = pdfPages;
+  // All event batches in parallel — biggest perf win on slow networks.
+  const batches = await Promise.all(
+    manifest.batches.map(fn => fetchData(`data/events/${fn}`))
+  );
   const all = [];
   const dataSources = {};
-  for (const batchFile of manifest.batches) {
-    const batch = await fetchData(`data/events/${batchFile}`);
+  for (const batch of batches) {
     if (batch.data_source) {
       dataSources[batch.data_source] = {
         id: batch.data_source,
@@ -469,11 +472,39 @@ function buildDetailHtml(e) {
   `;
 }
 
+// Lazy summary fetch — see app.js for rationale.
+let SUMMARIES_PROMISE = null;
+function ensureSummaries() {
+  if (!SUMMARIES_PROMISE) {
+    SUMMARIES_PROMISE = fetch('data/summaries.json').then(r => r.json()).then(map => {
+      for (const ev of STATE.events) {
+        const entry = map[ev.id];
+        if (entry) Object.assign(ev, entry);
+      }
+      return map;
+    }).catch(err => { console.warn('summaries load failed:', err); return {}; });
+  }
+  return SUMMARIES_PROMISE;
+}
+
 function showDetail(e) {
   STATE.lastDetailEvent = e;
-  document.getElementById('detail-content').innerHTML = buildDetailHtml(e);
-  document.getElementById('detail-panel').classList.remove('hidden');
+  const render = () => {
+    document.getElementById('detail-content').innerHTML = buildDetailHtml(e);
+    document.getElementById('detail-panel').classList.remove('hidden');
+  };
+  render();
+  if (!e.report_summary && !e.report_summary_zh) {
+    ensureSummaries().then(map => {
+      const entry = map[e.id];
+      if (entry) {
+        Object.assign(e, entry);
+        if (STATE.lastDetailEvent === e) render();
+      }
+    });
+  }
 }
+window.ensureSummaries = ensureSummaries;
 
 // ===== Card expand/collapse + event-row clicks =========================
 
@@ -542,6 +573,7 @@ if (_origApply) {
     await loadData();
     buildFilters();
     render();
+    setTimeout(() => ensureSummaries(), 2000);
   } catch (err) {
     console.error('Failed:', err);
     document.getElementById('reports-list').innerHTML =

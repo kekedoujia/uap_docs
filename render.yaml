@@ -41,6 +41,9 @@ services:
       - path: /data/events/*
         name: Cache-Control
         value: public, max-age=120, must-revalidate    # 2 min — pick up new events quickly
+      - path: /data/summaries.json
+        name: Cache-Control
+        value: public, max-age=120, must-revalidate    # paired with batches above
       - path: /js/*
         name: Cache-Control
         value: public, max-age=3600

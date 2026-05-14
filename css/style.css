@@ -1339,7 +1339,7 @@ body.donate-page #topbar h1 a.back-link {
   text-decoration: none; color: #82b9ff; margin-right: 6px;
 }
 
-.donate-back-btn {
+.topbar-nav-btn, .donate-back-btn {
   display: inline-flex; align-items: center;
   padding: 7px 14px;
   background: rgba(130, 185, 255, 0.15);
@@ -1350,14 +1350,15 @@ body.donate-page #topbar h1 a.back-link {
   text-decoration: none;
   white-space: nowrap;
   transition: background 0.15s, border-color 0.15s, color 0.15s;
+  font-family: inherit;
 }
-.donate-back-btn:hover {
+.topbar-nav-btn:hover, .donate-back-btn:hover {
   background: rgba(130, 185, 255, 0.28);
   border-color: #82b9ff;
   color: #b8d3fb;
 }
 @media (max-width: 720px) {
-  .donate-back-btn { padding: 5px 10px; font-size: 12px; }
+  .topbar-nav-btn, .donate-back-btn { padding: 5px 10px; font-size: 12px; }
 }
 
 #donate-page-main {

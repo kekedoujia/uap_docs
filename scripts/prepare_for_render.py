@@ -247,6 +247,15 @@ def main():
         return
     rewrite_event_batches(info_map, video_map)
     note_archive_symlinks()
+    # Perf: split heavy report_summary fields into lazy-loaded summaries.json.
+    # Idempotent — re-runs after rewrite_event_batches above so any newly
+    # added summary fields get included.
+    try:
+        import subprocess
+        script = os.path.join(os.path.dirname(__file__), 'split_summaries.py')
+        subprocess.check_call([sys.executable, script])
+    except Exception as e:
+        print(f'[prepare] WARN: split_summaries.py failed: {e}')
     # Final size check
     total = 0
     for d, _, files in os.walk(SITE):

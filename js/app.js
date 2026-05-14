@@ -18,29 +18,32 @@ const STATE = {
   markersById: {},
 };
 
-// Fetch helper: always revalidate (bypass stale browser cache for dynamic data)
+// Fetch helper: rely on HTTP cache headers (manifest is short-cached and
+// triggers revalidation of batches via must-revalidate in render.yaml).
 async function fetchData(path) {
-  const res = await fetch(path, { cache: 'no-cache' });
+  const res = await fetch(path);
   return res.json();
 }
 
 async function loadData() {
-  // 1. Manifest
-  const manifest = await fetchData('data/manifest.json');
+  // 1. Manifest + geocode in parallel (small, both blocking).
+  const [manifest, geocode] = await Promise.all([
+    fetchData('data/manifest.json'),
+    fetchData('data/geocode.json'),
+  ]);
   STATE.manifest = manifest;
+  STATE.geocode = geocode;
 
-  // 2. Geocode
-  STATE.geocode = await fetchData('data/geocode.json');
+  // 2. All event batches in PARALLEL (was the main bottleneck — 12 sequential
+  //    fetches × RTT was costing several seconds on a typical mobile network).
+  const batches = await Promise.all(
+    manifest.batches.map(fn => fetchData(`data/events/${fn}`))
+  );
 
-  // 3. Cities heatmap (large, rarely changes — can use normal cache)
-  STATE.citiesHeat = await (await fetch('data/cities_heatmap.json')).json();
-
-  // 4. All event batches
+  // 3. Process batches into a flat events array.
   const allEvents = [];
   const dataSources = {};  // ds_id → metadata from batch
-  for (const batchFile of manifest.batches) {
-    const batch = await fetchData(`data/events/${batchFile}`);
-    // Collect per-batch data-source metadata (driven by batch JSON, not hardcoded)
+  for (const batch of batches) {
     if (batch.data_source) {
       dataSources[batch.data_source] = {
         id: batch.data_source,
@@ -64,7 +67,6 @@ async function loadData() {
         release_date: batch.release_date,
         data_source: e.data_source || batch.data_source || 'Other',
       });
-      // Unique ID
       ev.id = e.id || `${batch.batch_id}_${ev.date_iso}_${ev.location}_${(ev.file || '').slice(0, 30)}`;
       allEvents.push(ev);
     }
@@ -76,6 +78,13 @@ async function loadData() {
 
   // Build filter options
   buildFilters();
+
+  // 4. Cities heatmap is large (~820KB) and only used for the heat layer.
+  //    Fire-and-forget after critical path so markers render immediately.
+  fetch('data/cities_heatmap.json').then(r => r.json()).then(data => {
+    STATE.citiesHeat = data;
+    if (window.applyHeatLayer) window.applyHeatLayer();
+  }).catch(err => console.warn('heatmap load failed:', err));
 }
 
 // Lookup helpers driven by STATE.dataSources (loaded from batch JSONs)
@@ -458,21 +467,35 @@ function initMap() {
     maxZoom: 19,
   }).addTo(map);
 
-  // Heatmap layer — lightweight overlay (won't drown the base map)
-  STATE.heatLayer = L.heatLayer(STATE.citiesHeat, {
-    radius: 12, blur: 16, maxZoom: 7,
-    max: 1.5,                    // higher max → colors stay lower in scale
-    minOpacity: 0.10,            // very subtle low-activity areas
-    gradient: {
-      0.0: 'rgba(0, 60, 140, 0)',
-      0.3: 'rgba(30, 127, 190, 0.35)',
-      0.5: 'rgba(58, 168, 196, 0.45)',
-      0.7: 'rgba(146, 214, 93, 0.55)',
-      0.85: 'rgba(251, 209, 71, 0.65)',
-      1.0: 'rgba(255, 94, 58, 0.75)',
-    },
-  });
-  if (document.getElementById('show-heatmap').checked) STATE.heatLayer.addTo(map);
+  // Heatmap layer — lightweight overlay. Data may not be loaded yet
+  // (deferred fire-and-forget). applyHeatLayer() is called once when it
+  // arrives, and can also be called later if the data becomes ready after
+  // the map is initialised.
+  window.applyHeatLayer = function applyHeatLayer() {
+    if (!STATE.citiesHeat || !STATE.citiesHeat.length) return;
+    if (STATE.heatLayer) return;  // already built
+    STATE.heatLayer = L.heatLayer(STATE.citiesHeat, {
+      radius: 12, blur: 16, maxZoom: 7,
+      max: 1.5,
+      minOpacity: 0.10,
+      gradient: {
+        0.0: 'rgba(0, 60, 140, 0)',
+        0.3: 'rgba(30, 127, 190, 0.35)',
+        0.5: 'rgba(58, 168, 196, 0.45)',
+        0.7: 'rgba(146, 214, 93, 0.55)',
+        0.85: 'rgba(251, 209, 71, 0.65)',
+        1.0: 'rgba(255, 94, 58, 0.75)',
+      },
+    });
+    const cb = document.getElementById('show-heatmap');
+    if (cb && cb.checked) STATE.heatLayer.addTo(map);
+    // Re-apply current opacity if slider was already moved
+    const op = document.getElementById('heat-opacity');
+    if (op && STATE.heatLayer.setOptions) {
+      STATE.heatLayer.setOptions({ minOpacity: parseInt(op.value, 10) / 100 });
+    }
+  };
+  applyHeatLayer();
 
   // Apply initial opacity from slider
   setTimeout(() => {
@@ -626,6 +649,11 @@ function autoCloseSidebar() {
 }
 
 function toggleHeat() {
+  // Heatmap data is deferred — layer may not exist yet.
+  if (!STATE.heatLayer) {
+    // Will be auto-added on arrival if checkbox is checked
+    return;
+  }
   if (document.getElementById('show-heatmap').checked) {
     STATE.heatLayer.addTo(STATE.map);
   } else {
@@ -712,11 +740,42 @@ function closeOtherModal() {
   document.body.classList.remove('modal-open');
 }
 
+// Lazy summary fetch (perf: keeps critical batches small).
+// summaries.json is fetched on first detail open OR ~3s after main load
+// as background prefetch. Cached after.
+let SUMMARIES_PROMISE = null;
+function ensureSummaries() {
+  if (!SUMMARIES_PROMISE) {
+    SUMMARIES_PROMISE = fetch('data/summaries.json').then(r => r.json()).then(map => {
+      // Merge into existing events in-place
+      for (const ev of STATE.events) {
+        const entry = map[ev.id];
+        if (entry) Object.assign(ev, entry);
+      }
+      return map;
+    }).catch(err => { console.warn('summaries load failed:', err); return {}; });
+  }
+  return SUMMARIES_PROMISE;
+}
+
 function showDetail(e) {
   STATE.lastDetailEvent = e;
-  document.getElementById('detail-content').innerHTML = buildDetailHtml(e);
-  document.getElementById('detail-panel').classList.remove('hidden');
+  const render = () => {
+    document.getElementById('detail-content').innerHTML = buildDetailHtml(e);
+    document.getElementById('detail-panel').classList.remove('hidden');
+  };
+  render();
+  if (!e.report_summary && !e.report_summary_zh) {
+    ensureSummaries().then(map => {
+      const entry = map[e.id];
+      if (entry) {
+        Object.assign(e, entry);
+        if (STATE.lastDetailEvent === e) render();
+      }
+    });
+  }
 }
+window.ensureSummaries = ensureSummaries;
 
 function updateLegend() {
   if (!STATE.legendEl) return;
@@ -803,6 +862,8 @@ function handleHash() {
     initMap();
     handleHash();
     window.addEventListener('hashchange', handleHash);
+    // Background-prefetch summaries so detail panels open instantly.
+    setTimeout(() => ensureSummaries(), 2000);
   } catch (err) {
     console.error('Failed to load data:', err);
     const I = window.I18N || { t: (k) => k };
