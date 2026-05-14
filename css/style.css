@@ -1419,16 +1419,16 @@ body.donate-page #topbar h1 a.back-link {
 
 .donate-methods {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
   margin-bottom: 32px;
 }
 
 .donate-card {
   background: rgba(15, 26, 47, 0.7);
   border: 1px solid #2a3a5a;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 8px;
+  padding: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1436,22 +1436,19 @@ body.donate-page #topbar h1 a.back-link {
 }
 .donate-card:hover { border-color: #3a5582; }
 
-.donate-card--venmo {
-  border-top: 3px solid #3D95CE;
-}
-.donate-card--paypal {
-  border-top: 3px solid #0070BA;
-}
+.donate-card--venmo  { border-top: 2px solid #3D95CE; }
+.donate-card--paypal { border-top: 2px solid #0070BA; }
+.donate-card--wechat { border-top: 2px solid #1AAD19; }
 
 .donate-card__head {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 .donate-card__avatar {
-  width: 56px; height: 56px;
+  width: 40px; height: 40px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #3D95CE;
@@ -1460,89 +1457,70 @@ body.donate-page #topbar h1 a.back-link {
 }
 .donate-card__avatar--logo {
   display: flex; align-items: center; justify-content: center;
-  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-  font-size: 28px; font-weight: 700; font-style: italic;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 19px; font-weight: 700; font-style: italic;
   color: #ffffff;
 }
 .donate-card__avatar--paypal {
   border-color: #0070BA;
   background: linear-gradient(135deg, #0070BA 0%, #002C8A 100%);
 }
+.donate-card__avatar--wechat {
+  border-color: #1AAD19;
+  background: linear-gradient(135deg, #2DC72D 0%, #128A12 100%);
+  font-style: normal; font-size: 18px;
+}
 .donate-card__title { flex: 1; min-width: 0; }
 .donate-card__brand {
-  font-size: 13px;
+  font-size: 11px;
   color: #8fa3c4;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   font-weight: 600;
 }
 .donate-card__handle {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   color: #e8eef9;
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 .donate-card__qr-wrap {
   width: 100%;
   background: #ffffff;
-  border-radius: 8px;
-  padding: 12px;
+  border-radius: 6px;
+  padding: 8px;
   display: flex;
   justify-content: center;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 .donate-card__qr {
   width: 100%;
-  max-width: 220px;
+  max-width: 170px;
   height: auto;
   display: block;
 }
 
 .donate-card__hint {
-  font-size: 12px;
+  font-size: 11px;
   color: #8fa3c4;
   text-align: center;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   line-height: 1.5;
 }
 
 .donate-card__btn {
   display: inline-block;
-  padding: 10px 18px;
+  padding: 7px 14px;
   background: #3D95CE;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 5px;
   transition: background 0.15s;
 }
 .donate-card__btn:hover { background: #2f7fb3; }
-.donate-card__btn--paypal { background: #0070BA; }
-.donate-card__btn--paypal:hover { background: #005a96; }
-
-.donate-card--coming-soon {
-  border-style: dashed;
-  border-color: #2a3a5a;
-  min-height: 360px;
-  justify-content: center;
-  opacity: 0.7;
-}
-.donate-card__placeholder {
-  text-align: center;
-  color: #6a7c9c;
-}
-.donate-card__placeholder-icon {
-  font-size: 48px;
-  color: #3a5582;
-  margin-bottom: 12px;
-  line-height: 1;
-}
-.donate-card__placeholder-text {
-  font-size: 13px;
-  line-height: 1.6;
-}
 
 .donate-thanks {
   text-align: center;
@@ -1555,6 +1533,6 @@ body.donate-page #topbar h1 a.back-link {
   #donate-page-main { padding: 0 16px; margin-top: 16px; }
   .donate-intro h2 { font-size: 17px; }
   .donate-intro p { font-size: 13px; }
-  .donate-card { padding: 16px; }
-  .donate-card__handle { font-size: 18px; }
+  .donate-card { padding: 12px; }
+  .donate-card__handle { font-size: 14px; }
 }

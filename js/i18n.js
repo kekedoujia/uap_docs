@@ -111,8 +111,8 @@ const I18N = {
       donate_venmo_hint: '使用 Venmo App 扫描二维码，或直接搜索 @uapmap',
       donate_venmo_open: '在 Venmo 中打开 ↗',
       donate_paypal_hint: '使用 PayPal App 扫描二维码，或直接搜索用户名 UAP-MAP',
-      donate_verify: '🔍 <strong>扫码后请务必核对收款用户名</strong>，确认与本页所示一致（Venmo: <strong>@uapmap</strong>，PayPal: <strong>UAP-MAP</strong>，均与本站名称相关）后再转账，谨防误付他人。',
-      donate_more_coming: '更多付款方式即将上线<br>（微信 / 支付宝）',
+      donate_wechat_hint: '使用微信扫一扫，向 UAP-MAP 转账',
+      donate_verify: '🔍 <strong>扫码后请务必核对收款用户名</strong>，确认与本页所示一致（Venmo: <strong>@uapmap</strong>，PayPal: <strong>UAP-MAP</strong>，微信: <strong>UAP-MAP</strong>，均与本站名称相关）后再转账，谨防误付他人。',
       donate_thanks: '感谢您的支持 🛸',
       disclaimer_title: '📄 免责声明 / Disclaimer',
       disclaimer_body: (
@@ -239,8 +239,8 @@ const I18N = {
       donate_venmo_hint: 'Scan with the Venmo app, or search @uapmap directly',
       donate_venmo_open: 'Open in Venmo ↗',
       donate_paypal_hint: 'Scan with the PayPal app, or search the username UAP-MAP directly',
-      donate_verify: '🔍 <strong>After scanning, please verify the recipient username</strong> matches what is shown on this page (Venmo: <strong>@uapmap</strong>, PayPal: <strong>UAP-MAP</strong> — both derived from this site\'s name) before sending, to avoid paying the wrong person.',
-      donate_more_coming: 'More payment methods coming soon<br>(WeChat / Alipay)',
+      donate_wechat_hint: 'Scan with WeChat to send to UAP-MAP',
+      donate_verify: '🔍 <strong>After scanning, please verify the recipient username</strong> matches what is shown on this page (Venmo: <strong>@uapmap</strong>, PayPal: <strong>UAP-MAP</strong>, WeChat: <strong>UAP-MAP</strong> — all derived from this site\'s name) before sending, to avoid paying the wrong person.',
       donate_thanks: 'Thank you for your support 🛸',
       disclaimer_title: '📄 Disclaimer',
       disclaimer_body: (
