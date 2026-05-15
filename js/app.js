@@ -551,8 +551,11 @@ function rebuildMarkers() {
   const filters = getActiveFilters();
   for (const e of STATE.events) {
     if (!eventPasses(e, filters)) continue;
-    // Skip non-geographic events — they show in the Other panel instead
+    // Skip non-geographic events — they show in the Other panel instead.
+    // Hard guard: events with mapping_to_map === false (space / off-Earth)
+    // must never get a marker even if they accidentally have lat/lon.
     if (e.non_geographic) continue;
+    if (e.mapping_to_map === false) continue;
     const kind = agencyKind(e.agency);
     const icon = L.divIcon({
       className: 'uap-marker ' + kind,
@@ -724,7 +727,7 @@ function updateOtherEvents(visible) {
   const tbody = document.getElementById('other-modal-tbody');
   const countSidebar = document.getElementById('other-events-count');
   const countModal = document.getElementById('other-modal-count');
-  const others = visible.filter(e => e.non_geographic);
+  const others = visible.filter(e => e.non_geographic || e.mapping_to_map === false);
   // Newest first — matches the timeline view ordering.
   others.sort((a, b) => b.date_iso.localeCompare(a.date_iso));
   if (countSidebar) countSidebar.textContent = others.length;
