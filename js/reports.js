@@ -231,6 +231,8 @@ function buildFilters() {
   document.getElementById('rp-sort').addEventListener('change', refilter);
   document.getElementById('detail-close').addEventListener('click', () => {
     document.getElementById('detail-panel').classList.add('hidden');
+    highlightSelectedRow(null);
+    STATE.lastDetailEvent = null;
   });
 }
 
@@ -344,6 +346,10 @@ function render() {
     return;
   }
   list.innerHTML = visible.map(renderReportCard).join('');
+  // Restore selection highlight (DOM was just rebuilt)
+  if (STATE.lastDetailEvent && STATE.lastDetailEvent.id) {
+    highlightSelectedRow(STATE.lastDetailEvent.id);
+  }
 }
 
 // ===== Detail-panel helpers (reused from timeline.js logic) ============
@@ -487,8 +493,17 @@ function ensureSummaries() {
   return SUMMARIES_PROMISE;
 }
 
+function highlightSelectedRow(eventId) {
+  document.querySelectorAll('.rp-event-row.is-selected').forEach(el =>
+    el.classList.remove('is-selected'));
+  if (!eventId) return;
+  const row = document.querySelector(`.rp-event-row[data-id="${CSS.escape(eventId)}"]`);
+  if (row) row.classList.add('is-selected');
+}
+
 function showDetail(e) {
   STATE.lastDetailEvent = e;
+  highlightSelectedRow(e && e.id);
   const render = () => {
     document.getElementById('detail-content').innerHTML = buildDetailHtml(e);
     document.getElementById('detail-panel').classList.remove('hidden');

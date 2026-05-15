@@ -1117,6 +1117,17 @@ body.reports-page #topbar h1 a.back-link { text-decoration: none; color: #82b9ff
   background: rgba(130, 185, 255, 0.1);
   border-color: #82b9ff;
 }
+.rp-event-row.is-selected {
+  background: rgba(130, 185, 255, 0.35);
+  border-color: #82b9ff;
+  border-left: 3px solid #82b9ff;
+  padding-left: 8px;       /* compensate for the 3px left border */
+  box-shadow: 0 0 0 1px rgba(130, 185, 255, 0.55) inset,
+              0 0 8px rgba(130, 185, 255, 0.25);
+}
+.rp-event-row.is-selected:hover {
+  background: rgba(130, 185, 255, 0.45);
+}
 .rp-row-marker {
   width: 9px; height: 9px; border-radius: 50%;
   background: #ff6b6b;
