@@ -69,6 +69,7 @@ async function loadData() {
         batch_name: batch.batch_name,
         release_date: batch.release_date,
         data_source: e.data_source || batch.data_source || 'Other',
+        agency: e.agency || 'unknown',
       });
       ev.id = e.id || `${batch.batch_id}_${ev.date_iso}_${ev.location}_${(ev.file || '').slice(0, 30)}`;
       allEvents.push(ev);
@@ -190,7 +191,8 @@ function buildFilters() {
   for (const [ag, n] of sortedAgencies) {
     const label = document.createElement('label');
     label.className = 'cb';
-    label.innerHTML = `<input type="checkbox" value="${escapeAttr(ag)}" checked> ${escapeHtml(ag)} <span style="color:#6a7c9c">(${n})</span>`;
+    const displayLabel = ag === 'unknown' ? I18N.t('agency_others') : ag;
+    label.innerHTML = `<input type="checkbox" value="${escapeAttr(ag)}" checked> ${escapeHtml(displayLabel)} <span style="color:#6a7c9c">(${n})</span>`;
     label.querySelector('input').addEventListener('change', refilter);
     aWrap.appendChild(label);
   }
@@ -241,6 +243,10 @@ function refilter() {
   updateStats();
 }
 
+function agencyDisplay(agency) {
+  return agency === 'unknown' ? I18N.t('agency_others') : (agency || '');
+}
+
 function agencyKind(agency) {
   const a = (agency || '').toLowerCase();
   if (a.includes('fbi')) return 'fbi';
@@ -262,7 +268,7 @@ function buildPopupHtml(e) {
       </div>
       <div style="margin-top:6px; font-weight:600; color:#82b9ff;">${escapeHtml(e.location)}</div>
       <div style="margin-top:4px; font-size:11px; color:#8fa3c4;">
-        <strong>${escapeHtml(e.agency || '')}</strong> · ${escapeHtml(e.type || '')}
+        <strong>${escapeHtml(agencyDisplay(e.agency))}</strong> · ${escapeHtml(e.type || '')}
       </div>
       <div style="margin-top:6px; font-size:11px; color:#c8d6f0; max-height:80px; overflow:hidden;">
         ${titleEsc.length > 140 ? titleEsc.slice(0, 140) + '…' : titleEsc}
@@ -361,7 +367,7 @@ function buildDetailHtml(e) {
     <h3>${escapeHtml(e.title || t('detail_no_title'))}</h3>
     <div class="date-badge">${e.date_iso}</div>
     <div class="meta-row"><strong>${t('detail_location')}</strong>：${escapeHtml(e.location)} ${coordLabel}${e.location_approximate ? ` <span style="color:#e0a83c;font-size:11px;margin-left:6px;">· ${escapeHtml(t('detail_loc_approx'))}</span>` : ''}</div>
-    <div class="meta-row"><strong>${t('detail_agency')}</strong>：${escapeHtml(e.agency || '')}</div>
+    <div class="meta-row"><strong>${t('detail_agency')}</strong>：${escapeHtml(agencyDisplay(e.agency))}</div>
     <div class="meta-row"><strong>${t('detail_type')}</strong>：${escapeHtml(typeLabel)}</div>
     <div class="meta-row"><strong>${t('detail_date_raw')}</strong>：${escapeHtml(e.date_raw || '')}</div>
     <div class="meta-row"><strong>${t('detail_source')}</strong>：${escapeHtml(e.source || '')}</div>
@@ -383,6 +389,20 @@ function buildDetailHtml(e) {
          🏛 ${escapeHtml(dsLabel(e.data_source, 'short_label'))}
        </a>` : ''}
     </div>
+    ${Array.isArray(e.additional_files) && e.additional_files.length ? `
+    <div class="detail-also-in">
+      <div class="detail-also-in-title">🔗 ${escapeHtml(t('detail_also_in_files'))}</div>
+      <ul class="detail-also-in-list">
+        ${e.additional_files.map(f => {
+          const archUrl = e.archive_url
+            ? e.archive_url.replace(/[^/]+$/, encodeURIComponent(f))
+            : `https://archive.org/download/CanadaUFO/${encodeURIComponent(f)}`;
+          return `<li>📄 <a href="${escapeAttr(archUrl)}" target="_blank" rel="noopener">
+            ${escapeHtml(f)}
+          </a></li>`;
+        }).join('')}
+      </ul>
+    </div>` : ''}
 
     ${Array.isArray(e.additional_resources) && e.additional_resources.length ? `
     <div class="detail-resources">
@@ -746,7 +766,7 @@ function updateOtherEvents(visible) {
       <tr class="modal-row" data-id="${escapeAttr(e.id)}" tabindex="0" role="button">
         <td><span class="tl-row-marker tl-marker-${kind}" style="display:inline-block;margin-right:6px;vertical-align:middle;"></span>${escapeHtml(e.date_iso)}</td>
         <td>${escapeHtml(e.location)}</td>
-        <td>${escapeHtml(e.agency || '')}</td>
+        <td>${escapeHtml(agencyDisplay(e.agency))}</td>
         <td>${escapeHtml(e.type || '')}</td>
         <td class="modal-title-cell">${escapeHtml(title)}${title.length >= 160 ? '…' : ''}</td>
         <td class="modal-media-cell">${hasImg}${hasVid}</td>
@@ -880,8 +900,67 @@ function handleHash() {
   showDetail(ev);
 }
 
+// Sidebar resize handle (desktop only). Width persists in localStorage and
+// is re-applied on load. The CSS variable --sidebar-w drives both the
+// sidebar and the map's left offset.
+const SIDEBAR_W_KEY = 'sidebar-w';
+const SIDEBAR_MIN = 220;
+const SIDEBAR_MAX = 600;
+function isDesktop() { return window.innerWidth > 900; }
+function applyStoredSidebarWidth() {
+  const root = document.documentElement;
+  const raw = localStorage.getItem(SIDEBAR_W_KEY);
+  if (raw && isDesktop()) {
+    const w = Math.max(SIDEBAR_MIN, Math.min(SIDEBAR_MAX, parseInt(raw, 10) || 0));
+    if (w) root.style.setProperty('--sidebar-w', w + 'px');
+  } else {
+    // Let the stylesheet's default (or media-query override) apply.
+    root.style.removeProperty('--sidebar-w');
+  }
+}
+function initSidebarResizer() {
+  const r = document.getElementById('sidebar-resizer');
+  if (!r) return;
+  let startX = 0;
+  let startW = 0;
+  let dragging = false;
+  r.addEventListener('mousedown', (e) => {
+    if (!isDesktop()) return;
+    dragging = true;
+    startX = e.clientX;
+    startW = document.getElementById('sidebar').getBoundingClientRect().width;
+    r.classList.add('dragging');
+    document.body.classList.add('resizing-sidebar');
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', (e) => {
+    if (!dragging) return;
+    let w = startW + (e.clientX - startX);
+    w = Math.max(SIDEBAR_MIN, Math.min(SIDEBAR_MAX, w));
+    document.documentElement.style.setProperty('--sidebar-w', w + 'px');
+  });
+  document.addEventListener('mouseup', () => {
+    if (!dragging) return;
+    dragging = false;
+    r.classList.remove('dragging');
+    document.body.classList.remove('resizing-sidebar');
+    const cur = document.getElementById('sidebar').getBoundingClientRect().width;
+    localStorage.setItem(SIDEBAR_W_KEY, String(Math.round(cur)));
+    if (STATE.map && STATE.map.invalidateSize) STATE.map.invalidateSize();
+  });
+  // Double-click resets to default
+  r.addEventListener('dblclick', () => {
+    localStorage.removeItem(SIDEBAR_W_KEY);
+    document.documentElement.style.removeProperty('--sidebar-w');
+    if (STATE.map && STATE.map.invalidateSize) STATE.map.invalidateSize();
+  });
+  window.addEventListener('resize', applyStoredSidebarWidth);
+}
+
 // Boot
 (async function main() {
+  applyStoredSidebarWidth();
+  initSidebarResizer();
   // Set loading placeholder via i18n if available
   const evtCount = document.getElementById('event-count');
   if (evtCount && window.I18N) evtCount.textContent = I18N.t('loading');

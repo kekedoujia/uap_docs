@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="ru_title">UFO/UAP 最近更新</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="timeline-page recent-updates-page">
+
+<div id="topbar">
+  <h1><a href="index.html" class="back-link" data-i18n="ru_back" title="Map">🛸</a> <span data-i18n="ru_header">最近更新</span></h1>
+  <div id="topbar-right">
+    <div id="meta">
+      <span id="ru-window-summary" data-i18n="ru_window_summary">最近 180 天</span><span style="opacity:.5">/</span>
+      <span id="event-count">…</span> <span data-i18n="meta_events">事件</span>
+    </div>
+    <a href="index.html" class="topbar-nav-btn" data-i18n="ru_to_map">🗺 返回地图</a>
+    <a href="timeline.html" class="topbar-nav-btn" data-i18n="ru_to_timeline">📅 时间轴</a>
+    <a href="reports.html" class="topbar-nav-btn" data-i18n="ru_to_reports">📑 报告索引</a>
+    <a href="donate.html" class="topbar-donate" data-i18n="nav_donate">☕ 打赏</a>
+    <div id="lang-toggle" role="group" aria-label="Language toggle">
+      <button data-lang="zh" class="lang-btn active">中</button>
+      <button data-lang="en" class="lang-btn">EN</button>
+    </div>
+  </div>
+</div>
+<a href="index.html" id="mobile-fab-back" title="Back to map" aria-label="Back to map">🗺</a>
+
+<div id="timeline-toolbar">
+  <div class="tl-filter-cell">
+    <label data-i18n="ru_window_label">时间窗口：</label>
+    <select id="ru-window">
+      <option value="30">30</option>
+      <option value="90">90</option>
+      <option value="180" selected>180</option>
+      <option value="365">365</option>
+      <option value="0" data-i18n="ru_window_all">全部</option>
+    </select>
+    <span data-i18n="ru_days">天</span>
+  </div>
+  <div class="tl-filter-cell tl-grow">
+    <label data-i18n="tl_search">搜索：</label>
+    <input type="text" id="ru-search" placeholder="..." data-i18n-placeholder="ru_search_placeholder">
+  </div>
+  <div class="tl-filter-cell">
+    <label data-i18n="ru_updated_by_label">更新者：</label>
+    <select id="ru-updater-filter"><option value="">All</option></select>
+  </div>
+  <div class="tl-filter-cell">
+    <label data-i18n="filter_source">数据源：</label>
+    <select id="ru-source-filter"><option value="">All</option></select>
+  </div>
+  <div class="tl-filter-cell">
+    <label data-i18n="tl_visible">显示：</label>
+    <span id="ru-visible-count">—</span> / <span id="ru-total-count">—</span>
+  </div>
+</div>
+
+<div id="timeline-container">
+  <div id="ru-list"></div>
+</div>
+
+<div id="detail-panel" class="hidden">
+  <button id="detail-close" title="Close">×</button>
+  <div id="detail-content"></div>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/version_check.js"></script>
+<script src="js/recent-updates.js"></script>
+</body>
+</html>

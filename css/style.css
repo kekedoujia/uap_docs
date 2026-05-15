@@ -1,4 +1,5 @@
 /* UFO/UAP map site */
+:root { --sidebar-w: 308px; }   /* desktop default (280 × 1.10) */
 * { box-sizing: border-box; }
 html, body {
   margin: 0; padding: 0; height: 100%;
@@ -74,12 +75,28 @@ body.donate-page .topbar-donate { display: none; }
 /* Sidebar */
 #sidebar {
   position: absolute; top: 60px; left: 0; bottom: 0;
-  width: 280px; padding: 16px;
+  width: var(--sidebar-w); padding: 16px;
   background: rgba(15, 26, 47, 0.95);
   border-right: 1px solid #2a3a5a;
   overflow-y: auto;
   z-index: 999;
 }
+
+/* Sidebar resizer (desktop only) — thin draggable strip at the sidebar's right edge */
+#sidebar-resizer {
+  position: absolute; top: 60px; bottom: 0;
+  left: var(--sidebar-w);
+  width: 6px; margin-left: -3px;
+  cursor: ew-resize;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.12s;
+}
+#sidebar-resizer:hover,
+#sidebar-resizer.dragging { background: rgba(130, 185, 255, 0.35); }
+body.resizing-sidebar { cursor: ew-resize; user-select: none; }
+body.resizing-sidebar #map { pointer-events: none; }
+@media (max-width: 900px) { #sidebar-resizer { display: none; } }
 #sidebar h2 {
   margin-top: 0; font-size: 14px; color: #82b9ff;
   text-transform: uppercase; letter-spacing: 1px;
@@ -523,7 +540,7 @@ hr { border: 0; border-top: 1px solid #2a3a5a; margin: 16px 0; }
 
 /* Map */
 #map {
-  position: absolute; top: 60px; left: 280px; right: 0; bottom: 0;
+  position: absolute; top: 60px; left: var(--sidebar-w); right: 0; bottom: 0;
   background: #08111e;
 }
 
@@ -792,8 +809,7 @@ body.sidebar-open #sidebar-backdrop { display: block; }
    Tablet (≤ 900px)
    ============================================ */
 @media (max-width: 900px) {
-  #sidebar { width: 240px; }
-  #map { left: 240px; }
+  :root { --sidebar-w: 240px; }
   #detail-panel { width: 360px; }
   #timeline-toolbar { padding: 10px 14px; gap: 10px; }
 }
@@ -1268,6 +1284,40 @@ body.reports-page #topbar h1 a.back-link { text-decoration: none; color: #82b9ff
   color: #e8eef9;
   text-decoration: underline;
 }
+
+/* Cross-file case — list of additional PDF files this case appears in */
+.detail-also-in {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: rgba(130, 185, 255, 0.08);
+  border-left: 2px solid #82b9ff;
+  border-radius: 0 3px 3px 0;
+}
+.detail-also-in-title {
+  font-size: 11px;
+  color: #8fa3c4;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.detail-also-in-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.detail-also-in-list li {
+  padding: 3px 0;
+  font-size: 12px;
+}
+.detail-also-in-list a {
+  color: #82b9ff;
+  text-decoration: none;
+  word-break: break-word;
+}
+.detail-also-in-list a:hover {
+  color: #e8eef9;
+  text-decoration: underline;
+}
 .resource-type {
   color: #6a7c9c;
   font-size: 10px;
@@ -1569,4 +1619,30 @@ body.donate-page #topbar h1 a.back-link {
   .donate-intro p { font-size: 13px; }
   .donate-card { padding: 12px; }
   .donate-card__handle { font-size: 14px; }
+}
+
+/* Recent Updates page */
+body.recent-updates-page .tl-event-row { grid-template-columns: 16px 130px 1fr; }
+.ru-updated {
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 13px; color: #ffd93d;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.ru-event-date {
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 11px; color: #6a7c9c;
+  margin-top: 3px;
+}
+.ru-updater-tag {
+  background: rgba(130,185,255,0.12);
+  color: #a8c5ee;
+  padding: 1px 6px; border-radius: 2px;
+  font-size: 10px;
+  letter-spacing: 0.2px;
+}
+@media (max-width: 700px) {
+  body.recent-updates-page .tl-event-row { grid-template-columns: 16px 110px 1fr; }
+  .ru-updated { font-size: 12px; }
+  .ru-event-date { font-size: 10px; }
 }
