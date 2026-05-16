@@ -187,13 +187,40 @@ function buildFilters() {
 
   // Agency checkboxes
   const aWrap = document.getElementById('agency-checkboxes');
+  aWrap.innerHTML = '';
   const sortedAgencies = [...agencies.entries()].sort((a, b) => b[1] - a[1]);
+
+  // Master "select all" toggle — rendered first
+  const allLabel = document.createElement('label');
+  allLabel.className = 'cb';
+  allLabel.style.fontWeight = '600';
+  allLabel.innerHTML = `<input type="checkbox" id="agency-select-all" checked> ${escapeHtml(I18N.t('filter_select_all'))} <span style="color:#6a7c9c">(${sortedAgencies.length})</span>`;
+  aWrap.appendChild(allLabel);
+  const allInput = allLabel.querySelector('input');
+
+  function syncAgencyMaster() {
+    const boxes = aWrap.querySelectorAll('input[type=checkbox]:not(#agency-select-all)');
+    let checked = 0;
+    boxes.forEach(b => { if (b.checked) checked++; });
+    allInput.checked = checked === boxes.length;
+    allInput.indeterminate = checked > 0 && checked < boxes.length;
+  }
+  allInput.addEventListener('change', () => {
+    const next = allInput.checked;
+    allInput.indeterminate = false;
+    aWrap.querySelectorAll('input[type=checkbox]:not(#agency-select-all)').forEach(b => { b.checked = next; });
+    refilter();
+  });
+
   for (const [ag, n] of sortedAgencies) {
     const label = document.createElement('label');
     label.className = 'cb';
     const displayLabel = ag === 'unknown' ? I18N.t('agency_others') : ag;
     label.innerHTML = `<input type="checkbox" value="${escapeAttr(ag)}" checked> ${escapeHtml(displayLabel)} <span style="color:#6a7c9c">(${n})</span>`;
-    label.querySelector('input').addEventListener('change', refilter);
+    label.querySelector('input').addEventListener('change', () => {
+      syncAgencyMaster();
+      refilter();
+    });
     aWrap.appendChild(label);
   }
 
@@ -221,7 +248,7 @@ function getActiveFilters() {
   const dateMin = document.getElementById('date-min').value || null;
   const dateMax = document.getElementById('date-max').value || null;
   const agenciesChecked = new Set();
-  document.querySelectorAll('#agency-checkboxes input:checked').forEach(c => agenciesChecked.add(c.value));
+  document.querySelectorAll('#agency-checkboxes input:checked:not(#agency-select-all)').forEach(c => agenciesChecked.add(c.value));
   const typesChecked = null;  // type filter removed; always pass
   const sourcesChecked = new Set();
   document.querySelectorAll('#source-checkboxes input:checked').forEach(c => sourcesChecked.add(c.value));

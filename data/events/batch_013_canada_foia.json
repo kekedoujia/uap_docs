@@ -33797,8 +33797,8 @@
       "page": 231,
       "archive_url": "https://archive.org/download/CanadaUFO/Canada%20-%20FOIA%20Part%2010%20-%20Pages%202701-3000.pdf",
       "gov_page_url": "https://archive.org/details/CanadaUFO",
-      "image_url": "data/page_thumbs/canada_foia/Canada_-_FOIA_Part_10_-_Pages_2701-3000__p233.jpg",
-      "page_thumb_url": "data/page_thumbs/canada_foia/Canada_-_FOIA_Part_10_-_Pages_2701-3000__p233.jpg",
+      "image_url": "data/page_thumbs/canada_foia/Canada_-_FOIA_Part_10_-_Pages_2701-3000__p231.jpg",
+      "page_thumb_url": "data/page_thumbs/canada_foia/Canada_-_FOIA_Part_10_-_Pages_2701-3000__p231.jpg",
       "record_description": "Canadian declassified UFO record from the FOIA release archived on archive.org. Holding agency typically Department of National Defence / RCAF / RCMP / NRC / Transport Canada.",
       "official_date": "14 Oct 1975",
       "official_location": "Ontario, Canada",
@@ -33807,7 +33807,7 @@
       "page_end": 240,
       "record_no": "N76/110",
       "mapping_to_map": false,
-      "last_updated": "",
+      "last_updated": "2026-05-16",
       "updated_by": "UAP-MAP-OFFICIAL"
     },
     {
@@ -95208,7 +95208,7 @@
       "date_raw": "30 July 1961, 2115 GMT",
       "date_approximate": false,
       "location": "Atlantic Ocean — 53°08'N 47°38'W (R.M.S. SAXONIA position)",
-      "non_geographic": true,
+      "non_geographic": false,
       "agency": "Cunard Steam-Ship Company / Department of National Defence",
       "title": "R.M.S. SAXONIA Atlantic USO sighting July 1961 (Capt. J.T. Jones)",
       "witnesses": "Captain J.T. Jones, R.M.S. SAXONIA (Cunard Steam-Ship Company)",
@@ -95221,10 +95221,12 @@
       "image_url": "data/page_thumbs/canada_foia/Canada_-_FOIA_Part_29_-_Pages_8401-8759__p309.jpg",
       "page_thumb_url": "data/page_thumbs/canada_foia/Canada_-_FOIA_Part_29_-_Pages_8401-8759__p309.jpg",
       "record_description": "Canadian declassified UFO record from the FOIA release archived on archive.org.",
-      "lat": null,
-      "lon": null,
-      "mapping_to_map": false,
-      "last_updated": "2026-05-15",
+      "lat": 53.1333,
+      "lon": -47.6333,
+      "location_approximate": false,
+      "location_approximate_basis": "logged_ship_position",
+      "mapping_to_map": true,
+      "last_updated": "2026-05-16",
       "updated_by": "UAP-MAP-OFFICIAL"
     }
   ]
