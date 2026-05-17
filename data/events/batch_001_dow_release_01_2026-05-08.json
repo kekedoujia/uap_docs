@@ -3164,6 +3164,7 @@
       "updated_by": "UAP-MAP-OFFICIAL"
     },
     {
+      "id": "dow-65sec1-p0178-boise-smith-1947-07-04",
       "date_iso": "1947-07-04",
       "date_raw": "Friday, 4 July 1947, 8:04 p.m.",
       "location": "Boise, Idaho",
@@ -3251,6 +3252,7 @@
       "updated_by": "UAP-MAP-OFFICIAL"
     },
     {
+      "id": "dow-65serial130-p0109-boise-stevens-1947-07-04",
       "date_iso": "1947-07-04",
       "date_raw": "4th of July, eight minutes after departure from Boise, Idaho",
       "location": "Boise, Idaho",
@@ -7078,13 +7080,16 @@
       "updated_by": "UAP-MAP-OFFICIAL"
     },
     {
+      "id": "dow-box7-1-100-p0133-logan-incident-61-1947-09-08",
+      "case_id": "logan-ut-1947-09-08",
+      "regroup_note": "Same underlying Logan, Utah incident as the Section 2 teletype, Section 3 follow-up memo, and Box 7 Incident 61/61a checklist records.",
       "date_iso": "1947-09-08",
       "date_raw": "8 Sept 47, Approx 10:30 P.M.",
       "location": "Logan, Utah",
       "agency": "USAF",
       "type": "PDF (Check-List)",
-      "title": "Mr & Mrs Norman Hall: formation of flying objects, Logan, UT (8 Sep 1947)",
-      "source": "DoW Box 7 Incident Summaries 1-100, p.0013 (+1 additional pages)",
+      "title": "Logan UT Incident 61/61a: Anderson/Caldwell and Hall flying-object reports (8 Sep 1947)",
+      "source": "DoW Box 7 Incident Summaries 1-100, p.0133 (+2 additional pages)",
       "file": "38_143685_box7_incident_summaries_1-100.pdf",
       "page": "0133",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/38_143685_box7_incident_summaries_1-100.pdf",
@@ -7108,6 +7113,9 @@
       "updated_by": "UAP-MAP-OFFICIAL"
     },
     {
+      "id": "dow-65sec2-p0152-logan-teletype-1947-09-08",
+      "case_id": "logan-ut-1947-09-08",
+      "regroup_note": "Same underlying Logan, Utah incident as the Section 2 teletype, Section 3 follow-up memo, and Box 7 Incident 61/61a checklist records.",
       "date_iso": "1947-09-08",
       "date_raw": "Between 10:40 and 11:10 PM Monday, 1947-09-08; teletype dated 1947-09-10 9:55 AM MST",
       "location": "Logan, Cache County, Utah",
@@ -7137,6 +7145,9 @@
       "updated_by": "UAP-MAP-OFFICIAL"
     },
     {
+      "id": "dow-65sec3-p0169-logan-followup-1947-09-08",
+      "case_id": "logan-ut-1947-09-08",
+      "regroup_note": "Same underlying Logan, Utah incident as the Section 2 teletype, Section 3 follow-up memo, and Box 7 Incident 61/61a checklist records.",
       "date_iso": "1947-09-08",
       "date_raw": "Evening of September 8, 1947; FBI memorandum dated September 15, 1947",
       "location": "Logan, Cache County, Utah",
@@ -7144,9 +7155,10 @@
       "type": "PDF",
       "title": "Logan UT: multiple white flying discs over city, 8 Sep 1947",
       "title_ocr_original": "",
-      "source": "FBI Case File 62-HQ-83894 Section 3, p.0169",
+      "source": "FBI Case File 62-HQ-83894 Section 3, p.0169 (+1 continuation page p.0171)",
       "file": "65_hs1-834228961_62-hq-83894_section_3.pdf",
       "page": "0169",
+      "page_end": "0171",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/65_hs1-834228961_62-hq-83894_section_3.pdf",
       "image_url": "https://www.war.gov/medialink/ufo/release_1/thumbnail/65_hs1-834228961_62-hq-83894_section_3.jpg",
       "record_description": "The FBI's 62-HQ-83894 case file includes investigative records, eyewitness testimonies, and public reports concerning Unidentified Flying Objects and flying discs documented between June 1947 and July 1968. The records include high-profile incident accounts, photographic evidence from sites like Oak Ridge, TN, and technical proposals regarding potential propulsion systems. Additional topics include convention programs, researcher accounts, and extensive media coverage from the period.  This file is partially posted on FBI vault with more redactions and some pages missing.  Included here is the complete case file with several newly declassified pages and only minor redactions.",
