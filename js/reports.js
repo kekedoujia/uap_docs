@@ -99,9 +99,9 @@ async function loadData() {
   // Compute counts and sort events by page (ascending) then date
   for (const g of groups.values()) {
     g.eventCount = g.events.length;
-    // pageCount = total pages in the source PDF (from pdf_pages.json),
-    // falling back to the count of distinct event-pages if not available.
-    g.pageCount = (g.file && (STATE.pdfPages || {})[g.file]) || g.pages.size;
+    // pageCount = total pages in the source PDF. Do not fall back to
+    // event-pages here; that would confuse incident count with PDF length.
+    g.pageCount = g.file ? inferPdfPageCount(g.file) : 0;
     g.coveredPages = g.pages.size;  // distinct event-pages (informational)
     g.events.sort((a, b) => {
       const pa = parseInt(a.page || 0, 10);
@@ -126,6 +126,16 @@ function escapeHtml(s) {
 function escapeAttr(s) {
   if (s == null) return '';
   return String(s).replace(/"/g, '&quot;').replace(/&/g, '&amp;');
+}
+
+function inferPdfPageCount(file) {
+  const listed = file && (STATE.pdfPages || {})[file];
+  if (listed) return listed;
+  const m = String(file || '').match(/\bPages\s+(\d+)\s*-\s*(\d+)\.pdf$/i);
+  if (!m) return 0;
+  const start = Number(m[1]);
+  const end = Number(m[2]);
+  return end >= start ? (end - start + 1) : 0;
 }
 
 function renderSummary(text) {
