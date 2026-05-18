@@ -10140,13 +10140,13 @@
     },
     {
       "date_iso": "1948-11-17",
-      "date_raw": "0418Z 17 November 1948",
-      "location": "Edmonton, Alberta, Canada",
+      "date_raw": "1418Z 17 November 1948",
+      "location": "117°50'W, 56°10'N, northwest Alberta, Canada",
       "agency": "USAF",
       "type": "PDF",
-      "title": "1st Lt. James Tormey: Egg-shaped bright orange object near Edmonton, Alberta (17 Nov 1948)",
+      "title": "1st Lt. James Tormey: egg-shaped bright orange object over northwest Alberta (17 Nov 1948)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.121",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0121 and 0141",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "121",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -10158,14 +10158,20 @@
       "official_location": "N/A",
       "page_thumb_url": "data/page_thumbs/342_hs1-416511228_box186_319.1-flying-discs-1949/page_0121.jpg",
       "data_source": "DoW",
-      "lat": 53.5461,
-      "lon": -113.4938,
+      "lat": 56.1667,
+      "lon": -117.8333,
       "non_geographic": false,
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "id": "dow-box186-tormey-nw-alberta-1948-11-17",
+      "pages_used": [
+        "0121",
+        "0141"
+      ],
+      "regroup_note": "Local Box 186 audit: p.0141 is page 2/continuation of the 17 November 1948 Tormey report, signed by Capt. George F. Brenner; the old July 1949 Brenner item was not a separate event."
     },
     {
       "date_iso": "1948-11-17",
@@ -10454,7 +10460,7 @@
       "agency": "USAF",
       "type": "PDF",
       "title": "Unidentified aerial object sighted from Fairfield-Suisun AFB, CA (3 Dec 1948)",
-      "source": "Box 186 319.1 Flying Discs 1949, p.103",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0099-0114",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "103",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -10473,8 +10479,28 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0114",
+      "pages_used": [
+        "0099",
+        "0100",
+        "0101",
+        "0102",
+        "0103",
+        "0104",
+        "0105",
+        "0106",
+        "0107",
+        "0108",
+        "0109",
+        "0110",
+        "0111",
+        "0112",
+        "0113",
+        "0114"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1948-12-05",
@@ -10571,7 +10597,7 @@
       "type": "PDF",
       "title": "Chanute AFB, Illinois: bright white object heading south (9 Dec 1948)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.137",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0137-0140",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "137",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -10589,8 +10615,16 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0140",
+      "pages_used": [
+        "0137",
+        "0138",
+        "0139",
+        "0140"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1948-12-11",
@@ -10600,7 +10634,7 @@
       "type": "PDF",
       "title": "C-46P aircraft sighting: unidentified object near Martinsburg, WV (11 Dec 1948)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.122",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0122-0129 and p.0134",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "122",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -10618,8 +10652,21 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "id": "dow-box186-martinsburg-c46-1948-12-11",
+      "pages_used": [
+        "0122",
+        "0123",
+        "0124",
+        "0125",
+        "0126",
+        "0127",
+        "0128",
+        "0129",
+        "0134"
+      ],
+      "regroup_note": "Local Box 186 audit: this C-46P/Martinsburg report is interleaved with transmission sheets and the final page appears at p.0134 after unrelated Jackson pages."
     },
     {
       "date_iso": "1948-12-12",
@@ -10712,9 +10759,9 @@
       "location": "Jackson, Mississippi (2 miles East)",
       "agency": "USAF",
       "type": "PDF",
-      "title": "Thomas A. Rush & T.A. Deolittle: cigar-shaped object, Jackson, MS (1 Jan 1949)",
+      "title": "Thomas A. Rush & T. A. Doolittle: cigar-shaped object near Jackson, MS (1 Jan 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.116",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0116-0120 and pp.0132-0136",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "116",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -10732,8 +10779,21 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "id": "dow-box186-rush-doolittle-jackson-1949-01-01",
+      "pages_used": [
+        "0116",
+        "0117",
+        "0118",
+        "0119",
+        "0120",
+        "0132",
+        "0133",
+        "0135",
+        "0136"
+      ],
+      "regroup_note": "Local Box 186 audit: pp.0116-0120 and pp.0132-0136 document the same Jackson cigar-shaped object. The old p.0133 Maxwell AFB item was a duplicate continuation/reporting packet, not a separate event."
     },
     {
       "date_iso": "1949-01-01",
@@ -10765,42 +10825,13 @@
       "updated_by": "UAP-MAP-OFFICIAL"
     },
     {
-      "date_iso": "1949-01-02",
-      "date_raw": "2 Jan 49",
-      "location": "Maxwell Air Force Base, Alabama",
-      "agency": "USAF",
-      "type": "PDF",
-      "title": "Cigar-shaped object, dark blue/black, 60 ft long near Maxwell AFB, AL (2 Jan 49)",
-      "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.133",
-      "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "page": "133",
-      "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "image_url": "https://www.war.gov/medialink/ufo/release_1/thumbnail/342_hs1-416511228_box186_319.1-flying-discs-1949.jpg",
-      "record_description": "This file primarily contains incident reports on Unidentified Flying Objects (UFOs) written in compliance with the 1948 Flight Service Regulation (FSR) 200-4. The incidents were witnessed by military sources, as well as well as by some Civilian Aviation Authority (CAA) ones. The reports typically include information such as dates, locations, weather, and altitude, plus detailed descriptions of appearance and movement. Some messages from the Military Air Transport Service (MATS) and Army Airways Communications System (AACS) are also included, as well as additional military intelligence reports, several diagrams, and a report from a weather station in Japan.",
-      "record_type": "PDF",
-      "gov_page_url": "https://www.war.gov/UFO/#342_HS1-416511228_3191-Flying-Discs-1949",
-      "official_date": "1/9/50",
-      "official_location": "N/A",
-      "page_thumb_url": "data/page_thumbs/342_hs1-416511228_box186_319.1-flying-discs-1949/page_0133.jpg",
-      "data_source": "DoW",
-      "lat": 32.3829,
-      "lon": -86.3659,
-      "non_geographic": false,
-      "location_approximate": true,
-      "location_approximate_basis": "city_center",
-      "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
-    },
-    {
       "date_iso": "1949-01-04",
       "date_raw": "4 January 1949 at 1407 local time (sighted by Capt. Stoney); reported by 1810th AACS 8 Jan 1949; 1st Ind from HQ 1808th AACS Wing 17 Jan 1949",
       "location": "Hickam Field, Territory of Hawaii",
       "agency": "USAF",
       "type": "PDF",
       "title": "Capt. Paul R. Stoney: white oscillating disc over Hickam Field, HI (4 Jan 1949)",
-      "source": "Box 186 319.1 Flying Discs 1949, p.092",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0090-0098",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "092",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -10819,8 +10850,22 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "id": "dow-box186-stoney-hickam-1949-01-04",
+      "page_end": "0098",
+      "pages_used": [
+        "0090",
+        "0091",
+        "0092",
+        "0093",
+        "0094",
+        "0095",
+        "0096",
+        "0097",
+        "0098"
+      ],
+      "regroup_note": "Local Box 186 audit: pp.0090-0091 are follow-up comments, pp.0092-0095 the written report, and pp.0097-0098 the teletype for the same Capt. Stoney Hickam sighting. The old p.0090 item was a duplicate follow-up, not a new 7 February sighting."
     },
     {
       "date_iso": "1949-01-04",
@@ -10858,7 +10903,7 @@
       "agency": "USAF",
       "type": "PDF",
       "title": "Multiple Japanese weather stations observe unidentified object (25 Jan 1949)",
-      "source": "Box 186 319.1 Flying Discs 1949, p.083",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0083-0089",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "083",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -10877,8 +10922,19 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0089",
+      "pages_used": [
+        "0083",
+        "0084",
+        "0085",
+        "0086",
+        "0087",
+        "0088",
+        "0089"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1949-01-30",
@@ -10925,7 +10981,7 @@
       "type": "PDF",
       "title": "Wells & Burnes: burning object near Guelph's East, Newfoundland (1 Feb 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.071",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0071-0072",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "071",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -10943,37 +10999,14 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
-    },
-    {
-      "date_iso": "1949-02-05",
-      "date_raw": "5 February 1949 and 7 February 1949",
-      "location": "San Andrés Islands, Colombia",
-      "agency": "USAF",
-      "type": "PDF",
-      "title": "Unidentified objects near San Andrés Islands & Russian sloops at Colón",
-      "source": "Box 186 319.1 Flying Discs 1949, p.077",
-      "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "page": "077",
-      "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "image_url": "https://www.war.gov/medialink/ufo/release_1/thumbnail/342_hs1-416511228_box186_319.1-flying-discs-1949.jpg",
-      "record_description": "This file primarily contains incident reports on Unidentified Flying Objects (UFOs) written in compliance with the 1948 Flight Service Regulation (FSR) 200-4. The incidents were witnessed by military sources, as well as well as by some Civilian Aviation Authority (CAA) ones. The reports typically include information such as dates, locations, weather, and altitude, plus detailed descriptions of appearance and movement. Some messages from the Military Air Transport Service (MATS) and Army Airways Communications System (AACS) are also included, as well as additional military intelligence reports, several diagrams, and a report from a weather station in Japan.",
-      "record_type": "PDF",
-      "gov_page_url": "https://www.war.gov/UFO/#342_HS1-416511228_3191-Flying-Discs-1949",
-      "official_date": "1/9/50",
-      "official_location": "N/A",
-      "page_thumb_url": "data/page_thumbs/342_hs1-416511228_box186_319.1-flying-discs-1949/page_0077.jpg",
-      "title_ocr_original": "Sighting near Colon — 342 hs1-416511228 box186 319.1-flying-di p.077",
-      "data_source": "DoW",
-      "lat": 12.5847,
-      "lon": -81.7006,
-      "non_geographic": false,
-      "location_approximate": true,
-      "location_approximate_basis": "city_center",
-      "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0072",
+      "pages_used": [
+        "0071",
+        "0072"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1949-02-06",
@@ -10982,7 +11015,7 @@
       "agency": "USAF",
       "type": "PDF",
       "title": "S.S. Antigua officers: silver sphere over San Andrés Islands, Caribbean Sea (6 Feb 1949)",
-      "source": "Box 186 319.1 Flying Discs 1949, p.075",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0075-0078",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "075",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -11001,8 +11034,17 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "id": "dow-box186-ss-antigua-san-andres-1949-02-06",
+      "page_end": "0078",
+      "pages_used": [
+        "0075",
+        "0076",
+        "0077",
+        "0078"
+      ],
+      "regroup_note": "Local Box 186 audit: the old p.0077 San Andres/Russian sloops record was paragraph 6 and page 2 of the same S.S. Antigua report."
     },
     {
       "date_iso": "1949-02-07",
@@ -11012,7 +11054,7 @@
       "type": "PDF",
       "title": "Godman AFB, Ft Knox: rotating bright object, green/yellow/red (7 Feb 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.079",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0079-0082",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "079",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -11030,37 +11072,16 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
-    },
-    {
-      "date_iso": "1949-02-07",
-      "date_raw": "7 February 1949, various times mentioned: 0147, 0508, 0518, 0909 local time",
-      "location": "Hickam Air Force Base, Hawaii",
-      "agency": "USAF",
-      "type": "PDF",
-      "title": "Unidentified air object sighting near Hickam AFB, Hawaii (7 Feb 1949)",
-      "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.090",
-      "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "page": "090",
-      "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "image_url": "https://www.war.gov/medialink/ufo/release_1/thumbnail/342_hs1-416511228_box186_319.1-flying-discs-1949.jpg",
-      "record_description": "This file primarily contains incident reports on Unidentified Flying Objects (UFOs) written in compliance with the 1948 Flight Service Regulation (FSR) 200-4. The incidents were witnessed by military sources, as well as well as by some Civilian Aviation Authority (CAA) ones. The reports typically include information such as dates, locations, weather, and altitude, plus detailed descriptions of appearance and movement. Some messages from the Military Air Transport Service (MATS) and Army Airways Communications System (AACS) are also included, as well as additional military intelligence reports, several diagrams, and a report from a weather station in Japan.",
-      "record_type": "PDF",
-      "gov_page_url": "https://www.war.gov/UFO/#342_HS1-416511228_3191-Flying-Discs-1949",
-      "official_date": "1/9/50",
-      "official_location": "N/A",
-      "page_thumb_url": "data/page_thumbs/342_hs1-416511228_box186_319.1-flying-discs-1949/page_0090.jpg",
-      "data_source": "DoW",
-      "lat": 21.318611,
-      "lon": -157.922778,
-      "non_geographic": false,
-      "location_approximate": true,
-      "location_approximate_basis": "city_center",
-      "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0082",
+      "pages_used": [
+        "0079",
+        "0080",
+        "0081",
+        "0082"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1949-02-08",
@@ -11070,7 +11091,7 @@
       "type": "PDF",
       "title": "Observation from Curtiss Field at N 58° W 48° (8 Feb 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.073",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0073-0074",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "073",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -11088,8 +11109,14 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0074",
+      "pages_used": [
+        "0073",
+        "0074"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1949-02-19",
@@ -11099,7 +11126,7 @@
       "type": "PDF",
       "title": "Slow running aircraft engine heard from Goose Bay, Labrador (19 Feb 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.064",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0060, 0062, 0064",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "064",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -11117,8 +11144,15 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "id": "dow-box186-goose-bay-engine-sound-1949-02-19",
+      "pages_used": [
+        "0060",
+        "0062",
+        "0064"
+      ],
+      "regroup_note": "Local Box 186 audit: p.0064 is the substantive Goose Bay/Fort Chimo sound report; pp.0060 and 0062 are related follow-up messages."
     },
     {
       "date_iso": "1949-02-28",
@@ -11128,7 +11162,7 @@
       "type": "PDF",
       "title": "1st Lt. John T. Smith: jet-propelled blimp near Bakersfield, CA (28 Feb 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.065",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0065-0068",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "065",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -11146,18 +11180,26 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0068",
+      "pages_used": [
+        "0065",
+        "0066",
+        "0067",
+        "0068"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
-      "date_iso": "1949-03-04",
-      "date_raw": "Four Nine (0449 hours), 4 March 1949",
+      "date_iso": "1949-03-18",
+      "date_raw": "1950Z, 18 March 1949; message DTG 192130Z",
       "location": "Port Chimo, Quebec (near Station 1950)",
       "agency": "USAF",
       "type": "PDF",
-      "title": "Station 1950: Red light object near Port Chimo, Quebec (4 Mar 1949)",
+      "title": "Station 1950/Fort Chimo: red-light object near Port Chimo, Quebec (18 Mar 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.063",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0062-0063",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "063",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -11175,8 +11217,14 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "id": "dow-box186-port-chimo-red-light-1949-03-18",
+      "pages_used": [
+        "0062",
+        "0063"
+      ],
+      "regroup_note": "Local Box 186 audit: the OCR-derived 4 March date was wrong; the message states 1950Z on 18 March 1949, with p.0062 as related follow-up/evaluation."
     },
     {
       "date_iso": "1949-03-06",
@@ -11355,13 +11403,13 @@
       "regroup_note": "Local audit: p.0126 is the Salt Lake City teletype; p.0128 is a related Air Force routing sheet."
     },
     {
-      "date_iso": "1949-04-06",
-      "date_raw": "6 April 1949, passing approximately 2000 hours",
-      "location": "U.S. Naval Operating Base, Kodiak, Alaska",
+      "date_iso": "1949-04-08",
+      "date_raw": "8 April 1949, approximately 2035-2050 hours; report dated 23 April 1949",
+      "location": "Kodiak, Alaska (U.S. Naval Operating Base / Chiniak Bay area)",
       "agency": "USAF",
       "type": "PDF",
-      "title": "Luminous energy phenomenon over Kodiak Naval Operating Base, AK (6 Apr 1949)",
-      "source": "Box 186 319.1 Flying Discs 1949, p.055",
+      "title": "Multiple witnesses: luminous fireball/energy phenomenon over Kodiak, Alaska (8 Apr 1949)",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0053-0057",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "055",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -11380,37 +11428,18 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
-    },
-    {
-      "date_iso": "1949-04-08",
-      "date_raw": "8 April 1949, approximately 2000-2045 hours",
-      "location": "Kodiak, Alaska",
-      "agency": "USAF",
-      "type": "PDF",
-      "title": "Multiple witnesses: luminous object over Kodiak, Alaska (8 Apr 1949)",
-      "source": "Box 186 319.1 Flying Discs 1949, p.056",
-      "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "page": "056",
-      "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "image_url": "https://www.war.gov/medialink/ufo/release_1/thumbnail/342_hs1-416511228_box186_319.1-flying-discs-1949.jpg",
-      "record_description": "This file primarily contains incident reports on Unidentified Flying Objects (UFOs) written in compliance with the 1948 Flight Service Regulation (FSR) 200-4. The incidents were witnessed by military sources, as well as well as by some Civilian Aviation Authority (CAA) ones. The reports typically include information such as dates, locations, weather, and altitude, plus detailed descriptions of appearance and movement. Some messages from the Military Air Transport Service (MATS) and Army Airways Communications System (AACS) are also included, as well as additional military intelligence reports, several diagrams, and a report from a weather station in Japan.",
-      "record_type": "PDF",
-      "gov_page_url": "https://www.war.gov/UFO/#342_HS1-416511228_3191-Flying-Discs-1949",
-      "official_date": "1/9/50",
-      "official_location": "N/A",
-      "page_thumb_url": "data/page_thumbs/342_hs1-416511228_box186_319.1-flying-discs-1949/page_0056.jpg",
-      "title_ocr_original": "Sighting near Kodiak, Alaska — 342 hs1-416511228 box186 319.1-flying-di p.056",
-      "data_source": "DoW",
-      "lat": 57.79,
-      "lon": -152.41,
-      "non_geographic": false,
-      "location_approximate": true,
-      "location_approximate_basis": "city_center",
-      "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "id": "dow-box186-kodiak-luminous-1949-04-08",
+      "page_end": "0057",
+      "pages_used": [
+        "0053",
+        "0054",
+        "0055",
+        "0056",
+        "0057"
+      ],
+      "regroup_note": "Local Box 186 audit: pp.0053-0057 are one Kodiak Air Intelligence Information Report with its drawing enclosure. The old p.0056 item duplicated the same event."
     },
     {
       "date_iso": "1949-04-13",
@@ -11420,7 +11449,7 @@
       "type": "PDF",
       "title": "1st Lt Robert A. Franois: silver ball-shaped object, Fort Worth, TX (13 Apr 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.058",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0058-0059",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "058",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -11438,8 +11467,14 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0059",
+      "pages_used": [
+        "0058",
+        "0059"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1949-04-16",
@@ -11479,43 +11514,14 @@
       "regroup_note": "Local audit: pp.0133 and 0135 are the FBI Little Rock memo; p.0136 is the attached Southwest-Times Record clipping."
     },
     {
-      "date_iso": "1949-04-21",
-      "date_raw": "21 April 1949",
-      "location": "Tinker Air Force Base, Oklahoma",
-      "agency": "USAF",
-      "type": "PDF",
-      "title": "White object triangulated at 4200 mph near Tinker AFB, Oklahoma (21 Apr 1949)",
-      "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.048",
-      "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "page": "048",
-      "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "image_url": "https://www.war.gov/medialink/ufo/release_1/thumbnail/342_hs1-416511228_box186_319.1-flying-discs-1949.jpg",
-      "record_description": "This file primarily contains incident reports on Unidentified Flying Objects (UFOs) written in compliance with the 1948 Flight Service Regulation (FSR) 200-4. The incidents were witnessed by military sources, as well as well as by some Civilian Aviation Authority (CAA) ones. The reports typically include information such as dates, locations, weather, and altitude, plus detailed descriptions of appearance and movement. Some messages from the Military Air Transport Service (MATS) and Army Airways Communications System (AACS) are also included, as well as additional military intelligence reports, several diagrams, and a report from a weather station in Japan.",
-      "record_type": "PDF",
-      "gov_page_url": "https://www.war.gov/UFO/#342_HS1-416511228_3191-Flying-Discs-1949",
-      "official_date": "1/9/50",
-      "official_location": "N/A",
-      "page_thumb_url": "data/page_thumbs/342_hs1-416511228_box186_319.1-flying-discs-1949/page_0048.jpg",
-      "data_source": "DoW",
-      "lat": 35.4147,
-      "lon": -97.3866,
-      "non_geographic": false,
-      "location_approximate": true,
-      "location_approximate_basis": "city_center",
-      "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
-    },
-    {
       "date_iso": "1949-05-02",
-      "date_raw": "Monday, the 2nd of May, 1949 and 8th of June 1949",
+      "date_raw": "2 May 1949 radar interference; 8 June 1949 white billowing substance sighting; summary dated 16 June 1949",
       "location": "Guam and Marianas Islands",
       "agency": "USAF",
       "type": "PDF",
-      "title": "514th Recon Squadron: radar interference & white contrail sightings (May-Jun 1949)",
+      "title": "514th Recon Squadron: radar interference near Guam and high-altitude white substance near Rota/Guam (May-Jun 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.046",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0046-0052",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "046",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -11533,8 +11539,20 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "id": "dow-box186-514th-guam-marianas-1949-05-02",
+      "page_end": "0052",
+      "pages_used": [
+        "0046",
+        "0047",
+        "0048",
+        "0049",
+        "0050",
+        "0051",
+        "0052"
+      ],
+      "regroup_note": "Local Box 186 audit: p.0048 is page 2 of the 2143d Air Weather Wing semi-monthly intelligence summary. Tinker AFB was only a relay/recipient; the old Tinker record has been merged here."
     },
     {
       "date_iso": "1949-05-02",
@@ -11544,7 +11562,7 @@
       "type": "PDF",
       "title": "Marvin Love: three flying discs near Elko, Nevada (2 May 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.044",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0043-0045",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "044",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -11562,8 +11580,14 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "pages_used": [
+        "0043",
+        "0044",
+        "0045"
+      ],
+      "regroup_note": "Local Box 186 audit: routing page and transmitted message belong to one Marvin Love packet."
     },
     {
       "date_iso": "1949-05-12",
@@ -11751,7 +11775,7 @@
       "type": "PDF",
       "title": "White tubular object, 100 ft long, 20 mi SW of Boston, MA (10 Jun 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.037",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0037-0042",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "037",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -11769,8 +11793,18 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0042",
+      "pages_used": [
+        "0037",
+        "0038",
+        "0039",
+        "0040",
+        "0041",
+        "0042"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1949-06-23",
@@ -11838,7 +11872,7 @@
       "type": "PDF",
       "title": "Major R. L. Long & civilian: flame tail UFO near Fairfield, OH (28 Jun 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.035",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0035-0036",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "035",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -11856,37 +11890,14 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
-    },
-    {
-      "date_iso": "1949-07-01",
-      "date_raw": "Not specified - flight from Edmonton, Alberta to Kittigazuit, N.W.T., Canada [date_iso padded 1949→1949-07-01 for sort]",
-      "location": "Edmonton to Kittigazuit, Northwest Territories, Canada (en route)",
-      "agency": "USAF",
-      "type": "PDF",
-      "title": "Capt. Brenner: bright flaming orange object, Edmonton to Kittigazuit, Canada",
-      "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.141",
-      "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "page": "141",
-      "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "image_url": "https://www.war.gov/medialink/ufo/release_1/thumbnail/342_hs1-416511228_box186_319.1-flying-discs-1949.jpg",
-      "record_description": "This file primarily contains incident reports on Unidentified Flying Objects (UFOs) written in compliance with the 1948 Flight Service Regulation (FSR) 200-4. The incidents were witnessed by military sources, as well as well as by some Civilian Aviation Authority (CAA) ones. The reports typically include information such as dates, locations, weather, and altitude, plus detailed descriptions of appearance and movement. Some messages from the Military Air Transport Service (MATS) and Army Airways Communications System (AACS) are also included, as well as additional military intelligence reports, several diagrams, and a report from a weather station in Japan.",
-      "record_type": "PDF",
-      "gov_page_url": "https://www.war.gov/UFO/#342_HS1-416511228_3191-Flying-Discs-1949",
-      "official_date": "1/9/50",
-      "official_location": "N/A",
-      "page_thumb_url": "data/page_thumbs/342_hs1-416511228_box186_319.1-flying-discs-1949/page_0141.jpg",
-      "data_source": "DoW",
-      "lat": 60.0,
-      "lon": -125.0,
-      "non_geographic": false,
-      "location_approximate": true,
-      "location_approximate_basis": "city_center",
-      "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0036",
+      "pages_used": [
+        "0035",
+        "0036"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1949-07-01",
@@ -12018,7 +12029,7 @@
       "type": "PDF",
       "title": "Heinkirchen: flying wing-type object over Columbus, Ohio (19 Jul 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.032",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0032-0034",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "032",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -12036,17 +12047,24 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0034",
+      "pages_used": [
+        "0032",
+        "0033",
+        "0034"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1949-07-24",
       "date_raw": "1205 MST, 24 July 1949",
-      "location": "Mountain Home, Idaho",
+      "location": "10 miles northwest of Mountain Home, Idaho",
       "agency": "USAF",
       "type": "PDF",
-      "title": "Seven delta-wing objects in V formation near Mountain Home, ID (24 Jul 1949)",
-      "source": "Box 186 319.1 Flying Discs 1949, p.028",
+      "title": "Harry Clark: seven delta-wing objects in V formation near Mountain Home, ID (24 Jul 1949)",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0028-0031",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "028",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -12065,37 +12083,17 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
-    },
-    {
-      "date_iso": "1949-07-25",
-      "date_raw": "25 July 1949",
-      "location": "Burley to Nampa, Idaho",
-      "agency": "USAF",
-      "type": "PDF",
-      "title": "Mr. Clark: 9 disc formation near Burley-Nampa, Idaho (25 July 1949)",
-      "source": "Box 186 319.1 Flying Discs 1949, p.030",
-      "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "page": "030",
-      "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "image_url": "https://www.war.gov/medialink/ufo/release_1/thumbnail/342_hs1-416511228_box186_319.1-flying-discs-1949.jpg",
-      "record_description": "This file primarily contains incident reports on Unidentified Flying Objects (UFOs) written in compliance with the 1948 Flight Service Regulation (FSR) 200-4. The incidents were witnessed by military sources, as well as well as by some Civilian Aviation Authority (CAA) ones. The reports typically include information such as dates, locations, weather, and altitude, plus detailed descriptions of appearance and movement. Some messages from the Military Air Transport Service (MATS) and Army Airways Communications System (AACS) are also included, as well as additional military intelligence reports, several diagrams, and a report from a weather station in Japan.",
-      "record_type": "PDF",
-      "gov_page_url": "https://www.war.gov/UFO/#342_HS1-416511228_3191-Flying-Discs-1949",
-      "official_date": "1/9/50",
-      "official_location": "N/A",
-      "page_thumb_url": "data/page_thumbs/342_hs1-416511228_box186_319.1-flying-discs-1949/page_0030.jpg",
-      "title_ocr_original": "Sighting near Burley, Idaho — 342 hs1-416511228 box186 319.1-flying-di p.030",
-      "data_source": "DoW",
-      "lat": 42.6,
-      "lon": -114.35,
-      "non_geographic": false,
-      "location_approximate": true,
-      "location_approximate_basis": "city_center",
-      "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "id": "dow-box186-clark-mountain-home-1949-07-24",
+      "page_end": "0031",
+      "pages_used": [
+        "0028",
+        "0029",
+        "0030",
+        "0031"
+      ],
+      "regroup_note": "Local Box 186 audit: the old p.0030 Burley-Nampa item was a continuation of Harry Clark's Mountain Home report, not a separate 25 July event."
     },
     {
       "date_iso": "1949-07-26",
@@ -12105,7 +12103,7 @@
       "type": "PDF",
       "title": "Bill Millor: eight dish-shaped objects over Spokane, WA (26 Jul 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.015",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0015-0017",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "015",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -12123,8 +12121,15 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0017",
+      "pages_used": [
+        "0015",
+        "0016",
+        "0017"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1949-07-28",
@@ -12157,13 +12162,13 @@
     },
     {
       "date_iso": "1949-07-30",
-      "date_raw": "30 July 1949, from 2100P to 2130P",
+      "date_raw": "30 July 1949, from 2100P to 2130P; report dated 1 August 1949",
       "location": "Portland, Oregon (vicinity of Troutdale and Mount Hood)",
       "agency": "USAF",
       "type": "PDF",
-      "title": "Multiple witnesses: unidentified flying objects near Portland/Mount Hood, OR (30 Jul 1949)",
+      "title": "Portland/Troutdale/Mount Hood witnesses: unidentified object with red/white lights (30 Jul 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.025",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0025-0027",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "025",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -12181,37 +12186,16 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
-    },
-    {
-      "date_iso": "1949-08-01",
-      "date_raw": "1 August 1949, while approaching Portland from the east",
-      "location": "Portland, Oregon (vicinity)",
-      "agency": "USAF",
-      "type": "PDF",
-      "title": "Capt. Thrush: aircraft with red/white lights near Portland, OR (1 Aug 1949)",
-      "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.026",
-      "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "page": "026",
-      "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
-      "image_url": "https://www.war.gov/medialink/ufo/release_1/thumbnail/342_hs1-416511228_box186_319.1-flying-discs-1949.jpg",
-      "record_description": "This file primarily contains incident reports on Unidentified Flying Objects (UFOs) written in compliance with the 1948 Flight Service Regulation (FSR) 200-4. The incidents were witnessed by military sources, as well as well as by some Civilian Aviation Authority (CAA) ones. The reports typically include information such as dates, locations, weather, and altitude, plus detailed descriptions of appearance and movement. Some messages from the Military Air Transport Service (MATS) and Army Airways Communications System (AACS) are also included, as well as additional military intelligence reports, several diagrams, and a report from a weather station in Japan.",
-      "record_type": "PDF",
-      "gov_page_url": "https://www.war.gov/UFO/#342_HS1-416511228_3191-Flying-Discs-1949",
-      "official_date": "1/9/50",
-      "official_location": "N/A",
-      "page_thumb_url": "data/page_thumbs/342_hs1-416511228_box186_319.1-flying-discs-1949/page_0026.jpg",
-      "data_source": "DoW",
-      "lat": 45.5152,
-      "lon": -122.6784,
-      "non_geographic": false,
-      "location_approximate": true,
-      "location_approximate_basis": "city_center",
-      "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "id": "dow-box186-portland-mount-hood-1949-07-30",
+      "page_end": "0027",
+      "pages_used": [
+        "0025",
+        "0026",
+        "0027"
+      ],
+      "regroup_note": "Local Box 186 audit: the old p.0026 Capt. Thrush item was a continuation of this same 30 July Portland/Mount Hood report, not a separate 1 August event."
     },
     {
       "date_iso": "1949-08-01",
@@ -12221,7 +12205,7 @@
       "type": "PDF",
       "title": "Columbus Tower: unidentified object over Columbus, Ohio (1 Aug 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.022",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0022-0024",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "022",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -12239,8 +12223,15 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0024",
+      "pages_used": [
+        "0022",
+        "0023",
+        "0024"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1949-08-08",
@@ -12250,7 +12241,7 @@
       "type": "PDF",
       "title": "Five AACS operators: unidentified flying objects, Medford, OR (8 Aug 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.018",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0018-0021",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "018",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -12268,8 +12259,16 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0021",
+      "pages_used": [
+        "0018",
+        "0019",
+        "0020",
+        "0021"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1949-08-15",
@@ -12307,7 +12306,7 @@
       "agency": "USAF",
       "type": "PDF",
       "title": "UFO sighting report: Seattle, Washington (22 Aug 1949)",
-      "source": "Box 186 319.1 Flying Discs 1949, p.009",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0009-0013",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "009",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -12326,8 +12325,17 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0013",
+      "pages_used": [
+        "0009",
+        "0010",
+        "0011",
+        "0012",
+        "0013"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1949-09-14",
@@ -12366,7 +12374,7 @@
       "type": "PDF",
       "title": "C-45 aircraft: unidentified object near Griffiss AFB, Rome, NY (20 Sep 1949)",
       "title_ocr_original": "",
-      "source": "Box 186 319.1 Flying Discs 1949, p.003",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0003-0008",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "003",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -12384,8 +12392,18 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0008",
+      "pages_used": [
+        "0003",
+        "0004",
+        "0005",
+        "0006",
+        "0007",
+        "0008"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1949-09-25",
@@ -12568,7 +12586,7 @@
       "agency": "USAF",
       "type": "PDF",
       "title": "Two spherical UFOs over Kansas City and Olathe, Kansas (6 Jan 1950)",
-      "source": "Box 186 319.1 Flying Discs 1949, p.001",
+      "source": "Box 186 319.1 Flying Discs 1949, pp.0001-0002",
       "file": "342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
       "page": "001",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/342_hs1-416511228_box186_319.1-flying-discs-1949.pdf",
@@ -12587,8 +12605,14 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0002",
+      "pages_used": [
+        "0001",
+        "0002"
+      ],
+      "regroup_note": "Local Box 186 audit: page range expanded from a single-page record to the full report packet."
     },
     {
       "date_iso": "1950-01-22",
