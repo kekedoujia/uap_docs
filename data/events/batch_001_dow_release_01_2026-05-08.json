@@ -9354,8 +9354,8 @@
       "location": "Santa Fe, New Mexico",
       "agency": "USAF",
       "type": "PDF (Check-List)",
-      "title": "A. Rubio Angier: white disc, stationary, Santa Fe, NM (23 Sept 1948)",
-      "source": "DoW Box 7 Incident Summaries 173-233, p.0006",
+      "title": "Angier (Incident 175) & Fairchild (175a): white flat disc and silvery oblong object, Santa Fe, NM (23 Sept 1948)",
+      "source": "DoW Box 7 Incident Summaries 173-233, p.0006 (+3 additional pages)",
       "file": "38_143685_box7_incident_summaries_173-233.pdf",
       "page": "0006",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/38_143685_box7_incident_summaries_173-233.pdf",
@@ -9374,8 +9374,10 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0009",
+      "witnesses": "A. Ruble Angier (Waco, TX; pilot since 1928) — saw a perfectly flat white disc, ~100-150 ft diameter, stationary at 25-30k ft, viewed from Santa Fe Plaza for 15-20 min starting ~0945 (Incident 175). | John C. Fairchild (Angier's companion) — independently reported a bright silvery oblong/egg-shaped object with a sunflower-like bluish tail, 150-200 ft, ~30k ft alt, 700-800 MPH NE→SW, ~0930 (Incident 175a). DoW noted statements \"do not tally\" but the 15-minute time discrepancy could account for the difference."
     },
     {
       "date_iso": "1948-09-23",
