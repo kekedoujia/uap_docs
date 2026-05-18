@@ -8,19 +8,19 @@ The repository directory **is** the static website — no backend, just JSON fil
 
 | | Count |
 |---|---|
-| Events | **4,410** across 13 batches |
-| Mapped (with coordinates) | **96.0%** (4,233 events) |
+| Events | **3,978** across 13 batches |
+| Mapped (with coordinates) | **97.4%** (3,874 events) |
 | Date range | **1865 – 2025** |
-| Geocoded place names | 3,523 |
-| Lazy-loaded summaries (EN + ZH) | 4,386 |
-| Repo size | ~635 MB (mostly page thumbnails) |
+| Geocoded place names | 4,752 |
+| Lazy-loaded summaries (EN + ZH) | 3,767 |
+| Repo size | ~1.3 GB (mostly page thumbnails) |
 
 ### Data sources
 
 | Source | Code | Events | Origin |
 |---|---|---|---|
-| US Department of War FOIA Release 01 | `DoW` | 701 | [war.gov/UFO](https://www.war.gov/UFO/) |
-| Canadian FOIA + CIRVIS (30 PDFs, ~8,700 pages) | `CA-FOIA` | 3,456 | [archive.org/details/CanadaUFO](https://archive.org/details/CanadaUFO) |
+| US Department of War FOIA Release 01 | `DoW` | 681 | [war.gov/UFO](https://www.war.gov/UFO/) |
+| Canadian FOIA + CIRVIS (30 PDFs, ~8,700 pages) | `CA-FOIA` | 3,044 | [archive.org/details/CanadaUFO](https://archive.org/details/CanadaUFO) |
 | New Zealand Defence Force | `NZDF` | 243 | [nzdf.mil.nz/foi](https://www.nzdf.mil.nz/foi/) |
 | National Archives of Australia (A703 / 580/1/1) | `NAA` | 8 | [recordsearch.naa.gov.au](https://recordsearch.naa.gov.au/) |
 | Arquivo Nacional Brasil (Ilha da Trindade 1958) | `BR-AN` | 2 | [arquivonacional.gov.br](https://www.arquivonacional.gov.br/) |
@@ -41,8 +41,10 @@ The site must be served over HTTP — browsers disallow `fetch()` of JSON over `
 | **Map** | `index.html` | Leaflet dark world map with event markers + GeoNames human-activity heatmap. Click any marker for the report detail panel. |
 | **Timeline** | `timeline.html` | Chronological browser. Filter by date range, agency, type, country. |
 | **Reports** | `reports.html` | Searchable table of all events. Sort by date, agency, location. |
+| **Recent updates** | `recent-updates.html` | Audit log of events touched in the last 30 / 90 / 180 / 365 days. Filter by updater and data source. |
+| **Donate** | `donate.html` | Support page (☕). |
 
-All three pages share:
+All pages share:
 - 🌐 Bilingual EN / 中文 switch (top-right)
 - 🔍 Date range, agency, type, and per-country filters
 - 📄 Per-event detail card with lat/lon, witnesses, source PDF page anchor, EN + ZH summary
@@ -51,13 +53,15 @@ All three pages share:
 ## Architecture
 
 ```
-ufo_site/
-├── index.html / timeline.html / reports.html     # 3 user-facing pages
+uap_docs/
+├── index.html / timeline.html / reports.html     # User-facing pages
+├── recent-updates.html / donate.html
 ├── css/style.css
 ├── js/
 │   ├── app.js              # Map page logic (Leaflet, markers, heatmap)
 │   ├── timeline.js         # Timeline page
 │   ├── reports.js          # Reports table
+│   ├── recent-updates.js   # Recent-updates audit log page
 │   ├── i18n.js             # EN/ZH translation dictionary
 │   ├── visitor.js          # Lightweight visit counter
 │   └── version_check.js    # Auto-reload when a new deploy is detected
@@ -65,19 +69,23 @@ ufo_site/
 │   ├── manifest.json       # List of all event batches
 │   ├── version.json        # Build timestamp + commit SHA (regenerated each deploy)
 │   ├── geocode.json        # Location string → {lat, lon}
-│   ├── cities_heatmap.json # 33k+ GeoNames cities for the heatmap
+│   ├── cities_heatmap.json # GeoNames cities for the heatmap
 │   ├── summaries.json      # Lazy-loaded EN + ZH per-event summaries
+│   ├── pdf_pages.json      # Real PDF page counts (drives Reports pagination)
 │   ├── events/
 │   │   ├── batch_001_dow_release_01_2026-05-08.json
 │   │   ├── batch_002_aus_naa.json
 │   │   ├── batch_003-011_nzdf_*.json
 │   │   ├── batch_012_br_arquivo_nacional.json
 │   │   └── batch_013_canada_foia.json
-│   └── page_thumbs/        # Per-page JPEG thumbnails (linked from event details)
+│   ├── page_thumbs/        # Per-page JPEG thumbnails (linked from event details)
+│   └── watermark_crops/    # Cropped watermark/seal artifacts surfaced in detail cards
 ├── render.yaml             # Render Blueprint (build + cache headers)
 └── scripts/
     ├── prepare_for_render.py    # Build step: rewrites archive_url + writes version.json
     ├── split_summaries.py       # Extracts per-event summaries into summaries.json
+    ├── add_page_end_all_batches.py
+    ├── dedupe_all_batches.py
     └── add_event.py             # CLI for adding a new event
 ```
 
