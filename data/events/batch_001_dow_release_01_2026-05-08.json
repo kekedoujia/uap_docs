@@ -15185,10 +15185,10 @@
       "lon": -122.379,
       "non_geographic": false,
       "location_approximate": true,
-      "location_approximate_basis": "city_center",
+      "location_approximate_basis": "airport_center (SFO geometric center; news clipping says \"over San Francisco Airport\", no explicit coords)",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-18",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT"
     },
     {
       "id": "dow-65sec7-s7-005",
