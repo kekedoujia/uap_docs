@@ -10141,7 +10141,7 @@
     {
       "date_iso": "1948-11-17",
       "date_raw": "1418Z 17 November 1948",
-      "location": "117°50'W, 56°10'N, northwest Alberta, Canada",
+      "location": "56°10'N, 117°50'W, northwest Alberta, Canada",
       "agency": "USAF",
       "type": "PDF",
       "title": "1st Lt. James Tormey: egg-shaped bright orange object over northwest Alberta (17 Nov 1948)",
@@ -10162,7 +10162,7 @@
       "lon": -117.8333,
       "non_geographic": false,
       "location_approximate": true,
-      "location_approximate_basis": "city_center",
+      "location_approximate_basis": "reported_coords_DMM (117°50'W, 56°10'N from report)",
       "mapping_to_map": true,
       "last_updated": "2026-05-18",
       "updated_by": "UAP-MAP-LOCAL-AUDIT",

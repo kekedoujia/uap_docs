@@ -20403,5 +20403,9 @@
   "Battle Creek, Michigan, USA": {
     "lat": 42.3211,
     "lon": -85.1797
+  },
+  "56°10'N, 117°50'W, northwest Alberta, Canada": {
+    "lat": 56.1667,
+    "lon": -117.8333
   }
 }
