@@ -1917,9 +1917,9 @@
       "agency": "USAF",
       "type": "PDF (Check-List)",
       "title": "Lt. Kuzman & Maj Morris: yellow egg-shaped objects near Grays Harbor (Incident 199)",
-      "source": "DoW Box 7 Incident Summaries 173-233, p.0058",
+      "source": "DoW Box 7 Incident Summaries 173-233, pp.0057-0058",
       "file": "38_143685_box7_incident_summaries_173-233.pdf",
-      "page": "0058",
+      "page": "0057",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/38_143685_box7_incident_summaries_173-233.pdf",
       "image_url": "https://www.war.gov/medialink/ufo/release_1/thumbnail/38_143685_box7_incident_summaries_173-233.jpg",
       "record_description": "Each of these incident summaries includes a \"Check-List - Unidentified Flying Objects\" that contains details about the incident. Many summaries also include witness lists or statements and other narrative reports or descriptions.",
@@ -1927,8 +1927,8 @@
       "gov_page_url": "https://www.war.gov/UFO/#38_143685_box_Incident_Summaries_173-233",
       "official_date": "N/A",
       "official_location": "N/A",
-      "page_thumb_url": "data/page_thumbs/38_143685_box7_incident_summaries_173-233/page_0058.jpg",
-      "title_ocr_original": "Incident 199 — USAF UAP Check-List",
+      "page_thumb_url": "data/page_thumbs/38_143685_box7_incident_summaries_173-233/page_0057.jpg",
+      "title_ocr_original": "Incident 199 — USAF UAP check-list and narrative summary",
       "data_source": "DoW",
       "lat": 46.97,
       "lon": -123.82,
@@ -1936,8 +1936,14 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-20",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0058",
+      "pages_used": [
+        "0057",
+        "0058"
+      ],
+      "regroup_note": "Local audit: PDF p.0057 is Incident 199 check-list; p.0058 is the attached narrative summary. The earlier single-page record started on the continuation page and omitted the preceding check-list."
     },
     {
       "date_iso": "1947-07-04",
@@ -9652,10 +9658,10 @@
       "location": "Crescent City, California",
       "agency": "USAF",
       "type": "PDF (Check-List)",
-      "title": "Dry cleaner observes metallic plane-like object, Crescent City, CA (17 Oct 1948)",
-      "source": "DoW Box 7 Incident Summaries 173-233, p.0063",
+      "title": "Multiple Crescent City witnesses report metallic/egg-shaped objects (Incident 200 series)",
+      "source": "DoW Box 7 Incident Summaries 173-233, pp.0059-0066",
       "file": "38_143685_box7_incident_summaries_173-233.pdf",
-      "page": "0063",
+      "page": "0059",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/38_143685_box7_incident_summaries_173-233.pdf",
       "image_url": "https://www.war.gov/medialink/ufo/release_1/thumbnail/38_143685_box7_incident_summaries_173-233.jpg",
       "record_description": "Each of these incident summaries includes a \"Check-List - Unidentified Flying Objects\" that contains details about the incident. Many summaries also include witness lists or statements and other narrative reports or descriptions.",
@@ -9663,8 +9669,8 @@
       "gov_page_url": "https://www.war.gov/UFO/#38_143685_box_Incident_Summaries_173-233",
       "official_date": "N/A",
       "official_location": "N/A",
-      "page_thumb_url": "data/page_thumbs/38_143685_box7_incident_summaries_173-233/page_0063.jpg",
-      "title_ocr_original": "Incident 200 — USAF UAP Check-List",
+      "page_thumb_url": "data/page_thumbs/38_143685_box7_incident_summaries_173-233/page_0059.jpg",
+      "title_ocr_original": "Incident 200 series — Crescent City witness check-lists and narrative summaries",
       "data_source": "DoW",
       "lat": 41.7557,
       "lon": -124.2026,
@@ -9672,8 +9678,20 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-20",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0066",
+      "pages_used": [
+        "0059",
+        "0060",
+        "0061",
+        "0062",
+        "0063",
+        "0064",
+        "0065",
+        "0066"
+      ],
+      "regroup_note": "Local audit: pp.0059-0066 are one Crescent City incident series (200, 200a, 200b, 200c), each pairing a check-list with an attached narrative page. The earlier record started at p.0063 and only represented witness Ernest Haley (200b)."
     },
     {
       "date_iso": "1948-10-18",
@@ -10060,7 +10078,7 @@
       "agency": "USAF",
       "type": "PDF (Check-List)",
       "title": "Radarscope operator: 2 aircraft circling, Wakkanai, Japan (6 Nov 1948)",
-      "source": "DoW Box 7 Incident Summaries 173-233, p.0055",
+      "source": "DoW Box 7 Incident Summaries 173-233, pp.0055-0056",
       "file": "38_143685_box7_incident_summaries_173-233.pdf",
       "page": "0055",
       "archive_url": "https://www.war.gov/medialink/ufo/release_1/38_143685_box7_incident_summaries_173-233.pdf",
@@ -10071,7 +10089,7 @@
       "official_date": "N/A",
       "official_location": "N/A",
       "page_thumb_url": "data/page_thumbs/38_143685_box7_incident_summaries_173-233/page_0055.jpg",
-      "title_ocr_original": "Incident 198 — USAF UAP Check-List",
+      "title_ocr_original": "Incident 198 — USAF UAP check-list and narrative summary",
       "data_source": "DoW",
       "lat": 45.4095,
       "lon": 141.6739,
@@ -10079,8 +10097,14 @@
       "location_approximate": true,
       "location_approximate_basis": "city_center",
       "mapping_to_map": true,
-      "last_updated": "",
-      "updated_by": "UAP-MAP-OFFICIAL"
+      "last_updated": "2026-05-20",
+      "updated_by": "UAP-MAP-LOCAL-AUDIT",
+      "page_end": "0056",
+      "pages_used": [
+        "0055",
+        "0056"
+      ],
+      "regroup_note": "Local audit: p.0055 is Incident 198 check-list; p.0056 is the attached narrative summary."
     },
     {
       "date_iso": "1948-11-08",
