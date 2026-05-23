@@ -20403,5 +20403,9 @@
   "56°10'N, 117°50'W, northwest Alberta, Canada": {
     "lat": 56.1667,
     "lon": -117.8333
+  },
+  "Amarillo, Texas": {
+    "lat": 35.222,
+    "lon": -101.831
   }
 }
