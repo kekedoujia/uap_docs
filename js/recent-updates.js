@@ -302,6 +302,33 @@ function buildDetailHtml(e) {
     `;
   }
 
+  let videoBlock = '';
+  if (e.video_url) {
+    const captionsTrack = e.video_captions_vtt
+      ? `<track kind="subtitles" src="${escapeAttr(e.video_captions_vtt)}" srclang="en" label="English" default>`
+      : '';
+    const playLabel = I18N.t('detail_play_video');
+    const dvidsLabel = I18N.t('detail_dvids_page');
+    const captionVid = e.video_title || e.title || '';
+    videoBlock = `
+      <div class="media-block">
+        <div class="media-block-title">🎬 ${escapeHtml(captionVid)}</div>
+        <video controls preload="metadata" playsinline crossorigin="anonymous"
+               style="width:100%; max-height:260px; background:#000; border-radius:4px;">
+          <source src="${escapeAttr(e.video_url)}" type="video/mp4">
+          ${captionsTrack}
+        </video>
+        <div style="margin-top:6px;">
+          <a href="${escapeAttr(e.video_url)}" target="_blank" rel="noopener"
+             class="archive-link small">${escapeHtml(playLabel)}</a>
+          ${e.dvids_page ? `<a href="${escapeAttr(e.dvids_page)}" target="_blank"
+             rel="noopener" class="archive-link small"
+             style="margin-left:6px;">${escapeHtml(dvidsLabel)}</a>` : ''}
+        </div>
+      </div>
+    `;
+  }
+
   const coordLabel = e.non_geographic
     ? I18N.t('detail_non_geo')
     : (e.lat != null ? `(${e.lat.toFixed(4)}, ${e.lon.toFixed(4)})` : '');
@@ -328,6 +355,7 @@ function buildDetailHtml(e) {
     ${renderSummaryBlock(e, lang)}
 
     ${imageBlock}
+    ${videoBlock}
 
     <div class="detail-links" style="margin-top:8px;">
       ${mapBtn}
