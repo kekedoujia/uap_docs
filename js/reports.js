@@ -386,7 +386,7 @@ function buildDetailHtml(e) {
         </a>
       </div>
     `;
-  } else if (e.image_url && !e.page) {
+  } else if (e.image_url && !e.page && !e.video_url) {
     imageBlock = `
       <div class="media-block">
         <a href="${escapeAttr(e.image_url)}" target="_blank" rel="noopener">
@@ -410,7 +410,7 @@ function buildDetailHtml(e) {
     videoBlock = `
       <div class="media-block">
         <div class="media-block-title">🎬 ${escapeHtml(captionVid)}</div>
-        <video controls preload="metadata" playsinline crossorigin="anonymous"
+        <video controls preload="metadata" playsinline crossorigin="anonymous"${e.image_url ? ` poster="${escapeAttr(e.image_url)}"` : ''}
                style="width:100%; max-height:260px; background:#000; border-radius:4px;">
           <source src="${escapeAttr(e.video_url)}" type="video/mp4">
           ${captionsTrack}
