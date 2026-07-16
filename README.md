@@ -8,7 +8,7 @@ The repository directory **is** the static website — no backend, just JSON fil
 
 | | Count |
 |---|---|
-| Events | **4,410** across 13 batches |
+| Events | **4,154** across 16 batches |
 | Mapped (with coordinates) | **96.0%** (4,233 events) |
 | Date range | **1865 – 2025** |
 | Geocoded place names | 3,523 |
@@ -19,7 +19,7 @@ The repository directory **is** the static website — no backend, just JSON fil
 
 | Source | Code | Events | Origin |
 |---|---|---|---|
-| US Department of War FOIA Release 01 | `DoW` | 701 | [war.gov/UFO](https://www.war.gov/UFO/) |
+| US Department of War FOIA Releases 01–04 | `DoW` | 857 | [war.gov/UFO](https://www.war.gov/UFO/) |
 | Canadian FOIA + CIRVIS (30 PDFs, ~8,700 pages) | `CA-FOIA` | 3,456 | [archive.org/details/CanadaUFO](https://archive.org/details/CanadaUFO) |
 | New Zealand Defence Force | `NZDF` | 243 | [nzdf.mil.nz/foi](https://www.nzdf.mil.nz/foi/) |
 | National Archives of Australia (A703 / 580/1/1) | `NAA` | 8 | [recordsearch.naa.gov.au](https://recordsearch.naa.gov.au/) |
@@ -72,7 +72,8 @@ ufo_site/
 │   │   ├── batch_002_aus_naa.json
 │   │   ├── batch_003-011_nzdf_*.json
 │   │   ├── batch_012_br_arquivo_nacional.json
-│   │   └── batch_013_canada_foia.json
+│   │   ├── batch_013_canada_foia.json
+│   │   └── batch_014-016_dow_release_02-04_*.json
 │   └── page_thumbs/        # Per-page JPEG thumbnails (linked from event details)
 ├── render.yaml             # Render Blueprint (build + cache headers)
 └── scripts/

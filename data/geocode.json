@@ -20407,5 +20407,25 @@
   "Amarillo, Texas": {
     "lat": 35.222,
     "lon": -101.831
+  },
+  "Baku, Azerbaijan": {
+    "lat": 40.4093,
+    "lon": 49.8671
+  },
+  "Budapest, Hungary": {
+    "lat": 47.4979,
+    "lon": 19.0402
+  },
+  "Harare, Zimbabwe": {
+    "lat": -17.8292,
+    "lon": 31.0522
+  },
+  "Colorado Springs, Colorado": {
+    "lat": 38.8339,
+    "lon": -104.8214
+  },
+  "Pantex Plant, near Amarillo, Texas": {
+    "lat": 35.314,
+    "lon": -101.564
   }
 }
