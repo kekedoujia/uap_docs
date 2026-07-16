@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /data/page_thumbs/
+
+Sitemap: https://uap-map.com/sitemap.xml

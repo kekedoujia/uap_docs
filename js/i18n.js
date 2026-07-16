@@ -161,6 +161,7 @@ const I18N = {
       ),
       // Recent Updates page
       nav_recent_updates: '🔔 最近更新',
+      nav_about: 'ℹ️ 关于本站',
       ru_title: 'UFO/UAP 最近更新',
       ru_header: '最近更新',
       ru_back: '返回地图',
@@ -341,6 +342,7 @@ const I18N = {
       ),
       // Recent Updates page
       nav_recent_updates: '🔔 Recent Updates',
+      nav_about: 'ℹ️ About',
       ru_title: 'UFO/UAP — Recent Updates',
       ru_header: 'Recent Updates',
       ru_back: 'Back to map',

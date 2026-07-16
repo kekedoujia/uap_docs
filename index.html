@@ -4,12 +4,64 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-i18n="title">UFO/UAP 解密档案交互地图</title>
+<meta name="description" content="Interactive map of 4,100+ declassified UFO/UAP sighting records released by the US Department of War (war.gov/UFO), Canada, New Zealand, Australia and Brazil — searchable by date, location and agency, with links to the original government documents. 收录美国战争部、加拿大等政府解密 UFO/UAP 档案的交互地图，可按日期、地点、机构检索原始文件。">
+<link rel="canonical" href="https://uap-map.com/">
+<meta name="theme-color" content="#0b1320">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛸</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="UAP Map">
+<meta property="og:url" content="https://uap-map.com/">
+<meta property="og:title" content="UFO/UAP Disclosure Archive — Interactive Map">
+<meta property="og:description" content="4,100+ declassified UFO/UAP records from the US Department of War, Canada, New Zealand, Australia and Brazil on an interactive world map, linked to the original government documents.">
+<meta property="og:image" content="https://uap-map.com/assets/og/og-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "UAP Map — UFO/UAP Disclosure Archive",
+      "url": "https://uap-map.com/",
+      "inLanguage": ["en", "zh-CN"]
+    },
+    {
+      "@type": "Dataset",
+      "name": "Declassified UFO/UAP Government Records — Interactive Archive",
+      "description": "4,100+ UFO/UAP sighting and contact events extracted from declassified government releases: US Department of War UFO/UAP Releases 01-04 (war.gov/UFO), Canadian FOIA & CIRVIS files, New Zealand Defence Force FOI records, National Archives of Australia, and Arquivo Nacional Brazil. Each event links to the original source document.",
+      "url": "https://uap-map.com/",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "creator": { "@type": "Organization", "name": "UAP Map" },
+      "temporalCoverage": "1865/2026",
+      "spatialCoverage": "Worldwide",
+      "isAccessibleForFree": true,
+      "keywords": ["UFO", "UAP", "declassified", "FOIA", "Department of War", "sightings", "unidentified anomalous phenomena", "government records"]
+    }
+  ]
+}
+</script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin="">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<noscript>
+  <div style="max-width:760px;margin:40px auto;padding:0 20px;line-height:1.7">
+    <h1>UFO/UAP Disclosure Archive — Interactive Map</h1>
+    <p>An independent, free archive of 4,100+ declassified UFO/UAP records released by the
+    US Department of War (war.gov/UFO), Canada, New Zealand, Australia and Brazil, shown on
+    an interactive world map with links to every original government document.
+    This map requires JavaScript. Non-JS entry points:
+    <a href="about.html">About this archive</a> ·
+    <a href="timeline.html">Event timeline</a> ·
+    <a href="reports.html">Report index</a> ·
+    <a href="recent-updates.html">Recent updates</a></p>
+  </div>
+</noscript>
 
 <div id="topbar">
   <button id="hamburger-btn" type="button" aria-label="Toggle menu">
@@ -54,6 +106,7 @@
     <a href="timeline.html" class="nav-link" data-i18n="nav_timeline">📅 时间轴视图</a>
     <a href="reports.html" class="nav-link" data-i18n="nav_reports">📑 按报告索引</a>
     <a href="recent-updates.html" class="nav-link" data-i18n="nav_recent_updates">🔔 最近更新</a>
+    <a href="about.html" class="nav-link" data-i18n="nav_about">ℹ️ 关于本站</a>
     <button id="other-events-btn" type="button" class="open-modal-btn">
       <span>✦</span>
       <span data-i18n="other_events_title">其他事件（外太空 / 无具体地点）</span>
